@@ -681,24 +681,27 @@ In total, `r format(length(unique(c(SP_V$Subject, PP$Subject))), scientific = FA
 ```{r sample-table, results = 'asis'}
 merge_subjects %>% 
   arrange(Language) %>% 
-  select(PSA_ID, Language, SP_N_trials, PP_N_trials, SP_N, PP_N, 
+  ungroup() %>% 
+  filter(PSA_ID %in% unique(SP_V$PSA_ID)) %>%
+  select(Language, SP_N_trials, PP_N_trials, SP_N, PP_N, 
          Overall_N_Gender, Overall_N_Female, Overall_N_Male, 
          Overall_Age, Overall_SD) %>% 
   mutate(
     Overall_Age = format(round(Overall_Age, 2), nsmall = 2), 
     Overall_SD = format(round(Overall_SD, 2), nsmall = 2)
   ) %>% 
-  filter(PSA_ID %in% unique(SP_V$PSA_ID)) %>%
   kable(
  format = "latex",
  booktabs = TRUE,
  escape = TRUE,
- col.names = c("Lab ID", "Language", "SP Trials",
-               "PP Trials", "SP N", "PP N", "Demographic N",
-               "Female N", "Male N","M Age", "SD Age"),
- align = c("l","l", rep("c", 7)),
- caption = "Note. SP = Sentence Picture Verification, PP = Picture Picture Verification. Sample sizes for demographics may be higher than the sample size for the this study, as participants could have only completed the bundled experiment. Additionally, not all entries could be unambigously matched by lab ID, and therefore, demographic sample sizes could also be less than data collected."
- )
+ col.names = c("Language", "SP \nTrials",
+               "PP \nTrials", "SP \nN", "PP \nN", "Demographic \nN",
+               "Female \nN", "Male \nN","M \nAge", "SD \nAge"),
+ align = c("l", rep("c", 9)),
+ caption = "Demographic and Sample Size Characteristics",
+ ) %>% 
+  kable_styling(latex_options="scale_down") %>% 
+  footnote("*Note*. SP = Sentence Picture Verification, PP = Picture Picture Verification. Sample sizes for demographics may be higher than the sample size for the this study, as participants could have only completed the bundled experiment. Additionally, not all entries could be unambigously matched by lab ID, and therefore, demographic sample sizes could also be less than data collected.")
 ```
 
 ```{r exclude-nonnative}
@@ -833,9 +836,11 @@ SP_V_noout %>%
  booktabs = TRUE,
  escape = FALSE,
  col.names = c("Language","Accuracy Percentages","Mismatching","Matching","Match Advantage"),
- align = c("l","l","r","r","r","r"),
- caption = "Descriptive statistics by language: Average accuracy percentage, Median response times and median absolute deviations (in parentheses) per match condition (Mismatching, Matching); Match advantage (difference in response times)."
- )
+ align = c("l",rep("c",4)),
+ caption = "Descriptive Statistics by Language"
+ ) %>% 
+  kable_styling(latex_options="scale_down") %>% 
+  footnote("*Note*. Average accuracy percentage, Median response times and median absolute deviations (in parentheses) per match condition (Mismatching, Matching); Match advantage (difference in response times).")
 ```
 
 ## Meta-Analysis
@@ -866,7 +871,7 @@ SP_V_meta_data <- SP_V_correct %>%
            ri = cor(Y, N)) 
 ```
 
-```{r meta-all-plot, echo = FALSE, message = FALSE, warning = FALSE, results = 'asis', paged.print = TRUE, fig.cap = "Meta-analysis on match advantage of object orientation for all languages"}
+```{r meta-plot}
 ### a little helper function to add Q-test, I^2, and tau^2 estimate info
 mlabfun <- function(text, res) {
  list(bquote(paste(.(text),
@@ -892,8 +897,17 @@ SP_V_es <- escalc(measure = "MC",
 SP_V_meta_all <- rma.uni(yi, vi, data = SP_V_es, method = "REML", digits = 2)
 
 {
-  forest(SP_V_meta_all, 
-   ilab = cbind(ni,paste0(round(m_mismatch,2),"(",round(sd_mismatch,2),")"),paste0(round(m_match,2),"(",round(sd_match,2),")")), 
+  ## save the plot
+  png(file = "includes/fig/meta-all.png", width=1400*3, height=1400*3, res = 225)
+  
+  forest(SP_V_meta_all,
+   xlim = c(-300, 200), 
+    olim = c(-100, 125),
+   ilab = cbind(ni, 
+                paste0(round(m_mismatch,2),
+                      "(",round(sd_mismatch,2),")"), 
+                paste0(round(m_match,2),
+                       "(",round(sd_match,2),")")), 
    ilab.xpos = c(-250,-200,-150), 
    ylim = c(-1,40+4*17+6), 
    rows = c(
@@ -918,16 +932,16 @@ SP_V_meta_all <- rma.uni(yi, vi, data = SP_V_es, method = "REML", digits = 2)
    ), 
    mlab = mlabfun("REML model for All Teams", SP_V_meta_all),
    xlab = "", psize = 0.7)
-
-    ### set font expansion factor (as in forest() above) and use a bold font
-    op <- par(cex = 0.8, font = 1)
+  
+  ### set font expansion factor (as in forest() above) and use a bold font
+    op <- par(cex = 1, font = 1)
 
     ### add additional column headings to the plot
-    text(c(-345,-250,-200,-150,300),39+4*17+7,c("Team","N","Mismatching","Matching" ,"Match Advantage [95% CI]"))
+    text(c(-290,-250,-200,-150,170),39+4*17+7,c("Team","N","Mismatching","Matching" ,"Match Advantage [95% CI]"))
   ### switch to bold italic font
   par(font = 2)
   ### add text for the subgroups
-  text(-275, c(40+4*17, # English
+  text(-300, c(40+4*17, # English
     20+4*16, # Germany
     17+4*15, # Norway
     14+4*14, # Turkish
@@ -945,7 +959,8 @@ SP_V_meta_all <- rma.uni(yi, vi, data = SP_V_es, method = "REML", digits = 2)
     1+4*2,  # Portuguese
     1+4,  # Serbian
     1  # Thai
-    ) + 2, pos = 2, 
+    ) + 2, #pos = 2, 
+    adj = c(0,1),
       c("English",
       "German",
       "Norweigan",
@@ -990,8 +1005,12 @@ SP_V_meta_all <- rma.uni(yi, vi, data = SP_V_es, method = "REML", digits = 2)
   addpoly(res.Slovak, row = 6+4*11-1.5, mlab = mlabfun("RE Model for Slovak", res.Slovak))
   addpoly(res.Spanish, row = 4+4*10-1.5, mlab = mlabfun("RE Model for Spanish", res.Spanish))
   addpoly(res.TC, row = 2+4*9-1.5, mlab = mlabfun("RE Model for Traditional Chinese", res.TC))
-  
+  dev.off()
 }
+```
+
+```{r meta-all-plot, echo = FALSE, message = FALSE, warning = FALSE, results = 'asis', paged.print = TRUE, fig.cap = "Meta-analysis on match advantage of object orientation for all languages"}
+knitr::include_graphics("includes/fig/meta-all.png")
 ```
 
 The planned meta-analysis examined the effect overall and within for languages wherein at least two laboratories had collected data (Arabic, English, German, Norway, Simplified Chinese, Traditional Chinese, Slovak, and Turkey). Figure \@ref(fig:meta-all-plot) showed a significant meta-analytic effect across German laboratories (*b* = `r as.character(round(res.Germany$b,2))`, 95% CI [`r as.character(round(res.Germany$ci.lb,2))`, `r as.character(round(res.Germany$ci.ub,2))`]) but did not reveal a significant overall effect (*b* = `r as.character(round(SP_V_meta_all$b,2))`, 95% CI [`r as.character(round(SP_V_meta_all$ci.lb,2))`, `r as.character(round(SP_V_meta_all$ci.ub,2))`]).
