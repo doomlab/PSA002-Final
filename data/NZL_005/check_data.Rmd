@@ -1,0 +1,39 @@
+---
+title: "Check data time"
+author: "Sau-Chin Chen"
+date: "2021/3/23"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+csv_files <- list.files(pattern = ".csv$")
+```
+
+## Retrieve data from AUS091
+
+Because I assigned NZL005 links to AUS091 at their beginning of data collection, this process at first retrieved the AUS091 data and export to their folder. Second step I filtered the NZL 005 data and saved in this folder.
+
+```{r data}
+meta_df <- read_csv(csv_files[grep(csv_files,pattern = "_meta_")])
+data_df <- read_csv(csv_files[grep(csv_files,pattern = "_results_")])
+
+## Export AUS_091 results data to the lab directory
+AUS091_results_df <- data_df %>% filter( datetime %>% str_detect( pattern = "Australian")  ) %>%
+  write_csv(paste0("../AUS_091/",csv_files[grep(csv_files,pattern = "_results_")]),append = FALSE)
+
+## Export AUS_091 meta data to the lab directory
+meta_df %>% filter(`Result ID` %in% unique(AUS091_results_df$jatosStudyResultId)) %>%
+  select(-Batch) %>%
+  mutate(Batch = "AUS_091") %>%
+  write_csv(paste0("../AUS_091/",csv_files[grep(csv_files,pattern = "_meta_")]),append = FALSE)
+
+## Export NZL_005 results data to the current directory
+data_df %>% filter( !(datetime %>% str_detect( pattern = "Australian"))  ) %>%
+  write_csv(csv_files[grep(csv_files,pattern = "_results_")])
+
+## Export NZL_005 meta data to the current directory
+meta_df %>% filter( !(`Result ID` %in% unique(AUS091_results_df$jatosStudyResultId))) %>%
+  write_csv(csv_files[grep(csv_files,pattern = "_meta_")])
+```

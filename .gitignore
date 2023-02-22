@@ -2,6 +2,10 @@
 .Rhistory
 .Rapp.history
 
+/Stage2_Report_full_cache/*
+/Stage2_Report_full_files/*
+jatos_results*.txt
+
 # Session Data files
 .RData
 .RDataTmp

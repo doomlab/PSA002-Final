@@ -1,0 +1,21 @@
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+\includegraphics[width=3.2in]{./includes/fig/fig2a} \caption{Procedure of sentence-picture verification task.}\label{fig:fig01}
+\end{figure*}
+\efloatseparator
+ 
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+\includegraphics[width=1.9in]{includes/fig/psa002_flow.drawio} \caption{Sample Size and Exclusions.}\label{fig:sample-fig}
+\end{figure*}
+\efloatseparator
+ 
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+\centering
+\includegraphics{Stage2_Report_full_files/figure-latex/meta-all-plot-1.pdf}
+\caption{\label{fig:meta-all-plot}Meta-analysis on match advantage of object orientation for all languages}
+\end{figure*}

@@ -1,0 +1,51 @@
+SEED,SUBJID,Sequence,DATE,SIGN,round,Notes
+1069,1,002_SP -> 002_PP -> 003,09/24/2019,TRE,1,
+1069,2,002_SP -> 002_PP -> 003,09/24/2019,TRE,1,
+1069,3,002_SP -> 002_PP -> 003,09/24/2019,TRE,1,
+1069,4,003 -> 002_SP -> 002_PP,09/24/2019,TRE,1,"Wrong choice, Correct sequence"
+1069,5,003 -> 002_SP -> 002_PP,09/24/2019,TRE,1,"Wrong choice, Correct sequence"
+1069,6,002_SP -> 002_PP -> 003,09/24/2019,TRE,1,
+1069,7,002_SP -> 002_PP -> 003,09/24/2019,TRE,1,
+1069,8,003 -> 002_SP -> 002_PP,09/24/2019,TRE,1,"Wrong choice, Correct sequence"
+1069,9,002_SP -> 002_PP -> 003,09/24/2019,TRE,1,
+1069,10,003 -> 002_SP -> 002_PP,09/25/2019,TRE,1,"Wrong choice, Correct sequence"
+1069,11,002_SP -> 002_PP -> 003,09/25/2019,TRE,1,
+1069,12,002_SP -> 002_PP -> 003,09/25/2019,TRE,1,
+1069,13,003 -> 002_SP -> 002_PP,09/25/2019,TRE,1,"Wrong choice, Correct sequence"
+1069,14,003 -> 002_SP -> 002_PP,09/25/2019,TRE,1,"Wrong choice, Correct sequence"
+1069,15,003 -> 002_SP -> 002_PP,09/25/2019,TRE,1,"Wrong choice, Correct sequence"
+1069,16,003 -> 002_SP -> 002_PP,09/25/2019,TRE,1,"Wrong choice, Correct sequence"
+1069,17,002_SP -> 002_PP -> 003,09/25/2019,TRE,1,
+1069,18,002_SP -> 002_PP -> 003,09/25/2019,TRE,1,
+1069,19,002_SP -> 002_PP -> 003,09/26/2019,TRE,1,
+1069,20,002_SP -> 002_PP -> 003,09/26/2019,TRE,1,
+1069,21,003 -> 002_SP -> 002_PP,09/26/2019,TRE,1,"Wrong choice, Correct sequence"
+1069,22,003 -> 002_SP -> 002_PP,09/26/2019,TRE,1,"Wrong choice, Correct sequence"
+1069,23,003 -> 002_SP -> 002_PP,09/26/2019,TRE,1,"Wrong choice, Correct sequence"
+1069,24,003 -> 002_SP -> 002_PP,09/26/2019,TRE,1,"Wrong choice, Correct sequence"
+1069,25,003 -> 002_SP -> 002_PP,09/26/2019,TRE,1,"Wrong choice, Correct sequence"
+1069,26,002_SP -> 002_PP -> 003,09/26/2019,TRE,1,
+1069,27,002_SP -> 002_PP -> 003,09/27/2019,TRE,1,
+1069,28,003 -> 002_SP -> 002_PP,09/27/2019,TRE,1,"Wrong choice, Correct sequence"
+1069,29,002_SP -> 002_PP -> 003,09/27/2019,TRE,1,
+1069,30,002_SP -> 002_PP -> 003,09/27/2019,TRE,1,
+1069,31,003 -> 002_SP -> 002_PP,09/27/2019,TRE,1,"Wrong choice, Correct sequence"
+1069,32,002_SP -> 002_PP -> 003,09/27/2019,TRE,1,
+1069,33,003 -> 002_SP -> 002_PP,09/27/2019,TRE,1,"Wrong choice, Correct sequence"
+1069,34,003 -> 002_SP -> 002_PP,10/01/2019,TRE,1,"Wrong choice, Correct sequence"
+1069,35,002_SP -> 002_PP -> 003,10/01/2019,TRE,1,
+1069,36,002_SP -> 002_PP -> 003,10/01/2019,TRE,1,
+1069,37,003 -> 002_SP -> 002_PP,10/01/2019,TRE,1,"Wrong choice, Correct sequence"
+1069,38,002_SP -> 002_PP -> 003,10/01/2019,TRE,1,
+1069,39,003 -> 002_SP -> 002_PP,10/01/2019,TRE,1,"Wrong choice, Correct sequence"
+1069,40,002_SP -> 002_PP -> 003,10/01/2019,TRE,1,
+1069,41,002_SP -> 002_PP -> 003,10/01/2019,TRE,1,
+1069,42,002_SP -> 002_PP -> 003,10/01/2019,TRE,1,
+1069,43,002_SP -> 002_PP -> 003,10/01/2019,TRE,1,
+1069,44,003 -> 002_SP -> 002_PP,10/01/2019,TRE,1,"Wrong choice, Correct sequence"
+1069,45,003 -> 002_SP -> 002_PP,10/01/2019,TRE,1,"Wrong choice, Correct sequence"
+1069,46,003 -> 002_SP -> 002_PP,10/01/2019,TRE,1,"Wrong choice, Correct sequence"
+1069,47,003 -> 002_SP -> 002_PP,10/01/2019,TRE,1,"Wrong choice, Correct sequence"
+1069,48,003 -> 002_SP -> 002_PP,10/01/2019,TRE,1,"Wrong choice, Correct sequence"
+1069,49,003 -> 002_SP -> 002_PP,10/01/2019,TRE,1,"Wrong choice, Correct sequence"
+1069,50,002_SP -> 002_PP -> 003,10/01/2019,TRE,1,

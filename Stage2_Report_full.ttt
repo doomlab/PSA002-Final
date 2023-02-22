@@ -1,0 +1,108 @@
+\begin{table*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+
+\caption{\label{tab:sample-table}Note. SP = Sentence Picture Verification, PP = Picture Picture Verification. Sample sizes for demographics may be higher than the sample size for the this study, as participants could have only completed the bundled experiment. Additionally, not all entries could be unambigously matched by lab ID, and therefore, demographic sample sizes could also be less than data collected.}
+\centering
+\begin{tabular}[t]{llcccccccll}
+\toprule
+Lab ID & Language & SP Trials & PP Trials & SP N & PP N & Demographic N & Female N & Male N & M Age & SD Age\\
+\midrule
+ARE\_001 & Arabic & 1248 & 1248 & 52 & 52 & 53 & 0 & 0 & 38.00 & NaN\\
+ARE\_002 & Arabic & 1296 & 1296 & 54 & 54 & 54 & 42 & 12 & 26.51 & 18.59\\
+BRA\_003 & Brazilian Portuguese & 1200 & 1200 & 50 & 50 & 50 & 36 & 13 & 30.80 & 8.73\\
+AUS\_002 & English & 2376 & 2376 & 99 & 99 & 103 & 46 & 37 & 20.14 & 3.32\\
+AUS\_091 & English & 3840 & 3840 & 160 & 160 & 160 & 127 & 25 & 26.03 & 11.55\\
+\addlinespace
+CAN\_020 & English & 2352 & 2376 & 98 & 99 & 104 & 54 & 40 & 20.26 & 3.66\\
+GBR\_005 & English & 1272 & 1272 & 53 & 53 & 76 & 57 & 13 & 19.96 & 3.90\\
+GBR\_006 & English & 1200 & 1200 & 50 & 50 & 51 & 37 & 13 & 20.14 & 2.46\\
+GBR\_014 & English & 1200 & 1200 & 50 & 50 & 58 & 46 & 11 & 18.74 & 1.62\\
+GBR\_043 & English & 720 & 720 & 30 & 30 & 32 & 15 & 11 & 25.70 & 9.40\\
+\addlinespace
+MYS\_003 & English & 1200 & 1248 & 50 & 52 & 52 & 38 & 11 & 22.56 & 3.90\\
+MYS\_004 & English & 2400 & 2400 & 100 & 100 & 109 & 65 & 30 & 20.73 & 2.00\\
+NGA\_001 & English & 1248 & 1248 & 52 & 52 & 52 & 24 & 22 & 23.94 & 11.29\\
+NZL\_005 & English & 7680 & 7680 & 320 & 320 & 320 & 244 & 56 & 23.21 & 5.43\\
+PSA\_001 & English & 1248 & 1272 & 52 & 53 & 71 & 50 & 12 & 18.89 & 0.95\\
+\addlinespace
+PSA\_002 & English & 1536 & 1536 & 64 & 64 & 102 & 79 & 11 & 19.82 & 2.42\\
+TUR\_007E & English & 264 & 264 & 11 & 11 & 12 & 9 & 2 & 20.36 & 1.91\\
+TWN\_002E & English & 288 & 288 & 12 & 12 & 12 & 6 & 5 & 21.17 & 1.19\\
+USA\_011 & English & 1512 & 1512 & 63 & 63 & 63 & 30 & 23 & 22.34 & 11.55\\
+USA\_020 & English & 7980 & 8064 & 333 & 336 & 403 & 258 & 76 & 19.63 & 2.12\\
+\addlinespace
+USA\_030 & English & 648 & 648 & 27 & 27 & 31 & 20 & 3 & 36.00 & 0.96\\
+USA\_032 & English & 1209 & 1224 & 51 & 51 & 51 & 30 & 21 & 19.29 & 1.51\\
+USA\_033 & English & 3000 & 3024 & 125 & 126 & 129 & 90 & 25 & 20.06 & 1.36\\
+USA\_065 & English & 1200 & 1200 & 50 & 50 & 61 & 35 & 15 & 18.86 & 1.63\\
+USA\_173 & English & 816 & 744 & 34 & 31 & 3 & 0 & 3 & 19.67 & 0.58\\
+\addlinespace
+AUT\_002 & German & 2400 & 2400 & 100 & 100 & 114 & 0 & 1 & 20.94 & 2.56\\
+AUT\_005 & German & 2592 & 2592 & 108 & 108 & 108 & 80 & 22 & 22.18 & 4.26\\
+DEU\_020 & German & 624 & 624 & 26 & 26 & 26 & 18 & 3 & 23.88 & 3.39\\
+GRC\_002 & Greek & 2376 & 2376 & 99 & 99 & 109 & 0 & 0 & 33.86 & 11.30\\
+ISR\_001 & Hebrew & 3576 & 3571 & 149 & 149 & 181 & 0 & 0 & 24.25 & 9.29\\
+\addlinespace
+IND\_003 & Hindi & 1896 & 1896 & 79 & 79 & 86 & 57 & 27 & 21.66 & 3.46\\
+HUN\_001 & Magyar & 3610 & 3816 & 151 & 159 & 168 & 3 & 1 & 21.50 & 2.82\\
+NOR\_002 & Norwegian & 504 & 504 & 21 & 21 & 21 & 12 & 8 & 30.10 & 8.58\\
+NOR\_003 & Norwegian & 1320 & 1320 & 55 & 55 & 53 & 1 & 1 & 23.55 & 6.25\\
+NOR\_004 & Norwegian & 1752 & 1752 & 73 & 73 & 80 & 0 & 0 & 22.00 & 4.38\\
+\addlinespace
+POL\_001 & Polish & 1368 & 1368 & 57 & 57 & 146 & 0 & 0 & 23.25 & 7.96\\
+POR\_001 & Portuguese & 1488 & 1464 & 62 & 61 & 55 & 26 & 23 & 30.74 & 9.09\\
+SRB\_002 & Serbian & 3120 & 3120 & 130 & 130 & 130 & 108 & 21 & 21.38 & 4.50\\
+CHN\_005 & Simple Chinese & 1200 & 1200 & 50 & 50 & 57 & 0 & 0 & 18.66 & 3.92\\
+CHN\_019 & Simple Chinese & 840 & 816 & 35 & 34 & 39 & 0 & 1 & 25.17 & 5.44\\
+\addlinespace
+SVK\_001 & Slovak & 2419 & 2400 & 101 & 100 & 103 & 1 & 0 & 21.59 & 2.51\\
+SVK\_002 & Slovak & 1462 & 1199 & 61 & 50 & 222 & 0 & 0 & 21.96 & 2.14\\
+COL\_001 & Spanish & 1680 & 1656 & 70 & 69 & 70 & 0 & 0 & 21.36 & 3.36\\
+ECU\_001 & Spanish & 1440 & 1440 & 60 & 60 & 76 & 0 & 0 & 22.10 & 4.30\\
+THA\_001 & Thai & 1200 & 1152 & 50 & 48 & 50 & 29 & 9 & 21.54 & 3.81\\
+\addlinespace
+TWN\_001 & Traditional Chinese & 1440 & 1440 & 60 & 60 & 70 & 45 & 14 & 20.73 & 1.21\\
+TWN\_002 & Traditional Chinese & 2160 & 2160 & 90 & 90 & 116 & 24 & 32 & 21.04 & 3.66\\
+TUR\_007 & Turkish & 2184 & 2184 & 91 & 91 & 93 & 0 & 0 & 20.92 & 2.93\\
+TUR\_023 & Turkish & 1896 & 1896 & 79 & 79 & 80 & 36 & 14 & 21.58 & 8.64\\
+TUR\_025 & Turkish & 2376 & 2352 & 99 & 98 & 101 & 0 & 0 & 21.63 & 2.19\\
+\bottomrule
+\end{tabular}
+\end{table*}
+\efloatseparator
+ 
+\begin{table*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+
+\caption{\label{tab:summary-languages}Descriptive statistics by language: Average accuracy percentage, Median response times and median absolute deviations (in parentheses) per match condition (Mismatching, Matching); Match advantage (difference in response times).}
+\centering
+\begin{tabular}[t]{llrrr}
+\toprule
+Language & Accuracy Percentages & Mismatching & Matching & Match Advantage\\
+\midrule
+Arabic & 90.65 & 580.25 (167.53) & 581.00 (200.89) & -0.75\\
+Brazilian Portuguese & 94.87 & 641.00 (136.40) & 654.50 (146.78) & -13.50\\
+English & 95.04 & 576.75 (124.17) & 578.75 (127.87) & -2.00\\
+German & 96.53 & 593.00 (106.75) & 576.00 (107.12) & 17.00\\
+Greek & 92.35 & 753.50 (225.36) & 728.50 (230.91) & 25.00\\
+\addlinespace
+Hebrew & 96.73 & 569.50 (98.59) & 574.50 (110.45) & -5.00\\
+Hindi & 91.32 & 638.50 (207.19) & 662.00 (228.32) & -23.50\\
+Hungarian & 96.47 & 623.00 (111.94) & 643.00 (129.73) & -20.00\\
+Norwegian & 96.93 & 592.50 (126.39) & 612.00 (136.03) & -19.50\\
+Polish & 96.11 & 601.00 (139.36) & 586.00 (108.23) & 15.00\\
+\addlinespace
+Portuguese & 95.01 & 616.50 (144.55) & 607.00 (145.29) & 9.50\\
+Serbian & 94.78 & 617.75 (158.64) & 635.00 (168.28) & -17.25\\
+Simplified Chinese & 92.39 & 655.00 (170.50) & 642.50 (158.64) & 12.50\\
+Slovak & 96.45 & 610.50 (125.28) & 607.25 (117.87) & 3.25\\
+Spanish & 94.32 & 663.00 (147.52) & 676.00 (154.19) & -13.00\\
+\addlinespace
+Thai & 93.92 & 652.50 (177.91) & 637.75 (130.10) & 14.75\\
+Traditional Chinese & 94.41 & 625.00 (139.36) & 620.00 (123.06) & 5.00\\
+Turkish & 95.38 & 654.50 (146.04) & 637.00 (126.02) & 17.50\\
+\bottomrule
+\end{tabular}
+\end{table*}

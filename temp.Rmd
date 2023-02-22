@@ -1,0 +1,1063 @@
+---
+title: "temp"
+author: "Erin M. Buchanan"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+In online study participants heard auditory instructions at the beginning and had to correctly answer at least 2 of 3 comprehension check questions about the instructions. 
+
+```{r site_SP_V, message = FALSE, warning = FALSE, include = FALSE}
+## `SP_V_subj_site` is for count checks. The outcomes are for counting total number in the report.
+
+## Summarize the valid participants' SP verification data
+SP_V_subj_site <- SP_V %>%
+ filter(opensesame_codename!= "osweb") %>% # exclude jatos data
+ group_by(Subject) %>%
+ mutate(acc = sum(correct)/n()) %>%
+ #mutate(acc = n()/24) %>%
+ filter(acc > .7) %>%
+ group_by(Language, PSA_ID, Subject, Match) %>%
+## summarise(V_RT = median(response_time), V_Acc = n()/12)
+ summarise(V_RT = median(response_time), V_Acc = sum(correct)/n()) 
+
+## Tidy SP V data for mixed linear model in `SP-source-lme`. Acc < .70 are included.
+SP_V_site_tidy <- SP_V %>% 
+ filter(Source!= "osweb")
+```
+
+```{r site_SP_M, message = FALSE, warning = FALSE, include = FALSE}
+## Tidy SP M data is for count checks. The outcomes are not for report.
+SP_M_site_tidy <- SP_M %>% 
+ filter(Source != "osweb")
+
+## Summarize the valid participants' SP memory data
+SP_M_subj_site <- SP_M_site_tidy %>%
+ group_by(Language, PSA_ID, Subject) %>% 
+# summarise(M_Acc = n()/11)
+ summarise(M_Acc = sum(correct)/n())
+```
+
+```{r site_PP, message = FALSE, warning = FALSE, include = FALSE}
+## Tidy PP data is for count checks. The outcomes are for counting total number.
+PP_site_tidy <- PP %>% 
+ filter(Source!= "osweb") 
+
+## Summarize the valid participants' PP verification data
+PP_subj_site <- PP_site_tidy %>%
+ mutate(Match = (Orientation1 == Orientation2)) %>%
+ group_by(Language, PSA_ID, Subject, Match) %>%
+# summarise(P_RT = median(response_time), P_Acc = n()/12) 
+ summarise(P_RT = median(response_time), P_Acc = sum(correct)/n()) 
+```
+
+```{r count_site, message = FALSE, warning = FALSE, include = FALSE}
+## Generate the total numbers based on old preregistered outliers
+sum_site <- (SP_V_site_tidy %>% # first part: SP V
+ group_by(Language, PSA_ID, Subject) %>%
+ summarise(N = n()) %>%
+ group_by(Language, PSA_ID) %>%
+ summarise(SP_N = n())) %>% #divide by 2 for match/no match 
+left_join(
+ SP_M_subj_site %>%  # second part: memory check
+ group_by(Language, PSA_ID) %>%
+ summarise(M_N = n()),
+ by = c("Language","PSA_ID")) %>%
+left_join( 
+(PP_site_tidy %>% # third part: PP
+ group_by(Language, PSA_ID, Subject) %>%
+ summarise(N = n()) %>%
+ group_by(Language, PSA_ID) %>%
+ summarise(PP_N = n())), #divide by 2 for identical/different orientations 
+by = c("Language","PSA_ID")
+) 
+
+##sum_site %>% filter((SP_N != M_N) & (SP_N != PP_N))
+```
+
+```{r online_SP_V, message = FALSE, warning = FALSE, include = FALSE}
+## Tidy SP V data for mixed linear model in `SP-source-lme`. Acc < .70 are included.
+
+SP_V_osweb_tidy <- SP_V %>%
+ filter(Source == "osweb") %>% # include jatos data
+ #subset(correct == 1 & Match != "F") %>% ## Exclude the incorrect responses and filler trials
+ subset(Match != "F") %>% 
+ distinct() %>% ## Merge the language aspects
+ filter(!(PSA_ID == "USA_033" & subject_nr == 39)) ## exclude this participant who had not complete PP
+```
+
+```{r online_SP_M, message = FALSE, warning = FALSE, include = FALSE}
+## Tidy SP M data for mixed linear model
+SP_M_osweb_tidy <- SP_M %>%
+ filter(Source == "osweb") %>% # include jatos data
+ distinct() %>% ## Merge the language aspects
+ filter(!(PSA_ID == "USA_033" & subject_nr == 39)) ## exclude this participant who had not complete PP
+
+## Summarize the valid participants' SP memory data
+SP_M_subj_osweb <- SP_M_osweb_tidy %>%
+ group_by(Language, PSA_ID, Subject) %>% 
+ #group_by(Language, PSA_ID, subject_nr) %>% 
+ summarise(M_Acc = sum(correct)/n())
+ #summarise(M_Acc = n()/11)
+```
+
+```{r online_PP, message = FALSE, warning = FALSE, include = FALSE}
+## Tidy PP data for mixed linear model
+PP_osweb_tidy <- PP %>%
+ filter(Source == "osweb") %>% # include jatos data
+ #subset(correct == 1 & Identical != "F") %>% ## Exclude the incorrect responses and filler trials
+ subset(Identical != "F") %>% 
+ distinct() %>% ## Merge the language aspects
+ filter(!(PSA_ID == "USA_033" & subject_nr == 39)) ## exclude this participant who had not complete PP
+
+## Summarize the valid participants' PP verification data
+PP_subj_osweb <- PP_osweb_tidy %>%
+ mutate(Match = (Orientation1 == Orientation2)) %>%
+ group_by(Language, PSA_ID, Subject, Match) %>%
+# summarise(P_RT = median(response_time), P_Acc = n()/12) 
+ summarise(P_RT = median(response_time), P_Acc = sum(correct)/n()) 
+```
+
+```{r count_online, message = FALSE, warning = FALSE, include = FALSE}
+## Compute the participants from labs and from Internet
+sum_osweb <- (SP_V_osweb_tidy %>%
+ group_by(Language, PSA_ID, Subject) %>%
+ summarise(N = n()) %>%
+ group_by(Language, PSA_ID) %>%
+ summarise(SP_N = n())) %>%
+left_join( 
+(PP_osweb_tidy %>% 
+ group_by(Language, PSA_ID, Subject) %>%
+ summarise(N = n()) %>%
+ group_by(Language, PSA_ID) %>%
+ summarise(PP_N = n())),
+by = c("Language","PSA_ID")
+) 
+```
+
+```{r preparation, message = FALSE, warning = FALSE, include = FALSE}
+## Check and combine the onsite data frame and online data frame sharing the same structure
+if(sum(names(SP_V_site_tidy) == names(SP_V_osweb_tidy)) == dim(SP_V_site_tidy)[2]){
+ SP_V_tidy = bind_rows(SP_V_site_tidy, SP_V_osweb_tidy)
+ chunk_msg01 <- c("All columns in SP_V matched")
+} else {
+ chunk_msg01 <- c("Not all columns in SP_V matched")
+}
+
+if(sum(names(PP_site_tidy) == names(PP_osweb_tidy)) == dim(PP_site_tidy)[2]){
+ PP_tidy = bind_rows(PP_site_tidy, PP_osweb_tidy)
+ chunk_msg02 <- c("All columns in PP matched")
+} else {
+ chunk_msg02 <- c("Not all columns in PP matched")
+}
+
+
+if(sum(names(SP_M_site_tidy) == names(SP_M_osweb_tidy)) == dim(SP_M_site_tidy)[2]){
+ SP_M_tidy = bind_rows(SP_M_site_tidy, SP_M_osweb_tidy)
+ chunk_msg03 <- c("All columns in SP_M matched")
+} else {
+ chunk_msg03 <- c("Not all columns in SP_M matched")
+}
+```
+
+```{r MAD_outliers}
+# We will implement a minimum response latency 160
+# We will use a 2*MAD criterion to eliminate long response latencies
+# SP_V_tidy and PP_tidy has the variable "Outlier" denoted the outlier.
+
+
+
+SP_M_tidy <- SP_M_tidy %>% 
+ group_by(Subject) %>% 
+ mutate(MAD = mad(response_time),
+  med = median(response_time)) 
+
+# Integrate this into the outlier analysis table, change out for lmer criterion and say why
+```
+
+```{r cycle_outlier_check, message = FALSE, warning = FALSE, include = FALSE}
+## Technically this chunk is unavailable. 
+## To compute the available N in terms of old preregistered criterion.
+get_intercept <- function(set) {
+ t <- cbind(
+  Subject = levels(as.factor(set$Subject)),
+  (lmer(response_time ~ Match + (1|Subject), data = set) %>%
+ coef())$Subject %>%
+ as_tibble()%>%
+ mutate(#LowerBound = quantile(`(Intercept)`,probs = .25),
+  #UpperBound = quantile(`(Intercept)`,probs = .75),
+  Mark = 
+  (`(Intercept)` > quantile(`(Intercept)`,probs = .75)) | (`(Intercept)` < quantile(`(Intercept)`,probs = .25)) )
+ ) ## We should exclude the unusual fastest responses
+ 
+ return(t)
+}
+
+LABS <- unique(SP_V_tidy$PSA_ID)
+
+## Marks outliers by lme
+
+outliers_marks <- NULL
+for(lab_id in LABS){
+ outliers_marks<- get_intercept( subset(SP_V_tidy,PSA_ID == lab_id)) %>%
+ mutate(LAB = lab_id) %>%
+ rbind(outliers_marks)
+}
+
+
+## Erin's revised outliers table are by MAD. The codes after this chunk can not access this table
+
+outliers_table <- SP_V_tidy %>% 
+ group_by(PSA_ID) %>% 
+ summarize(total_n = length(unique(Subject)), 
+  total_data = n(), 
+  total_outliers = sum(Outlier == T), 
+  prop = round(total_outliers / total_data, 2))
+
+```
+
+```{r N-computations, echo = FALSE, message = FALSE, warning = FALSE, paged.print = TRUE}
+## Summarize how many participants excluded by old and MAD criterion.
+
+## Count the available participants
+Prereg_N <- SP_V_tidy %>% 
+ left_join(outliers_marks, by = c("PSA_ID" = "LAB", "Subject" = "Subject")) %>% 
+ filter(Mark == FALSE) %>% ## Outlier by intercept
+ group_by(PSA_ID, Subject) %>%
+ summarise(N = n()) %>%
+ group_by(PSA_ID) %>%
+ summarise(Lab_N = n()) #%>%
+ #summarise(Total = sum(Lab_N))
+
+MAD_N <- SP_V_tidy %>% 
+# left_join(outliers_marks, by = c("PSA_ID" = "LAB", "Subject" = "Subject")) %>% 
+ filter(Outlier == FALSE) %>% ## Outlier by MAD
+ group_by(PSA_ID, Subject) %>%
+ summarise(N = n()) %>%
+ group_by(PSA_ID) %>%
+ summarise(Lab_N = n()) 
+
+## Note for changes:
+## In the September update I integrated the outliers decided by old preregistered criterion and the outliers decided by MAD criterion. Method section has the code to compute the outliers; Results section has the code that summarised the different outputs. These codes either changed the following codes for descriptive statistics, meta-analysis, and mixed-effect models. I would added the comments in the corresponding chunks if they are necessary.
+```
+
+```{r SP-lme-coef, message = FALSE, warning = FALSE, include = FALSE}
+## Manage the SP effect CI table
+##source("includes/files/lme_SPV_effects.R") ## backup all code into single script for safe
+
+
+# Import data for estimation
+#SP_V_lme_data <- read_csv(file = "./includes/files/SP_V_lme_data.csv")
+
+## German
+german.fixed.two.model <- lmer(response_time ~ Match + (1|Subject) + (1|Target) , 
+    control = lmerControl(optimizer = "bobyqa",
+       optCtrl = list(maxfun = 1e6)), 
+    data = subset(SP_V_lme_data,Language == "German"))
+
+## Effect CI
+german.ci <- paste(round(fixef(german.fixed.two.model)["MatchMISMATCHING"], 2),"[", 
+   round(fixef(german.fixed.two.model)["MatchMISMATCHING"] + 
+    qnorm(.025)*standard_error(german.fixed.two.model)[2,"SE"], 2), ## Compute CI for illustration 
+   ",",
+   round(fixef(german.fixed.two.model)["MatchMISMATCHING"] + 
+    qnorm(.925)*standard_error(german.fixed.two.model)[2,"SE"], 2),"]")
+
+
+## English
+english.fixed.two.model <- lmer(response_time ~ Match + (1|Subject) + (1|Target) , 
+    control = lmerControl(optimizer = "bobyqa",
+       optCtrl = list(maxfun = 1e6)), 
+    data = subset(SP_V_lme_data,Language == "English"))
+
+english.fixed.three.model <- lmer(response_time ~ Match + (1|Subject) + (1|Target) + (1|PSA_ID), 
+    control = lmerControl(optimizer = "bobyqa",
+       optCtrl = list(maxfun = 1e6)), 
+    data = subset(SP_V_lme_data,Language == "English"))
+
+AIC(english.fixed.three.model) < AIC(english.fixed.two.model) ## TRUE
+#anova(english.fixed.two.model,english.fixed.three.model)
+
+## Effect CI
+english.ci <- paste(round(fixef(english.fixed.three.model)["MatchMISMATCHING"], 2),"[", 
+   round(fixef(english.fixed.three.model)["MatchMISMATCHING"] + 
+    qnorm(.025)*standard_error(english.fixed.three.model)[2,"SE"], 2), ## Compute CI for illustration 
+   ",",
+   round(fixef(english.fixed.three.model)["MatchMISMATCHING"] + 
+    qnorm(.925)*standard_error(english.fixed.three.model)[2,"SE"], 2),"]")
+
+
+## Arabic
+arabic.fixed.two.model <- lmer(response_time ~ Match + (1|Subject) + (1|Target) , 
+    control = lmerControl(optimizer = "bobyqa",
+       optCtrl = list(maxfun = 1e6)), 
+    data = subset(SP_V_lme_data,Language == "Arabic"))
+## Effect CI
+arabic.ci <- paste(round(fixef(arabic.fixed.two.model)["MatchMISMATCHING"], 2),"[", 
+   round(fixef(arabic.fixed.two.model)["MatchMISMATCHING"] + 
+    qnorm(.025)*standard_error(arabic.fixed.two.model)[2,"SE"], 2), ## Compute CI for illustration 
+   ",",
+   round(fixef(arabic.fixed.two.model)["MatchMISMATCHING"] + 
+    qnorm(.925)*standard_error(arabic.fixed.two.model)[2,"SE"], 2),"]")
+
+
+## Brazilian Portuguese
+brazilian_portuguese.fixed.two.model <- lmer(response_time ~ Match + (1|Subject) + (1|Target) , 
+    control = lmerControl(optimizer = "bobyqa",
+       optCtrl = list(maxfun = 1e6)), 
+    data = subset(SP_V_lme_data,Language == "Brazilian Portuguese"))
+
+## Effect CI
+brazilian_portuguese.ci <- paste(round(fixef(brazilian_portuguese.fixed.two.model)["MatchMISMATCHING"], 2),"[", 
+   round(fixef(brazilian_portuguese.fixed.two.model)["MatchMISMATCHING"] + 
+    qnorm(.025)*standard_error(brazilian_portuguese.fixed.two.model)[2,"SE"], 2), ## Compute CI for illustration 
+   ",",
+   round(fixef(brazilian_portuguese.fixed.two.model)["MatchMISMATCHING"] + 
+    qnorm(.925)*standard_error(brazilian_portuguese.fixed.two.model)[2,"SE"], 2),"]")
+
+## Greek
+greek.fixed.two.model <- lmer(response_time ~ Match + (1|Subject) + (1|Target) , 
+    control = lmerControl(optimizer = "bobyqa",
+       optCtrl = list(maxfun = 1e6)), 
+    data = subset(SP_V_lme_data,Language == "Greek"))
+
+## Effect CI
+greek.ci <- paste(round(fixef(greek.fixed.two.model)["MatchMISMATCHING"], 2),"[", 
+   round(fixef(greek.fixed.two.model)["MatchMISMATCHING"] + 
+    qnorm(.025)*standard_error(greek.fixed.two.model)[2,"SE"], 2), ## Compute CI for illustration 
+   ",",
+   round(fixef(greek.fixed.two.model)["MatchMISMATCHING"] + 
+    qnorm(.925)*standard_error(greek.fixed.two.model)[2,"SE"], 2),"]")
+
+## Hebrew
+hebrew.fixed.two.model <- lmer(response_time ~ Match + (1|Subject) + (1|Target) , 
+    control = lmerControl(optimizer = "bobyqa",
+       optCtrl = list(maxfun = 1e6)), 
+    data = subset(SP_V_lme_data,Language == "Hebrew"))
+
+## Effect CI
+hebrew.ci <- paste(round(fixef(hebrew.fixed.two.model)["MatchMISMATCHING"], 2),"[", 
+   round(fixef(hebrew.fixed.two.model)["MatchMISMATCHING"] + 
+    qnorm(.025)*standard_error(hebrew.fixed.two.model)[2,"SE"], 2), ## Compute CI for illustration 
+   ",",
+   round(fixef(hebrew.fixed.two.model)["MatchMISMATCHING"] + 
+    qnorm(.925)*standard_error(hebrew.fixed.two.model)[2,"SE"], 2),"]")
+
+## Hindi
+hindi.fixed.two.model <- lmer(response_time ~ Match + (1|Subject) + (1|Target) , 
+    control = lmerControl(optimizer = "bobyqa",
+       optCtrl = list(maxfun = 1e6)), 
+    data = subset(SP_V_lme_data,Language == "Hindi"))
+
+## Effect CI
+hindi.ci <- paste(round(fixef(hindi.fixed.two.model)["MatchMISMATCHING"], 2),"[", 
+   round(fixef(hindi.fixed.two.model)["MatchMISMATCHING"] + 
+    qnorm(.025)*standard_error(hindi.fixed.two.model)[2,"SE"], 2), ## Compute CI for illustration 
+   ",",
+   round(fixef(hindi.fixed.two.model)["MatchMISMATCHING"] + 
+    qnorm(.925)*standard_error(hindi.fixed.two.model)[2,"SE"], 2),"]")
+
+
+## Hungarian
+hungarian.fixed.two.model <- lmer(response_time ~ Match + (1|Subject) + (1|Target) , 
+    control = lmerControl(optimizer = "bobyqa",
+       optCtrl = list(maxfun = 1e6)), 
+    data = subset(SP_V_lme_data,Language == "Hungarian"))
+
+## Effect CI
+hungarian.ci <- paste(round(fixef(hungarian.fixed.two.model)["MatchMISMATCHING"], 2),"[", 
+   round(fixef(hungarian.fixed.two.model)["MatchMISMATCHING"] + 
+    qnorm(.025)*standard_error(hungarian.fixed.two.model)[2,"SE"], 2), ## Compute CI for illustration 
+   ",",
+   round(fixef(hungarian.fixed.two.model)["MatchMISMATCHING"] + 
+    qnorm(.925)*standard_error(hungarian.fixed.two.model)[2,"SE"], 2),"]")
+
+
+## Norwegian
+norwegian.fixed.two.model <- lmer(response_time ~ Match + (1|Subject) + (1|Target) , 
+     control = lmerControl(optimizer = "bobyqa",
+       optCtrl = list(maxfun = 1e6)), 
+     data = subset(SP_V_lme_data,Language == "Norwegian"))
+
+norwegian.fixed.three.model <- lmer(response_time ~ Match + (1|Subject) + (1|Target) + (1|PSA_ID), 
+     control = lmerControl(optimizer = "bobyqa",
+       optCtrl = list(maxfun = 1e6)), 
+     data = subset(SP_V_lme_data,Language == "Norwegian"))
+
+AIC(norwegian.fixed.three.model) < AIC(norwegian.fixed.two.model) ## FALSE
+
+## Effect CI
+norwegian.ci <- paste(round(fixef(norwegian.fixed.two.model)["MatchMISMATCHING"], 2),"[", 
+   round(fixef(norwegian.fixed.two.model)["MatchMISMATCHING"] + 
+    qnorm(.025)*standard_error(norwegian.fixed.two.model)[2,"SE"], 2), ## Compute CI for illustration 
+   ",",
+   round(fixef(norwegian.fixed.two.model)["MatchMISMATCHING"] + 
+    qnorm(.925)*standard_error(norwegian.fixed.two.model)[2,"SE"], 2),"]")
+
+
+## Polish
+polish.fixed.two.model <- lmer(response_time ~ Match + (1|Subject) + (1|Target) , 
+     control = lmerControl(optimizer = "bobyqa",
+       optCtrl = list(maxfun = 1e6)), 
+     data = subset(SP_V_lme_data,Language == "Polish"))
+
+## Effect CI
+polish.ci <- paste(round(fixef(polish.fixed.two.model)["MatchMISMATCHING"], 2),"[", 
+   round(fixef(polish.fixed.two.model)["MatchMISMATCHING"] + 
+    qnorm(.025)*standard_error(polish.fixed.two.model)[2,"SE"], 2), ## Compute CI for illustration 
+   ",",
+   round(fixef(polish.fixed.two.model)["MatchMISMATCHING"] + 
+    qnorm(.925)*standard_error(polish.fixed.two.model)[2,"SE"], 2),"]")
+
+
+## Portuguese
+portuguese.fixed.two.model <- lmer(response_time ~ Match + (1|Subject) + (1|Target) , 
+    control = lmerControl(optimizer = "bobyqa",
+       optCtrl = list(maxfun = 1e6)), 
+    data = subset(SP_V_lme_data,Language == "Portuguese"))
+
+## Effect CI
+portuguese.ci <- paste(round(fixef(portuguese.fixed.two.model)["MatchMISMATCHING"], 2),"[", 
+   round(fixef(portuguese.fixed.two.model)["MatchMISMATCHING"] + 
+    qnorm(.025)*standard_error(portuguese.fixed.two.model)[2,"SE"], 2), ## Compute CI for illustration 
+   ",",
+   round(fixef(portuguese.fixed.two.model)["MatchMISMATCHING"] + 
+    qnorm(.925)*standard_error(portuguese.fixed.two.model)[2,"SE"], 2),"]")
+
+
+
+## Serbian
+serbian.fixed.two.model <- lmer(response_time ~ Match + (1|Subject) + (1|Target) , 
+     control = lmerControl(optimizer = "bobyqa",
+        optCtrl = list(maxfun = 1e6)), 
+     data = subset(SP_V_lme_data,Language == "Serbian"))
+
+## Effect CI
+serbian.ci <- paste(round(fixef(serbian.fixed.two.model)["MatchMISMATCHING"], 2),"[", 
+   round(fixef(serbian.fixed.two.model)["MatchMISMATCHING"] + 
+    qnorm(.025)*standard_error(serbian.fixed.two.model)[2,"SE"], 2), ## Compute CI for illustration 
+   ",",
+   round(fixef(serbian.fixed.two.model)["MatchMISMATCHING"] + 
+    qnorm(.925)*standard_error(serbian.fixed.two.model)[2,"SE"], 2),"]")
+
+
+## Simplified Chinese
+sc.fixed.two.model <- lmer(response_time ~ Match + (1|Subject) + (1|Target) , 
+    control = lmerControl(optimizer = "bobyqa",
+       optCtrl = list(maxfun = 1e6)), 
+    data = subset(SP_V_lme_data,Language == "Simplified Chinese"))
+sc.fixed.three.model <- lmer(response_time ~ Match + (1|Subject) + (1|Target) + (1|PSA_ID), 
+    control = lmerControl(optimizer = "bobyqa",
+       optCtrl = list(maxfun = 1e6)), 
+    data = subset(SP_V_lme_data,Language == "Simplified Chinese"))
+
+AIC(sc.fixed.three.model) < AIC(sc.fixed.two.model) ## FALSE
+
+## Effect CI
+sc.ci <- paste(round(fixef(sc.fixed.two.model)["MatchMISMATCHING"], 2),"[", 
+   round(fixef(sc.fixed.two.model)["MatchMISMATCHING"] + 
+    qnorm(.025)*standard_error(sc.fixed.two.model)[2,"SE"], 2), ## Compute CI for illustration 
+   ",",
+   round(fixef(sc.fixed.two.model)["MatchMISMATCHING"] + 
+    qnorm(.925)*standard_error(sc.fixed.two.model)[2,"SE"], 2),"]")
+
+
+## Slovak
+slovak.fixed.two.model <- lmer(response_time ~ Match + (1|Subject) + (1|Target) , 
+    control = lmerControl(optimizer = "bobyqa",
+       optCtrl = list(maxfun = 1e6)), 
+    data = subset(SP_V_lme_data,Language == "Slovak"))
+
+## Effect CI
+slovak.ci <- paste(round(fixef(slovak.fixed.two.model)["MatchMISMATCHING"], 2),"[", 
+  round(fixef(slovak.fixed.two.model)["MatchMISMATCHING"] + 
+   qnorm(.025)*standard_error(slovak.fixed.two.model)[2,"SE"], 2), ## Compute CI for illustration 
+  ",",
+  round(fixef(slovak.fixed.two.model)["MatchMISMATCHING"] + 
+   qnorm(.925)*standard_error(slovak.fixed.two.model)[2,"SE"], 2),"]")
+
+
+## Spanish
+spanish.fixed.two.model <- lmer(response_time ~ Match + (1|Subject) + (1|Target) , 
+    control = lmerControl(optimizer = "bobyqa",
+       optCtrl = list(maxfun = 1e6)), 
+    data = subset(SP_V_lme_data,Language == "Spanish"))
+
+## Effect CI
+spanish.ci <- paste(round(fixef(spanish.fixed.two.model)["MatchMISMATCHING"], 2),"[", 
+   round(fixef(spanish.fixed.two.model)["MatchMISMATCHING"] + 
+    qnorm(.025)*standard_error(spanish.fixed.two.model)[2,"SE"], 2), ## Compute CI for illustration 
+   ",",
+   round(fixef(spanish.fixed.two.model)["MatchMISMATCHING"] + 
+    qnorm(.925)*standard_error(spanish.fixed.two.model)[2,"SE"], 2),"]")
+
+
+## Thai
+thai.fixed.two.model <- lmer(response_time ~ Match + (1|Subject) + (1|Target) , 
+    control = lmerControl(optimizer = "bobyqa",
+       optCtrl = list(maxfun = 1e6)), 
+    data = subset(SP_V_lme_data,Language == "Thai"))
+
+## Effect CI
+thai.ci <- paste(round(fixef(thai.fixed.two.model)["MatchMISMATCHING"], 2),"[", 
+   round(fixef(thai.fixed.two.model)["MatchMISMATCHING"] + 
+    qnorm(.025)*standard_error(thai.fixed.two.model)[2,"SE"], 2), ## Compute CI for illustration 
+   ",",
+   round(fixef(thai.fixed.two.model)["MatchMISMATCHING"] + 
+    qnorm(.925)*standard_error(thai.fixed.two.model)[2,"SE"], 2),"]")
+
+
+## Traditional Chinese
+tc.fixed.two.model <- lmer(response_time ~ Match + (1|Subject) + (1|Target) , 
+    control = lmerControl(optimizer = "bobyqa",
+       optCtrl = list(maxfun = 1e6)), 
+    data = subset(SP_V_lme_data,Language == "Traditional Chinese"))
+
+## Effect CI
+tc.ci <- paste(round(fixef(tc.fixed.two.model)["MatchMISMATCHING"], 2),"[", 
+   round(fixef(tc.fixed.two.model)["MatchMISMATCHING"] + 
+    qnorm(.025)*standard_error(tc.fixed.two.model)[2,"SE"], 2), ## Compute CI for illustration 
+   ",",
+   round(fixef(tc.fixed.two.model)["MatchMISMATCHING"] + 
+    qnorm(.925)*standard_error(tc.fixed.two.model)[2,"SE"], 2),"]")
+
+## Turkish
+turkish.fixed.two.model <- lmer(response_time ~ Match + (1|Subject) + (1|Target) , 
+    control = lmerControl(optimizer = "bobyqa",
+       optCtrl = list(maxfun = 1e6)), 
+    data = subset(SP_V_lme_data,Language == "Turkish"))
+
+turkish.fixed.three.model <- lmer(response_time ~ Match + (1|Subject) + (1|Target) + (1|PSA_ID), 
+    control = lmerControl(optimizer = "bobyqa",
+       optCtrl = list(maxfun = 1e6)), 
+    data = subset(SP_V_lme_data,Language == "Turkish"))
+
+AIC(turkish.fixed.three.model) < AIC(turkish.fixed.two.model) ## TRUE
+
+
+## Effect CI
+turkish.ci <- paste(round(fixef(turkish.fixed.three.model)["MatchMISMATCHING"], 2),"[", 
+  round(fixef(turkish.fixed.three.model)["MatchMISMATCHING"] + 
+   qnorm(.025)*standard_error(turkish.fixed.three.model)[2,"SE"], 2), ## Compute CI for illustration 
+  ",",
+  round(fixef(turkish.fixed.three.model)["MatchMISMATCHING"] + 
+   qnorm(.925)*standard_error(turkish.fixed.three.model)[2,"SE"], 2),"]")
+
+SPV_effect_table <- data.frame(
+ Language = sort(unique(SP_V_lme_data$Language)),
+ SPV_CI = c(arabic.ci,
+  brazilian_portuguese.ci,
+  english.ci,
+  german.ci,
+  greek.ci,
+  hebrew.ci,
+  hindi.ci,
+  hungarian.ci,
+  norwegian.ci,
+  polish.ci,
+  portuguese.ci,
+  serbian.ci,
+  sc.ci,
+  slovak.ci,
+  spanish.ci,
+  thai.ci,
+  tc.ci,
+  turkish.ci)
+)
+```
+
+
+
+```{r PP-data-preparation, message = FALSE, warning = FALSE, include = FALSE}
+## Dataset for mixed-effect model
+PP_lme_data <- PP_tidy %>% 
+ filter(Outlier == FALSE) %>% #filter outlier by time rule established above
+ filter(SPV_bound == FALSE) %>% ## Exclude the participants who had SPV accuracy < 70%
+ mutate(Identical = factor(Identical,
+    levels = c("Y","N"),
+    labels = c("1SAME","0DIFF")))
+
+## export data for app5
+write_csv(PP_tidy, file = "includes/files/PP_lme_data.csv")
+```
+
+
+
+```{r PP-source-lme, message = FALSE, warning = FALSE, include = FALSE}
+
+PP.source.lme <- lmerTest::lmer(response_time ~ 
+   Source +  # Fixed effect
+   (1 | Subject) + # By-subject random intercept
+   (1 | Picture1) + # By-item random intercept
+   (1 | PSA_ID) + # By-lab random intercept
+   (1 | Language),
+   data = PP_lme_data,
+   control = lmerControl(optimizer = "bobyqa",optCtrl = list(maxfun = 1e6)) # Increase maximum number of iterations to facilitate model convergence 
+   ) 
+
+#AIC(PP.source.lme) < AIC(PP.lang.lme) ## TRUE
+
+section02_PP_AIC <- AIC(PP.source.lme) # Presentation in text
+section02_PP_BIC <- BIC(PP.source.lme) # Presentation in text
+
+# Comparison of source model and null model
+PP_model_test00 <- round(unlist(anova(PP.lang.lme, PP.source.lme))[c("npar1","npar2","Chisq2","Pr(>Chisq)2")],3)
+
+
+pp_source_out <- round(summary(PP.source.lme)$coefficients["Sourcesite",],3)
+
+
+```
+
+```{r PP-rotation-lme, message = FALSE, warning = FALSE, include = FALSE}
+## Additive fixed effects of mental rotation scores and languages
+PP.lang.add.lme <- lmerTest::lmer(response_time ~ 
+   Identical +  # Fixed effect
+   (1 | Subject) + # By-subject random intercept
+   (1 | Picture1) + # By-item random intercept
+   (1 | PSA_ID) + # By-lab random intercept
+   (1 | Language), # By-language random intercept
+   data = PP_lme_data,
+   control = lmerControl(optimizer = "bobyqa",optCtrl = list(maxfun = 1e6)) # Increase maximum number of iterations to facilitate model convergence 
+   ) 
+
+## Interaction of mental rotation scores and languages
+PP.lang.inter.lme <- lmerTest::lmer(response_time ~ 
+   Identical +  # Fixed effect
+   (1 | Subject) + # By-subject random intercept
+   (1 | Picture1) + # By-item random intercept
+   (1 | PSA_ID) + # By-lab random intercept
+   (Identical | Language), # By-language random intercept
+   data = PP_lme_data,
+   control = lmerControl(optimizer = "bobyqa",optCtrl = list(maxfun = 1e6)) # Increase maximum number of iterations to facilitate model convergence 
+   ) 
+
+#AIC(PP.lang.add.lme) < AIC(PP.lab.lme) ## TRUE
+#AIC(PP.lang.inter.lme)< AIC(PP.lang.add.lme) ## TRUE
+
+
+PP_add_AIC <- AIC(PP.lang.add.lme)
+PP_add_BIC <- BIC(PP.lang.add.lme)
+
+PP_inter_AIC <- AIC(PP.lang.inter.lme)
+PP_inter_BIC <- BIC(PP.lang.inter.lme)
+
+
+PP_model_test01 <- round(unlist(anova(PP.lab.lme, PP.lang.add.lme)),3)[c("npar1","npar2","Chisq2","Pr(>Chisq)2")] ## present in the text
+
+#PP_model_test02 <- round(unlist(anova(PP.lab.lme,PP.lang.inter.lme)),3)[c("npar1","npar2","Chisq2","Pr(>Chisq)2")] 
+
+PP_model_test02 <- round(unlist(anova(PP.lang.add.lme,PP.lang.inter.lme)),3)[c("npar1","npar2","Chisq2","Pr(>Chisq)2")] 
+
+
+#PP_inter_AIC < PP_add_AIC # PP.lang.inter.cor.lme is better
+
+pp_lme_out <- round(summary(PP.lang.inter.lme)$coefficients["Identical0DIFF",],3)
+
+#reported_p <- ifelse(pp_cor_lme_out["Pr(>|t|)"] < .001,"< .001", paste0(" = ", pp_cor_lme_out["Pr(>|t|)"]))
+
+```
+
+```{r PP-lme-coef, message = FALSE, warning = FALSE, include = FALSE}
+## Manage the PP effect CI table
+## source("includes/files/lme_PP_effects.R") 
+
+## German
+german.fixed.two.model <- lmer(response_time ~ Identical + (1|Subject) + (1|Picture1) , 
+    control = lmerControl(optimizer = "bobyqa",
+       optCtrl = list(maxfun = 1e6)), 
+    data = subset(PP_lme_data,Language == "German"))
+
+german.fixed.three.model <- lmer(response_time ~ Identical + (1|Subject) + (1|Picture1) + (1|PSA_ID) , 
+    control = lmerControl(optimizer = "bobyqa",
+       optCtrl = list(maxfun = 1e6)), 
+    data = subset(PP_lme_data,Language == "German"))
+
+AIC(german.fixed.three.model) < AIC(german.fixed.two.model) ## FALSE
+
+## Effect CI
+german.ci <- paste(round(fixef(german.fixed.two.model)["Identical0DIFF"], 2),"[", 
+   round(fixef(german.fixed.two.model)["Identical0DIFF"] + 
+    qnorm(.025)*standard_error(german.fixed.two.model)[2,"SE"], 2), ## Compute CI for illustration 
+   ",",
+   round(fixef(german.fixed.two.model)["Identical0DIFF"] + 
+    qnorm(.925)*standard_error(german.fixed.two.model)[2,"SE"], 2),"]")
+
+
+## English
+english.fixed.two.model <- lmer(response_time ~ Identical + (1|Subject) + (1|Picture1) , 
+    control = lmerControl(optimizer = "bobyqa",
+       optCtrl = list(maxfun = 1e6)), 
+    data = subset(PP_lme_data,Language == "English"))
+
+english.fixed.three.model <- lmer(response_time ~ Identical + (1|Subject) + (1|Picture1) + (1|PSA_ID), 
+    control = lmerControl(optimizer = "bobyqa",
+       optCtrl = list(maxfun = 1e6)), 
+    data = subset(PP_lme_data,Language == "English"))
+
+AIC(english.fixed.three.model) < AIC(english.fixed.two.model) ## TRUE
+#anova(english.fixed.two.model,english.fixed.three.model)
+
+## Effect CI
+english.ci <- paste(round(fixef(english.fixed.three.model)["Identical0DIFF"], 2),"[", 
+   round(fixef(english.fixed.three.model)["Identical0DIFF"] + 
+    qnorm(.025)*standard_error(english.fixed.three.model)[2,"SE"], 2), ## Compute CI for illustration 
+   ",",
+   round(fixef(english.fixed.three.model)["Identical0DIFF"] + 
+    qnorm(.925)*standard_error(english.fixed.three.model)[2,"SE"], 2),"]")
+
+
+## Arabic
+arabic.fixed.two.model <- lmer(response_time ~ Identical + (1|Subject) + (1|Picture1) , 
+    control = lmerControl(optimizer = "bobyqa",
+       optCtrl = list(maxfun = 1e6)), 
+    data = subset(PP_lme_data,Language == "Arabic"))
+## Effect CI
+arabic.ci <- paste(round(fixef(arabic.fixed.two.model)["Identical0DIFF"], 2),"[", 
+   round(fixef(arabic.fixed.two.model)["Identical0DIFF"] + 
+    qnorm(.025)*standard_error(arabic.fixed.two.model)[2,"SE"], 2), ## Compute CI for illustration 
+   ",",
+   round(fixef(arabic.fixed.two.model)["Identical0DIFF"] + 
+    qnorm(.925)*standard_error(arabic.fixed.two.model)[2,"SE"], 2),"]")
+
+
+## Brazilian Portuguese
+brazilian_portuguese.fixed.two.model <- lmer(response_time ~ Identical + (1|Subject) + (1|Picture1) , 
+    control = lmerControl(optimizer = "bobyqa",
+       optCtrl = list(maxfun = 1e6)), 
+    data = subset(PP_lme_data,Language == "Brazilian Portuguese"))
+
+## Effect CI
+brazilian_portuguese.ci <- paste(round(fixef(brazilian_portuguese.fixed.two.model)["Identical0DIFF"], 2),"[", 
+   round(fixef(brazilian_portuguese.fixed.two.model)["Identical0DIFF"] + 
+    qnorm(.025)*standard_error(brazilian_portuguese.fixed.two.model)[2,"SE"], 2), ## Compute CI for illustration 
+   ",",
+   round(fixef(brazilian_portuguese.fixed.two.model)["Identical0DIFF"] + 
+    qnorm(.925)*standard_error(brazilian_portuguese.fixed.two.model)[2,"SE"], 2),"]")
+
+## Greek
+greek.fixed.two.model <- lmer(response_time ~ Identical + (1|Subject) + (1|Picture1) , 
+    control = lmerControl(optimizer = "bobyqa",
+       optCtrl = list(maxfun = 1e6)), 
+    data = subset(PP_lme_data,Language == "Greek"))
+
+## Effect CI
+greek.ci <- paste(round(fixef(greek.fixed.two.model)["Identical0DIFF"], 2),"[", 
+   round(fixef(greek.fixed.two.model)["Identical0DIFF"] + 
+    qnorm(.025)*standard_error(greek.fixed.two.model)[2,"SE"], 2), ## Compute CI for illustration 
+   ",",
+   round(fixef(greek.fixed.two.model)["Identical0DIFF"] + 
+    qnorm(.925)*standard_error(greek.fixed.two.model)[2,"SE"], 2),"]")
+
+## Hebrew
+hebrew.fixed.two.model <- lmer(response_time ~ Identical + (1|Subject) + (1|Picture1) , 
+    control = lmerControl(optimizer = "bobyqa",
+       optCtrl = list(maxfun = 1e6)), 
+    data = subset(PP_lme_data,Language == "Hebrew"))
+
+## Effect CI
+hebrew.ci <- paste(round(fixef(hebrew.fixed.two.model)["Identical0DIFF"], 2),"[", 
+   round(fixef(hebrew.fixed.two.model)["Identical0DIFF"] + 
+    qnorm(.025)*standard_error(hebrew.fixed.two.model)[2,"SE"], 2), ## Compute CI for illustration 
+   ",",
+   round(fixef(hebrew.fixed.two.model)["Identical0DIFF"] + 
+    qnorm(.925)*standard_error(hebrew.fixed.two.model)[2,"SE"], 2),"]")
+
+## Hindi
+hindi.fixed.two.model <- lmer(response_time ~ Identical + (1|Subject) + (1|Picture1) , 
+    control = lmerControl(optimizer = "bobyqa",
+       optCtrl = list(maxfun = 1e6)), 
+    data = subset(PP_lme_data,Language == "Hindi"))
+
+## Effect CI
+hindi.ci <- paste(round(fixef(hindi.fixed.two.model)["Identical0DIFF"], 2),"[", 
+   round(fixef(hindi.fixed.two.model)["Identical0DIFF"] + 
+    qnorm(.025)*standard_error(hindi.fixed.two.model)[2,"SE"], 2), ## Compute CI for illustration 
+   ",",
+   round(fixef(hindi.fixed.two.model)["Identical0DIFF"] + 
+    qnorm(.925)*standard_error(hindi.fixed.two.model)[2,"SE"], 2),"]")
+
+
+## Hungarian
+hungarian.fixed.two.model <- lmer(response_time ~ Identical + (1|Subject) + (1|Picture1) , 
+    control = lmerControl(optimizer = "bobyqa",
+       optCtrl = list(maxfun = 1e6)), 
+    data = subset(PP_lme_data,Language == "Hungarian"))
+
+## Effect CI
+hungarian.ci <- paste(round(fixef(hungarian.fixed.two.model)["Identical0DIFF"], 2),"[", 
+   round(fixef(hungarian.fixed.two.model)["Identical0DIFF"] + 
+    qnorm(.025)*standard_error(hungarian.fixed.two.model)[2,"SE"], 2), ## Compute CI for illustration 
+   ",",
+   round(fixef(hungarian.fixed.two.model)["Identical0DIFF"] + 
+    qnorm(.925)*standard_error(hungarian.fixed.two.model)[2,"SE"], 2),"]")
+
+
+## Norwegian
+norwegian.fixed.two.model <- lmer(response_time ~ Identical + (1|Subject) + (1|Picture1) , 
+     control = lmerControl(optimizer = "bobyqa",
+       optCtrl = list(maxfun = 1e6)), 
+     data = subset(PP_lme_data,Language == "Norwegian"))
+
+norwegian.fixed.three.model <- lmer(response_time ~ Identical + (1|Subject) + (1|Picture1) + (1|PSA_ID), 
+     control = lmerControl(optimizer = "bobyqa",
+       optCtrl = list(maxfun = 1e6)), 
+     data = subset(PP_lme_data,Language == "Norwegian"))
+
+AIC(norwegian.fixed.three.model) < AIC(norwegian.fixed.two.model) ## FALSE
+
+## Effect CI
+norwegian.ci <- paste(round(fixef(norwegian.fixed.two.model)["Identical0DIFF"], 2),"[", 
+   round(fixef(norwegian.fixed.two.model)["Identical0DIFF"] + 
+    qnorm(.025)*standard_error(norwegian.fixed.two.model)[2,"SE"], 2), ## Compute CI for illustration 
+   ",",
+   round(fixef(norwegian.fixed.two.model)["Identical0DIFF"] + 
+    qnorm(.925)*standard_error(norwegian.fixed.two.model)[2,"SE"], 2),"]")
+
+
+## Polish
+polish.fixed.two.model <- lmer(response_time ~ Identical + (1|Subject) + (1|Picture1) , 
+     control = lmerControl(optimizer = "bobyqa",
+       optCtrl = list(maxfun = 1e6)), 
+     data = subset(PP_lme_data,Language == "Polish"))
+
+## Effect CI
+polish.ci <- paste(round(fixef(polish.fixed.two.model)["Identical0DIFF"], 2),"[", 
+   round(fixef(polish.fixed.two.model)["Identical0DIFF"] + 
+    qnorm(.025)*standard_error(polish.fixed.two.model)[2,"SE"], 2), ## Compute CI for illustration 
+   ",",
+   round(fixef(polish.fixed.two.model)["Identical0DIFF"] + 
+    qnorm(.925)*standard_error(polish.fixed.two.model)[2,"SE"], 2),"]")
+
+
+## Portuguese
+portuguese.fixed.two.model <- lmer(response_time ~ Identical + (1|Subject) + (1|Picture1) , 
+    control = lmerControl(optimizer = "bobyqa",
+       optCtrl = list(maxfun = 1e6)), 
+    data = subset(PP_lme_data,Language == "Portuguese"))
+
+## Effect CI
+portuguese.ci <- paste(round(fixef(portuguese.fixed.two.model)["Identical0DIFF"], 2),"[", 
+   round(fixef(portuguese.fixed.two.model)["Identical0DIFF"] + 
+    qnorm(.025)*standard_error(portuguese.fixed.two.model)[2,"SE"], 2), ## Compute CI for illustration 
+   ",",
+   round(fixef(portuguese.fixed.two.model)["Identical0DIFF"] + 
+    qnorm(.925)*standard_error(portuguese.fixed.two.model)[2,"SE"], 2),"]")
+
+## Serbian
+serbian.fixed.two.model <- lmer(response_time ~ Identical + (1|Subject) + (1|Picture1) , 
+     control = lmerControl(optimizer = "bobyqa",
+        optCtrl = list(maxfun = 1e6)), 
+     data = subset(PP_lme_data,Language == "Serbian"))
+
+## Effect CI
+serbian.ci <- paste(round(fixef(serbian.fixed.two.model)["Identical0DIFF"], 2),"[", 
+   round(fixef(serbian.fixed.two.model)["Identical0DIFF"] + 
+    qnorm(.025)*standard_error(serbian.fixed.two.model)[2,"SE"], 2), ## Compute CI for illustration 
+   ",",
+   round(fixef(serbian.fixed.two.model)["Identical0DIFF"] + 
+    qnorm(.925)*standard_error(serbian.fixed.two.model)[2,"SE"], 2),"]")
+
+
+## Simplified Chinese
+sc.fixed.two.model <- lmer(response_time ~ Identical + (1|Subject) + (1|Picture1) , 
+    control = lmerControl(optimizer = "bobyqa",
+       optCtrl = list(maxfun = 1e6)), 
+    data = subset(PP_lme_data,Language == "Simplified Chinese"))
+sc.fixed.three.model <- lmer(response_time ~ Identical + (1|Subject) + (1|Picture1) + (1|PSA_ID), 
+    control = lmerControl(optimizer = "bobyqa",
+       optCtrl = list(maxfun = 1e6)), 
+    data = subset(PP_lme_data,Language == "Simplified Chinese"))
+
+AIC(sc.fixed.three.model) < AIC(sc.fixed.two.model) ## FALSE
+
+## Effect CI
+sc.ci <- paste(round(fixef(sc.fixed.two.model)["Identical0DIFF"], 2),"[", 
+   round(fixef(sc.fixed.two.model)["Identical0DIFF"] + 
+    qnorm(.025)*standard_error(sc.fixed.two.model)[2,"SE"], 2), ## Compute CI for illustration 
+   ",",
+   round(fixef(sc.fixed.two.model)["Identical0DIFF"] + 
+    qnorm(.925)*standard_error(sc.fixed.two.model)[2,"SE"], 2),"]")
+
+
+## Slovak
+slovak.fixed.two.model <- lmer(response_time ~ Identical + (1|Subject) + (1|Picture1) , 
+    control = lmerControl(optimizer = "bobyqa",
+       optCtrl = list(maxfun = 1e6)), 
+    data = subset(PP_lme_data,Language == "Slovak"))
+
+## Effect CI
+slovak.ci <- paste(round(fixef(slovak.fixed.two.model)["Identical0DIFF"], 2),"[", 
+  round(fixef(slovak.fixed.two.model)["Identical0DIFF"] + 
+   qnorm(.025)*standard_error(slovak.fixed.two.model)[2,"SE"], 2), ## Compute CI for illustration 
+  ",",
+  round(fixef(slovak.fixed.two.model)["Identical0DIFF"] + 
+   qnorm(.925)*standard_error(slovak.fixed.two.model)[2,"SE"], 2),"]")
+
+
+## Spanish
+spanish.fixed.two.model <- lmer(response_time ~ Identical + (1|Subject) + (1|Picture1) , 
+    control = lmerControl(optimizer = "bobyqa",
+       optCtrl = list(maxfun = 1e6)), 
+    data = subset(PP_lme_data,Language == "Spanish"))
+
+## Effect CI
+spanish.ci <- paste(round(fixef(spanish.fixed.two.model)["Identical0DIFF"], 2),"[", 
+   round(fixef(spanish.fixed.two.model)["Identical0DIFF"] + 
+    qnorm(.025)*standard_error(spanish.fixed.two.model)[2,"SE"], 2), ## Compute CI for illustration 
+   ",",
+   round(fixef(spanish.fixed.two.model)["Identical0DIFF"] + 
+    qnorm(.925)*standard_error(spanish.fixed.two.model)[2,"SE"], 2),"]")
+
+
+## Thai
+thai.fixed.two.model <- lmer(response_time ~ Identical + (1|Subject) + (1|Picture1) , 
+    control = lmerControl(optimizer = "bobyqa",
+       optCtrl = list(maxfun = 1e6)), 
+    data = subset(PP_lme_data,Language == "Thai"))
+
+## Effect CI
+thai.ci <- paste(round(fixef(thai.fixed.two.model)["Identical0DIFF"], 2),"[", 
+   round(fixef(thai.fixed.two.model)["Identical0DIFF"] + 
+    qnorm(.025)*standard_error(thai.fixed.two.model)[2,"SE"], 2), ## Compute CI for illustration 
+   ",",
+   round(fixef(thai.fixed.two.model)["Identical0DIFF"] + 
+    qnorm(.925)*standard_error(thai.fixed.two.model)[2,"SE"], 2),"]")
+
+
+## Traditional Chinese
+tc.fixed.two.model <- lmer(response_time ~ Identical + (1|Subject) + (1|Picture1) , 
+    control = lmerControl(optimizer = "bobyqa",
+       optCtrl = list(maxfun = 1e6)), 
+    data = subset(PP_lme_data,Language == "Traditional Chinese"))
+
+## Effect CI
+tc.ci <- paste(round(fixef(tc.fixed.two.model)["Identical0DIFF"], 2),"[", 
+   round(fixef(tc.fixed.two.model)["Identical0DIFF"] + 
+    qnorm(.025)*standard_error(tc.fixed.two.model)[2,"SE"], 2), ## Compute CI for illustration 
+   ",",
+   round(fixef(tc.fixed.two.model)["Identical0DIFF"] + 
+    qnorm(.925)*standard_error(tc.fixed.two.model)[2,"SE"], 2),"]")
+
+## Turkish
+turkish.fixed.two.model <- lmer(response_time ~ Identical + (1|Subject) + (1|Picture1) , 
+    control = lmerControl(optimizer = "bobyqa",
+       optCtrl = list(maxfun = 1e6)), 
+    data = subset(PP_lme_data,Language == "Turkish"))
+
+turkish.fixed.three.model <- lmer(response_time ~ Identical + (1|Subject) + (1|Picture1) + (1|PSA_ID), 
+    control = lmerControl(optimizer = "bobyqa",
+       optCtrl = list(maxfun = 1e6)), 
+    data = subset(PP_lme_data,Language == "Turkish"))
+
+AIC(turkish.fixed.three.model) < AIC(turkish.fixed.two.model) ## TRUE
+
+
+## Effect CI
+turkish.ci <- paste(round(fixef(turkish.fixed.two.model)["Identical0DIFF"], 2),"[", 
+  round(fixef(turkish.fixed.two.model)["Identical0DIFF"] + 
+   qnorm(.025)*standard_error(turkish.fixed.two.model)[2,"SE"], 2), ## Compute CI for illustration 
+  ",",
+  round(fixef(turkish.fixed.two.model)["Identical0DIFF"] + 
+   qnorm(.925)*standard_error(turkish.fixed.two.model)[2,"SE"], 2),"]")
+
+PP_effect_table <- data.frame(
+ Language = sort(unique(PP_lme_data$Language)),
+ PP_CI = c(arabic.ci,
+  brazilian_portuguese.ci,
+  english.ci,
+  german.ci,
+  greek.ci,
+  hebrew.ci,
+  hindi.ci,
+  hungarian.ci,
+  norwegian.ci,
+  polish.ci,
+  portuguese.ci,
+  serbian.ci,
+  sc.ci,
+  slovak.ci,
+  spanish.ci,
+  thai.ci,
+  tc.ci,
+  turkish.ci)
+)
+```
+
+```{r lme-coef, echo = FALSE, message = FALSE, warning = FALSE, paged.print = TRUE}
+## Merge SPV and PP effect tables
+#effect_table <- 
+SPV_effect_table %>% left_join(
+ PP_effect_table, by = "Language"
+) %>% 
+## Caption of this table can not be rendered in output pdf.
+#effect_table %>%
+ kable(
+ format = "latex",
+ booktabs = TRUE,
+ escape = FALSE,
+ col.names = c("Language","Match Advantage","Mental Rotation Score"),
+ align = c("l","r","r"),
+ caption = "Estimated effects and 95\\% confidence interval grouped by languages."
+ )
+## Note for changes:
+## This table was based on Zolten's suggestion. Because of some package problem, this chunk is disable.
+```
+
+
+
+```{r prediction_data, message = FALSE, warning = FALSE, include = FALSE}
+## Dataset for prediciton model
+PP_aov_data <- PP_tidy %>% #left_join(outliers_table, by = c("PSA_ID" = "LAB", "Subject" = "Subject")) %>% ## filter the outliers by SP_V data
+ filter(Outlier == FALSE) %>%#filter outlier by time rule established above
+ filter(SPV_bound == FALSE) %>% ## Exclude the participants who had accuracy < 70%
+ group_by(Source, Language, PSA_ID, Subject, Identical) %>%
+ summarise(subject_M = median(response_time), subject_ACC = mean(correct))
+
+## Merge the SP_V and PP data by participants' mean response times
+model_data <- (SP_V_tidy %>% 
+ filter(Outlier == FALSE) %>% 
+ group_by(Language, Subject, Match) %>%
+ summarise(subject_M = median(response_time)) %>%
+ pivot_wider(names_from = Match, values_from = c(subject_M)) %>%
+ mutate(Effect = (N - Y) )) %>%
+left_join(
+(PP_aov_data %>%
+ select(-subject_ACC) %>%
+ pivot_wider(names_from = Identical, values_from = subject_M) %>%
+ mutate(Imagery = (N - Y))),
+by = c("Language","Subject")
+)
+```
+
+```{r prediction_model, message = FALSE, warning = FALSE, include = FALSE}
+## Prediction models for all languages 
+lang_model1 <- lm(Effect ~ Language*Imagery, data = model_data)
+lang_model0 <- lm(Effect ~ Language, data = lang_model1$model)
+model_test <- anova(lang_model0, lang_model1)[2,c("Df","Res.Df","F","Pr(>F)")]
+lang_reults <- apa_print(lang_model0)
+
+lang_reults$table$term = lang_reults$table$term %>% gsub(pattern = "Language", replacement = "")
+
+
+## Below result does not show in the report.
+Ger_model0 <- lm(Effect ~ Imagery,
+data = subset(model_data, Language == "German"))
+
+Ger_result <- summary(Ger_model0)$coef["Imagery",]
+```
+
+```{r prediction-coef, echo = FALSE, message = FALSE, warning = FALSE, paged.print = TRUE}
+
+lang_reults$table %>% as.data.frame() %>% 
+ kable( 
+ format = "latex",
+ booktabs = TRUE,
+ escape = FALSE,
+ col.names = c("Predictor","b","95\\% CI","t","df", "p"),
+ align = c("l","r","r","r","r","r"),
+ caption = "Regression coefficient generated from the mental rotation scores. Dependent variable is the match advantages."
+ )
+## Note for changes:
+## This table was based on Zolten's suggestion. Because of some package problem, this chunk is disable.
+```
