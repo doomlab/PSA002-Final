@@ -1,0 +1,235 @@
+---
+title: 'Appendix 3: Summary of participant characteristics'
+#tags: `PSA002`
+output: pdf_document
+header-includes:
+  - \usepackage{caption}
+  - \usepackage{float}
+  - \captionsetup[table]{name=Table S,labelsep = period}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+library(tidyverse)
+library(data.table)
+library(flextable)
+library(lme4)
+```
+
+
+
+
+```{r load_info, message=FALSE, warning=FALSE, include=FALSE}
+# Load lab information
+lab_info <- ##dirname(getwd()) %>%
+  dir(path = "..",full.names = TRUE, recursive = TRUE, include.dirs = TRUE, pattern = "Lab_info.csv")  %>%
+  read_csv()
+
+lab_fin <- ##dirname(getwd()) %>%
+  dir(path = "..",full.names = TRUE, recursive = TRUE, include.dirs = TRUE, pattern = "lab_fin.csv")  %>%
+  read_csv()
+
+# Load meta data of in site data: age, female numbers
+
+insite_meta <- dir(path = "..",full.names = TRUE, recursive = TRUE, include.dirs = TRUE, pattern = "insite_meta.csv") %>%
+  read_csv() 
+
+# Load and summary meta data of online data: age, female numbers, language proficiency
+osweb_meta <- dir(path = "..",full.names = TRUE, recursive = TRUE, include.dirs = TRUE, pattern = "jatos_meta.csv") %>%
+  read_csv() %>%
+  mutate(gender = ifelse(gender==1,"FEMALE",ifelse(gender==2,"MALE","OTHER"))) %>%
+  mutate(birth_year = as.numeric(birth_year)) %>%
+  mutate(year = ifelse(birth_year > 21 & !is.na(birth_year), 1900 + birth_year, 2000 + birth_year)) %>%
+  mutate(age = ifelse(!is.na(year),2021-year,NA)) %>%
+  group_by(Batch) %>%
+  summarise(N = n(), Female_N = sum(gender=="FEMALE",na.rm = TRUE), Age = round(mean(age, na.rm=TRUE),0), Proficiency = round(mean(lang_prof),0) )
+
+SP_V <-  dir(path = "..",
+      pattern = "all_rawdata_SP_V",   ## include in-site and internet data
+      recursive = TRUE, full.names = TRUE) %>% 
+      read_csv() %>%
+      subset(correct == 1 & Match != "F") %>%  ## Exclude the incorrect responses and filler trials
+      inner_join(select(lab_info, PSA_ID, Language), by = "PSA_ID") %>%
+    distinct() %>% ## Merge the language aspects
+    mutate(Language = ifelse(Language == "Magyar", "Hungarian", Language)) %>%  ## Switch "Magyar" to "Hungrian"
+    mutate(Language = ifelse(Language == "Simple Chinese", "Simplified Chinese", Language)) %>%  ## Switch "Simple Chinese" to "Simplified Chinese"
+    mutate(Source = if_else(opensesame_codename == "osweb","osweb","site"), 
+           Subject = paste0(Source,"_",PSA_ID,"_",subject_nr)) ## Compose the unique participant id
+
+
+## Data Exclusions: Participant Level 
+## Stat information for Participants and Intra-lab analysis sections
+Raw_total <- SP_V %>%
+    group_by(Language, PSA_ID, Subject) %>%
+    summarise(Excluded = sum(Acc_bound == TRUE), source = sum(opensesame_codename == "osweb")) %>% ## summation of the excluded participants and the participants from Internet.
+    group_by(Language, PSA_ID) %>%
+    summarise(N = n(), N_excluded = sum(Excluded == 24), N_web = sum(source == 24)) 
+
+# Load PP verification responses
+PP <- dir(path = "..",
+      pattern = "all_rawdata_PP", 
+      recursive = TRUE, full.names = TRUE) %>% 
+      read_csv() %>%
+      subset(correct == 1 & Identical != "F")  %>%  ## Exclude the incorrect responses and filler trials
+      inner_join(select(lab_info, PSA_ID, Language), by = "PSA_ID") %>%
+    distinct() %>% ## Merge the language aspects
+    mutate(Language = ifelse(Language == "Magyar", "Hungarian", Language)) %>%  ## Switch "Magyar" to "Hungrian"
+    mutate(Language = ifelse(Language == "Simple Chinese", "Simplified Chinese", Language)) %>%  ## Switch "Simple Chinese" to "Simplified Chinese"
+    mutate(Source = if_else(opensesame_codename == "osweb","osweb","site"), 
+           Subject = paste0(Source,"_",PSA_ID,"_",subject_nr)) ## Compose the unique participant id
+
+## Summarize the valid participants' SP verification data
+SP_V_subj_site <- SP_V %>%
+    filter(Source!="osweb") %>%  # exclude jatos data
+    group_by(Subject) %>%
+    mutate(acc = n()/24) %>%
+    filter(acc > .7) %>%
+    group_by(Language, PSA_ID, Subject, Match) %>%
+    summarise(V_RT = median(response_time), V_Acc = n()/12) 
+
+## Tidy SP V data for mixed linear model
+SP_V_site_tidy <- SP_V %>% 
+  filter(Source!="osweb")
+
+## Tidy PP data for mixed linear model
+PP_site_tidy <- PP %>% 
+    filter(Source!="osweb")
+
+## Summarize the valid participants' PP verification data
+PP_subj_site <- PP_site_tidy %>%
+    mutate(Match = (Orientation1 == Orientation2)) %>%
+    group_by(Language, PSA_ID, Subject, Match) %>%
+    summarise(P_RT = median(response_time), P_Acc = n()/12) 
+
+SP_V_osweb <-  SP_V %>%
+      filter(Source=="osweb") %>%   # include jatos data
+      subset(correct == 1 & Match != "F") %>%  ## Exclude the incorrect responses and filler trials
+    distinct() %>% ## Merge the language aspects
+    filter(!(PSA_ID == "USA_033" & subject_nr == 39)) ## exclude this participant who had not complete PP
+
+## Tidy SP V data for mixed linear model
+SP_V_osweb_tidy <- SP_V_osweb 
+
+## Summarize the valid participants' SP verification data
+SP_V_subj_osweb <- SP_V_osweb %>%
+    group_by(Subject) %>%
+    mutate(acc = n()/24) %>%
+    filter(acc > .7) %>%
+    group_by(Language, PSA_ID, Subject, Match) %>%
+    summarise(V_RT = median(response_time), V_Acc = n()/12) 
+
+PP_osweb <-  PP %>%
+      filter(Source=="osweb") %>%   # include jatos data
+      subset(correct == 1 & Identical != "F")  %>%  ## Exclude the incorrect responses and filler trials
+    distinct() %>% ## Merge the language aspects
+    filter(!(PSA_ID == "USA_033" & subject_nr == 39)) ## exclude this participant who had not complete PP
+
+## Tidy PP data for mixed linear model
+PP_osweb_tidy <- PP_osweb 
+
+## Summarize the valid participants' PP verification data
+PP_subj_osweb <- PP_osweb_tidy %>%
+    mutate(Match = (Orientation1 == Orientation2)) %>%
+    group_by(Language, PSA_ID, Subject, Match) %>%
+    summarise(P_RT = median(response_time), P_Acc = n()/12) 
+
+## 
+SP_V_tidy = bind_rows(SP_V_site_tidy, SP_V_osweb_tidy)
+```
+
+
+```{r outlier-check, message=FALSE, warning=FALSE, include=FALSE, paged.print=TRUE}
+
+LABS <- unique(SP_V_tidy$PSA_ID)
+
+outliers_table <- NULL
+for(lab_id in LABS){
+  outliers_table<-  (subset(SP_V_tidy,PSA_ID == lab_id) %>%
+## codes from Stage2_Method.Rmd: erin_outliers
+  group_by(Subject) %>% 
+  mutate(MAD = mad(response_time),
+         med = median(response_time),
+         Outlier = response_time <= 160 | response_time >= (med + 2*MAD)) 
+  ) %>%
+    mutate(LAB = PSA_ID) %>%
+    rbind(outliers_table)
+}
+```
+
+```{r insite-meta, echo=FALSE, message=FALSE, warning=FALSE}
+insite_meta[,-1]   %>%
+  mutate(N=paste0(N,"(",Female_N,")"),Age=round(Age,0)) %>%
+  select(PSA_ID, N, Age) %>%
+  left_join((Raw_total %>%
+              select(PSA_ID, N_excluded))[,c(2,3)],
+            by = "PSA_ID") %>%
+  flextable( defaults = TRUE) %>%
+  set_header_labels(PSA_ID="Lab ID", 
+                    N = "Total N(Number of Females)", 
+                    Age = "Average age\n(years)",
+                    N_excluded = "Excluded") %>%
+  set_caption(caption = "Characteristics of on-site participants.") %>%
+  autofit()
+```
+
+\newpage
+
+```{r osweb-meta, echo=FALSE, message=FALSE, warning=FALSE}
+osweb_meta %>%
+  mutate(N=paste0(N,"(",Female_N,")")) %>%
+  select(Batch, N, Age, Proficiency) %>%
+  left_join((Raw_total %>%
+              select(PSA_ID, N_excluded))[,c(2,3)],
+            by = c("Batch"="PSA_ID" )) %>%
+  flextable( defaults = TRUE) %>%
+  set_header_labels(Batch="Lab ID", 
+                    N = "Total N(Number of Females)",
+                    Age = "Average age\n(years)", 
+                    Proficiency = "Proficiency\n accuracy(%)",
+                    N_excluded = "Excluded") %>%
+  set_caption(caption = "Characteristics of online participants.") %>%
+  add_footer_lines("Note. No participants from ARE_001 reported their birth year.") %>%
+  autofit()
+```
+
+\newpage
+
+```{r count-all, echo=FALSE, message=FALSE, warning=FALSE}
+sum_all <- (bind_rows(cbind(Source = "site",SP_V_subj_site),cbind(Source="osweb",SP_V_subj_osweb))  %>% 
+  group_by(Source, Language, PSA_ID) %>%
+  summarise(SP_N = n()/2)) %>%
+left_join(  
+(bind_rows(cbind(Source = "site",PP_subj_site),cbind(Source = "osweb",PP_subj_osweb)) %>% 
+  group_by(Source, Language, PSA_ID) %>%
+  summarise(PP_N = n()/2)),
+by=c("Source","Language","PSA_ID")
+) %>%
+    pivot_wider(names_from = Source, values_from = c(SP_N, PP_N) ) %>%
+  select(Language, PSA_ID, SP_N_site, PP_N_site, SP_N_osweb, PP_N_osweb)
+
+sum_all %>%
+  flextable( defaults = TRUE) %>%
+  set_header_labels(PSA_ID="Lab ID", SP_N_site = "SP", PP_N_site = "PP", SP_N_osweb = "SP", PP_N_osweb = "PP") %>%
+  add_header_row(values = c("","on sites","online"),
+                 colwidths = c(2,2,2))%>%
+  set_caption(caption = "Number of participants completed the experimental tasks.") %>%
+  add_footer_lines("Note. SP~ Sentence-picture verifiaction task; PP~ Picture-picture verifiaction task") %>%
+  align(part="header",align="center") %>%
+  autofit()
+```
+
+\newpage
+
+
+```{r outlier-sum, echo=FALSE, message=FALSE, warning=FALSE}
+## Summarize outliers by lab
+outliers_sum <- outliers_table %>%
+  group_by(LAB) %>%
+  summarise(N = sum(Outlier), Prop = round(sum(Outlier)/n(),2) )
+
+flextable(outliers_sum) %>%
+  set_header_labels(LAB="Lab ID", N = "Numbers of\nexcluded responses", Prop = "Proportion of\nexcluded responses") %>%
+  set_caption(caption = "Number and proportion of outliers by laboratory.") %>%
+  add_footer_lines("Note. Outliers are decided by the medians of participants' response times plus 2 median absolute deviation.") %>%
+  autofit()
+```
