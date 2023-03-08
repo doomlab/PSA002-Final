@@ -1,0 +1,101 @@
+\begin{table*}[hbt]
+\ifnextchar[{\eatarg}{}
+[tbp]
+
+\begin{center}
+\begin{threeparttable}
+
+\caption{\label{tab:sample-table}Demographic and Sample Size Characteristics}
+
+\footnotesize{
+
+\begin{tabular}{lccccccccc}
+\toprule
+Language & SP
+Trials & PP
+Trials & SP
+N & PP
+N & Demo
+N & Female
+N & Male
+N & M
+Age & SD
+Age\\
+\midrule
+Arabic & 2544 & 2544 & 106 & 106 & 107 & 42 & 12 & 32.26 & 18.59\\
+Brazilian Portuguese & 1200 & 1200 & 50 & 50 & 50 & 36 & 13 & 30.80 & 8.73\\
+English & 45189 & 45336 & 1884 & 1889 & 2055 & 1360 & 465 & 21.71 & 3.85\\
+German & 5616 & 5616 & 234 & 234 & 248 & 98 & 26 & 22.34 & 3.40\\
+Greek & 2376 & 2376 & 99 & 99 & 109 & 0 & 0 & 33.86 & 11.30\\
+Hebrew & 3576 & 3571 & 149 & 149 & 181 & 0 & 0 & 24.25 & 9.29\\
+Hindi & 1896 & 1896 & 79 & 79 & 86 & 57 & 27 & 21.66 & 3.46\\
+Magyar & 3610 & 3816 & 151 & 159 & 168 & 3 & 1 & 21.50 & 2.82\\
+Norwegian & 3576 & 3576 & 149 & 149 & 154 & 13 & 9 & 25.22 & 6.40\\
+Polish & 1368 & 1368 & 57 & 57 & 146 & 0 & 0 & 23.25 & 7.96\\
+Portuguese & 1488 & 1464 & 62 & 61 & 55 & 26 & 23 & 30.74 & 9.09\\
+Serbian & 3120 & 3120 & 130 & 130 & 130 & 108 & 21 & 21.38 & 4.50\\
+Simple Chinese & 2040 & 2016 & 85 & 84 & 96 & 0 & 1 & 21.92 & 4.68\\
+Slovak & 3881 & 3599 & 162 & 150 & 325 & 1 & 0 & 21.77 & 2.33\\
+Spanish & 3120 & 3096 & 130 & 129 & 146 & 0 & 0 & 21.73 & 3.83\\
+Thai & 1200 & 1152 & 50 & 48 & 50 & 29 & 9 & 21.54 & 3.81\\
+Traditional Chinese & 3600 & 3600 & 150 & 150 & 186 & 69 & 46 & 20.89 & 2.44\\
+Turkish & 6456 & 6432 & 269 & 268 & 274 & 36 & 14 & 21.38 & 4.59\\
+\bottomrule
+\addlinespace
+\end{tabular}
+
+}
+
+\begin{tablenotes}[para]
+\normalsize{\textit{Note.} SP = Sentence Picture Verification, PP = Picture Picture Verification. Sample sizes for demographics may be higher than the sample size for the this study, as participants could have only completed the bundled experiment. Additionally, not all entries could be unambigously matched by lab ID, and therefore, demographic sample sizes could also be less than data collected.}
+\end{tablenotes}
+
+\end{threeparttable}
+\end{center}
+
+\end{table*}
+\efloatseparator
+ 
+\begin{table*}[hbt]
+\ifnextchar[{\eatarg}{}
+[tbp]
+
+\begin{center}
+\begin{threeparttable}
+
+\caption{\label{tab:summary-languages}Descriptive Statistics by Language}
+
+\begin{tabular}{lcccc}
+\toprule
+Language & Accuracy Percent & Mismatching & Matching & Match Advantage\\
+\midrule
+Arabic & 90.65 & 580.25 (167.53) & 581.00 (200.89) & -0.75\\
+Brazilian Portuguese & 94.87 & 641.00 (136.40) & 654.50 (146.78) & -13.50\\
+English & 95.04 & 576.75 (124.17) & 578.75 (127.87) & -2.00\\
+German & 96.53 & 593.00 (106.75) & 576.00 (107.12) & 17.00\\
+Greek & 92.35 & 753.50 (225.36) & 728.50 (230.91) & 25.00\\
+Hebrew & 96.73 & 569.50 (98.59) & 574.50 (110.45) & -5.00\\
+Hindi & 91.32 & 638.50 (207.19) & 662.00 (228.32) & -23.50\\
+Hungarian & 96.47 & 623.00 (111.94) & 643.00 (129.73) & -20.00\\
+Norwegian & 96.93 & 592.50 (126.39) & 612.00 (136.03) & -19.50\\
+Polish & 96.11 & 601.00 (139.36) & 586.00 (108.23) & 15.00\\
+Portuguese & 95.01 & 616.50 (144.55) & 607.00 (145.29) & 9.50\\
+Serbian & 94.78 & 617.75 (158.64) & 635.00 (168.28) & -17.25\\
+Simplified Chinese & 92.39 & 655.00 (170.50) & 642.50 (158.64) & 12.50\\
+Slovak & 96.45 & 610.50 (125.28) & 607.25 (117.87) & 3.25\\
+Spanish & 94.32 & 663.00 (147.52) & 676.00 (154.19) & -13.00\\
+Thai & 93.92 & 652.50 (177.91) & 637.75 (130.10) & 14.75\\
+Traditional Chinese & 94.41 & 625.00 (139.36) & 620.00 (123.06) & 5.00\\
+Turkish & 95.38 & 654.50 (146.04) & 637.00 (126.02) & 17.50\\
+\bottomrule
+\addlinespace
+\end{tabular}
+
+\begin{tablenotes}[para]
+\normalsize{\textit{Note.} Average accuracy percentage, Median response times and median absolute deviations (in parentheses) per match condition (Mismatching, Matching); Match advantage (difference in response times).}
+\end{tablenotes}
+
+\end{threeparttable}
+\end{center}
+
+\end{table*}
