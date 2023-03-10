@@ -1,0 +1,185 @@
+---
+title: "Download 002 Data"
+author: "Erin M. Buchanan"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+- R code accompanying Sau-Chin Chen et al. (2019)
+- OSF projet: https://osf.io/e428p/
+- Access post survey data from 003 Qualtrics server
+- Written by Sau-Chin Chen
+- E-mail: pmsp96@gmail.com
+- Last update: January 17, 2020
+
+## Libraries
+
+```{r}
+library(tidyverse)
+if(!require(lutz)){devtools::install_github("ateucher/lutz")}
+library(lutz)
+library(lubridate)
+library(rio)
+# Import multiple-bytes string in English system
+# Sys.setlocale("LC_ALL","English") 
+```
+
+## Qualtrics Data for Demographics
+
+```{r}
+## Import 003 post survey data
+## unzip the data downloaded from Qualtrics server
+# unzip(dir(pattern = "PSYSCIACC", recursive = T)[grep(dir(pattern = "PSYSCIACC", recursive = T), pattern=".zip")])
+
+## import Qualtrics data
+postdata <- import(dir(path = "../", 
+                       pattern = "PSYSCIACC", recursive = T, 
+                       full.names = T)[grep(dir(path = "../", 
+                       pattern = "PSYSCIACC", recursive = T,
+                       full.names = T), pattern=".csv")])
+
+## Delete two stupid Qualtrics lines 
+postdata <- postdata[-c(1:2), ]
+
+# Get gender, age, race
+postinfo <- postdata %>% 
+  select(pptgender, pptage, pptrace, `Lab Code`, `Ppt Num`, 
+         StartDate, RecordedDate, LocationLatitude, LocationLongitude) %>% 
+  rename(gender = pptgender, 
+         age = pptage, 
+         race = pptrace, 
+         PSA_ID = `Lab Code`,
+         subjID = `Ppt Num`,
+         datetime = StartDate)
+
+## Manage lab code key
+lab_key <- c(` MYS_004` = "MYS_004", USA_020013 = "USA_020", USA_020012 = "USA_020", 
+              GBR006 = "GBR_006", USA_20 = "USA_020", UAS_20 = "USA_020", 
+              usa_020 = "USA_020", Usa_020="USA_020", `065_USA` = "USA_065", 
+             USA_65="USA_065", usa_065="USA_065", ` hun_001`="HUN_001", 
+             hun_001="HUN_001", Hun_001="HUN_001", `HUN-001`="HUN_001", 
+             HUM_001="HUN_001", TWN001 = "TWN_001", Pol_001 = "POL_001", 
+             pol_001 = "POL_001", pol001="POL_001", usa_033 = "USA_033", 
+             UAS_033 = "USA_033", `USA-033`="USA_033", us032="USA_032", 
+             us_032 = "USA_032", us32="USA_032", grc_002="GRC_002", 
+             tha_011="THA_001", `GBR-14`="GBR_014", `GBR-14`="GBR_014", 
+             CAN020="CAN_020", US_032="USA_032", ISR001="ISR_001", 
+             tur_025="TUR_025", `GBR-014`="GBR_014", `\" hun_001\"`="HUN_001", 
+             `\" MYS_004\"`="MYS_004", `\" SVK_002\"`="SVK_002", 
+             `1183`="IND_003", GR_002="GRC_002", USA_003_16 = "USA_003", 
+             `USA_033_Subject-10` = "USA_033", GR002="GBR_002", AT002="AUT_002", 
+             AT_002="AUT_002", tha_001="THA_001", `\"BRA003 \"`="BRA_003", 
+             GRC002 = "GRC_002", GRC0002 = "GRC_002", `1770`="USA_065", 
+             `6447`="HUN_001", `8552`="USA_020", `5009`="TWN_001", 
+             `6205`="CAN_020", `3024`="TUR_007", `5747`="COL_001", 
+             `5604`="ISR_001", "2684" = "TWN_002", "5640" = "ISR_001", 
+             "7575"="TUR_007E", "8016"="ECU_001", "9497"="CHN_005", 
+             "7054"="GBR_014", `ECU 001`="ECU_001", ECU001 = "ECU_001", 
+             `NZL-005`="NZL_005", `SVK-002`="SVK_002", `SVK _002` = "SVK_002", 
+             `SVK 001`="SVK_001", SVK_001_32="SVK_001", SVK_001_33="SVK_001", 
+             svk_002 = "SVK_002", SVK001 = "SVK_001", USA033 = "USA_003", 
+             CAM020="CAN_020", ECU_1001 = "ECU_001", `IND-003`="IND_003", 
+             `CHN-005`="CHN_005", `USA-033` = "USA_033", 
+             `USA_033_Subject-10` = "USA_033", `tur 025` = "TUR_025", 
+             `USA 065` = "USA_065", SVK002 = "SVK_002", SVK_01 = "SVK_001",
+             psa_001 = "PSA_001", ` SVK_002` = "SVK_002", Aus_002 = "AUS_002",
+             `BRA003 ` = "BRA_003", can020 = "CAN_020", Can020 = "CAN_020",
+             `ECU–` = "ECU_001", MAS_004 = "MYS_004", NOR004 = "NOR_004", 
+             USA51 = "USA_051", POR_001 = "POL_001")
+
+## Manage unused key
+unused <- c("", "USA_033 (do not use this data)", 
+            "Trial", "testing", "testcode", "test-to be removed", 
+            "TEST_001", "TEST", "TEst", "test", "GBR_005_TEST", 
+            "ECU_001 prueba", "do not use this data", 
+            "BRA003  teste", "PILOT", "pilot", "exclude")
+
+## Filter the data for merging SP data
+postlog <- postinfo %>% 
+  filter(!(PSA_ID %in% unused)) %>%
+## Transfer Latitude and Longitude to numeric
+  mutate_at(c("LocationLatitude", "LocationLongitude"), funs(as.numeric(as.character(.)))) %>%
+## Figure out local time 
+  mutate(tz = tz_lookup_coords(LocationLatitude, LocationLongitude ), method="accurate")
+
+## Make lab code consistent
+postlog$PSA_ID <- recode(postlog$PSA_ID,!!!lab_key)
+# View(table(postlog$PSA_ID))
+postlog <- droplevels(postlog)
+
+# examine subject variable for other test markers to exclude
+postlog$subjID <- tolower(postlog$subjID)
+subject_remove <- c("", "xx",
+                    postlog$subjID[grep("demo|test|trial|do no|pilot", postlog$subjID)])
+postlog <- postlog %>% 
+  filter(!(subjID %in% subject_remove))
+#View(table(postlog$subjID))
+
+# examine other variables to exclude 
+postlog$gender <- tolower(postlog$gender)
+subject_remove <- c(postlog$gender[grep("do not|delete|test", postlog$gender)])
+postlog <- postlog %>% 
+  filter(!(gender %in% subject_remove))
+#View(table(postlog$gender))
+
+# deal with age
+postlog$age <- gsub('\\D+', "", postlog$age)
+postlog$age <- as.numeric(postlog$age)
+
+# Recode gender
+genderDF <- import("includes/files/gender_translate.xlsx")
+
+finalDF <- postlog %>% 
+  left_join(genderDF %>% select(input, `coded group`), 
+            by = c("gender" = "input")) %>% 
+  rename(gender_recoded = `coded group`)
+
+finalDF <- finalDF %>% select(-LocationLatitude, -LocationLongitude, -method)
+
+export(finalDF, "includes/files/insite_meta.csv")
+```
+
+## Download the OSF Data
+
+```{r}
+# Download the lab data
+#library(tidyverse)
+library(dplyr)
+library(osfr)
+
+## Get the lab info from csv file
+lab_info <- import("includes/files/Lab_info.csv")
+
+## Check the status of the data osf
+## Reserve the id for processing
+## Method to download multiple data in one OSF:
+## https://github.com/CenterForOpenScience/osfr/issues/98
+N_files <- NULL
+for(osf_id in lab_info$osfid[4:length(lab_info$osfid)]){
+  if(subset(lab_info, osfid == osf_id)$Publicity == "Yes"){
+    cr_project <- osf_retrieve_node(osf_id)
+    ## Check the files in OSF
+    N_files <- c(N_files, dim(osf_ls_files(cr_project, n_max = Inf))[1])
+    if(tail(N_files, n = 1) > 1) {
+      ## Create the file directory
+      dir.create(paste0("../data/", as.character(subset(lab_info, osfid == osf_id)$PSA_ID)))
+      ## Get the data file list in the OSF
+      osf_data <- osf_ls_files(cr_project, n_max = Inf)
+      ## Download all the data in the target OSF if more files are uploaded
+      if(tail(N_files, n = 1) > length(list.files())){
+        osf_data %>%
+          {
+            split(., 1:nrow(.))} %>%
+          lapply(osf_download, 
+                 path = paste0("../data/", as.character(subset(lab_info, osfid == osf_id)$PSA_ID), .$name),
+                 conflicts = "overwrite")
+      }
+    }
+  }
+  print(osf_id)
+}
+```

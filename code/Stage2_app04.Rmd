@@ -1,0 +1,73 @@
+---
+appendix: Stage2_app004.Rmd
+---
+
+# Model Estimates for Mental Simulation 
+
+```{r setup_d, include=FALSE}
+knitr::opts_chunk$set(
+	echo = FALSE,
+	message = FALSE,
+	warning = FALSE
+)
+```
+
+All model estimates are given below for the planned mixed linear model to estimate the matching effect for object orientation in the sentence picture verification task. 
+
+\newpage
+
+```{r intercept, results='asis'}
+apa_table(tidy(intercept.model), 
+          format = "latex", 
+          col.names = c("Term", "Estimate (b)", "SE", "t", "p"), 
+          caption = "Intercept Only Object Orientation Results") 
+```
+
+```{r subject, results='asis'}
+apa_table(tidy(subject.model), 
+          format = "latex", 
+          col.names = c("Effect", "Group", "Term", "Estimate (b)", "SE",  "t", "df", "p"), 
+          caption = "Subject-Random Intercept Object Orientation Results") 
+```
+
+```{r item, results='asis'}
+apa_table(tidy(item.model), 
+          format = "latex", 
+          col.names = c("Effect", "Group", "Term", "Estimate (b)", "SE",  "t", "df", "p"), 
+          caption = "Subject and Item-Random Intercept Object Orientation Results") 
+```
+
+```{r lab, results='asis'}
+apa_table(tidy(lab.model), 
+          format = "latex", 
+          col.names = c("Effect", "Group", "Term", "Estimate (b)", "SE",  "t", "df", "p"), 
+          caption = "Subject, Item, and Lab-Random Intercept Object Orientation Results") 
+```
+
+```{r lang, results='asis'}
+apa_table(tidy(language.model), 
+          format = "latex", 
+          col.names = c("Effect", "Group", "Term", "Estimate (b)", "SE",  "t", "df", "p"), 
+          caption = "Subject, Item, Lab, and Language-Random Intercept Object Orientation Results") 
+```
+
+```{r fixed, results='asis'}
+apa_table(tidy(fixed.model), 
+          format = "latex", 
+          col.names = c("Effect", "Group", "Term", "Estimate (b)", "SE",  "t", "df", "p"), 
+          caption = "Fixed Effects Object Orientation Results") 
+```
+
+```{r german-random, results='asis'}
+apa_table(tidy(german.lab.model), 
+          format = "latex", 
+          col.names = c("Effect", "Group", "Term", "Estimate (b)", "SE",  "t", "df", "p"), 
+          caption = "Random Effects German Object Orientation Results") 
+```
+
+```{r german-fixed, results='asis'}
+apa_table(tidy(german.fixed.three.model), 
+          format = "latex", 
+          col.names = c("Effect", "Group", "Term", "Estimate (b)", "SE",  "t", "df", "p"), 
+          caption = "Fixed Effects German Object Orientation Results") 
+```

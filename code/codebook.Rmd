@@ -1,0 +1,276 @@
+---
+title: "PSA 002 Data Codebook"
+output:
+  html_document:
+    toc: true
+    toc_depth: 4
+    toc_float: true
+    code_folding: 'hide'
+    self_contained: true
+  pdf_document:
+    toc: yes
+    toc_depth: 4
+    latex_engine: xelatex
+---
+
+# Set Options
+
+```{r setup}
+knitr::opts_chunk$set(
+  warning = TRUE, # show warnings during codebook generation
+  message = TRUE, # show messages during codebook generation
+  error = TRUE, # do not interrupt codebook generation in case of errors,
+                # usually better for debugging
+  inclue = TRUE,
+  echo = TRUE  # show R code
+)
+ggplot2::theme_set(ggplot2::theme_bw())
+
+library(codebook)
+library(rio)
+library(labelled)
+library(flextable)
+library(dplyr)
+library(stringr)
+```
+
+# Prep Data
+
+```{r all_data, warning = FALSE}
+lab_info <- dir(path = "..", full.names = TRUE, recursive = TRUE, 
+    include.dirs = TRUE, pattern = "Lab_Info.csv") %>%
+ import()
+
+# Load raw SPV data 
+# Build data frame of valid SP verification responses
+all_files <- list.files(path = "../data",
+                         pattern = ".csv", 
+                         full.names = TRUE,
+                         recursive = TRUE)
+all_files <- all_files[grepl("PP|SP|jatos_results|pp|sp|Pp|Sp", all_files)]
+
+all_list <- list()
+for (i in 1:length(all_files)){
+  all_list[[i]] <- import(all_files[i])
+  all_list[[i]]$unique_id <- all_files[i]
+  
+  all_list[[i]] <- all_list[[i]] %>% 
+    mutate(across(everything(), as.character))
+}
+
+all_data <- bind_rows(all_list) %>% 
+  select(subject_nr, 
+         LAB_SEED, 
+         datetime, 
+         logfile, 
+         task_order,
+         List, 
+         PList,
+         Match,
+         Orientation, 
+         Probe,
+         Target,
+         response_time, 
+         correct,
+         PPList, 
+         Orientation1,
+         Orientation2, 
+         Identical,
+         Picture1,
+         Picture2, 
+         opensesame_codename,
+         opensesame_version,
+         unique_id) %>% 
+  filter(!is.na(opensesame_codename))
+
+all_data$PSA_ID <- substr(all_data$unique_id, 9, 16)
+all_data$PSA_ID <- gsub("\\/", "", all_data$PSA_ID)
+
+all_data$subject_nr[na.omit(all_data$opensesame_codename != "osweb")] <- 
+  gsub("../data/|SP|PP|_|-| |.csv", "", all_data$unique_id[na.omit(all_data$opensesame_codename != "osweb")])
+
+SP_V <- all_data %>% select(
+  PSA_ID, subject_nr, LAB_SEED, datetime, logfile, task_order, List,
+  Match, Orientation, PList, Probe, Target, response_time, correct, 
+  opensesame_codename, opensesame_version) %>% 
+  left_join(lab_info %>% select(PSA_ID, Language), by = "PSA_ID") %>% 
+  readr::type_convert() %>% 
+  distinct() %>% 
+  mutate(Language = ifelse(Language == "Magyar", "Hungarian", Language)) %>% ## Switch "Magyar" to "Hungarian"
+ mutate(Language = ifelse(Language == "Simple Chinese", "Simplified Chinese", Language)) %>% ## Switch "Simple Chinese" to "Simplified Chinese"
+ mutate(PSA_ID = str_replace(PSA_ID, "SRB_002B", "SRB_002")) %>% ## Combine two Serbian language groups based on the collectors' recommendation
+ mutate(Source = if_else(opensesame_codename == "osweb","osweb","site"), 
+  Subject = paste0(Source,"_",PSA_ID,"_",subject_nr, "_", datetime)) %>% ## Compose the unique participant id
+ subset(Match != "F") ## Exclude fillers in SP_V
+
+# Build data frame of valid PP responses
+PP <- all_data %>% select(
+  PSA_ID, LAB_SEED, datetime, logfile, subject_nr, PPList, 
+  Orientation1, Orientation2, Identical, Picture1, Picture2, 
+  response_time, correct, opensesame_codename, opensesame_version) %>% 
+  left_join(lab_info %>% select(PSA_ID, Language), by = "PSA_ID") %>% 
+  readr::type_convert() %>% 
+  distinct() %>% 
+  mutate(Language = ifelse(Language == "Magyar", "Hungarian", Language)) %>% ## Switch "Magyar" to "Hungarian"
+  mutate(Language = ifelse(Language == "Simple Chinese", "Simplified Chinese", Language)) %>% ## Switch "Simple Chinese" to "Simplified Chinese"
+  mutate(PSA_ID = str_replace(PSA_ID, "SRB_002B", "SRB_002")) %>% ## Combine two Serbian language groups based on the collectors' recommendation
+  mutate(Source = if_else(opensesame_codename == "osweb","osweb","site"), 
+  Subject = paste0(Source,"_",PSA_ID,"_",subject_nr, "_", datetime)) %>%  ## Compose the unique participant id
+  filter(Identical != "F") # practice trials 
+
+SP_V$Subject[SP_V$opensesame_codename != "osweb"] <-
+  paste0(SP_V$Source[SP_V$opensesame_codename != "osweb"],
+         "_",
+         SP_V$PSA_ID[SP_V$opensesame_codename != "osweb"],
+         "_",
+         SP_V$subject_nr[SP_V$opensesame_codename != "osweb"])
+
+PP$Subject[PP$opensesame_codename != "osweb"] <- paste0(PP$Source[PP$opensesame_codename != "osweb"],"_",PP$PSA_ID[PP$opensesame_codename != "osweb"],"_",PP$subject_nr[PP$opensesame_codename != "osweb"])
+```
+
+```{r fix_part_id}
+PP$Subject[PP$Subject == "site_MYS_003_MYS003/MYS00324"] <- rep(c("site_MYS_003_MYS003/MYS00324", "site_MYS_003_MYS003/MYS00324_1"), each = 24)
+
+SP_V$Subject[SP_V$Subject == "site_USA_173_USA173/USA17328
+"] <- c(rep("site_USA_173_USA173_28", 30), rep("site_USA_173_USA173/USA17328_1", 29))
+
+# fix issues with duplicate trials 
+SP_V <- SP_V %>% 
+  filter(!duplicated(SP_V %>% select(Subject, Target)))
+PP <- PP %>% 
+  filter(!duplicated(PP %>% select(Subject, Picture1)))
+
+# test subjects counts
+SP_V_subjects <- SP_V %>% 
+  group_by(Subject, PSA_ID) %>% 
+  count() 
+
+PP_subjects <- PP %>% 
+  group_by(Subject, PSA_ID) %>% 
+  count()
+
+merge_subjects <- SP_V_subjects %>% 
+  full_join(PP_subjects, by = "Subject") %>% 
+  rename(SP_Data = n.x,
+         PP_Data = n.y)
+
+merge_subjects$PSA_ID.x[is.na(merge_subjects$PSA_ID.x)] <- merge_subjects$PSA_ID.y[is.na(merge_subjects$PSA_ID.x)]
+
+merge_subjects$PSA_ID <- merge_subjects$PSA_ID.x
+
+merge_subjects <- merge_subjects %>% select(-PSA_ID.x, -PSA_ID.y)
+```
+
+```{r import_gender}
+osweb_meta <- dir(path = ".."
+                  ,full.names = TRUE, recursive = TRUE, 
+                  include.dirs = TRUE, pattern = "jatos_meta.csv") %>%
+  import() %>%
+  unique() %>% 
+  mutate(Batch = str_replace(Batch, "SRB_002B", "SRB_002")) %>% 
+  mutate(gender = ifelse(gender==1,"FEMALE",ifelse(gender==2,"MALE","MISSING"))) %>%
+  # mutate(birth_year_tr = as.numeric(birth_year)) %>%
+  mutate(birth_year_tr = as.numeric(gsub(birth_year,pattern="NA|x",replacement = ""))) %>%
+  mutate(year = ifelse(birth_year_tr > 21 & !is.na(birth_year_tr), 1900 + birth_year_tr, 2000 + birth_year_tr)) %>%
+  mutate(age = ifelse(!is.na(year),2021-year,NA)) %>%
+  group_by(Batch) %>%
+  summarise(N = n(), 
+            Female_N = sum(gender=="FEMALE",na.rm = TRUE), 
+            Male_N = sum(gender=="MALE", na.rm = T), 
+            Age = mean(age, na.rm=TRUE), 
+            AgeSD = sd(age, na.rm=TRUE), 
+            Proficiency = mean(lang_prof),
+            missing_age = sum(is.na(age)))
+
+site_meta <- import("includes/files/insite_meta.csv") %>% 
+  mutate(gender = ifelse(gender=="female","FEMALE",ifelse(gender=="male","MALE","MISSING"))) %>%
+  unique() %>% 
+  group_by(PSA_ID) %>% 
+  summarize(N = n(), Female_N = sum(gender=="FEMALE", na.rm = TRUE), 
+            Male_N = sum(gender=="MALE", na.rm = T), 
+            Age = mean(age, na.rm=TRUE),
+            AgeSD = sd(age, na.rm=TRUE), 
+            missing_age = sum(is.na(age))
+            )
+
+merge_subjects <- merge_subjects %>% 
+  group_by(PSA_ID) %>% 
+  summarize(SP_N_trials = sum(SP_Data, na.rm = T),
+            PP_N_trials = sum(PP_Data, na.rm = T),
+            SP_N = length(na.omit(SP_Data)),
+            PP_N = length(na.omit(PP_Data))) %>% 
+  full_join(site_meta, by = "PSA_ID") %>% 
+  full_join(osweb_meta, by = c("PSA_ID" = "Batch"))
+
+merge_subjects <- merge_subjects %>% 
+  group_by(PSA_ID) %>% 
+  mutate(Overall_N_Gender = sum(c(N.x, N.y), na.rm = T),
+         Overall_N_Female = sum(c(Female_N.x, Female_N.y), na.rm = T),
+         Overall_N_Male = sum(c(Male_N.x, Male_N.y), na.rm = T),
+         Overall_Age = mean(c(Age.x, Age.y), na.rm = T), 
+         Overall_SD = mean(c(AgeSD.x, AgeSD.y), na.rm = T),
+         Overall_Missing_Age = sum(c(missing_age.x, missing_age.y), na.rm = T)) %>% 
+  left_join(lab_info %>% select(PSA_ID, Language) %>% unique(), by = "PSA_ID")
+```
+
+```{r}
+flextable(merge_subjects %>% 
+            select(1:5, 19:25)) %>% 
+  set_header_labels(c("Lab ID Code", "SP Number Trials", "PP Number Trials", 
+                      "SP Participants", "PP Participants", "Demographic Sample Size", 
+                      "Female Sample Size", "Male Sample Size", "Average Age", 
+                      "SD Age", "Missing Age", "Language")) %>% 
+  set_caption(caption = "Sample Size and Meta Data Information")
+  
+```
+
+
+```{r prepare_codebook}
+codebook_data <- bind_rows(SP_V, PP)
+
+var_label(codebook_data) <- list(
+  PSA_ID = "Lab identification code",
+  subject_nr = "Original, lab assigned subject number",
+  LAB_SEED = "Original, lab assigned seed number for randomization",
+  datetime = "Date and time of the study", 
+  logfile = "Original location of the saved log",
+  task_order = "", 
+  List = "List file for the presentation of the stimuli",
+  Match = "Match or Mismatch of the sentence and picture for sentence picture trials. F indicates practical trials.",
+  Orientation = "Direction of the stimuli picture presented on the screen", 
+  PList = "List file for the practice stimuli presentation",
+  Probe = "Sentence seen in the sentence picture matching task",
+  Target = "Object seen in the sentence picture matching task", 
+  response_time = "Response time to determine if objects or sentence/picture matched",
+  correct = "Indicates if the participant answered the trial correctly",
+  opensesame_codename = "Name of the version of open sesame",
+  opensesame_version = "Version number of the open sesame used",
+  Language = "Language the participant took the study in",
+  Source = "Online (osweb) versus in person (all others) data source",
+  Subject = "A unique participant identifier, as duplicates and other repeating trials were fixed", 
+  PPList = "The stimulus presentation list for picture picture matching task",
+  Orientation1 = "The orientation of the first picture in the picture picture matching task",
+  Orientation2 = "The orientation of the second picture in the picture picture matching task",
+  Identical = "If the two orientations of the pictures matched in the picture picture matching task",
+  Picture1 = "Name of the first picture in the picture picture matching task",
+  Picture2 = "Name of the secon picture in the picture picture matching task"
+  )
+
+metadata(codebook_data)$name <- "Object Orientation across languages"
+metadata(codebook_data)$description <- "This dataset includes the raw trial data from the PSA002: Object Orientation Across Languages Study. 
+
+Mental simulation theories of language comprehension propose that people automatically create mental representations of objects mentioned in sentences. Representation is often measured with the sentence-picture verification task, in which participants first read a sentence implying the shape/size/color/object orientation and, on the following screen, a picture of an object. Participants then verify if the pictured object either matched or mismatched the implied visual information mentioned in the sentence. Previous studies indicated the match advantages of shapes, but findings concerning object orientation were mixed across languages. This registered report describes our investigation of the match advantage of object orientation across 18 languages, which was undertaken by multiple laboratories and organized by the Psychological Science Accelerator. The preregistered analysis revealed that there is no compelling evidence for a global match advantage, although some evidence of a match advantage in one language was found. Additionally, the match advantage was not predicted by mental rotation scores which does not support current embodied cognition theories."
+metadata(codebook_data)$identifier <- "https://osf.io/e428p/"
+metadata(codebook_data)$creator <- "Erin M. Buchanan"
+metadata(codebook_data)$citation <- "Chen et al. (2023). Investigating Object Orientation Effects Across 18 Languages. Registered Report."
+metadata(codebook_data)$url <- "https://osf.io/e428p/"
+metadata(codebook_data)$datePublished <- "2023-02-10"
+metadata(codebook_data)$temporalCoverage <- "2019-2021" 
+metadata(codebook_data)$spatialCoverage <- "Online and in Person" 
+```
+
+# Create codebook
+
+```{r codebook}
+codebook(codebook_data)
+```

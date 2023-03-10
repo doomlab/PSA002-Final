@@ -1,0 +1,88 @@
+---
+appendix: "Stage2_app003.Rmd"
+---
+
+# Demographic Characteristics by Lab
+
+```{r setup_c, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, include = FALSE)
+```
+
+```{r make-table}
+ft <- 
+  merge_subjects %>% 
+  arrange(Language) %>% 
+  ungroup() %>% 
+  filter(PSA_ID %in% unique(SP_V$PSA_ID)) %>%
+  group_by(Language, PSA_ID) %>% 
+  summarize(SP_N_trials = sum(SP_N_trials, na.rm = T), 
+            PP_N_trials = sum(PP_N_trials, na.rm = T), 
+            SP_N = sum(SP_N, na.rm = T),
+            PP_N = sum(PP_N, na.rm = T), 
+            Overall_N_Gender = sum(Overall_N_Gender, na.rm = T), 
+            Overall_N_Female = sum(Overall_N_Female, na.rm = T),
+            Overall_N_Male = sum(Overall_N_Male, na.rm = T), 
+            Overall_Age = mean(Overall_Age, na.rm = T), 
+            Overall_SD = mean(Overall_SD, na.rm = T)) %>% 
+  ungroup() %>% 
+  select(Language, SP_N_trials, PP_N_trials, SP_N, PP_N, 
+         Overall_N_Gender, Overall_N_Female, Overall_N_Male, 
+         Overall_Age, Overall_SD) %>% 
+  mutate(
+    Overall_Age = format(round(Overall_Age, 2), nsmall = 2), 
+    Overall_SD = format(round(Overall_SD, 2), nsmall = 2)
+  )
+```
+
+```{r print-part1, results = 'asis', include = TRUE}
+ft[1:15, ] %>% 
+  apa_table(
+ format = "latex",
+ booktabs = TRUE,
+ escape = TRUE,
+ font_size = "footnotesize",
+ col.names = c("Language", "SP \nTrials",
+               "PP \nTrials", "SP \nN", "PP \nN", "Demo \nN",
+               "Female \nN", "Male \nN","M \nAge", "SD \nAge"),
+ align = c("l", rep("c", 9)),
+ caption = "Demographic and Sample Size Characteristics by Lab Part 1",
+ note = "SP = Sentence Picture Verification, PP = Picture Picture Verification. Sample sizes for demographics may be higher than the sample size for the this study, as participants could have only completed the bundled experiment. Additionally, not all entries could be unambigously matched by lab ID, and therefore, demographic sample sizes could also be less than data collected."
+ ) 
+```
+
+\newpage
+
+```{r print-part2, results = 'asis', include = TRUE}
+ft[16:35, ] %>% 
+  apa_table(
+ format = "latex",
+ booktabs = TRUE,
+ escape = TRUE,
+ font_size = "footnotesize",
+ col.names = c("Language", "SP \nTrials",
+               "PP \nTrials", "SP \nN", "PP \nN", "Demo \nN",
+               "Female \nN", "Male \nN","M \nAge", "SD \nAge"),
+ align = c("l", rep("c", 9)),
+ caption = "Demographic and Sample Size Characteristics by Lab Part 2",
+ note = "SP = Sentence Picture Verification, PP = Picture Picture Verification. Sample sizes for demographics may be higher than the sample size for the this study, as participants could have only completed the bundled experiment. Additionally, not all entries could be unambigously matched by lab ID, and therefore, demographic sample sizes could also be less than data collected."
+ ) 
+```
+
+\newpage
+
+```{r print-part3, results = 'asis', include = TRUE}
+ft[36:50, ] %>% 
+  apa_table(
+ format = "latex",
+ booktabs = TRUE,
+ escape = TRUE,
+ font_size = "footnotesize",
+ col.names = c("Language", "SP \nTrials",
+               "PP \nTrials", "SP \nN", "PP \nN", "Demo \nN",
+               "Female \nN", "Male \nN","M \nAge", "SD \nAge"),
+ align = c("l", rep("c", 9)),
+ caption = "Demographic and Sample Size Characteristics by Lab Part 1",
+ note = "SP = Sentence Picture Verification, PP = Picture Picture Verification. Sample sizes for demographics may be higher than the sample size for the this study, as participants could have only completed the bundled experiment. Additionally, not all entries could be unambigously matched by lab ID, and therefore, demographic sample sizes could also be less than data collected."
+ ) 
+```
+

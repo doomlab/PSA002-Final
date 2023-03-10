@@ -1,0 +1,90 @@
+---
+appendix: Stage2_app005.Rmd
+---
+
+# Model Estimates for Mental Rotation 
+
+```{r setup_e, include=FALSE}
+knitr::opts_chunk$set(
+	echo = FALSE,
+	message = FALSE,
+	warning = FALSE
+)
+```
+
+All model estimates are given below for the mixed linear model for the prediction of mental rotation scores by orientation, and the effects of predicting mental simulation effects (object orientation) with the mental rotation scores. 
+
+\newpage
+
+```{r intercept_e, results = 'asis'}
+apa_table(tidy(PP.intercept.lme), 
+          format = "latex", 
+          col.names = c("Term", "Estimate (b)", "SE", "t", "p"), 
+          caption = "Intercept Only Mental Rotation Results") 
+```
+
+```{r subject_e, results='asis'}
+apa_table(tidy(PP.subject.lme), 
+          format = "latex", 
+          col.names = c("Effect", "Group", "Term", "Estimate (b)", "SE",  "t", "df", "p"), 
+          caption = "Subject-Random Intercept Mental Rotation Results") 
+```
+
+```{r item_e, results='asis'}
+apa_table(tidy(PP.item.lme), 
+          format = "latex", 
+          col.names = c("Effect", "Group", "Term", "Estimate (b)", "SE",  "t", "df", "p"), 
+          caption = "Subject and Item-Random Intercept Mental Rotation Results") 
+```
+
+```{r lab_e, results='asis'}
+apa_table(tidy(PP.lab.lme), 
+          format = "latex", 
+          col.names = c("Effect", "Group", "Term", "Estimate (b)", "SE",  "t", "df", "p"), 
+          caption = "Subject, Item, and Lab-Random Intercept Mental Rotation Results") 
+```
+
+```{r lang_e, results='asis'}
+apa_table(tidy(PP.lang.lme), 
+          format = "latex", 
+          col.names = c("Effect", "Group", "Term", "Estimate (b)", "SE",  "t", "df", "p"), 
+          caption = "Subject, Item, Lab, and Language-Random Intercept Mental Rotation Results") 
+```
+
+```{r fixed_e, results='asis'}
+apa_table(tidy(PP.fixed.lme), 
+          format = "latex", 
+          col.names = c("Effect", "Group", "Term", "Estimate (b)", "SE",  "t", "df", "p"), 
+          caption = "Fixed Effects Mental Rotation Results") 
+```
+
+
+```{r pred_intercept, results='asis'}
+apa_table(tidy(pred.intercept), 
+          format = "latex", 
+          col.names = c("Term", "Estimate (b)", "SE", "t", "p"), 
+          caption = "Intercept Only Predicting Mental Simulation Results") 
+```
+
+```{r pred_lab, results='asis'}
+apa_table(tidy(pred.lab), 
+          format = "latex", 
+          col.names = c("Effect", "Group", "Term", "Estimate (b)", "SE",  "t", "df", "p"), 
+          caption = "Lab-Random Intercept Predicting Mental Simulation Results") 
+```
+
+```{r pred_interact, results='asis'}
+apa_table(tidy(pred.interact)[1:18 , ], 
+          format = "latex", 
+          font_size = "small",
+          col.names = c("Effect", "Group", "Term", "Estimate (b)", "SE",  "t", "df", "p"), 
+          caption = "Fixed Effects Interaction Language and Rotation Predicting Mental Simulation Results") 
+```
+
+```{r pred_interact_2, results='asis'}
+apa_table(tidy(pred.interact)[19:36, ], 
+          format = "latex", 
+          font_size = "small",
+          col.names = c("Effect", "Group", "Term", "Estimate (b)", "SE",  "t", "df", "p"), 
+          caption = "Fixed Effects Interaction Language and Rotation Predicting Mental Simulation Results") 
+```
