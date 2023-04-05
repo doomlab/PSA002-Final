@@ -998,7 +998,7 @@ header-includes:
 
 csl               : "`r system.file('rmd', 'apa7.csl', package = 'papaja')`"
 documentclass     : "apa7"
-output            : papaja::apa6_docx
+output            : papaja::apa6_pdf
 appendix          :
   - "Stage2_app01.Rmd"
   - "Stage2_app02.Rmd"
@@ -2374,6 +2374,7 @@ SP_M_out <- all_data %>%
  mutate(PSA_ID = str_replace(PSA_ID, "SRB_002B", "SRB_002")) %>% ## Combine two Serbian language groups based on the collectors' recommendation
  mutate(Source = if_else(opensesame_codename == "osweb","osweb","site"), 
   Subject = paste0(Source,"_",PSA_ID,"_",subject_nr, "_", datetime)) %>% ## Compose the unique participant id
+  filter(PSA_ID %in% SP_V_correct$PSA_ID) %>% 
   group_by(Source, Subject) %>% 
   summarise(M_acc = mean(correct)) 
 
@@ -2397,8 +2398,8 @@ in-person and online data.
 Although we combined the two data sets in the final data analysis, it is
 worth considering that online participants\' attention may be easily
 distracted given the lack of any environmental control and lack of
-experimenter assistance. Our planned analysis did not include the memory
-check responses, but this secondary task revealed that online
+experimenter assistance. However, while our planned analysis did not include the memory
+check responses, this secondary task revealed that online
 participants had a higher percent correct than in-person participants, *t*(`r apa_num(t_test$parameter)`) = `r apa_num(t_test$statistic)`, *p* `r apa_p(t_test$p.value)`, $M_{online}$ = `r apa_num(mean(SP_M_out$M_acc[SP_M_out$Source == "osweb"], na.rm = T)*100)` (*SD* = `r apa_num(sd(SP_M_out$M_acc[SP_M_out$Source == "osweb"], na.rm = T)*100)`) and $M_{in-person}$ = `r apa_num(mean(SP_M_out$M_acc[SP_M_out$Source == "site"], na.rm = T)*100)` (*SD* = `r apa_num(sd(SP_M_out$M_acc[SP_M_out$Source == "site"], na.rm = T)*100)`). 
 
 ## Conclusion
