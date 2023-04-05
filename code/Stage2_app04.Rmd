@@ -8,7 +8,9 @@ appendix: Stage2_app004.Rmd
 knitr::opts_chunk$set(
 	echo = FALSE,
 	message = FALSE,
-	warning = FALSE
+	warning = FALSE,
+	cache = TRUE,
+	include = TRUE
 )
 ```
 

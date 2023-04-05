@@ -3,7 +3,7 @@ appendix: "Stage2_app002.Rmd"
 ---
 
 ```{r setup_b, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE)
+knitr::opts_chunk$set(echo = FALSE, cache = TRUE)
 ```
 
 # Data Collection Logs

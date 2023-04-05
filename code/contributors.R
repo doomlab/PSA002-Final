@@ -20,3 +20,5 @@ DF <- subset(DF, !is.na(Firstname))
 cat(print_yaml(contributors_table = DF))
 
 "No. 67, Jei-Ren St., Hualien City, Taiwan"
+
+cat(print_funding(contributors_table = DF))

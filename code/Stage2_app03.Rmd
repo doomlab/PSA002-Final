@@ -5,7 +5,7 @@ appendix: "Stage2_app003.Rmd"
 # Demographic Characteristics by Lab
 
 ```{r setup_c, include=FALSE}
-knitr::opts_chunk$set(echo = FALSE, message = FALSE, include = FALSE)
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, include = FALSE, cache = TRUE)
 ```
 
 ```{r make-table}
