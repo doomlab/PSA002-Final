@@ -1282,6 +1282,7 @@ all_files <- list.files(path = "../data",
                          full.names = TRUE,
                          recursive = TRUE)
 all_files <- all_files[grepl("PP|SP|jatos_results|pp|sp|Pp|Sp", all_files)]
+all_files <- all_files[!grepl("CITATION", all_files)]
 
 all_list <- list()
 for (i in 1:length(all_files)){
@@ -2167,6 +2168,32 @@ PP.fixed.lme <- lmerTest::lmer(response_time ~ 1 +
    ) 
 
 PP_output <- summary(PP.fixed.lme)$coefficients
+
+lang_results <- data.frame(
+  Language = unique(PP_correct$Language), 
+  Coefficient = rep(NA, length(unique(PP_correct$Language))),
+  SE = rep(NA, length(unique(PP_correct$Language)))
+)
+
+for (language in unique(PP_correct$Language)) {
+  
+  temp <- lmerTest::lmer(response_time ~ 1 +
+   (1 | Subject) + # By-subject random intercept
+   (1 | Picture1) + # By-item random intercept
+     Identical,
+   data = PP_correct %>% filter(Language == language),
+   control = lmerControl(optimizer = "bobyqa", 
+                         optCtrl = list(maxfun = 1e6)) # Increase maximum number of iterations to facilitate model convergence 
+   ) 
+  
+  temp_table <- tidy(temp)
+  lang_results$Coefficient[lang_results$Language == language] <- temp_table$estimate[2]
+  lang_results$SE[lang_results$Language == language] <- temp_table$std.error[2]
+  
+}
+
+min(lang_results$Coefficient)
+max(lang_results$Coefficient)
 ```
 
 Using the same steps as described for the sentence-picture verification

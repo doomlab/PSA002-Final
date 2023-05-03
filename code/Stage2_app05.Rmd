@@ -16,6 +16,8 @@ knitr::opts_chunk$set(
 
 All model estimates are given below for the mixed linear model for the prediction of mental rotation scores by orientation, and the effects of predicting mental simulation effects (object orientation) with the mental rotation scores. 
 
+*Note*. Fixed indicates fixed parameters in multilevel models, while "ran_pars" indicates the random intercepts included in the model. 
+
 \newpage
 
 ```{r intercept_e, results = 'asis'}
@@ -60,6 +62,12 @@ apa_table(tidy(PP.fixed.lme),
           caption = "Fixed Effects Mental Rotation Results") 
 ```
 
+```{r random_e, results='asis'}
+apa_table(lang_results, 
+          format = "latex",
+          row.names = F, 
+          caption = "Language Specific Mental Rotation Results")
+```
 
 ```{r pred_intercept, results='asis'}
 apa_table(tidy(pred.intercept), 
@@ -80,7 +88,7 @@ apa_table(tidy(pred.interact)[1:18 , ],
           format = "latex", 
           font_size = "small",
           col.names = c("Effect", "Group", "Term", "Estimate (b)", "SE",  "t", "df", "p"), 
-          caption = "Fixed Effects Interaction Language and Rotation Predicting Mental Simulation Results") 
+          caption = "Fixed Effects Interaction Language and Rotation Predicting Mental Simulation Results Part 1") 
 ```
 
 ```{r pred_interact_2, results='asis'}
@@ -88,5 +96,5 @@ apa_table(tidy(pred.interact)[19:36, ],
           format = "latex", 
           font_size = "small",
           col.names = c("Effect", "Group", "Term", "Estimate (b)", "SE",  "t", "df", "p"), 
-          caption = "Fixed Effects Interaction Language and Rotation Predicting Mental Simulation Results") 
+          caption = "Fixed Effects Interaction Language and Rotation Predicting Mental Simulation Results Part 2") 
 ```
