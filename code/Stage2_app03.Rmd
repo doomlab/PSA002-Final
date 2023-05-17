@@ -2,7 +2,7 @@
 appendix: "Stage2_app003.Rmd"
 ---
 
-# Demographic Characteristics by Lab
+# Demographic Characteristics by Language
 
 ```{r setup_c, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, message = FALSE, include = FALSE, cache = TRUE)
@@ -45,8 +45,8 @@ ft[1:15, ] %>%
                "PP \nTrials", "SP \nN", "PP \nN", "Demo \nN",
                "Female \nN", "Male \nN","M \nAge", "SD \nAge"),
  align = c("l", rep("c", 9)),
- caption = "Demographic and Sample Size Characteristics by Lab Part 1",
- note = "SP = Sentence Picture Verification, PP = Picture Picture Verification. Sample sizes for demographics may be higher than the sample size for the this study, as participants could have only completed the bundled experiment. Additionally, not all entries could be unambigously matched by lab ID, and therefore, demographic sample sizes could also be less than data collected."
+ caption = "Demographic and Sample Size Characteristics by Language Part 1",
+ note = "SP = Sentence Picture Verification, PP = Picture Picture Verification. Sample sizes for demographics may be higher than the sample size for the this study, as participants could have only completed the bundled experiment. Additionally, not all entries could be unambigously matched by lab ID, and therefore, demographic sample sizes could also be less than data collected. Each row represents a single lab."
  ) 
 ```
 

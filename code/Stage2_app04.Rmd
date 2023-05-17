@@ -14,7 +14,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-All model estimates are given below for the planned mixed linear model to estimate the matching effect for object orientation in the sentence picture verification task. 
+All model estimates are given below for the planned mixed linear model to estimate the matching effect for object orientation in the sentence picture verification task.
 
 *Note*. Fixed indicates fixed parameters in multilevel models, while "ran_pars" indicates the random intercepts included in the model. 
 

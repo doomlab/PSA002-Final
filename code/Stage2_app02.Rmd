@@ -15,9 +15,9 @@ If you want to check the sequential analysis result of a laboratory, at first yo
 The source files of the public logs are available in the github repository:
 https://github.com/SCgeeker/PSA002_log_site
 
-All the raw data and log files are compressed in the project OSF repository. Direct access link: https://osf.io/rg8a3/
+All the raw data and log files are compressed in the project OSF repository: https://osf.io/e428p/
 
-The R code to conduct the Bayesian sequential analysis is available at "data_seq_analysis.R". Direct access link is: https://github.com/SCgeeker/PSA002_log_site/blob/master/data_seq_analysis.R
+The R code to conduct the Bayesian sequential analysis is available at "data_seq_analysis.R". This file can be found at: https://github.com/SCgeeker/PSA002_log_site 
 
 **Note 1** USA_067, BRA_004 and POL_004 were unavailable because the teams withdrew.
 
@@ -52,6 +52,6 @@ C: Judge sentences for their accuracy
 
 ## Distributions of scripts
 
-The instructions and experimental scripts are available at the public OSF folder (https://osf.io/e428p/ “Materials/js” folder in Files). To upload to a jatos server, a script had to be converted to the compatible package. Researchers could do this conversion by "OSWEB" package in OpenSesame. We rent an remote server for the distributions during the data collection period. Any researcher would distribute the scripts on a free jatos server such as MindProbe ( https://www.mindprobe.eu/ ).
+The instructions and experimental scripts are available at the public OSF folder (https://osf.io/e428p/ "Materials/js" folder in Files). To upload to a jatos server, a script had to be converted to the compatible package. Researchers could do this conversion by "OSWEB" package in OpenSesame. We rent an remote server for the distributions during the data collection period. Any researcher would distribute the scripts on a free jatos server such as MindProbe (https://www.mindprobe.eu/).
 
 

@@ -29,12 +29,12 @@ The R codes for the sensitivity analysis on the trial level were written by Erin
 
 ## Load data and run models
 
-The data for the sensitivity analysis shared the same exclusion criterion for the preregistered mixed-effect models.  First, we shall determine if there is a minimum number of trials required for stable results. 
+The data for the sensitivity analysis shared the same exclusion criterion for the pre-registered mixed-effects models. The first step is to determine if there is a minimum number of trials required for stable results.
 
 ```{r Trial-count_a}
 number_trials <- SP_V_correct %>% 
-  group_by(Subject, Match) %>%
-  summarize(count = n())
+ group_by(Subject, Match) %>%
+ summarize(count = n())
 ```
 
 ```{r model_a}
@@ -42,18 +42,18 @@ models <- list()
 
 for (i in 3:12){
 
-  subjects <- number_trials %>%
-       filter(count >= i) %>%
-       pull(Subject) %>% unique()
+ subjects <- number_trials %>%
+    filter(count >= i) %>%
+    pull(Subject) %>% unique()
 
-  temp_data <- SP_V_correct %>%
-       filter(Subject %in% subjects)
+ temp_data <- SP_V_correct %>%
+    filter(Subject %in% subjects)
 
-  # match model in the paper
-  models[[paste("fixed.three.model", i, sep = "_")]]  <- lmer(response_time ~ Match + (1|Subject) + (1|Target) + (1|PSA_ID), 
-                        control = lmerControl(optimizer = "bobyqa",
-                                              optCtrl = list(maxfun = 1e6)), 
-                        data = temp_data)
+ # match model in the paper
+ models[[paste("fixed.three.model", i, sep = "_")]] <- lmer(response_time ~ Match + (1|Subject) + (1|Target) + (1|PSA_ID), 
+            control = lmerControl(optimizer = "bobyqa",
+                       optCtrl = list(maxfun = 1e6)), 
+            data = temp_data)
 }
 ```
 
@@ -63,15 +63,23 @@ for (i in 3:12){
 b_values <- 1:length(models)
 p_values <- 1:length(models)
 for (i in 1:length(models)){
-  b_values[i] <- round(fixef(models[[i]])["MatchN"],2)
-  p_values[i] <- apa_p(summary(models[[i]])$coefficients[2,5])
+ b_values[i] <- round(fixef(models[[i]])["MatchN"],2)
+ p_values[i] <- apa_p(summary(models[[i]])$coefficients[2,5])
 }
 
-b_values
-p_values
+#b_values
+#p_values
 ```
 
-As we can see, the effect is generally negative until participants were required to have 7-12 correct trials. When participants accurately answer all 12 trials the effect is approximately 3 ms. Examination of the p-values indicates that no coeffecients would have been considered significant. 
+### *b* values
+
+`r b_values`
+
+### *p* values
+
+`r p_values`
+
+As we can see, the effect is generally negative until participants were required to have 7-12 correct trials. When participants accurately answer all 12 trials the effect is approximately 3 ms. Examination of the p-values indicates that no coefficients would have been considered significant. 
 
 ## Calculate the Sensitivity
 
@@ -79,7 +87,7 @@ Given we used all data points, the smallest detectable effect with our standard 
 
 ```{r sense_a}
 qt(p = .05/2, # two tailed 
-   df = summary(models[[1]])$coefficients[2, 3],
-   lower.tail = F) * summary(models[[1]])$coefficients[2, 2] 
+  df = summary(models[[1]])$coefficients[2, 3],
+  lower.tail = F) * summary(models[[1]])$coefficients[2, 2] 
 ```
 
