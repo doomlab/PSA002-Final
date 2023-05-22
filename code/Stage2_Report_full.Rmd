@@ -240,13 +240,13 @@ author:
     role:
       - Investigation
       - Writing - review & editing
-    email: 1804426@abertay.ac.uk
+    email: "1804426@abertay.ac.uk"
   - name: Danny Riis
     affiliation: '19'
     role:
       - Investigation
       - Writing - review & editing
-    email: 1702768@abertay.ac.uk
+    email: "1702768@abertay.ac.uk"
   - name: Glenn P. Williams
     affiliation: '20'
     role:
@@ -573,7 +573,7 @@ author:
     role:
       - Investigation
       - Writing - review & editing
-    email: ​ganttt@yeah.net
+    email: ganttt@yeah.net
   - name: Hu Chuan-Peng
     affiliation: '47'
     role:
@@ -727,11 +727,13 @@ author:
     email: ilkerdalgar@gmail.com
   - name: Mahmoud Elsherif
     affiliation: '61'
-    role: Writing - review & editing
+    role: 
+      - Writing - review & editing
     email: mahmoud.medhat.elsherif@gmail.com
   - name: Martin Vasilev
     affiliation: '62'
-    role: Writing - review & editing
+    role: 
+      - Writing - review & editing
     email: mvasilev@bournemouth.ac.uk
   - name: Vinka Mlakic
     affiliation: '63'
@@ -786,8 +788,7 @@ affiliation:
   - id: '5'
     institution: Institute of Cognition and Culture, Queen’s University Belfast, UK
   - id: '6'
-    institution: Department of Psychology, Lancaster University, Lancaster, United
-      Kingdom
+    institution: Department of Psychology, Lancaster University, Lancaster, United Kingdom
   - id: '7'
     institution: LIP/PC2S, Université Grenoble Alpes, Grenoble, France
   - id: '8'
@@ -989,7 +990,7 @@ header-includes:
       {\normalfont\normalsize\bfseries\itshape\hspace{\parindent}{#1}\textit{\addperi}}{\relax}}
 csl               : "`r system.file('rmd', 'apa7.csl', package = 'papaja')`"
 documentclass     : "apa7"
-output            : papaja::apa6_pdf
+output            : papaja::apa6_docx
 appendix          :
   - "Stage2_app01.Rmd"
   - "Stage2_app02.Rmd"
@@ -1207,11 +1208,14 @@ and Chinese. Compared to the results of sentence-picture verification
 and picture-picture verification, @chenDoesObjectSize2020 converted the
 picture-picture verification times to the mental rotation scores that
 were the discrepancy of verification times between the identical and
-different orientations[^In the pre-registered plan, we used the term "imagery score" but this term was confusing. Therefore, we used "mental rotation scores" instead of "imagery scores" in the final report.]. Their analysis showed that mental rotation
-affected the Dutch participants' sentence-picture verification
-performance. With the measurement of mental rotation scores, we explore
-the association of spatial cognition and the effect of orientation in
-comprehension across the investigated languages.
+different orientations[\^In the pre-registered plan, we used the term
+"imagery score" but this term was confusing. Therefore, we used "mental
+rotation scores" instead of "imagery scores" in the final report.].
+Their analysis showed that mental rotation affected the Dutch
+participants' sentence-picture verification performance. With the
+measurement of mental rotation scores, we explore the association of
+spatial cognition and the effect of orientation in comprehension across
+the investigated languages.
 
 ## Purposes of this study
 
@@ -1223,7 +1227,9 @@ across languages and evaluated the magnitude of match advantage in each
 specific language. Additionally, we examined whether the match
 advantages were related to the mental rotation index. Thus, this study
 followed the original methods from [@stanfield_effect_2001] and
-addressed two primary questions: (1) How much of the match advantage of object orientation can be obtained within different languages, and (2) How do differences in the mental rotation index affect the match
+addressed two primary questions: (1) How much of the match advantage of
+object orientation can be obtained within different languages, and (2)
+How do differences in the mental rotation index affect the match
 advantage across languages?
 
 # Method
@@ -1446,14 +1452,65 @@ follow a secondary plan: a team collected at least their pre-registered
 minimum sample size (suggested 100 to 160 participants, most implemented
 50), and then determine whether or not to continue data collection via
 Bayesian sequential analysis (stopping data collection if $BF_{10}$ = 10
-or 0.10)[^ See details of power analysis in the pre-registered plan, pp. 13 - 15. <https://psyarxiv.com/t2pjv/>].
+or 0.10)[\^ See details of power analysis in the pre-registered plan,
+pp. 13 - 15. <https://psyarxiv.com/t2pjv/>].
 
 We collected data in `r length(unique(SP_V$Language))` languages from
-`r length(unique(c(SP_V$PSA_ID, PP$PSA_ID)))` laboratories. Each laboratory chose a maximal sample size and an incremental *n* for sequential analysis before their data collection. Because the pre-registered power analysis did not match the final analysis plan, we additionally completed a sensitivity analysis to ensure the sample size was adequate to detect small effects, and the results indicated that if the observe orientation difference in reaction time between the different orientations was overall 2.36 ms or higher, the effect would be detected as significant. Appendix A summarizes the details of the sensitivity analysis.
+`r length(unique(c(SP_V$PSA_ID, PP$PSA_ID)))` laboratories. Each
+laboratory chose a maximal sample size and an incremental *n* for
+sequential analysis before their data collection. Because the
+pre-registered power analysis did not match the final analysis plan, we
+additionally completed a sensitivity analysis to ensure the sample size
+was adequate to detect small effects, and the results indicated that if
+the observe orientation difference in reaction time between the
+different orientations was overall 2.36 ms or higher, the effect would
+be detected as significant. Appendix A summarizes the details of the
+sensitivity analysis.
 
-The original sample sizes are presented in Table \@ref(tab:sample-table) for the teams that provided raw data to the project. Data collection proceeded in two broad stages: initially we collected data in the laboratory. However, when the global COVID-19 pandemic made this practice impossible to continue, we moved data collection online. In total, `r format(length(unique(c(SP_V$Subject, PP$Subject))), scientific = FALSE, big.mark = ",")` unique participants completed the present study with `r format(length(unique(c(SP_V$Subject[SP_V$opensesame_codename != "osweb"], PP$Subject[PP$opensesame_codename != "osweb"]))), scientific = FALSE, big.mark = ",")` completing the in-person version and `r format(length(unique(c(SP_V$Subject[SP_V$opensesame_codename == "osweb"], PP$Subject[PP$opensesame_codename == "osweb"]))), scientific = FALSE, big.mark = ",")` completing the online version[^1]. The in-person version included `r length(unique(SP_V$PSA_ID[SP_V$opensesame_codename != "osweb"]))` research teams and the online version included `r length(unique(SP_V$PSA_ID[SP_V$opensesame_codename == "osweb"]))` with `r length(unique(SP_V$PSA_ID))` total teams across both data collection methods (i.e., some labs completed both in-person and online data collection). Based on recommendations from the research teams (TUR_007, TWN_002), two sets of data were excluded from all analyses due to participants being non-native speakers. Figure \@ref(fig:sample-fig) provides a flow chart for participant exclusion and inclusion for analyses. All participating laboratories had either ethical approval or institutional evaluation before data collection. All data and analysis scripts are available on the source files (<https://codeocean.com/capsule/9287673>). Appendix B summarizes the average characteristics by language and laboratory.
+The original sample sizes are presented in Table \@ref(tab:sample-table)
+for the teams that provided raw data to the project. Data collection
+proceeded in two broad stages: initially we collected data in the
+laboratory. However, when the global COVID-19 pandemic made this
+practice impossible to continue, we moved data collection online. In
+total,
+`r format(length(unique(c(SP_V$Subject, PP$Subject))), scientific = FALSE, big.mark = ",")`
+unique participants completed the present study with
+`r format(length(unique(c(SP_V$Subject[SP_V$opensesame_codename != "osweb"], PP$Subject[PP$opensesame_codename != "osweb"]))), scientific = FALSE, big.mark = ",")`
+completing the in-person version and
+`r format(length(unique(c(SP_V$Subject[SP_V$opensesame_codename == "osweb"], PP$Subject[PP$opensesame_codename == "osweb"]))), scientific = FALSE, big.mark = ",")`
+completing the online version[^1]. The in-person version included
+`r length(unique(SP_V$PSA_ID[SP_V$opensesame_codename != "osweb"]))`
+research teams and the online version included
+`r length(unique(SP_V$PSA_ID[SP_V$opensesame_codename == "osweb"]))`
+with `r length(unique(SP_V$PSA_ID))` total teams across both data
+collection methods (i.e., some labs completed both in-person and online
+data collection). Based on recommendations from the research teams
+(TUR_007, TWN_002), two sets of data were excluded from all analyses due
+to participants being non-native speakers. Figure \@ref(fig:sample-fig)
+provides a flow chart for participant exclusion and inclusion for
+analyses. All participating laboratories had either ethical approval or
+institutional evaluation before data collection. All data and analysis
+scripts are available on the source files
+(<https://codeocean.com/capsule/9287673>). Appendix B summarizes the
+average characteristics by language and laboratory.
 
-[^1]: Data for this study was collected together with another unrelated study [@phills_preregistration_2022] during the same data collection session, with the two studies using different data collection platforms. The demographic data was collected within the platform of the other study during the in-person sessions. Some participants only completed the Phills et al. study and dropped out without completing the present study, and there were also some data entry errors in the demographic data. Thus, the demographic data of some participants who took the present study are missing or unidentifiable (*n* = `r merge_subjects %>% filter(!(PSA_ID %in% unique(SP_V$PSA_ID))) %>% pull(Overall_N_Gender) %>% sum()` cannot be matched to a lab, *n* = `r format(sum(merge_subjects$Overall_N_Gender) - sum(c(merge_subjects$Overall_N_Female, merge_subjects$Overall_N_Male)), big.mark = ",")` were missing gender information, and *n* = `r sum(merge_subjects$Overall_Missing_Age)` were missing age information). Importantly, this does not affect the integrity of the experimental research data.
+[^1]: Data for this study was collected together with another unrelated
+    study [@phills_preregistration_2022] during the same data collection
+    session, with the two studies using different data collection
+    platforms. The demographic data was collected within the platform of
+    the other study during the in-person sessions. Some participants
+    only completed the Phills et al. study and dropped out without
+    completing the present study, and there were also some data entry
+    errors in the demographic data. Thus, the demographic data of some
+    participants who took the present study are missing or
+    unidentifiable (*n* =
+    `r merge_subjects %>% filter(!(PSA_ID %in% unique(SP_V$PSA_ID))) %>% pull(Overall_N_Gender) %>% sum()`
+    cannot be matched to a lab, *n* =
+    `r format(sum(merge_subjects$Overall_N_Gender) - sum(c(merge_subjects$Overall_N_Female, merge_subjects$Overall_N_Male)), big.mark = ",")`
+    were missing gender information, and *n* =
+    `r sum(merge_subjects$Overall_Missing_Age)` were missing age
+    information). Importantly, this does not affect the integrity of the
+    experimental research data.
 
 ```{r sample-table, results = 'asis'}
 merge_subjects %>% 
@@ -1506,11 +1563,45 @@ knitr::include_graphics("includes/fig/psa002_flow.drawio.png")
 
 ## Materials
 
-**Sentences.** 24 critical sentence pairs (48 total sentences) were included in this study following Stanfield and Zwaan (2001). Each pair consisted of versions that differed in their implied orientation of the object embedded in the sentence. For instance, the sentence *The librarian put the book back on the table* — which implies a horizontal orientation — had a counterpart in the sentence *The librarian put the book back on the shelf* — which implies a vertical orientation. Another two sets of 24 sentences were included as filler sentences for the task, and each participant received only one set of these two randomized versions. These were not matched to any particular orientation but included a potential object for depiction. For example, *After a week the painting arrived by mail*, and *The flowers that were planted last week had survived the storm* were included as filler sentences. Each participant was shown 24 critical sentences and 24 filler sentences in the study. The filler sentences were included to counterbalance the number of yes-no answers to create an even 50% ratio. 
+**Sentences.** 24 critical sentence pairs (48 total sentences) were
+included in this study following Stanfield and Zwaan (2001). Each pair
+consisted of versions that differed in their implied orientation of the
+object embedded in the sentence. For instance, the sentence *The
+librarian put the book back on the table* - which implies a horizontal
+orientation - had a counterpart in the sentence *The librarian put the
+book back on the shelf* - which implies a vertical orientation. Another
+two sets of 24 sentences were included as filler sentences for the task,
+and each participant received only one set of these two randomized
+versions. These were not matched to any particular orientation but
+included a potential object for depiction. For example, *After a week
+the painting arrived by mail*, and *The flowers that were planted last
+week had survived the storm* were included as filler sentences. Each
+participant was shown 24 critical sentences and 24 filler sentences in
+the study. The filler sentences were included to counterbalance the
+number of yes-no answers to create an even 50% ratio.
 
-**Pictures.** The study included 24 critical matched pictures that only varied in their orientation (vertical/horizontal) for a total of 48 critical pictures. These pictures were matched to their respective sentences for implied orientation. *The librarian put the book back on the table* was matched with a horizontally-oriented book, while *The librarian put the book back on the shelf* was matched with a vertically-oriented book. For counterbalancing, the mismatch between picture orientation and sentence was created, and the book would be shown in the respective opposite orientation (see orientation pairs at <https://osf.io/utqxb>). Another 48 pictures were included for the fillers which were unrelated to the corresponding sentence. Therefore, the answer to critical pairs was always "yes", while the filler sentence-picture combinations answer was always "no". 
+**Pictures.** The study included 24 critical matched pictures that only
+varied in their orientation (vertical/horizontal) for a total of 48
+critical pictures. These pictures were matched to their respective
+sentences for implied orientation. *The librarian put the book back on
+the table* was matched with a horizontally-oriented book, while *The
+librarian put the book back on the shelf* was matched with a
+vertically-oriented book. For counterbalancing, the mismatch between
+picture orientation and sentence was created, and the book would be
+shown in the respective opposite orientation (see orientation pairs at
+<https://osf.io/utqxb>). Another 48 pictures were included for the
+fillers which were unrelated to the corresponding sentence. Therefore,
+the answer to critical pairs was always "yes", while the filler
+sentence-picture combinations answer was always "no".
 
-**Picture-Picture Trials.** The picture-picture verification task used the same object pictures as the above task. The 24 critical picture pairs were included as match trials and were counterbalanced such as half the time they appeared with the same object and orientation (i.e., the same picture), and half the time with the opposite orientation (i.e., horizontal and vertical). The filler pictures were randomly paired to create mismatch trials. Table \@ref(tab:stim-table) shows the counterbalancing and combinations for trials.
+**Picture-Picture Trials.** The picture-picture verification task used
+the same object pictures as the above task. The 24 critical picture
+pairs were included as match trials and were counterbalanced such as
+half the time they appeared with the same object and orientation (i.e.,
+the same picture), and half the time with the opposite orientation
+(i.e., horizontal and vertical). The filler pictures were randomly
+paired to create mismatch trials. Table \@ref(tab:stim-table) shows the
+counterbalancing and combinations for trials.
 
 ```{r stim-table, results = 'asis'}
 data.frame(
@@ -1559,91 +1650,169 @@ data.frame(
  ) 
 ```
 
-## Procedure 
+## Procedure
 
-**Sentence-Picture Task.** The sentence-picture verification task was always administered first. This task began with six practice trials. Each trial started with a left-aligned vertically-centered fixation point displayed for 1,000 ms, immediately followed by the probe sentence. The sentence remained on the screen until the participant pressed the space key, acknowledging that they had read the sentence. Then, the object picture [from @zwaanRevisitingMentalSimulation2012] was presented in the center of the screen until the participant responded, or it disappeared after two seconds. Participants were instructed to verify, as quickly and accurately as possible, whether the object on screen had been mentioned in the probe sentence. Following [@stanfield_effect_2001], a memory check test was carried out after every three to eight trials to ensure that participants had read each sentence carefully.
+**Sentence-Picture Task.** The sentence-picture verification task was
+always administered first. This task began with six practice trials.
+Each trial started with a left-aligned vertically-centered fixation
+point displayed for 1,000 ms, immediately followed by the probe
+sentence. The sentence remained on the screen until the participant
+pressed the space key, acknowledging that they had read the sentence.
+Then, the object picture [from @zwaanRevisitingMentalSimulation2012] was
+presented in the center of the screen until the participant responded,
+or it disappeared after two seconds. Participants were instructed to
+verify, as quickly and accurately as possible, whether the object on
+screen had been mentioned in the probe sentence. Following
+[@stanfield_effect_2001], a memory check test was carried out after
+every three to eight trials to ensure that participants had read each
+sentence carefully.
 
-As shown in Table \@ref(tab:stim-table), the trials for the sentence-picture task were created by counterbalancing the sentence implied orientation (vertical, horizontal) by the pictured object orientation creating a fully-crossed combination between matching sentences and objects. Therefore, each participant only saw one of the four possible combinations (sentence orientation 2 x object orientation 2). For the filler items, sentences and pictures were randomly assigned in two separate patterns, and these were included with the critical pairs. Stimuli lists were created in Excel, and this information can be found at <https://osf.io/utqxb>. 
+As shown in Table \@ref(tab:stim-table), the trials for the
+sentence-picture task were created by counterbalancing the sentence
+implied orientation (vertical, horizontal) by the pictured object
+orientation creating a fully-crossed combination between matching
+sentences and objects. Therefore, each participant only saw one of the
+four possible combinations (sentence orientation 2 x object orientation
+2). For the filler items, sentences and pictures were randomly assigned
+in two separate patterns, and these were included with the critical
+pairs. Stimuli lists were created in Excel, and this information can be
+found at <https://osf.io/utqxb>.
 
-**Translation of Sentences.** The translation of probe sentences followed our pre-registered plan. Every non-English language coordinator was required to recruit at least four translators who were fluent in both English and the target language. Every language coordinator supervised the translators using the Psychological Science Accelerator guidelines (<https://psysciacc.org/translation-process/>). In addition, the coordinator and participating laboratories consulted about each of the following points:
+**Translation of Sentences.** The translation of probe sentences
+followed our pre-registered plan. Every non-English language coordinator
+was required to recruit at least four translators who were fluent in
+both English and the target language. Every language coordinator
+supervised the translators using the Psychological Science Accelerator
+guidelines (<https://psysciacc.org/translation-process/>). In addition,
+the coordinator and participating laboratories consulted about each of
+the following points:
 
-1)	Four translators could denote the items that are unfamiliar to a particular language based on object familiarity ratings. The two forward translators would suggest alternative probe sentences and object pictures to replace the unfamiliar objects. The two backward translators would evaluate the suggested items.
+1)  Four translators could denote the items that are unfamiliar to a
+    particular language based on object familiarity ratings. The two
+    forward translators would suggest alternative probe sentences and
+    object pictures to replace the unfamiliar objects. The two backward
+    translators would evaluate the suggested items.
 
-2)	Some objects in a particular language have different spellings or pronunciations among countries and geographical zones due to dialect. For example, American speakers tend to write *tire* whereas British speakers tend to write *tyre.* Every coordinator would mark these local translations in the final version of translated materials. Participating laboratories could replace the names to match the local dialect.
+2)  Some objects in a particular language have different spellings or
+    pronunciations among countries and geographical zones due to
+    dialect. For example, American speakers tend to write *tire* whereas
+    British speakers tend to write *tyre.* Every coordinator would mark
+    these local translations in the final version of translated
+    materials. Participating laboratories could replace the names to
+    match the local dialect.
 
-**Picture-Picture Task.** Next, the picture-picture verification task was administered. In each trial, two objects appeared on either side of the central fixation point until either the participant indicated that the pictures displayed the same object or two different objects, or until two seconds elapsed. As shown in Table \@ref(tab:stim-table), four possible combinations of critical orientations could be shown with the picture (same, different) by orientation (same, different). Each participant only saw one of the critical combinations, and filler items were randomly paired in two combinations to match. The stimuli lists can be found at <https://osf.io/utqxb>.
+**Picture-Picture Task.** Next, the picture-picture verification task
+was administered. In each trial, two objects appeared on either side of
+the central fixation point until either the participant indicated that
+the pictures displayed the same object or two different objects, or
+until two seconds elapsed. As shown in Table \@ref(tab:stim-table), four
+possible combinations of critical orientations could be shown with the
+picture (same, different) by orientation (same, different). Each
+participant only saw one of the critical combinations, and filler items
+were randomly paired in two combinations to match. The stimuli lists can
+be found at <https://osf.io/utqxb>.
 
-**Software Implementation.** The study was executed using OpenSesame software for millisecond timing [@mathotOpenSesameOpensourceGraphical2012]. After data collection moved online, to minimize the differences between on-site and web-based studies, we converted the original Python code to Javascript and collected the data using OpenSesame through a JATOS server [@langeJustAnotherTool2015; @mathot_conducting_2022]. We proceeded with the online study from February to June 2021 after the changes in the procedure were approved by the journal editor and reviewers. Following the literature, we did not anticipate any theoretically important differences between the two data collection methods [see
+**Software Implementation.** The study was executed using OpenSesame
+software for millisecond timing
+[@mathotOpenSesameOpensourceGraphical2012]. After data collection moved
+online, to minimize the differences between on-site and web-based
+studies, we converted the original Python code to Javascript and
+collected the data using OpenSesame through a JATOS server
+[@langeJustAnotherTool2015; @mathot_conducting_2022]. We proceeded with
+the online study from February to June 2021 after the changes in the
+procedure were approved by the journal editor and reviewers. Following
+the literature, we did not anticipate any theoretically important
+differences between the two data collection methods [see
 @anwyl-irvineGorillaOurMidst2020; @bridgesTimingMegastudyComparing2020a;
-@deleeuwPsychophysicsWebBrowser2016]. The instructions and experimental scripts are available at the public OSF folder (<https://osf.io/e428p/> "Materials" in Files).
+@deleeuwPsychophysicsWebBrowser2016]. The instructions and experimental
+scripts are available at the public OSF folder (<https://osf.io/e428p/>
+"Materials" in Files).
 
 ## Analysis Plan
 
-Our first planned analysis[^2] employed a random-effects meta-analysis
-model that estimated the match advantage across laboratories and
-languages. The meta-analysis summarized the median reaction times by
-match condition to determine the effect size by laboratory
-($d = \frac{Mdn_{Mismatch} - Mdn_{Match}}{\sqrt{MAD_{Mismatch}^2 + MAD_{Match}^2-2\times r\times MAD_{Mismatch} \times MAD_{Match}}} \times \sqrt{2 \times (1-r)}$).
-For the languages for which at least two teams collected data, we
-computed the meta-analytical effect size of that language.
+To test hypothesis 1, our first planned analysis[^2] used a
+random-effects meta-analysis model that estimated the match advantage
+across laboratories and languages. The meta-analysis summarized the
+median reaction times by match condition to determine the effect size by
+laboratory. The following formula was used:
 
-[^2]: See the analysis plan in the preregistered plan, p. 19 \~ 20.
-    <https://psyarxiv.com/t2pjv/> This plan was changed to a
+[^2]: See the analysis plan in the pre-registered plan, pp. 19 - 20,
+    <https://psyarxiv.com/t2pjv/>. This plan was changed to a
     random-effects model to ensure that we did not assume the exact same
     effect size for each language and lab.
 
-Next, we ran planned mixed-effect models using each individual response
-time from the sentence-picture verification task as the dependent
-variable. In each analysis we first built a simple linear regression
-model with a fixed intercept only. Then, we systematically added fixed
-effect and random intercepts arriving at the final model. First, the
-random intercepts were added to the model one-by-one in the following
-order: participant ID, target, laboratory ID, and finally language.
-Please see below for decision criteria. Then, the fixed effect of
-matching condition (match vs. mismatch) was added to the model.
-Language-specific mixed-effect models were conducted in the same way if
-the meta-analysis showed a significant orientation effect.
+$$d = \frac{Mdn_{Mismatch} - Mdn_{Match}}{\sqrt{MAD_{Mismatch}^2 + MAD_{Match}^2-2\times r\times MAD_{Mismatch} \times MAD_{Match}}} \times \sqrt{2 \times (1-r)}$$
 
-According to the preregistration, we planned to first evaluate the
-equality of mental rotation scores across languages using an ANOVA.
-However, this plan was updated to use mixed models instead due the
-nested structure of the data [@gelman_multilevel_2006]. The same
+where $d$ is Cohen's $d$ [@fritz2012], $Mdn$ is Median, $MAD$ is median
+absolute deviation, and $r$ is correlation between match and mismatch
+condition. Meta-analytic effect sizes were computed for those languages
+that had data from more than one team.
+
+Continuing to test hypothesis 1, next, we ran planned mixed-effects
+models using each individual response time from the sentence-picture
+verification task as the dependent variable. In each analysis, we first
+built a simple linear regression model with a fixed intercept only.
+Then, we systematically added random intercepts and fixed effects,
+arriving at the final model. First, the random intercepts were added to
+the model one-by-one in the following order: participant ID, target,
+laboratory ID, and finally language. Please see below for decision
+criteria for determining the final random-effect structure. Then, the
+fixed effect of matching condition (match vs. mismatch) was added to the
+model. Language-specific mixed-effects models were conducted in the same
+way if the meta-analysis showed a significant orientation effect.
+
+According to the pre-registration, we planned to test hypothesis 2 by
+first evaluating the equality of mental rotation scores across languages
+using an ANOVA. However, this plan was updated to use mixed models
+instead due to the nested structure of the data (Gelman, 2006). The same
 analysis plan was used for model building and selection as described
-above for the sentence-picture verification task. The last planned
-analysis was to use mental rotation scores for the prediction of mental
-stimulation with an interaction between language and mental rotation
-scores to determine there were differences in prediction of match
-advantage based on language. This model was updated to a mixed-effects
-model to control for the random effect of the data collection lab.
+above for the sentence-picture verification task.
 
-**Decision criterion.** *p*-values were interpreted using the
-preregistered $\alpha$ level of .05. *p*-values for each effect were
-calculated using the Satterthwaite approximation for degrees of freedom
-for individual predictor coefficients and meta-analysis
-[@lukeEvaluatingSignificanceLinear2017]. For model comparison and random
-effects selection, we compared the model fit measured by the AIC at each
-of these steps, to determine the best random effect structure for the
-model. Models with lower AIC were preferred over models with higher AIC,
-and in a case where the difference in AIC did not reach 2, the model
-with the fewer parameters was preferred.
+To further assess hypothesis 2, the last planned analysis was to use
+mental rotation scores for the prediction of mental stimulation with an
+interaction between language and mental rotation scores computed from
+the picture-picture task to determine if there were differences in
+prediction of match advantage in the sentence-picture task. Here, we
+used a mixed-effects model as well to control for the random effect of
+the data collection lab, and with language, mental rotation score, and
+their interaction as fixed effect predictors.
 
-**Intra-lab analysis during data collection.** Before data collection,
-each lab decided whether they wanted to apply a sequential analysis
-[@schonbrodtSequentialHypothesisTesting2017] or whether they wanted to
-settle for a fixed sample size. The preregistered protocol for labs
-applying sequential analysis established that they could stop data
-collection upon reaching the preregistered criterion
-($BF_{10} = 10\ or\ \frac{1}{10}$), or the maximal sample size. Each
-laboratory chose a fixed sample size and an incremental *n* for
+**Decision criterion for model selection and hypothesis testing.** The
+inclusion of both random and fixed effects in models was assessed using
+model comparison based on the Akaike information criterion (AIC). While
+this method is less conservative than alternatives such as the
+likelihood ratio test [@matuschek2017], the AIC was deemed appropriate
+due to the modest effect sizes that tend to be produced by mental
+simulation effects, and the limited sample sizes in the present study
+(albeit larger samples than those of most previous studies). Models with
+lower AIC were preferred over models with higher AIC, and in cases where
+the difference in AIC did not reach 2 [@burnham1998], the model with
+fewer parameters was preferred.
+
+*p*-values for each effect were calculated using the Satterthwaite
+approximation for degrees of freedom for individual predictor
+coefficients and meta-analysis [@lukeEvaluatingSignificanceLinear2017].
+*p*-values were interpreted using the pre-registered $\alpha$ level of
+.05.
+
+**Intra-lab analysis during data collection.**
+
+Before data collection, each lab decided whether they wanted to apply a
+sequential analysis [@schonbrodtSequentialHypothesisTesting2017] or
+whether they wanted to settle for a fixed sample size. The
+pre-registered protocol for labs applying sequential analysis
+established that they could stop data collection upon reaching the
+pre-registered criterion ($BF_{10}$ = 10 or .10), or the maximal sample
+size. Each laboratory chose a fixed sample size and an incremental n for
 sequential analysis before their data collection. Two laboratories
-(HUN_001, TWN_001) stopped data collection at the preregistered
-criterion, $BF_{10} = \frac{1}{10}$. Fourteen laboratories did not
-finish the sequential analysis because (1) twelve laboratories were
-interrupted by the pandemic outbreak; (2) two laboratories (TUR_007E,
-TWN_002E) recruited English-speaking participants to comply with
-institutional policies. Lab-based records were reported on a public
-website as each laboratory completed data collection (details are
-available in Appendix C).
+(HUN_001, TWN_001) stopped data collection at the pre-registered
+criterion, $BF_{10}$ = .10. Fourteen laboratories did not finish the
+sequential analysis because (1) twelve laboratories were interrupted by
+the pandemic outbreak; (2) two laboratories (TUR_007E, TWN_002E)
+recruited English-speaking participants to comply with institutional
+policies. Lab-based records were reported on a public website as each
+laboratory completed data collection (details are available in Appendix
+C).
 
 # Results
 
@@ -1671,21 +1840,21 @@ PP_acc <- PP_non %>%
                          unique()))
 ```
 
-As shown in Figure \@ref(fig:sample-fig), entire participants were first
-removed from the sentence-picture and picture-picture tasks if they did
-not perform at 70% accuracy. Next, the data were screened for outliers.
-Our preregistered plan excluded outliers based on a linear mixed-model
-analysis for participants in the third quantile of the grand intercept
-(i.e., participants with the longest average response times). After
-examining the data from both online and in-person data collection, it
-became clear that both a minimum response latency and maximum response
-latency should be employed, as improbable times existed at both ends of
-the distribution. The minimum response time was set to 160 ms based on
-Hick's Law [@kvalsethHickLawEquivalent2021; @proctorHickLawChoice2018].
-The maximum response latency was calculated as two times the mean
-absolute deviation plus the median calculated separately for each
-participant. Exclusions were performed at the trial level for these
-outlier response times.
+As shown in Figure \@ref(fig:sample-fig), participants' data were
+deleted listwise from the sentence-picture and picture-picture tasks if
+they did not perform with at least 70% accuracy. Next, the data were
+screened for outliers. Our pre-registered plan excluded outliers based
+on a linear mixed-model analysis for participants in the third quantile
+of the grand intercept (i.e., participants with the longest average
+response times). After examining the data from both online and in-person
+data collection, it became clear that both a minimum response latency
+and maximum response latency should be employed, as improbable times
+existed at both ends of the distribution. The minimum response time was
+set to 160 ms based on Hick's Law [@kvalsethHickLawEquivalent2021;
+@proctorHickLawChoice2018]. The maximum response latency was calculated
+as two times the mean absolute deviation plus the median calculated
+separately for each participant. Exclusions were performed at the trial
+level for these outlier response times.
 
 ```{r outliers}
 SP_V_noout <- SP_V_acc %>% 
@@ -1719,13 +1888,12 @@ source_cor_lmer_out <- summary(source_cor.lmer)
 # summary(source_cor.lmer)
 ```
 
-In order to ensure equivalence between data collection methods, we
-evaluated the response times predicted by the fixed effects of the
-interaction between match (match versus mismatch) and data collection
-source (in-person, online). We included random intercepts of
-participants, lab, language, and random slopes of source by lab, and
-source by language. This analysis showed no difference between data
-sources: *b* =
+To ensure equivalence between data collection methods, we evaluated the
+response times predicted by the fixed effects of the interaction between
+match (match vs. mismatch) and data collection source (in-person vs.
+online). We included random intercepts for participants, lab, language,
+and random slopes for source by lab and source by language. This
+analysis showed no difference between data sources: *b* =
 `r format(round(source_cor_lmer_out$coefficients[4,1], 2), nsmall = 2)`,
 *SE* =
 `r format(round(source_cor_lmer_out$coefficients[4,2], 2), nsmall = 2)`,
@@ -1736,6 +1904,43 @@ sources: *b* =
 following analyses did not separate in-person and online data. Table
 \@ref(tab:summary-languages) provides a summary of the match advantage
 by language for the sentence-picture verification task.
+
+```{r limitations, message=FALSE, warning=FALSE, include=FALSE}
+SP_V_correct_temp <- SP_V_noout %>% 
+  filter(correct == 1)
+
+SP_M_out <- all_data %>% 
+  filter(Task == "M" | Task == "Prac") %>% 
+  left_join(lab_info %>% select(PSA_ID, Language), by = "PSA_ID") %>% 
+  readr::type_convert() %>% 
+  distinct() %>% 
+  mutate(Language = ifelse(Language == "Magyar", "Hungarian", Language)) %>% ## Switch "Magyar" to "Hungarian"
+ mutate(Language = ifelse(Language == "Simple Chinese", "Simplified Chinese", Language)) %>% ## Switch "Simple Chinese" to "Simplified Chinese"
+ mutate(PSA_ID = str_replace(PSA_ID, "SRB_002B", "SRB_002")) %>% ## Combine two Serbian language groups based on the collectors' recommendation
+ mutate(Source = if_else(opensesame_codename == "osweb","osweb","site"), 
+  Subject = paste0(Source,"_",PSA_ID,"_",subject_nr, "_", datetime)) %>% ## Compose the unique participant id
+  filter(PSA_ID %in% SP_V_correct_temp$PSA_ID) %>% 
+  group_by(Source, Subject) %>% 
+  summarise(M_acc = mean(correct)) 
+
+t_test <- t.test(SP_M_out$M_acc ~ SP_M_out$Source, 
+                 var.equal = FALSE, paired = FALSE)
+```
+
+Although we combined the two data sets in the final data analysis, it is
+worth considering that online participants' attention may be easily
+distracted given the lack of environmental control and experimenter
+overview. However, this secondary task revealed that online participants
+had a higher percent correct than in-person participants,
+*t*(`r apa_num(t_test$parameter)`) = `r apa_num(t_test$statistic)`, *p*
+`r apa_p(t_test$p.value)`, $M_{online}$ =
+`r apa_num(mean(SP_M_out$M_acc[SP_M_out$Source == "osweb"], na.rm = T)*100)`
+(*SD* =
+`r apa_num(sd(SP_M_out$M_acc[SP_M_out$Source == "osweb"], na.rm = T)*100)`)
+and $M_{in-person}$ =
+`r apa_num(mean(SP_M_out$M_acc[SP_M_out$Source == "site"], na.rm = T)*100)`
+(*SD* =
+`r apa_num(sd(SP_M_out$M_acc[SP_M_out$Source == "site"], na.rm = T)*100)`).
 
 ```{r summary-languages, echo = FALSE, message = FALSE, warning = FALSE, paged.print = TRUE}
 # Table in the final report.
@@ -1770,12 +1975,12 @@ SP_V_noout %>%
  escape = FALSE,
  col.names = c("Language","Accuracy Percent","Mismatching","Matching","Match Advantage"),
  align = c("l",rep("c",4)),
- caption = "Descriptive Statistics by Language",
+ caption = "Descriptive Summary of Sentence-Picture Verification Task by Language",
  note = "Average accuracy percentage, Median response times and median absolute deviations (in parentheses) per match condition (Mismatching, Matching); Match advantage (difference in response times)."
  ) 
 ```
 
-## Meta-Analysis
+## Hypothesis 1: Meta-Analysis of the Orientation Effect
 
 ```{r}
 SP_V_correct <- SP_V_noout %>% 
@@ -1895,11 +2100,11 @@ SP_V_meta_all <- rma.uni(yi, vi, data = SP_V_es, method = "REML", digits = 2)
     adj = c(0,1),
       c("English",
       "German",
-      "Norweigan",
+      "Norwegian",
       "Turkish",
       "Arabic",
       "Simplified Chinese",
-      "Slovak",
+      "Slovakian",
       "Spanish",
       "Traditional Chinese",
       "Brazilian Portuguese",
@@ -1941,14 +2146,14 @@ SP_V_meta_all <- rma.uni(yi, vi, data = SP_V_es, method = "REML", digits = 2)
 }
 ```
 
-```{r meta-all-plot, echo = FALSE, message = FALSE, warning = FALSE, results = 'asis', paged.print = TRUE, fig.cap = "Meta-analysis on match advantage of object orientation for all languages"}
+```{r meta-all-plot, echo = FALSE, message = FALSE, warning = FALSE, results = 'asis', paged.print = TRUE, fig.cap = "Meta-analysis on match advantage of object orientation for all languages. Diamonds indicate summary estimates, the midpoint of the diamond indicating the point estimate, and the left and right endpoints indicating the lower and upper bounds of the confidence interval of the estimated effect size. The lowermost diamond represents the estimate derived from the whole dataset."}
 knitr::include_graphics("includes/fig/meta-all.png")
 ```
 
 The planned meta-analysis examined the effect overall and within
 languages wherein at least two laboratories had collected data (Arabic,
 English, German, Norway, Simplified Chinese, Traditional Chinese,
-Slovak, and Turkey). Figure \@ref(fig:meta-all-plot) showed a
+Slovakian, and Turkey). Figure \@ref(fig:meta-all-plot) showed a
 significant positive orientation effect across German laboratories (*b*
 = `r as.character(round(res.Germany$b,2))`, 95% CI
 [`r as.character(round(res.Germany$ci.lb,2))`,
@@ -1963,9 +2168,7 @@ CI [-32.26, -2.24]), although in these languages only a single
 laboratory participated, so no language-specific meta-analysis was
 conducted.
 
-(Insert Figure \@ref(fig:meta-all-plot) about here)
-
-## Mixed-Linear Modeling
+## Hypothesis 1: Mixed-Linear Modeling of the Orientation Effect
 
 ```{r SP-lang-lme, message = FALSE, warning = FALSE, include = FALSE}
 SP_V_correct$Match <- factor(SP_V_correct$Match, 
@@ -2004,21 +2207,22 @@ SP_lme01_out <- summary(fixed.model)$coefficients
 ```
 
 First, an intercept only model of response times with no random
-intercepts was computed for comparison purposes
+intercepts was computed for comparison purposes AIC =
 `r format(round(AIC(intercept.model), digits = 2), nsmall = 2)`. The
-model with the participant random intercept was an improvement over this
-model `r format(round(AIC(subject.model), digits = 2), nsmall = 2)`. The
+model with the random intercept by participants was an improvement over
+this model, AIC =
+`r format(round(AIC(subject.model), digits = 2), nsmall = 2)`. The
 addition of a target random intercept improved model fit over the
-participant intercept only model
+participant intercept only model, AIC =
 `r format(round(AIC(item.model), digits = 2), nsmall = 2)`. Data
 collection lab was then added to the model as a random intercept, also
-showing model improvement
+showing model improvement, AIC =
 `r format(round(AIC(lab.model), digits = 2), nsmall = 2)`, and the
-random intercept of language was added last
+random intercept of language was added last, AIC =
 `r format(round(AIC(language.model), digits = 2), nsmall = 2)` which did
 not show model improvement at least 2 points change. Last, the fixed
 effect of match advantage was added with approximately the same fit as
-the three random-intercept model,
+the three random-intercept model, AIC =
 `r format(round(AIC(fixed.model), digits = 2), nsmall = 2)`. This model
 did not reveal a significant effect of match advantage: *b* =
 `r format(round(SP_lme01_out[2, 1], digits = 2), nsmall = 2)`, *SE* =
@@ -2042,15 +2246,15 @@ german.fixed.three.model <- lmer(response_time ~ Match + (1|Subject) + (1|Target
 german_output <- summary(german.fixed.three.model)$coefficients
 ```
 
-We conducted an exploratory mixed-effect model on German data as this
+We conducted an exploratory mixed-effects model on German data as this
 was the only language indicating a significant match advantage in the
 meta-analysis. An intercept-only model with random effects for
-participants, target, and lab was used as a comparison,
+participants, target, and lab was used as a comparison, AIC =
 `r format(round(AIC(german.lab.model), digits = 2), nsmall = 2)`. The
 addition of the fixed effect of match showed a small improvement over
-this random-intercept model,
+this random-intercept model, AIC =
 `r format(round(AIC(german.fixed.three.model), digits = 2), nsmall = 2)`.
-While the AIC values indicated a significant change, the *p*-value did
+Whereas the AIC values indicated a significant change, the *p*-value did
 not reveal a significant effect of match advantage: *b* =
 `r format(round(german_output[2, 1], digits = 2), nsmall = 2)`, *SE* =
 `r format(round(german_output[2,2], digits = 2), nsmall = 2)`,
@@ -2059,7 +2263,7 @@ t(`r format(round(german_output[2,3], digits = 2), nsmall = 2)`) =
 `r apa_p(german_output[2, 5])`. All the details of the above fixed
 effects and random intercepts are summarized in Appendix D.
 
-## Mental Rotation Scores
+## Hypothesis 2: Mental Rotation Scores
 
 ```{r PP-null-lme, message = FALSE, warning = FALSE, include = FALSE}
 PP_correct$Identical <- factor(PP_correct$Identical, 
@@ -2143,29 +2347,30 @@ max(lang_results$Coefficient)
 
 Using the same steps as described for the sentence-picture verification
 mixed model, we first started with an intercept only model with no
-random effects for comparison
+random effects for comparison, AIC =
 `r format(round(AIC(PP.intercept.lme), digits = 2), nsmall = 2)`. The
-addition of subject
-`r format(round(AIC(PP.subject.lme), digits = 2), nsmall = 2)`, item
-`r format(round(AIC(PP.item.lme), digits = 2), nsmall = 2)`, lab
-`r format(round(AIC(PP.lab.lme), digits = 2), nsmall = 2)`, and language
-`r format(round(AIC(PP.lang.lme), digits = 2), nsmall = 2)` random
-intercepts all subsequently improved model fit. Next, the match effect
-for object orientation was entered as the fixed effect for mental
-rotation score,
-`r format(round(AIC(PP.fixed.lme), digits = 2), nsmall = 2)`, which
-showed improvement over the random intercepts model. This model showed a
-significant effect of object orientation, *b* =
+addition of random intercepts by subject, AIC =
+`r format(round(AIC(PP.subject.lme), digits = 2), nsmall = 2)`, by item,
+AIC = `r format(round(AIC(PP.item.lme), digits = 2), nsmall = 2)`, by
+lab, AIC = `r format(round(AIC(PP.lab.lme), digits = 2), nsmall = 2)`,
+and by language, AIC =
+`r format(round(AIC(PP.lang.lme), digits = 2), nsmall = 2)`, all
+subsequently improved model fit. Next, the match effect for object
+orientation was entered as the fixed effect for mental rotation score,
+AIC = `r format(round(AIC(PP.fixed.lme), digits = 2), nsmall = 2)`,
+which showed improvement over the random intercepts model. This model
+showed a significant effect of object orientation, *b* =
 `r format(round(PP_output[2, 1], digits = 2), nsmall = 2)`, *SE* =
 `r format(round(PP_output[2,2], digits = 2), nsmall = 2)`,
 t(`r format(round(PP_output[2,3], digits = 2), nsmall = 2)`) =
 `r format(round(PP_output[2,4], digits = 2), nsmall = 2)`, *p* =
 `r apa_p(PP_output[2, 5])`, such that identical orientations were
-processed faster than rotated orientations. The coefficients of all
-considered mixed-effects models are reported in Appendix E, along with
-all effects presented by language.
+processed faster than rotated orientations. The point estimates of the
+orientation effect varied between 23.79--40.24, revealing a range of 14
+ms across languages. The coefficients of all mixed-effects models are
+reported in Appendix E, along with all effects presented by language.
 
-## Prediction of Match Advantage
+## Hypothesis 2: Prediction of Match Advantage
 
 ```{r prediction_data, message=FALSE, warning=FALSE, include=FALSE}
 ## Dataset for prediction model
@@ -2211,133 +2416,200 @@ pred_output <- summary(pred.interact)$coefficients
 ```
 
 The last analysis included a mixed effects regression model using the
-interaction of language and mental rotation to predict match advantage.
-First, an intercept only model was calculated for comparison,
+interaction of language and mental rotation scores to predict match
+advantage in the sentence-picture task. First, an intercept only model
+was calculated for comparison, AIC =
 `r format(round(AIC(pred.intercept), digits = 2), nsmall = 2)`, which
-was improved slightly by adding a random intercept of data collection
-lab, `r format(round(AIC(pred.lab), digits = 2), nsmall = 2)`. The
-addition of the fixed effects interaction of language and imagery
-improved the overall model,
+was improved slightly by adding a random intercept by data collection
+lab, AIC = `r format(round(AIC(pred.lab), digits = 2), nsmall = 2)`. The
+addition of the fixed effects interaction of language and mental
+rotation score improved the overall model, AIC =
 `r format(round(AIC(pred.interact), digits = 2), nsmall = 2)`. English
-was used as the comparison group for all language comparisons. No
-interaction effects or the main effect of mental rotation were
-significant, and these results are detailed in Appendix 5.
+was used as the comparison group for all language comparisons. Neither
+the mental rotation score nor the interaction of mental rotation score
+and language were significant, and these results are detailed in
+Appendix E.
 
 # Discussion
 
-This study aimed to test a global object orientation effect and to estimate the magnitude of object orientation effect in each particular language. The findings of our study did not support the existence of the object orientation effect as an outcome of general cognitive function. Our data failed to replicate the effects in English and Chinese, languages in which the effect has been reported previously [@chenDoesObjectSize2020; @stanfield_effect_2001;
-@zwaanRevisitingMentalSimulation2012]. The only language in which we found an indication of the orientation effect in the predicted direction was German, but this effect was evident only in the meta-analysis and not in the mixed-effects model approach. Mixed-effects models indicated significant mental rotation scores for each language that was consistent with the assumption mental rotation is a general cognitive function. However, the mental rotation score did not predict the object orientation effects nor interact with language. Overall, the failure to replicate the previously reported object orientation effects casts doubt on the existence of the effect as a language-general phenomenon [@kaschakEmbodimentLabTheory2021]. Below, we summarize the lessons and limitations of the methodology and analysis, and discuss theoretical issues related to the orientation effect as an effective probe to investigate the mental simulation process.
+This study aimed to test a global object orientation effect and to
+estimate the magnitude of object orientation effect in each particular
+language. The findings of our study did not support the existence of the
+object orientation effect as an outcome of general cognitive function.
+Our data failed to replicate the effects in English and Chinese,
+languages in which the effect has been reported previously
+[@chenDoesObjectSize2020; @stanfield_effect_2001;
+@zwaanRevisitingMentalSimulation2012]. The only language in which we
+found an indication of the orientation effect in the predicted direction
+was German, but this effect was evident only in the meta-analysis and
+not in the mixed-effects model approach. Mixed-effects models indicated
+significant mental rotation scores for each language that was consistent
+with the assumption mental rotation is a general cognitive function.
+However, the mental rotation score did not predict the object
+orientation effects nor interact with language. Overall, the failure to
+replicate the previously reported object orientation effects casts doubt
+on the existence of the effect as a language-general phenomenon
+[@kaschakEmbodimentLabTheory2021]. Below, we summarize the lessons and
+limitations of the methodology and analysis, and discuss theoretical
+issues related to the orientation effect as an effective probe to
+investigate the mental simulation process.
 
 ## Methodological Considerations
 
-By examining the failed replications of the object orientation effect in the English-language labs (see Figure 3), researchers can further identify the possible factors that may have contributed to the discrepancies between the results of this project and the original studies. Although our project had a larger sample of English-speaking participants compared to the original studies [i.e., @stanfield_effect_2001; @zwaanRevisitingMentalSimulation2012], our English-speaking participants came from multiple countries where the participants’ lexical knowledge is not completely consistent with American English. Although we prepared an alternative version of the stimuli for British English, these two versions of English stimuli did not cover all English language backgrounds, such as participants from Malaysia and Africa. Despite the overall non-significant effect in all English-language data, the meta-analysis indicated three significant positive team-based effects (USA_173, USA_030 and USA_032, see Figure 3) but also three significant negative effects (USA_33, USA_20, and GBR_005, see Figure 3). Future cross-linguistic studies should attempt to balance sample sizes across languages to allow reliable cross-linguistic comparisons.
+By examining the failed replications of the object orientation effect in
+the English-language labs (see Figure 3), researchers can further
+identify the possible factors that may have contributed to the
+discrepancies between the results of this project and the original
+studies. Although our project had a larger sample of English-speaking
+participants compared to the original studies [i.e.,
+@stanfield_effect_2001; @zwaanRevisitingMentalSimulation2012], our
+English-speaking participants came from multiple countries where the
+participants' lexical knowledge is not completely consistent with
+American English. Although we prepared an alternative version of the
+stimuli for British English, these two versions of English stimuli did
+not cover all English language backgrounds, such as participants from
+Malaysia and Africa. Despite the overall non-significant effect in all
+English-language data, the meta-analysis indicated three significant
+positive team-based effects (USA_173, USA_030 and USA_032, see Figure 3)
+but also three significant negative effects (USA_33, USA_20, and
+GBR_005, see Figure 3). Future cross-linguistic studies should attempt
+to balance sample sizes across languages to allow reliable
+cross-linguistic comparisons.
 
-Regarding the failed replication of Chinese orientation effects, the past study used simpler sentence content compared to this project. @chenDoesObjectSize2020  used the probe sentences in which the target objects were the subject of sentences (e.g., _The **nail** was hammered into the wall_; bold added to mark the subject noun). The Chinese probe sentences in this project were translated from the English sentences used in @stanfield_effect_2001, in which the target objects are the object of sentences (e.g., _The carpenter hammered the **nail** into the wall_; bold added to mark object noun). It is possible that the object orientation effect may be present or stronger when the target objects are the subject of the sentence, rather than the direct object, and future studies could explore this distinction. 
+Regarding the failed replication of Chinese orientation effects, the
+past study used simpler sentence content compared to this project.
+@chenDoesObjectSize2020 used the probe sentences in which the target
+objects were the subject of sentences (e.g., *The **nail** was hammered
+into the wall*; bold added to mark the subject noun). The Chinese probe
+sentences in this project were translated from the English sentences
+used in @stanfield_effect_2001, in which the target objects are the
+object of sentences (e.g., *The carpenter hammered the **nail** into the
+wall*; bold added to mark object noun). It is possible that the object
+orientation effect may be present or stronger when the target objects
+are the subject of the sentence, rather than the direct object, and
+future studies could explore this distinction.
 
-Lastly, past studies that employed a secondary task among the experimental trials [@chenDoesObjectSize2020; @kaschakEmbodimentLabTheory2021;
-@stanfield_effect_2001] showed a positive object orientation effect. In our study, the memory check did not increase the likelihood to detect the mental simulation effects. In addition, we did not find that mental imagery predicted match advantage, which implies that this strategy to ensure linguistic processing had limited influence in our study.
+Lastly, past studies that employed a secondary task among the
+experimental trials [@chenDoesObjectSize2020;
+@kaschakEmbodimentLabTheory2021; @stanfield_effect_2001] showed a
+positive object orientation effect. In our study, the memory check did
+not increase the likelihood to detect the mental simulation effects. In
+addition, we did not find that mental imagery predicted match advantage,
+which implies that this strategy to ensure linguistic processing had
+limited influence in our study.
 
 ## Analysis Issues
 
 The orientation effects were analyzed using a meta-analytic approach and
-mixed-effects models. Both approaches did not reveal an overall effect
-of object orientation. In the language-by-language analysis, a
-significant orientation effect was found in German language data in the
-meta-analysis. The mixed model analysis did not confirm this result,
-since the effect in the German data was not significant according to our
-preregistered test criteria. It is worth noting that there is
-considerable debate in the statistical community regarding the precision
-of the p-values computed for linear mixed models [@bolker2015]. One
-alternative approach to testing the significance of a fixed effect
-predictor is assessing the difference in AIC model fit index between a
-model that contains a fixed effect predictor and one that does not.
-Using this approach the effect of orientation in the German language
-data is significant in the mixed effect model as well, meaning that the
-results of the meta-analysis and the mixed-effect model are compatible.
-Nevertheless, even if the orientation effect exists in the German
-language, the size of the effect seems minute, estimated at 16.68 ms by
-the meta-analysis and 4.84 ms by the mixed-model.
+mixed-effects models. Neither approach revealed an overall effect of
+object orientation. In the language-by-language analysis, a significant
+orientation effect was found in the German language data in the
+meta-analysis. The mixed model analysis did not confirm this result
+because the effect in the German data was not significant according to
+our pre-registered test criteria. There is considerable debate in the
+statistical community regarding the precision of the *p* values computed
+for linear mixed models [@bolker2015]. One alternative,
+less-conservative approach to testing the significance of a fixed effect
+predictor is assessing the difference in the AIC model fit index between
+a model that contains a fixed effect predictor and one that does not
+[@matuschek2017]. Using this approach in an exploratory analysis, we
+found that the effect of orientation in the German language data was not
+negligible, rendering this result compatible with the result obtained
+for German in the meta-analysis. However, considered in the general
+context including all the other results, the present exploratory result
+for German could stem from measurement error
+[@lokenMeasurementErrorReplication2017] or from family-wise error
+[@armstrongWhenUseBonferroni2014].
+
+When a topic area yields inconsistent or small effects, some researchers
+have questioned the utility of further research [@brysbaert2020;
+@sala2017]. However, research on embodied cognition should continue with
+the aim of determining the factors behind the variability of the
+effects. One of these factors could be the nature of the variables
+used - for instance, categorical versus continuous. The object
+orientation design is a factorial, congruency paradigm, based on
+congruent (matching) and incongruent (mismatching) conditions. Another
+paradigm of similar characteristics, namely the action sentence
+compatibility effect, similarly failed to replicate in a large-scale
+study [@morey2022]. Whereas factorial paradigms require the use of
+categorical variables, other studies have operationalized sensorimotor
+information using continuous variables, and observed significant effects
+[@bernabeu2022; @lynott2020; @petilli2021]. Since continuous variables
+contain more information, they may afford more statistical power
+[@cohen1983]. Furthermore, in addition to categorical versus continuous
+predictors, sensorimotor effects are likely to be moderated by factors
+influencing participants\' attention during experiments
+[@barsalouEstablishingGeneralizableMechanisms2019; @noah2018]. Last, and
+more certainly, sensorimotor effects are moderated by the sample size of
+studies, and the sample size needed to study these effects can exceed
+1,000 participants [@bernabeu2022]. Examining these and other sources of
+variation is likely to yield the degree of granularity needed for the
+present topic.
 
 ## Theoretical Issues
 
-Theorists of mental simulation have proposed the cognitive processing
-framework that explains how the human mind converts sentences into
-either abstract symbols or grounded mental representations
-[@barsalouPerceptualSymbolSystems1999; @barsalou_grounded_2008;
-@zwaan_embodiment_2014]. However, the tasks used to test these theories
-rely on priming-based logic, whereby a designed sentence generates
-perceptual representations along some dimension (such as orientation)
-that facilitates or interferes with perceptual processing
-[@mcnamaraSemanticPrimingPerspectives2005;
-@kaschakEmbodimentLabTheory2021. Priming-logic implies that the reading
-of the sentence will activate perceptual imagery, thus facilitating a
-matching object picture, and causing interference for a mismatching
-picture. As discussed previously, the linguistic structure of languages
-is variable, and it may be that testing all languages together masks or
-adds unexpected variability to linguistic processing that is averaged
-across in analyses. Similar to the issues found with replication in the
-Chinese language, we may not know exactly what sentence content for each
-language can create the most priming for the object orientation effect.
-On the other hand, accumulating the small magnitude of orientation
-effects would reduce the theoretical importance of mental simulations in
-language comprehension. Future studies should examine the semantic and
-syntactic aspects, yet to be investigated in the published studies.
+Scholars interested in mental simulation have investigated whether the
+human mind processes linguistic content as abstract symbols or as
+grounded mental representations [@barsalou_grounded_2008;
+@barsalouPerceptualSymbolSystems1999; @zwaanReplicationsShouldBe2014].
+Some of the tasks used to test these theories-such as the
+sentence-verification task-rely on priming-based logic, whereby a
+designed sentence generates representations along some dimension (such
+as orientation) that facilitates or interferes with the processing of
+the subsequent stimulus [@roelke2018]. Furthermore, embodied cognition
+theories suggest that the reading of the sentence will activate
+perceptual experience, thus facilitating a matching object picture and
+causing interference for a mismatching picture
+[@kaschakEmbodimentLabTheory2021;
+@mcnamaraSemanticPrimingPerspectives2005]. To scrutinize these effects,
+future studies could augment the sentence-picture verification task to
+compare the degree of priming based on object orientation with the
+priming based on other semantic information. The present study
+constitutes the first large-scale, cross-linguistic approach to the
+object orientation effect. Cross-linguistic studies are rare in the
+present topic, and generally in the topic of conceptual/semantic
+processing. In future studies, the basis for cross-linguistic
+comparisons in conceptual processing should be expanded, for instance,
+by studying the lexicosemantic features of the stimuli used, how those
+differ across languages, and how those differences may influence
+psycholinguistic processing. For the development of this founding work,
+the field of linguistic relativity may be useful as a model [e.g.,
+@athanasopoulos2023].
+
+In addition, further research should compare the size of mental
+simulation effects with the size of effects that are associated with the
+symbolic account of conceptual processing. The symbolic account posits
+that conceptual processing (i.e., the comprehension of the meaning of
+words) is not dependent on modality-specific systems (e.g., vision,
+hearing, touch, interoception, motor control, emotion, etc.). So far,
+some of these comparisons have supported both accounts. However, in some
+studies, the effects of the symbolic account have been larger than those
+of the embodied account [@bernabeu2022; @louwerse2015], whereas the
+reverse has been true in other studies [@fernandino2022; @tong2022].
 
 ## Limitations
 
-```{r limitations, message=FALSE, warning=FALSE, include=FALSE}
-SP_M_out <- all_data %>% 
-  filter(Task == "M" | Task == "Prac") %>% 
-  left_join(lab_info %>% select(PSA_ID, Language), by = "PSA_ID") %>% 
-  readr::type_convert() %>% 
-  distinct() %>% 
-  mutate(Language = ifelse(Language == "Magyar", "Hungarian", Language)) %>% ## Switch "Magyar" to "Hungarian"
- mutate(Language = ifelse(Language == "Simple Chinese", "Simplified Chinese", Language)) %>% ## Switch "Simple Chinese" to "Simplified Chinese"
- mutate(PSA_ID = str_replace(PSA_ID, "SRB_002B", "SRB_002")) %>% ## Combine two Serbian language groups based on the collectors' recommendation
- mutate(Source = if_else(opensesame_codename == "osweb","osweb","site"), 
-  Subject = paste0(Source,"_",PSA_ID,"_",subject_nr, "_", datetime)) %>% ## Compose the unique participant id
-  filter(PSA_ID %in% SP_V_correct$PSA_ID) %>% 
-  group_by(Source, Subject) %>% 
-  summarise(M_acc = mean(correct)) 
-
-t_test <- t.test(SP_M_out$M_acc ~ SP_M_out$Source, 
-                 var.equal = FALSE, paired = FALSE)
-```
-
-This study reflected the challenges to assess the mental simulation of
+This study reflects the challenges to assess the mental simulation of
 object orientation across languages, especially when dealing with
 effects that require large sample sizes [see
 @lokenMeasurementErrorReplication2017;
 @vadilloUnderpoweredSamplesFalse2016]. Our data collection deviated from
-the preregistered plan because of the COVID-19 pandemic. Due to the lack
-of participant monitoring online, and an inspection of the data, we post
-hoc used filtering on outliers in terms of participants' response times
-for both too quick (\< 160 ms) and too slow responses (2 MAD beyond the
-median for each participant individually). After these exclusions, a
-mixed-effect model confirmed no difference of response times between
-in-person and online data.
-
-Although we combined the two data sets in the final data analysis, it is
-worth considering that online participants' attention may be easily
-distracted given the lack of any environmental control and lack of
-experimenter assistance. However, while our planned analysis did not
-include the memory check responses, this secondary task revealed that
-online participants had a higher percent correct than in-person
-participants, *t*(`r apa_num(t_test$parameter)`) =
-`r apa_num(t_test$statistic)`, *p* `r apa_p(t_test$p.value)`,
-$M_{online}$ =
-`r apa_num(mean(SP_M_out$M_acc[SP_M_out$Source == "osweb"], na.rm = T)*100)`
-(*SD* =
-`r apa_num(sd(SP_M_out$M_acc[SP_M_out$Source == "osweb"], na.rm = T)*100)`)
-and $M_{in-person}$ =
-`r apa_num(mean(SP_M_out$M_acc[SP_M_out$Source == "site"], na.rm = T)*100)`
-(*SD* =
-`r apa_num(sd(SP_M_out$M_acc[SP_M_out$Source == "site"], na.rm = T)*100)`).
+the pre-registered plan because of the COVID-19 pandemic. Due to the
+lack of participant monitoring online, and an inspection of the data, we
+post-hoc used filtering on outliers in terms of participants' response
+times for both too fast (\< 160 ms) and too slow responses (2 MAD beyond
+the median for each participant individually). After these exclusions, a
+mixed-effects model confirmed no difference of response times between
+in-person and online data. Future studies could evaluate how the task
+environments alter the magnitude of orientation effect.
 
 ## Conclusion
 
-Based on the results of this project, we did not find evidence for a general object orientation effect across languages. Our findings on the orientation effects question the theoretical importance of mental simulation in linguistic processing, but they also provide directions for new avenues of investigation.
-
+Based on the results of this project, we did not find evidence for a
+general object orientation effect across languages. Our findings on the
+orientation effects question the theoretical importance of mental
+simulation in linguistic processing, but they also provide directions
+for new avenues of investigation.
 
 ```{r picture, include = FALSE, echo = FALSE}
 #overall
