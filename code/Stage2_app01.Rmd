@@ -71,15 +71,19 @@ for (i in 1:length(models)){
 #p_values
 ```
 
-### *b* values
+### b values
+
+These values represent the *b* values found for each run of 3 up to 12 trials.
 
 `r b_values`
 
-### *p* values
+### p values
 
-`r p_values`
+These values represent the *p* values found for each run of 7 up to 12 trials.
 
-As we can see, the effect is generally negative until participants were required to have 7-12 correct trials. When participants accurately answer all 12 trials the effect is approximately 3 ms. Examination of the p-values indicates that no coefficients would have been considered significant. 
+`r paste(p_values, collapse = ", ")`
+
+As we can see, the effect is generally negative until participants were required to have 7-12 correct trials. When participants accurately answer all 12 trials the effect is approximately 3 ms. Examination of the *p*-values indicates that no coefficients would have been considered significant. 
 
 ## Calculate the Sensitivity
 

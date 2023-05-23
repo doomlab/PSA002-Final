@@ -958,7 +958,9 @@ affiliation:
       Subang 2, Malaysia
 authornote: |
   **Funding statement.** Matúš Adamkovič was supported by APVV-20-0319; Robert M. Ross was supported by Australian Research Council (grant number: DP180102384) and the John Templeton Foundation (grant ID: 62631); Zoltan Kekecs was supported by János Bolyai Research Scholarship of the Hungarian Academy of Science; Mahmoud Elsherif was supported by Leverhulme Trust; Glenn P. Williams was supported by Leverhulme Trust Research Project Grant (RPG-2016-093); Ivan Ropovik was supported by NPO Systemic Risk Institute (LX22NPO5101); Krystian Barzykowski was supported by National Science Centre, Poland (2019/35/B/HS6/00528); Gabriel Baník was supported by PRIMUS/20/HUM/009; Patrícia Arriaga was supported by Portuguese National Foundation for Science and Technology (FCT UID/PSI/03125/2019); Monika Hricová was supported by VEGA 1/0145/23.
+  
   **Ethical approval statement.** Authors who collected data on site and online had the ethical approval/agreement from their local institutions. The latest status of ethical approval for all the participating authors is available at the public OSF folder (https://osf.io/e428p/ "IRB approvals" in Files).
+  
   **Acknowledgement.** We thank the suggestions from the editor and two reviewers on our first and second proposals. 
 abstract: |
   Mental simulation theories of language comprehension propose that people automatically create mental representations of objects mentioned in sentences. Mental representation is often measured with the sentence-picture verification task, wherein participants first read a sentence that implies the object property (i.e., shape and orientation). Participants then respond to an image of an object by indicating whether it was an object from the sentence or not. Previous studies have shown matching advantages for shape, but findings concerning object orientation have not been robust across languages. This registered report investigated the match advantage of object orientation across 18 languages in nearly 4,000 participants. The preregistered analysis revealed no compelling evidence for a match advantage across languages. Additionally, the match advantage was not predicted by mental rotation scores. Overall, the results did not support current mental simulation theories.
@@ -978,19 +980,19 @@ editor_options:
     wrap: 72
   chunk_output_type: inline
 bibliography: ["includes/bib/psa002.bib"]
-header-includes:
-  - |
-    \makeatletter
-    \renewcommand{\paragraph}{\@startsection{paragraph}{4}{\parindent}%
-      {0\baselineskip \@plus 0.2ex \@minus 0.2ex}%
-      {-1em}%
-      {\normalfont\normalsize\bfseries\typesectitle}}
-      {0\baselineskip \@plus 0.2ex \@minus 0.2ex}%
-      {-\z@\relax}%
-      {\normalfont\normalsize\bfseries\itshape\hspace{\parindent}{#1}\textit{\addperi}}{\relax}}
+# header-includes:
+#   - |
+#     \makeatletter
+#     \renewcommand{\paragraph}{\@startsection{paragraph}{4}{\parindent}%
+#       {0\baselineskip \@plus 0.2ex \@minus 0.2ex}%
+#       {-1em}%
+#       {\normalfont\normalsize\bfseries\typesectitle}}
+#       {0\baselineskip \@plus 0.2ex \@minus 0.2ex}%
+#       {-\z@\relax}%
+#       {\normalfont\normalsize\bfseries\itshape\hspace{\parindent}{#1}\textit{\addperi}}{\relax}}
 csl               : "`r system.file('rmd', 'apa7.csl', package = 'papaja')`"
 documentclass     : "apa7"
-output            : papaja::apa6_docx
+output            : papaja::apa6_pdf
 appendix          :
   - "Stage2_app01.Rmd"
   - "Stage2_app02.Rmd"
@@ -1208,7 +1210,7 @@ and Chinese. Compared to the results of sentence-picture verification
 and picture-picture verification, @chenDoesObjectSize2020 converted the
 picture-picture verification times to the mental rotation scores that
 were the discrepancy of verification times between the identical and
-different orientations[\^In the pre-registered plan, we used the term
+different orientations^[In the pre-registered plan, we used the term
 "imagery score" but this term was confusing. Therefore, we used "mental
 rotation scores" instead of "imagery scores" in the final report.].
 Their analysis showed that mental rotation affected the Dutch
@@ -1452,7 +1454,7 @@ follow a secondary plan: a team collected at least their pre-registered
 minimum sample size (suggested 100 to 160 participants, most implemented
 50), and then determine whether or not to continue data collection via
 Bayesian sequential analysis (stopping data collection if $BF_{10}$ = 10
-or 0.10)[\^ See details of power analysis in the pre-registered plan,
+or 0.10)^[See details of power analysis in the pre-registered plan,
 pp. 13 - 15. <https://psyarxiv.com/t2pjv/>].
 
 We collected data in `r length(unique(SP_V$Language))` languages from
@@ -1538,11 +1540,10 @@ merge_subjects %>%
   apa_table(
  format = "latex",
  booktabs = TRUE,
- escape = TRUE,
  font_size = "footnotesize",
- col.names = c("Language", "SP \nTrials",
-               "PP \nTrials", "SP \nN", "PP \nN", "Demo \nN",
-               "Female \nN", "Male \nN","M \nAge", "SD \nAge"),
+ col.names = c("Language", "$SP_{Trials}$",
+               "$PP_{Trials}$", "$SP_N$", "$PP_N$", "$Demo_N$",
+               "$Female_N$", "$Male_N$","$M_{Age}$", "$SD_{Age}$"),
  align = c("l", rep("c", 9)),
  caption = "Demographic and Sample Size Characteristics",
  note = "SP = Sentence Picture Verification, PP = Picture Picture Verification. Sample sizes for demographics may be higher than the sample size for the this study, as participants could have only completed the bundled experiment. Additionally, not all entries could be unambigously matched by lab ID, and therefore, demographic sample sizes could also be less than data collected."
@@ -1557,7 +1558,7 @@ PP_non <- PP %>%
   filter(PSA_ID != "TUR_007E" & PSA_ID != "TWN_002E")
 ```
 
-```{r sample-fig, echo = FALSE, message = FALSE, warning = FALSE, results = 'asis', paged.print = TRUE, fig.cap = "Sample size and exclusions. *N* = number of unique participants, *T* = number of trials. The final combined sample was summarized to a median score for each match/mismatch condition, and therefore, includes one summary score per person."}
+```{r sample-fig, echo = FALSE, message = FALSE, warning = FALSE, results = 'asis', paged.print = TRUE, fig.cap = "Sample size and exclusions. N = number of unique participants, T = number of trials. The final combined sample was summarized to a median score for each match/mismatch condition, and therefore, includes one summary score per person."}
 knitr::include_graphics("includes/fig/psa002_flow.drawio.png")
 ```
 
@@ -1640,11 +1641,12 @@ data.frame(
   "Number" = c(6,6,6,6,24,
                6,6,6,6,24)
   ) %>% 
+  mutate(Number = as.character(Number)) %>% 
   apa_table(
  format = "latex",
  booktabs = TRUE,
- escape = TRUE,
- font_size = "footnotesize",
+ font_size = "scriptsize",
+ col.names = c("Condition", "Item 1", "Item 2", "Answer", "Number"),
  align = c(rep("l", 3), rep("c", 2)),
  caption = "Trial conditions for the Sentence-Picture and Picture-Picture Verification Task"
  ) 
@@ -2146,7 +2148,7 @@ SP_V_meta_all <- rma.uni(yi, vi, data = SP_V_es, method = "REML", digits = 2)
 }
 ```
 
-```{r meta-all-plot, echo = FALSE, message = FALSE, warning = FALSE, results = 'asis', paged.print = TRUE, fig.cap = "Meta-analysis on match advantage of object orientation for all languages. Diamonds indicate summary estimates, the midpoint of the diamond indicating the point estimate, and the left and right endpoints indicating the lower and upper bounds of the confidence interval of the estimated effect size. The lowermost diamond represents the estimate derived from the whole dataset."}
+```{r meta-all-plot, echo = FALSE, out.width="100%", out.height="90%",  fig.cap = "Meta-analysis on match advantage of object orientation for all languages. Diamonds indicate summary estimates, the midpoint of the diamond indicating the point estimate, and the left and right endpoints indicating the lower and upper bounds of the confidence interval of the estimated effect size. The lowermost diamond represents the estimate derived from the whole dataset."}
 knitr::include_graphics("includes/fig/meta-all.png")
 ```
 
@@ -2227,7 +2229,7 @@ the three random-intercept model, AIC =
 did not reveal a significant effect of match advantage: *b* =
 `r format(round(SP_lme01_out[2, 1], digits = 2), nsmall = 2)`, *SE* =
 `r format(round(SP_lme01_out[2,2], digits = 2), nsmall = 2)`,
-t(`r format(round(SP_lme01_out[2,3], digits = 2), nsmall = 2)`) =
+*t*(`r format(round(SP_lme01_out[2,3], digits = 2), nsmall = 2)`) =
 `r format(round(SP_lme01_out[2,4], digits = 2), nsmall = 2)`, *p* =
 `r apa_p(SP_lme01_out[2, 5])`.
 
@@ -2258,7 +2260,7 @@ Whereas the AIC values indicated a significant change, the *p*-value did
 not reveal a significant effect of match advantage: *b* =
 `r format(round(german_output[2, 1], digits = 2), nsmall = 2)`, *SE* =
 `r format(round(german_output[2,2], digits = 2), nsmall = 2)`,
-t(`r format(round(german_output[2,3], digits = 2), nsmall = 2)`) =
+*t*(`r format(round(german_output[2,3], digits = 2), nsmall = 2)`) =
 `r format(round(german_output[2,4], digits = 2), nsmall = 2)`, *p* =
 `r apa_p(german_output[2, 5])`. All the details of the above fixed
 effects and random intercepts are summarized in Appendix D.
@@ -2362,9 +2364,8 @@ which showed improvement over the random intercepts model. This model
 showed a significant effect of object orientation, *b* =
 `r format(round(PP_output[2, 1], digits = 2), nsmall = 2)`, *SE* =
 `r format(round(PP_output[2,2], digits = 2), nsmall = 2)`,
-t(`r format(round(PP_output[2,3], digits = 2), nsmall = 2)`) =
-`r format(round(PP_output[2,4], digits = 2), nsmall = 2)`, *p* =
-`r apa_p(PP_output[2, 5])`, such that identical orientations were
+*t*(`r format(round(PP_output[2,3], digits = 2), nsmall = 2)`) =
+`r format(round(PP_output[2,4], digits = 2), nsmall = 2)`, *p* `r apa_p(PP_output[2, 5])`, such that identical orientations were
 processed faster than rotated orientations. The point estimates of the
 orientation effect varied between 23.79--40.24, revealing a range of 14
 ms across languages. The coefficients of all mixed-effects models are

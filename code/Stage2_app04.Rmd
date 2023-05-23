@@ -21,57 +21,81 @@ All model estimates are given below for the planned mixed linear model to estima
 \newpage
 
 ```{r intercept, results='asis'}
-apa_table(tidy(intercept.model), 
+temp <- tidy(intercept.model)
+temp[ , 5] <- apply(temp[ , 5], 2, apa_p)
+
+apa_table(temp, 
           format = "latex", 
-          col.names = c("Term", "Estimate (b)", "SE", "t", "p"), 
+          col.names = c("Term", "Estimate ($b$)", "$SE$", "$t$", "$p$"), 
           caption = "Intercept Only Object Orientation Results") 
 ```
 
 ```{r subject, results='asis'}
-apa_table(tidy(subject.model), 
+temp <- tidy(subject.model)
+temp[ , 8] <- apply(temp[ , 8], 2, apa_p)
+
+apa_table(temp, 
           format = "latex", 
-          col.names = c("Effect", "Group", "Term", "Estimate (b)", "SE",  "t", "df", "p"), 
+          col.names = c("Effect", "Group", "Term", "Estimate ($b$)", "$SE$",  "$t$", "$df$", "$p$"), 
           caption = "Subject-Random Intercept Object Orientation Results") 
 ```
 
 ```{r item, results='asis'}
-apa_table(tidy(item.model), 
+temp <- tidy(item.model)
+temp[ , 8] <- apply(temp[ , 8], 2, apa_p)
+
+apa_table(temp, 
           format = "latex", 
-          col.names = c("Effect", "Group", "Term", "Estimate (b)", "SE",  "t", "df", "p"), 
+          col.names = c("Effect", "Group", "Term", "Estimate ($b$)", "$SE$",  "$t$", "$df$", "$p$"), 
           caption = "Subject and Item-Random Intercept Object Orientation Results") 
 ```
 
 ```{r lab, results='asis'}
-apa_table(tidy(lab.model), 
+temp <- tidy(lab.model)
+temp[ , 8] <- apply(temp[ , 8], 2, apa_p)
+
+apa_table(temp, 
           format = "latex", 
-          col.names = c("Effect", "Group", "Term", "Estimate (b)", "SE",  "t", "df", "p"), 
+          col.names = c("Effect", "Group", "Term", "Estimate ($b$)", "$SE$",  "$t$", "$df$", "$p$"), 
           caption = "Subject, Item, and Lab-Random Intercept Object Orientation Results") 
 ```
 
 ```{r lang, results='asis'}
-apa_table(tidy(language.model), 
+temp <- tidy(language.model)
+temp[ , 8] <- apply(temp[ , 8], 2, apa_p)
+
+apa_table(temp, 
           format = "latex", 
-          col.names = c("Effect", "Group", "Term", "Estimate (b)", "SE",  "t", "df", "p"), 
+          col.names = c("Effect", "Group", "Term", "Estimate ($b$)", "$SE$",  "$t$", "$df$", "$p$"), 
           caption = "Subject, Item, Lab, and Language-Random Intercept Object Orientation Results") 
 ```
 
 ```{r fixed, results='asis'}
-apa_table(tidy(fixed.model), 
+temp <- tidy(fixed.model)
+temp[ , 8] <- apply(temp[ , 8], 2, apa_p)
+
+apa_table(temp, 
           format = "latex", 
-          col.names = c("Effect", "Group", "Term", "Estimate (b)", "SE",  "t", "df", "p"), 
+          col.names = c("Effect", "Group", "Term", "Estimate ($b$)", "$SE$",  "$t$", "$df$", "$p$"), 
           caption = "Fixed Effects Object Orientation Results") 
 ```
 
 ```{r german-random, results='asis'}
-apa_table(tidy(german.lab.model), 
+temp <- tidy(german.lab.model)
+temp[ , 8] <- apply(temp[ , 8], 2, apa_p)
+
+apa_table(temp, 
           format = "latex", 
-          col.names = c("Effect", "Group", "Term", "Estimate (b)", "SE",  "t", "df", "p"), 
+          col.names = c("Effect", "Group", "Term", "Estimate ($b$)", "$SE$",  "$t$", "$df$", "$p$"), 
           caption = "Random Effects German Object Orientation Results") 
 ```
 
 ```{r german-fixed, results='asis'}
-apa_table(tidy(german.fixed.three.model), 
+temp <- tidy(german.fixed.three.model)
+temp[ , 8] <- apply(temp[ , 8], 2, apa_p)
+
+apa_table(temp, 
           format = "latex", 
-          col.names = c("Effect", "Group", "Term", "Estimate (b)", "SE",  "t", "df", "p"), 
+          col.names = c("Effect", "Group", "Term", "Estimate ($b$)", "$SE$",  "$t$", "$df$", "$p$"), 
           caption = "Fixed Effects German Object Orientation Results") 
 ```

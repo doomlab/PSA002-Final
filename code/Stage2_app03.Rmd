@@ -39,11 +39,10 @@ ft[1:15, ] %>%
   apa_table(
  format = "latex",
  booktabs = TRUE,
- escape = TRUE,
  font_size = "footnotesize",
- col.names = c("Language", "SP \nTrials",
-               "PP \nTrials", "SP \nN", "PP \nN", "Demo \nN",
-               "Female \nN", "Male \nN","M \nAge", "SD \nAge"),
+ col.names = c("Language", "$SP_{Trials}$",
+               "$PP_{Trials}$", "$SP_N$", "$PP_N$", "$Demo_N$",
+               "$Female_N$", "$Male_N$","$M_{Age}$", "$SD_{Age}$"),
  align = c("l", rep("c", 9)),
  caption = "Demographic and Sample Size Characteristics by Language Part 1",
  note = "SP = Sentence Picture Verification, PP = Picture Picture Verification. Sample sizes for demographics may be higher than the sample size for the this study, as participants could have only completed the bundled experiment. Additionally, not all entries could be unambigously matched by lab ID, and therefore, demographic sample sizes could also be less than data collected. Each row represents a single lab."
@@ -57,11 +56,10 @@ ft[16:35, ] %>%
   apa_table(
  format = "latex",
  booktabs = TRUE,
- escape = TRUE,
  font_size = "footnotesize",
- col.names = c("Language", "SP \nTrials",
-               "PP \nTrials", "SP \nN", "PP \nN", "Demo \nN",
-               "Female \nN", "Male \nN","M \nAge", "SD \nAge"),
+ col.names = c("Language", "$SP_{Trials}$",
+               "$PP_{Trials}$", "$SP_N$", "$PP_N$", "$Demo_N$",
+               "$Female_N$", "$Male_N$","$M_{Age}$", "$SD_{Age}$"),
  align = c("l", rep("c", 9)),
  caption = "Demographic and Sample Size Characteristics by Lab Part 2",
  note = "SP = Sentence Picture Verification, PP = Picture Picture Verification. Sample sizes for demographics may be higher than the sample size for the this study, as participants could have only completed the bundled experiment. Additionally, not all entries could be unambigously matched by lab ID, and therefore, demographic sample sizes could also be less than data collected."
@@ -75,11 +73,10 @@ ft[36:50, ] %>%
   apa_table(
  format = "latex",
  booktabs = TRUE,
- escape = TRUE,
  font_size = "footnotesize",
- col.names = c("Language", "SP \nTrials",
-               "PP \nTrials", "SP \nN", "PP \nN", "Demo \nN",
-               "Female \nN", "Male \nN","M \nAge", "SD \nAge"),
+col.names = c("Language", "$SP_{Trials}$",
+               "$PP_{Trials}$", "$SP_N$", "$PP_N$", "$Demo_N$",
+               "$Female_N$", "$Male_N$","$M_{Age}$", "$SD_{Age}$"),
  align = c("l", rep("c", 9)),
  caption = "Demographic and Sample Size Characteristics by Lab Part 3",
  note = "SP = Sentence Picture Verification, PP = Picture Picture Verification. Sample sizes for demographics may be higher than the sample size for the this study, as participants could have only completed the bundled experiment. Additionally, not all entries could be unambigously matched by lab ID, and therefore, demographic sample sizes could also be less than data collected."

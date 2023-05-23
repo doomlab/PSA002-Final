@@ -160,15 +160,6 @@
 
 \linenumbers
 \usepackage{csquotes}
-\makeatletter
-\renewcommand{\paragraph}{\@startsection{paragraph}{4}{\parindent}%
-  {0\baselineskip \@plus 0.2ex \@minus 0.2ex}%
-  {-1em}%
-  {\normalfont\normalsize\bfseries\typesectitle}}
-  {0\baselineskip \@plus 0.2ex \@minus 0.2ex}%
-  {-\z@\relax}%
-  {\normalfont\normalsize\bfseries\itshape\hspace{\parindent}{#1}\textit{\addperi}}{\relax}}
-
 \ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
@@ -193,7 +184,9 @@
 \authornote{
 
 \textbf{Funding statement.} Matúš Adamkovič was supported by APVV-20-0319; Robert M. Ross was supported by Australian Research Council (grant number: DP180102384) and the John Templeton Foundation (grant ID: 62631); Zoltan Kekecs was supported by János Bolyai Research Scholarship of the Hungarian Academy of Science; Mahmoud Elsherif was supported by Leverhulme Trust; Glenn P. Williams was supported by Leverhulme Trust Research Project Grant (RPG-2016-093); Ivan Ropovik was supported by NPO Systemic Risk Institute (LX22NPO5101); Krystian Barzykowski was supported by National Science Centre, Poland (2019/35/B/HS6/00528); Gabriel Baník was supported by PRIMUS/20/HUM/009; Patrícia Arriaga was supported by Portuguese National Foundation for Science and Technology (FCT UID/PSI/03125/2019); Monika Hricová was supported by VEGA 1/0145/23.
+
 \textbf{Ethical approval statement.} Authors who collected data on site and online had the ethical approval/agreement from their local institutions. The latest status of ethical approval for all the participating authors is available at the public OSF folder (\url{https://osf.io/e428p/} ``IRB approvals'' in Files).
+
 \textbf{Acknowledgement.} We thank the suggestions from the editor and two reviewers on our first and second proposals.
 
 The authors made the following contributions. Sau-Chin Chen: Conceptualization, Data curation, Formal analysis, Investigation, Methodology, Resources, Software, Supervision, Validation, Visualization, Writing - original draft, Writing - review \& editing; Erin Buchanan: Formal analysis, Project administration, Resources, Software, Validation, Writing - review \& editing; Zoltan Kekecs: Project administration, Writing - review \& editing; Jeremy K. Miller: Project administration, Resources, Supervision, Writing - review \& editing; Anna Szabelska: Project administration, Writing - original draft, Writing - review \& editing; Balazs Aczel: Investigation, Methodology, Resources, Writing - review \& editing; Pablo Bernabeu: Investigation, Methodology, Visualization, Writing - review \& editing; Patrick Forscher: Methodology, Writing - review \& editing; Attila Szuts: Investigation, Methodology, Resources, Writing - review \& editing; Zahir Vally: Investigation, Resources, Writing - review \& editing; Ali H. Al-Hoorie: Investigation, Resources, Writing - review \& editing; Mai Helmy: Investigation, Resources, Writing - review \& editing; Caio Santos Alves da Silva: Investigation, Resources, Writing - review \& editing; Luana Oliveira da Silva: Investigation, Resources, Writing - review \& editing; Yago Luksevicius de Moraes: Investigation, Resources, Writing - review \& editing; Rafael Ming Chi Santos Hsu: Investigation, Resources, Writing - review \& editing; Anthonieta Looman Mafra: Investigation, Resources, Writing - review \& editing; Jaroslava V. Valentova: Investigation, Resources, Writing - review \& editing; Marco Antonio Correa Varella: Investigation, Resources, Writing - review \& editing; Barnaby Dixson: Investigation, Writing - review \& editing; Kim Peters: Investigation, Writing - review \& editing; Nik Steffens: Investigation, Writing - review \& editing; Omid Ghasemi: Investigation, Writing - review \& editing; Andrew Roberts: Investigation, Writing - review \& editing; Robert M. Ross: Investigation, Writing - review \& editing; Ian D. Stephen: Investigation, Writing - review \& editing; Marina Milyavskaya: Investigation, Writing - review \& editing; Kelly Wang: Investigation, Writing - review \& editing; Kaitlyn M. Werner: Investigation, Writing - review \& editing; Dawn L. Holford: Investigation, Writing - review \& editing; Miroslav Sirota: Investigation, Writing - review \& editing; Thomas Rhys Evans: Investigation, Writing - review \& editing; Dermot Lynott: Investigation, Writing - review \& editing; Bethany M. Lane: Investigation, Writing - review \& editing; Danny Riis: Investigation, Writing - review \& editing; Glenn P. Williams: Investigation, Writing - review \& editing; Chrystalle B. Y. Tan: Investigation, Writing - review \& editing; Alicia Foo: Investigation, Writing - review \& editing; Steve M. J. Janssen: Investigation, Writing - review \& editing; Nwadiogo Chisom Arinze: Investigation, Writing - review \& editing; Izuchukwu Lawrence Gabriel Ndukaihe: Investigation, Writing - review \& editing; David Moreau: Investigation, Writing - review \& editing; Brianna Jurosic: Investigation, Writing - review \& editing; Brynna Leach: Investigation, Writing - review \& editing; Savannah Lewis: Investigation, Writing - review \& editing; Peter R. Mallik: Investigation, Writing - review \& editing; Kathleen Schmidt: Investigation, Resources, Writing - review \& editing; William J. Chopik: Investigation, Writing - review \& editing; Leigh Ann Vaughn: Investigation, Writing - review \& editing; Manyu Li: Investigation, Writing - review \& editing; Carmel A. Levitan: Investigation, Writing - review \& editing; Daniel Storage: Investigation, Writing - review \& editing; Carlota Batres: Investigation, Writing - review \& editing; Janina Enachescu: Investigation, Resources, Writing - review \& editing; Jerome Olsen: Investigation, Resources, Writing - review \& editing; Martin Voracek: Investigation, Resources, Writing - review \& editing; Claus Lamm: Investigation, Resources, Writing - review \& editing; Ekaterina Pronizius: Investigation, Writing - review \& editing; Tilli Ripp: Investigation, Writing - review \& editing; Jan Philipp Röer: Investigation, Writing - review \& editing; Roxane Schnepper: Investigation, Writing - review \& editing; Marietta Papadatou-Pastou: Investigation, Resources, Writing - review \& editing; Aviv Mokady: Investigation, Resources, Writing - review \& editing; Niv Reggev: Investigation, Resources, Writing - review \& editing; Priyanka Chandel: Investigation, Resources, Writing - review \& editing; Pratibha Kujur: Investigation, Resources, Writing - review \& editing; Babita Pande: Investigation, Resources, Supervision, Writing - review \& editing; Arti Parganiha: Investigation, Resources, Supervision, Writing - review \& editing; Noorshama Parveen: Investigation, Resources, Writing - review \& editing; Sraddha Pradhan: Investigation, Resources, Writing - review \& editing; Margaret Messiah Singh: Investigation, Writing - review \& editing; Max Korbmacher: Investigation, Writing - review \& editing; Jonas R. Kunst: Investigation, Resources, Writing - review \& editing; Christian K. Tamnes: Investigation, Resources, Writing - review \& editing; Frederike S. Woelfert: Investigation, Writing - review \& editing; Kristoffer Klevjer: Investigation, Writing - review \& editing; Sarah E. Martiny: Investigation, Writing - review \& editing; Gerit Pfuhl: Investigation, Resources, Writing - review \& editing; Sylwia Adamus: Investigation, Resources, Writing - review \& editing; Krystian Barzykowski: Investigation, Resources, Supervision, Writing - review \& editing; Katarzyna Filip: Investigation, Resources, Writing - review \& editing; Patrícia Arriaga: Funding acquisition, Investigation, Resources, Writing - review \& editing; Vasilije Gvozdenović: Investigation, Resources, Writing - review \& editing; Vanja Ković: Investigation, Resources, Writing - review \& editing; Tao-tao Gan: Investigation, Writing - review \& editing; Hu Chuan-Peng: Investigation, Writing - review \& editing; Qing-Lan Liu: Investigation, Writing - review \& editing; Zhong Chen: Investigation, Writing - review \& editing; Fei Gao: Investigation, Resources, Writing - review \& editing; Lisa Li: Investigation, Resources, Writing - review \& editing; Jozef Bavoľár: Investigation, Resources, Writing - review \& editing; Monika Hricová: Investigation, Resources, Writing - review \& editing; Pavol Kačmár: Investigation, Resources, Writing - review \& editing; Matúš Adamkovič: Investigation, Writing - review \& editing; Peter Babinčák: Investigation, Writing - review \& editing; Gabriel Baník: Investigation, Writing - review \& editing; Ivan Ropovik: Investigation, Writing - review \& editing; Danilo Zambrano Ricaurte: Investigation, Resources, Writing - review \& editing; Sara Álvarez Solas: Investigation, Resources, Writing - review \& editing; Harry Manley: Investigation, Resources, Writing - review \& editing; Panita Suavansri: Investigation, Resources, Writing - review \& editing; Chun-Chia Kung: Investigation, Resources, Writing - review \& editing; Belemir Çoktok: Investigation, Resources, Writing - review \& editing; Asil Ali Özdoğru: Investigation, Resources, Writing - review \& editing; Çağlar Solak: Investigation, Writing - review \& editing; Sinem Söylemez: Investigation, Writing - review \& editing; Sami Çoksan: Investigation, Resources, Writing - review \& editing; İlker Dalgar: Resources, Writing - review \& editing; Mahmoud Elsherif: Writing - review \& editing; Martin Vasilev: Writing - review \& editing; Vinka Mlakic: Resources, Writing - review \& editing; Elisabeth Oberzaucher: Resources, Writing - review \& editing; Stefan Stieger: Resources, Writing - review \& editing; Selina Volsa: Resources, Writing - review \& editing; Janis Zickfeld: Resources, Writing - review \& editing; Christopher R. Chartier: Investigation, Project administration, Writing - review \& editing.
@@ -371,9 +364,9 @@ and Chinese. Compared to the results of sentence-picture verification
 and picture-picture verification, Chen et al. (2020) converted the
 picture-picture verification times to the mental rotation scores that
 were the discrepancy of verification times between the identical and
-different orientations{[}\^{}In the pre-registered plan, we used the term
-``imagery score'' but this term was confusing. Therefore, we used ``mental
-rotation scores'' instead of ``imagery scores'' in the final report.{]}.
+different orientations\footnote{In the pre-registered plan, we used the term
+  ``imagery score'' but this term was confusing. Therefore, we used ``mental
+  rotation scores'' instead of ``imagery scores'' in the final report.}.
 Their analysis showed that mental rotation affected the Dutch
 participants' sentence-picture verification performance. With the
 measurement of mental rotation scores, we explore the association of
@@ -449,8 +442,8 @@ follow a secondary plan: a team collected at least their pre-registered
 minimum sample size (suggested 100 to 160 participants, most implemented
 50), and then determine whether or not to continue data collection via
 Bayesian sequential analysis (stopping data collection if \(BF_{10}\) = 10
-or 0.10){[}\^{} See details of power analysis in the pre-registered plan,
-pp.~13 - 15. \url{https://psyarxiv.com/t2pjv/}{]}.
+or 0.10)\footnote{See details of power analysis in the pre-registered plan,
+  pp.~13 - 15. \url{https://psyarxiv.com/t2pjv/}}.
 
 We collected data in 18 languages from
 50 laboratories. Each
@@ -518,16 +511,7 @@ average characteristics by language and laboratory.
 
 \begin{tabular}{lccccccccc}
 \toprule
-Language & SP 
-Trials & PP 
-Trials & SP 
-N & PP 
-N & Demo 
-N & Female 
-N & Male 
-N & M 
-Age & SD 
-Age\\
+Language & $SP_{Trials}$ & $PP_{Trials}$ & $SP_N$ & $PP_N$ & $Demo_N$ & $Female_N$ & $Male_N$ & $M_{Age}$ & $SD_{Age}$\\
 \midrule
 Arabic & 2544 & 2544 & 106 & 106 & 107 & 42 & 12 & 32.26 & 18.59\\
 Brazilian Portuguese & 1200 & 1200 & 50 & 50 & 50 & 36 & 13 & 30.80 & 8.73\\
@@ -563,7 +547,7 @@ Turkish & 6456 & 6432 & 269 & 268 & 274 & 36 & 14 & 21.38 & 4.59\\
 \end{table}
 
 \begin{figure}
-\includegraphics[width=5.71in]{includes/fig/psa002_flow.drawio} \caption{Sample size and exclusions. *N* = number of unique participants, *T* = number of trials. The final combined sample was summarized to a median score for each match/mismatch condition, and therefore, includes one summary score per person.}\label{fig:sample-fig}
+\includegraphics[width=5.71in]{includes/fig/psa002_flow.drawio} \caption{Sample size and exclusions. N = number of unique participants, T = number of trials. The final combined sample was summarized to a median score for each match/mismatch condition, and therefore, includes one summary score per person.}\label{fig:sample-fig}
 \end{figure}
 
 \hypertarget{materials}{%
@@ -616,56 +600,56 @@ counterbalancing and combinations for trials.
 
 \caption{\label{tab:stim-table}Trial conditions for the Sentence-Picture and Picture-Picture Verification Task}
 
-\footnotesize{
+\scriptsize{
 
 \begin{tabular}{lllcc}
 \toprule
-Condition & \multicolumn{1}{c}{Item.1} & \multicolumn{1}{c}{Item.2} & \multicolumn{1}{c}{Participant.Answer} & \multicolumn{1}{c}{Number}\\
+Condition & Item 1 & Item 2 & Answer & Number\\
 \midrule
 Sentence-Picture
 Critical
 Match & Critical Sentence:
 Horizontal & Critical Picture:
-Horizontal & Yes & 6.00\\
+Horizontal & Yes & 6\\
 Sentence-Picture
 Critical
 Match & Critical Sentence:
 Vertical & Critical Picture:
-Vertical & Yes & 6.00\\
+Vertical & Yes & 6\\
 Sentence-Picture
 Critical
 Mismatch & Critical Sentence:
 Horizontal & Critical Picture:
-Vertical & Yes & 6.00\\
+Vertical & Yes & 6\\
 Sentence-Picture
 Critical
 Mismatch & Critical Sentence:
 Vertical & Critical Picture:
-Horizontal & Yes & 6.00\\
+Horizontal & Yes & 6\\
 Sentence-Picture
-Filler & Sentence & Picture & No & 24.00\\
+Filler & Sentence & Picture & No & 24\\
 Picture-Picture
 Critical
 Match & Critical Picture:
 Horizontal & Critical Picture:
-Horizontal & Yes & 6.00\\
+Horizontal & Yes & 6\\
 Picture-Picture
 Critical
 Match & Critical Picture:
 Vertical & Critical Picture:
-Vertical & Yes & 6.00\\
+Vertical & Yes & 6\\
 Picture-Picture
 Critical
 Mismatch & Critical Picture:
 Horizontal & Critical Picture:
-Vertical & Yes & 6.00\\
+Vertical & Yes & 6\\
 Picture-Picture
 Critical
 Mismatch & Critical Picture:
 Vertical & Critical Picture:
-Horizontal & Yes & 6.00\\
+Horizontal & Yes & 6\\
 Picture-Picture
-Filler & Picture & Picture & No & 24.00\\
+Filler & Picture & Picture & No & 24\\
 \bottomrule
 \end{tabular}
 
@@ -941,7 +925,7 @@ Turkish & 95.38 & 654.50 (146.04) & 637.00 (126.02) & 17.50\\
 \subsection{Hypothesis 1: Meta-Analysis of the Orientation Effect}\label{hypothesis-1-meta-analysis-of-the-orientation-effect}}
 
 \begin{figure}
-\includegraphics[width=14in]{includes/fig/meta-all} \caption{Meta-analysis on match advantage of object orientation for all languages. Diamonds indicate summary estimates, the midpoint of the diamond indicating the point estimate, and the left and right endpoints indicating the lower and upper bounds of the confidence interval of the estimated effect size. The lowermost diamond represents the estimate derived from the whole dataset.}\label{fig:meta-all-plot}
+\includegraphics[width=1\linewidth,height=0.9\textheight]{includes/fig/meta-all} \caption{Meta-analysis on match advantage of object orientation for all languages. Diamonds indicate summary estimates, the midpoint of the diamond indicating the point estimate, and the left and right endpoints indicating the lower and upper bounds of the confidence interval of the estimated effect size. The lowermost diamond represents the estimate derived from the whole dataset.}\label{fig:meta-all-plot}
 \end{figure}
 
 The planned meta-analysis examined the effect overall and within
@@ -986,7 +970,7 @@ the three random-intercept model, AIC =
 did not reveal a significant effect of match advantage: \emph{b} =
 -0.17, \emph{SE} =
 1.20,
-t(69830.14) =
+\emph{t}(69830.14) =
 -0.14, \emph{p} =
 .887.
 
@@ -1002,7 +986,7 @@ Whereas the AIC values indicated a significant change, the \emph{p}-value did
 not reveal a significant effect of match advantage: \emph{b} =
 4.84, \emph{SE} =
 4.12,
-t(4085.71) =
+\emph{t}(4085.71) =
 1.17, \emph{p} =
 .241. All the details of the above fixed
 effects and random intercepts are summarized in Appendix D.
@@ -1027,9 +1011,8 @@ which showed improvement over the random intercepts model. This model
 showed a significant effect of object orientation, \emph{b} =
 32.30, \emph{SE} =
 0.53,
-t(79585.24) =
-61.23, \emph{p} =
-\textless{} .001, such that identical orientations were
+\emph{t}(79585.24) =
+61.23, \emph{p} \textless{} .001, such that identical orientations were
 processed faster than rotated orientations. The point estimates of the
 orientation effect varied between 23.79--40.24, revealing a range of 14
 ms across languages. The coefficients of all mixed-effects models are
@@ -1458,16 +1441,20 @@ The data for the sensitivity analysis shared the same exclusion criterion for th
 \subsection{View the Results}\label{view-the-results}}
 
 \hypertarget{b-values}{%
-\subsubsection{\texorpdfstring{\emph{b} values}{b values}}\label{b-values}}
+\subsubsection{b values}\label{b-values}}
+
+These values represent the \emph{b} values found for each run of 3 up to 12 trials.
 
 -0.17, -0.17, -0.17, -0.17, -0.18, -0.12, 0.49, -0.14, 0.67, and 3.11
 
 \hypertarget{p-values}{%
-\subsubsection{\texorpdfstring{\emph{p} values}{p values}}\label{p-values}}
+\subsubsection{p values}\label{p-values}}
 
-.887.887.887.890.880.918.687.913.647.150
+These values represent the \emph{p} values found for each run of 7 up to 12 trials.
 
-As we can see, the effect is generally negative until participants were required to have 7-12 correct trials. When participants accurately answer all 12 trials the effect is approximately 3 ms. Examination of the p-values indicates that no coefficients would have been considered significant.
+.887, .887, .887, .890, .880, .918, .687, .913, .647, .150
+
+As we can see, the effect is generally negative until participants were required to have 7-12 correct trials. When participants accurately answer all 12 trials the effect is approximately 3 ms. Examination of the \emph{p}-values indicates that no coefficients would have been considered significant.
 
 \hypertarget{calculate-the-sensitivity}{%
 \subsection{Calculate the Sensitivity}\label{calculate-the-sensitivity}}
@@ -1547,16 +1534,7 @@ The instructions and experimental scripts are available at the public OSF folder
 
 \begin{tabular}{lccccccccc}
 \toprule
-Language & SP 
-Trials & PP 
-Trials & SP 
-N & PP 
-N & Demo 
-N & Female 
-N & Male 
-N & M 
-Age & SD 
-Age\\
+Language & $SP_{Trials}$ & $PP_{Trials}$ & $SP_N$ & $PP_N$ & $Demo_N$ & $Female_N$ & $Male_N$ & $M_{Age}$ & $SD_{Age}$\\
 \midrule
 Arabic & 1248 & 1248 & 52 & 52 & 53 & 0 & 0 & 38.00 & \ \ NaN\\
 Arabic & 1296 & 1296 & 54 & 54 & 54 & 42 & 12 & 26.51 & 18.59\\
@@ -1601,16 +1579,7 @@ English & 1248 & 1272 & 52 & 53 & 71 & 50 & 12 & 18.89 & 0.95\\
 
 \begin{tabular}{lccccccccc}
 \toprule
-Language & SP 
-Trials & PP 
-Trials & SP 
-N & PP 
-N & Demo 
-N & Female 
-N & Male 
-N & M 
-Age & SD 
-Age\\
+Language & $SP_{Trials}$ & $PP_{Trials}$ & $SP_N$ & $PP_N$ & $Demo_N$ & $Female_N$ & $Male_N$ & $M_{Age}$ & $SD_{Age}$\\
 \midrule
 English & 1536 & 1536 & 64 & 64 & 102 & 79 & 11 & 19.82 & 2.42\\
 English & 264 & 264 & 11 & 11 & 12 & 9 & 2 & 20.36 & 1.91\\
@@ -1660,16 +1629,7 @@ Norwegian & 1752 & 1752 & 73 & 73 & 80 & 0 & 0 & 22.00 & 4.38\\
 
 \begin{tabular}{lccccccccc}
 \toprule
-Language & SP 
-Trials & PP 
-Trials & SP 
-N & PP 
-N & Demo 
-N & Female 
-N & Male 
-N & M 
-Age & SD 
-Age\\
+Language & $SP_{Trials}$ & $PP_{Trials}$ & $SP_N$ & $PP_N$ & $Demo_N$ & $Female_N$ & $Male_N$ & $M_{Age}$ & $SD_{Age}$\\
 \midrule
 Polish & 1368 & 1368 & 57 & 57 & 146 & 0 & 0 & 23.25 & 7.96\\
 Portuguese & 1488 & 1464 & 62 & 61 & 55 & 26 & 23 & 30.74 & 9.09\\
@@ -1719,9 +1679,9 @@ All model estimates are given below for the planned mixed linear model to estima
 
 \begin{tabular}{lllll}
 \toprule
-Term & Estimate (b) & SE & t & p\\
+Term & Estimate ($b$) & $SE$ & $t$ & $p$\\
 \midrule
-(Intercept) & 654.71 & 0.84 & 775.11 & 0.00\\
+(Intercept) & 654.71 & 0.84 & 775.11 & < .001\\
 \bottomrule
 \end{tabular}
 
@@ -1739,11 +1699,11 @@ Term & Estimate (b) & SE & t & p\\
 
 \begin{tabular}{llllllll}
 \toprule
-Effect & Group & Term & Estimate (b) & SE & t & df & p\\
+Effect & Group & Term & Estimate ($b$) & $SE$ & $t$ & $df$ & $p$\\
 \midrule
-fixed & NA & (Intercept) & 654.26 & 2.69 & 243.34 & 3,787.12 & 0.00\\
-ran\_pars & Subject & sd\_\_(Intercept) & 161.40 & NA & NA & NA & NA\\
-ran\_pars & Residual & sd\_\_Observation & 165.05 & NA & NA & NA & NA\\
+fixed & NA & (Intercept) & 654.26 & 2.69 & 243.34 & 3,787.12 & < .001\\
+ran\_pars & Subject & sd\_\_(Intercept) & 161.40 & NA & NA & NA & \\
+ran\_pars & Residual & sd\_\_Observation & 165.05 & NA & NA & NA & \\
 \bottomrule
 \end{tabular}
 
@@ -1761,12 +1721,12 @@ ran\_pars & Residual & sd\_\_Observation & 165.05 & NA & NA & NA & NA\\
 
 \begin{tabular}{llllllll}
 \toprule
-Effect & Group & Term & Estimate (b) & SE & t & df & p\\
+Effect & Group & Term & Estimate ($b$) & $SE$ & $t$ & $df$ & $p$\\
 \midrule
-fixed & NA & (Intercept) & 655.47 & 5.16 & 126.97 & 84.63 & 0.00\\
-ran\_pars & Subject & sd\_\_(Intercept) & 161.37 & NA & NA & NA & NA\\
-ran\_pars & Target & sd\_\_(Intercept) & 30.54 & NA & NA & NA & NA\\
-ran\_pars & Residual & sd\_\_Observation & 162.17 & NA & NA & NA & NA\\
+fixed & NA & (Intercept) & 655.47 & 5.16 & 126.97 & 84.63 & < .001\\
+ran\_pars & Subject & sd\_\_(Intercept) & 161.37 & NA & NA & NA & \\
+ran\_pars & Target & sd\_\_(Intercept) & 30.54 & NA & NA & NA & \\
+ran\_pars & Residual & sd\_\_Observation & 162.17 & NA & NA & NA & \\
 \bottomrule
 \end{tabular}
 
@@ -1784,13 +1744,13 @@ ran\_pars & Residual & sd\_\_Observation & 162.17 & NA & NA & NA & NA\\
 
 \begin{tabular}{llllllll}
 \toprule
-Effect & Group & Term & Estimate (b) & SE & t & df & p\\
+Effect & Group & Term & Estimate ($b$) & $SE$ & $t$ & $df$ & $p$\\
 \midrule
-fixed & NA & (Intercept) & 659.63 & 9.67 & 68.24 & 65.54 & 0.00\\
-ran\_pars & Subject & sd\_\_(Intercept) & 153.76 & NA & NA & NA & NA\\
-ran\_pars & Target & sd\_\_(Intercept) & 30.56 & NA & NA & NA & NA\\
-ran\_pars & PSA\_ID & sd\_\_(Intercept) & 55.76 & NA & NA & NA & NA\\
-ran\_pars & Residual & sd\_\_Observation & 162.17 & NA & NA & NA & NA\\
+fixed & NA & (Intercept) & 659.63 & 9.67 & 68.24 & 65.54 & < .001\\
+ran\_pars & Subject & sd\_\_(Intercept) & 153.76 & NA & NA & NA & \\
+ran\_pars & Target & sd\_\_(Intercept) & 30.56 & NA & NA & NA & \\
+ran\_pars & PSA\_ID & sd\_\_(Intercept) & 55.76 & NA & NA & NA & \\
+ran\_pars & Residual & sd\_\_Observation & 162.17 & NA & NA & NA & \\
 \bottomrule
 \end{tabular}
 
@@ -1808,14 +1768,14 @@ ran\_pars & Residual & sd\_\_Observation & 162.17 & NA & NA & NA & NA\\
 
 \begin{tabular}{llllllll}
 \toprule
-Effect & Group & Term & Estimate (b) & SE & t & df & p\\
+Effect & Group & Term & Estimate ($b$) & $SE$ & $t$ & $df$ & $p$\\
 \midrule
-fixed & NA & (Intercept) & 672.75 & 11.88 & 56.61 & 23.94 & 0.00\\
-ran\_pars & Subject & sd\_\_(Intercept) & 153.78 & NA & NA & NA & NA\\
-ran\_pars & Target & sd\_\_(Intercept) & 30.56 & NA & NA & NA & NA\\
-ran\_pars & PSA\_ID & sd\_\_(Intercept) & 48.60 & NA & NA & NA & NA\\
-ran\_pars & Language & sd\_\_(Intercept) & 25.52 & NA & NA & NA & NA\\
-ran\_pars & Residual & sd\_\_Observation & 162.17 & NA & NA & NA & NA\\
+fixed & NA & (Intercept) & 672.75 & 11.88 & 56.61 & 23.94 & < .001\\
+ran\_pars & Subject & sd\_\_(Intercept) & 153.78 & NA & NA & NA & \\
+ran\_pars & Target & sd\_\_(Intercept) & 30.56 & NA & NA & NA & \\
+ran\_pars & PSA\_ID & sd\_\_(Intercept) & 48.60 & NA & NA & NA & \\
+ran\_pars & Language & sd\_\_(Intercept) & 25.52 & NA & NA & NA & \\
+ran\_pars & Residual & sd\_\_Observation & 162.17 & NA & NA & NA & \\
 \bottomrule
 \end{tabular}
 
@@ -1833,14 +1793,14 @@ ran\_pars & Residual & sd\_\_Observation & 162.17 & NA & NA & NA & NA\\
 
 \begin{tabular}{llllllll}
 \toprule
-Effect & Group & Term & Estimate (b) & SE & t & df & p\\
+Effect & Group & Term & Estimate ($b$) & $SE$ & $t$ & $df$ & $p$\\
 \midrule
-fixed & NA & (Intercept) & 659.71 & 9.68 & 68.12 & 66.04 & 0.00\\
-fixed & NA & MatchN & -0.17 & 1.20 & -0.14 & 69,830.14 & 0.89\\
-ran\_pars & Subject & sd\_\_(Intercept) & 153.76 & NA & NA & NA & NA\\
-ran\_pars & Target & sd\_\_(Intercept) & 30.56 & NA & NA & NA & NA\\
-ran\_pars & PSA\_ID & sd\_\_(Intercept) & 55.76 & NA & NA & NA & NA\\
-ran\_pars & Residual & sd\_\_Observation & 162.17 & NA & NA & NA & NA\\
+fixed & NA & (Intercept) & 659.71 & 9.68 & 68.12 & 66.04 & < .001\\
+fixed & NA & MatchN & -0.17 & 1.20 & -0.14 & 69,830.14 & .887\\
+ran\_pars & Subject & sd\_\_(Intercept) & 153.76 & NA & NA & NA & \\
+ran\_pars & Target & sd\_\_(Intercept) & 30.56 & NA & NA & NA & \\
+ran\_pars & PSA\_ID & sd\_\_(Intercept) & 55.76 & NA & NA & NA & \\
+ran\_pars & Residual & sd\_\_Observation & 162.17 & NA & NA & NA & \\
 \bottomrule
 \end{tabular}
 
@@ -1858,13 +1818,13 @@ ran\_pars & Residual & sd\_\_Observation & 162.17 & NA & NA & NA & NA\\
 
 \begin{tabular}{llllllll}
 \toprule
-Effect & Group & Term & Estimate (b) & SE & t & df & p\\
+Effect & Group & Term & Estimate ($b$) & $SE$ & $t$ & $df$ & $p$\\
 \midrule
-fixed & NA & (Intercept) & 631.96 & 19.65 & 32.15 & 1.74 & 0.00\\
-ran\_pars & Subject & sd\_\_(Intercept) & 129.89 & NA & NA & NA & NA\\
-ran\_pars & Target & sd\_\_(Intercept) & 33.04 & NA & NA & NA & NA\\
-ran\_pars & PSA\_ID & sd\_\_(Intercept) & 28.11 & NA & NA & NA & NA\\
-ran\_pars & Residual & sd\_\_Observation & 134.89 & NA & NA & NA & NA\\
+fixed & NA & (Intercept) & 631.96 & 19.65 & 32.15 & 1.74 & .002\\
+ran\_pars & Subject & sd\_\_(Intercept) & 129.89 & NA & NA & NA & \\
+ran\_pars & Target & sd\_\_(Intercept) & 33.04 & NA & NA & NA & \\
+ran\_pars & PSA\_ID & sd\_\_(Intercept) & 28.11 & NA & NA & NA & \\
+ran\_pars & Residual & sd\_\_Observation & 134.89 & NA & NA & NA & \\
 \bottomrule
 \end{tabular}
 
@@ -1882,14 +1842,14 @@ ran\_pars & Residual & sd\_\_Observation & 134.89 & NA & NA & NA & NA\\
 
 \begin{tabular}{llllllll}
 \toprule
-Effect & Group & Term & Estimate (b) & SE & t & df & p\\
+Effect & Group & Term & Estimate ($b$) & $SE$ & $t$ & $df$ & $p$\\
 \midrule
-fixed & NA & (Intercept) & 629.52 & 19.74 & 31.90 & 1.77 & 0.00\\
-fixed & NA & MatchN & 4.84 & 4.12 & 1.17 & 4,085.71 & 0.24\\
-ran\_pars & Subject & sd\_\_(Intercept) & 129.90 & NA & NA & NA & NA\\
-ran\_pars & Target & sd\_\_(Intercept) & 33.06 & NA & NA & NA & NA\\
-ran\_pars & PSA\_ID & sd\_\_(Intercept) & 28.05 & NA & NA & NA & NA\\
-ran\_pars & Residual & sd\_\_Observation & 134.88 & NA & NA & NA & NA\\
+fixed & NA & (Intercept) & 629.52 & 19.74 & 31.90 & 1.77 & .002\\
+fixed & NA & MatchN & 4.84 & 4.12 & 1.17 & 4,085.71 & .241\\
+ran\_pars & Subject & sd\_\_(Intercept) & 129.90 & NA & NA & NA & \\
+ran\_pars & Target & sd\_\_(Intercept) & 33.06 & NA & NA & NA & \\
+ran\_pars & PSA\_ID & sd\_\_(Intercept) & 28.05 & NA & NA & NA & \\
+ran\_pars & Residual & sd\_\_Observation & 134.88 & NA & NA & NA & \\
 \bottomrule
 \end{tabular}
 
@@ -1916,9 +1876,9 @@ All model estimates are given below for the mixed linear model for the predictio
 
 \begin{tabular}{lllll}
 \toprule
-Term & Estimate (b) & SE & t & p\\
+Term & Estimate ($b$) & $SE$ & $t$ & $p$\\
 \midrule
-(Intercept) & 589.10 & 0.40 & 1,485.40 & 0.00\\
+(Intercept) & 589.10 & 0.40 & 1,485.40 & < .001\\
 \bottomrule
 \end{tabular}
 
@@ -1936,11 +1896,11 @@ Term & Estimate (b) & SE & t & p\\
 
 \begin{tabular}{llllllll}
 \toprule
-Effect & Group & Term & Estimate (b) & SE & t & df & p\\
+Effect & Group & Term & Estimate ($b$) & $SE$ & $t$ & $df$ & $p$\\
 \midrule
-fixed & NA & (Intercept) & 588.28 & 1.35 & 436.44 & 3,957.55 & 0.00\\
-ran\_pars & Subject & sd\_\_(Intercept) & 83.04 & NA & NA & NA & NA\\
-ran\_pars & Residual & sd\_\_Observation & 79.04 & NA & NA & NA & NA\\
+fixed & NA & (Intercept) & 588.28 & 1.35 & 436.44 & 3,957.55 & < .001\\
+ran\_pars & Subject & sd\_\_(Intercept) & 83.04 & NA & NA & NA & \\
+ran\_pars & Residual & sd\_\_Observation & 79.04 & NA & NA & NA & \\
 \bottomrule
 \end{tabular}
 
@@ -1958,12 +1918,12 @@ ran\_pars & Residual & sd\_\_Observation & 79.04 & NA & NA & NA & NA\\
 
 \begin{tabular}{llllllll}
 \toprule
-Effect & Group & Term & Estimate (b) & SE & t & df & p\\
+Effect & Group & Term & Estimate ($b$) & $SE$ & $t$ & $df$ & $p$\\
 \midrule
-fixed & NA & (Intercept) & 589.21 & 2.70 & 217.83 & 79.98 & 0.00\\
-ran\_pars & Subject & sd\_\_(Intercept) & 82.94 & NA & NA & NA & NA\\
-ran\_pars & Picture1 & sd\_\_(Intercept) & 16.26 & NA & NA & NA & NA\\
-ran\_pars & Residual & sd\_\_Observation & 77.56 & NA & NA & NA & NA\\
+fixed & NA & (Intercept) & 589.21 & 2.70 & 217.83 & 79.98 & < .001\\
+ran\_pars & Subject & sd\_\_(Intercept) & 82.94 & NA & NA & NA & \\
+ran\_pars & Picture1 & sd\_\_(Intercept) & 16.26 & NA & NA & NA & \\
+ran\_pars & Residual & sd\_\_Observation & 77.56 & NA & NA & NA & \\
 \bottomrule
 \end{tabular}
 
@@ -1981,13 +1941,13 @@ ran\_pars & Residual & sd\_\_Observation & 77.56 & NA & NA & NA & NA\\
 
 \begin{tabular}{llllllll}
 \toprule
-Effect & Group & Term & Estimate (b) & SE & t & df & p\\
+Effect & Group & Term & Estimate ($b$) & $SE$ & $t$ & $df$ & $p$\\
 \midrule
-fixed & NA & (Intercept) & 590.18 & 5.16 & 114.34 & 69.45 & 0.00\\
-ran\_pars & Subject & sd\_\_(Intercept) & 78.36 & NA & NA & NA & NA\\
-ran\_pars & Picture1 & sd\_\_(Intercept) & 16.32 & NA & NA & NA & NA\\
-ran\_pars & PSA\_ID & sd\_\_(Intercept) & 30.12 & NA & NA & NA & NA\\
-ran\_pars & Residual & sd\_\_Observation & 77.56 & NA & NA & NA & NA\\
+fixed & NA & (Intercept) & 590.18 & 5.16 & 114.34 & 69.45 & < .001\\
+ran\_pars & Subject & sd\_\_(Intercept) & 78.36 & NA & NA & NA & \\
+ran\_pars & Picture1 & sd\_\_(Intercept) & 16.32 & NA & NA & NA & \\
+ran\_pars & PSA\_ID & sd\_\_(Intercept) & 30.12 & NA & NA & NA & \\
+ran\_pars & Residual & sd\_\_Observation & 77.56 & NA & NA & NA & \\
 \bottomrule
 \end{tabular}
 
@@ -2005,14 +1965,14 @@ ran\_pars & Residual & sd\_\_Observation & 77.56 & NA & NA & NA & NA\\
 
 \begin{tabular}{llllllll}
 \toprule
-Effect & Group & Term & Estimate (b) & SE & t & df & p\\
+Effect & Group & Term & Estimate ($b$) & $SE$ & $t$ & $df$ & $p$\\
 \midrule
-fixed & NA & (Intercept) & 596.71 & 6.98 & 85.47 & 22.17 & 0.00\\
-ran\_pars & Subject & sd\_\_(Intercept) & 78.37 & NA & NA & NA & NA\\
-ran\_pars & Picture1 & sd\_\_(Intercept) & 16.32 & NA & NA & NA & NA\\
-ran\_pars & PSA\_ID & sd\_\_(Intercept) & 24.00 & NA & NA & NA & NA\\
-ran\_pars & Language & sd\_\_(Intercept) & 19.29 & NA & NA & NA & NA\\
-ran\_pars & Residual & sd\_\_Observation & 77.56 & NA & NA & NA & NA\\
+fixed & NA & (Intercept) & 596.71 & 6.98 & 85.47 & 22.17 & < .001\\
+ran\_pars & Subject & sd\_\_(Intercept) & 78.37 & NA & NA & NA & \\
+ran\_pars & Picture1 & sd\_\_(Intercept) & 16.32 & NA & NA & NA & \\
+ran\_pars & PSA\_ID & sd\_\_(Intercept) & 24.00 & NA & NA & NA & \\
+ran\_pars & Language & sd\_\_(Intercept) & 19.29 & NA & NA & NA & \\
+ran\_pars & Residual & sd\_\_Observation & 77.56 & NA & NA & NA & \\
 \bottomrule
 \end{tabular}
 
@@ -2030,15 +1990,15 @@ ran\_pars & Residual & sd\_\_Observation & 77.56 & NA & NA & NA & NA\\
 
 \begin{tabular}{llllllll}
 \toprule
-Effect & Group & Term & Estimate (b) & SE & t & df & p\\
+Effect & Group & Term & Estimate ($b$) & $SE$ & $t$ & $df$ & $p$\\
 \midrule
-fixed & NA & (Intercept) & 581.52 & 7.02 & 82.82 & 22.57 & 0.00\\
-fixed & NA & IdenticalN & 32.30 & 0.53 & 61.23 & 79,585.24 & 0.00\\
-ran\_pars & Subject & sd\_\_(Intercept) & 78.24 & NA & NA & NA & NA\\
-ran\_pars & Picture1 & sd\_\_(Intercept) & 16.89 & NA & NA & NA & NA\\
-ran\_pars & PSA\_ID & sd\_\_(Intercept) & 24.01 & NA & NA & NA & NA\\
-ran\_pars & Language & sd\_\_(Intercept) & 19.33 & NA & NA & NA & NA\\
-ran\_pars & Residual & sd\_\_Observation & 75.80 & NA & NA & NA & NA\\
+fixed & NA & (Intercept) & 581.52 & 7.02 & 82.82 & 22.57 & < .001\\
+fixed & NA & IdenticalN & 32.30 & 0.53 & 61.23 & 79,585.24 & < .001\\
+ran\_pars & Subject & sd\_\_(Intercept) & 78.24 & NA & NA & NA & \\
+ran\_pars & Picture1 & sd\_\_(Intercept) & 16.89 & NA & NA & NA & \\
+ran\_pars & PSA\_ID & sd\_\_(Intercept) & 24.01 & NA & NA & NA & \\
+ran\_pars & Language & sd\_\_(Intercept) & 19.33 & NA & NA & NA & \\
+ran\_pars & Residual & sd\_\_Observation & 75.80 & NA & NA & NA & \\
 \bottomrule
 \end{tabular}
 
@@ -2056,7 +2016,7 @@ ran\_pars & Residual & sd\_\_Observation & 75.80 & NA & NA & NA & NA\\
 
 \begin{tabular}{lll}
 \toprule
-Language & \multicolumn{1}{c}{Coefficient} & \multicolumn{1}{c}{SE}\\
+Language & Coefficient ($b$) & $SE$\\
 \midrule
 Arabic & 28.27 & 3.36\\
 English & 33.02 & 0.77\\
@@ -2093,9 +2053,9 @@ Traditional Chinese & 30.31 & 2.45\\
 
 \begin{tabular}{lllll}
 \toprule
-Term & Estimate (b) & SE & t & p\\
+Term & Estimate ($b$) & $SE$ & $t$ & $p$\\
 \midrule
-(Intercept) & -0.74 & 1.67 & -0.44 & 0.66\\
+(Intercept) & -0.74 & 1.67 & -0.44 & .661\\
 \bottomrule
 \end{tabular}
 
@@ -2113,11 +2073,11 @@ Term & Estimate (b) & SE & t & p\\
 
 \begin{tabular}{llllllll}
 \toprule
-Effect & Group & Term & Estimate (b) & SE & t & df & p\\
+Effect & Group & Term & Estimate ($b$) & $SE$ & $t$ & $df$ & $p$\\
 \midrule
-fixed & NA & (Intercept) & -0.74 & 1.67 & -0.44 & 3,543.00 & 0.66\\
-ran\_pars & PSA\_ID & sd\_\_(Intercept) & 0.00 & NA & NA & NA & NA\\
-ran\_pars & Residual & sd\_\_Observation & 99.67 & NA & NA & NA & NA\\
+fixed & NA & (Intercept) & -0.74 & 1.67 & -0.44 & 3,543.00 & .661\\
+ran\_pars & PSA\_ID & sd\_\_(Intercept) & 0.00 & NA & NA & NA & \\
+ran\_pars & Residual & sd\_\_Observation & 99.67 & NA & NA & NA & \\
 \bottomrule
 \end{tabular}
 
@@ -2137,26 +2097,26 @@ ran\_pars & Residual & sd\_\_Observation & 99.67 & NA & NA & NA & NA\\
 
 \begin{tabular}{llllllll}
 \toprule
-Effect & Group & Term & Estimate (b) & SE & t & df & p\\
+Effect & Group & Term & Estimate ($b$) & $SE$ & $t$ & $df$ & $p$\\
 \midrule
-fixed & NA & (Intercept) & -3.43 & 3.07 & -1.12 & 3,510.00 & 0.26\\
-fixed & NA & LanguageArabic & 16.27 & 16.34 & 1.00 & 3,510.00 & 0.32\\
-fixed & NA & LanguageBrazilian Portuguese & -17.00 & 16.63 & -1.02 & 3,510.00 & 0.31\\
-fixed & NA & LanguageGerman & 20.65 & 9.17 & 2.25 & 3,510.00 & 0.02\\
-fixed & NA & LanguageGreek & 7.52 & 12.58 & 0.60 & 3,510.00 & 0.55\\
-fixed & NA & LanguageHindi & 1.24 & 15.39 & 0.08 & 3,510.00 & 0.94\\
-fixed & NA & LanguageHungarian & -10.30 & 10.01 & -1.03 & 3,510.00 & 0.30\\
-fixed & NA & LanguageNorwegian & 19.66 & 10.31 & 1.91 & 3,510.00 & 0.06\\
-fixed & NA & LanguagePolish & -5.67 & 17.87 & -0.32 & 3,510.00 & 0.75\\
-fixed & NA & LanguagePortuguese & -15.90 & 17.21 & -0.92 & 3,510.00 & 0.36\\
-fixed & NA & LanguageSerbian & -0.48 & 11.20 & -0.04 & 3,510.00 & 0.97\\
-fixed & NA & LanguageSimplified Chinese & 22.70 & 14.45 & 1.57 & 3,510.00 & 0.12\\
-fixed & NA & LanguageSlovak & -0.34 & 11.58 & -0.03 & 3,510.00 & 0.98\\
-fixed & NA & LanguageSpanish & 5.39 & 11.51 & 0.47 & 3,510.00 & 0.64\\
-fixed & NA & LanguageThai & 27.53 & 21.22 & 1.30 & 3,510.00 & 0.19\\
-fixed & NA & LanguageTraditional Chinese & -8.24 & 11.20 & -0.74 & 3,510.00 & 0.46\\
-fixed & NA & LanguageTurkish & 10.66 & 8.57 & 1.24 & 3,510.00 & 0.21\\
-fixed & NA & Imagery & 0.04 & 0.05 & 0.79 & 3,510.00 & 0.43\\
+fixed & NA & (Intercept) & -3.43 & 3.07 & -1.12 & 3,510.00 & .264\\
+fixed & NA & LanguageArabic & 16.27 & 16.34 & 1.00 & 3,510.00 & .319\\
+fixed & NA & LanguageBrazilian Portuguese & -17.00 & 16.63 & -1.02 & 3,510.00 & .307\\
+fixed & NA & LanguageGerman & 20.65 & 9.17 & 2.25 & 3,510.00 & .024\\
+fixed & NA & LanguageGreek & 7.52 & 12.58 & 0.60 & 3,510.00 & .550\\
+fixed & NA & LanguageHindi & 1.24 & 15.39 & 0.08 & 3,510.00 & .936\\
+fixed & NA & LanguageHungarian & -10.30 & 10.01 & -1.03 & 3,510.00 & .304\\
+fixed & NA & LanguageNorwegian & 19.66 & 10.31 & 1.91 & 3,510.00 & .057\\
+fixed & NA & LanguagePolish & -5.67 & 17.87 & -0.32 & 3,510.00 & .751\\
+fixed & NA & LanguagePortuguese & -15.90 & 17.21 & -0.92 & 3,510.00 & .356\\
+fixed & NA & LanguageSerbian & -0.48 & 11.20 & -0.04 & 3,510.00 & .966\\
+fixed & NA & LanguageSimplified Chinese & 22.70 & 14.45 & 1.57 & 3,510.00 & .116\\
+fixed & NA & LanguageSlovak & -0.34 & 11.58 & -0.03 & 3,510.00 & .976\\
+fixed & NA & LanguageSpanish & 5.39 & 11.51 & 0.47 & 3,510.00 & .640\\
+fixed & NA & LanguageThai & 27.53 & 21.22 & 1.30 & 3,510.00 & .195\\
+fixed & NA & LanguageTraditional Chinese & -8.24 & 11.20 & -0.74 & 3,510.00 & .462\\
+fixed & NA & LanguageTurkish & 10.66 & 8.57 & 1.24 & 3,510.00 & .214\\
+fixed & NA & Imagery & 0.04 & 0.05 & 0.79 & 3,510.00 & .432\\
 \bottomrule
 \end{tabular}
 
@@ -2174,30 +2134,30 @@ fixed & NA & Imagery & 0.04 & 0.05 & 0.79 & 3,510.00 & 0.43\\
 
 \caption{\label{tab:pred_interact_2}Fixed Effects Interaction Language and Rotation Predicting Mental Simulation Results Part 2}
 
-\small{
+\footnotesize{
 
 \begin{tabular}{llllllll}
 \toprule
-Effect & Group & Term & Estimate (b) & SE & t & df & p\\
+Effect & Group & Term & Estimate ($b$) & $SE$ & $t$ & $df$ & $p$\\
 \midrule
-fixed & NA & LanguageArabic:Imagery & -0.37 & 0.24 & -1.55 & 3,510.00 & 0.12\\
-fixed & NA & LanguageBrazilian Portuguese:Imagery & 0.18 & 0.29 & 0.62 & 3,510.00 & 0.54\\
-fixed & NA & LanguageGerman:Imagery & -0.37 & 0.19 & -1.96 & 3,510.00 & 0.05\\
-fixed & NA & LanguageGreek:Imagery & -0.07 & 0.20 & -0.36 & 3,510.00 & 0.72\\
-fixed & NA & LanguageHindi:Imagery & -0.36 & 0.27 & -1.34 & 3,510.00 & 0.18\\
-fixed & NA & LanguageHungarian:Imagery & 0.10 & 0.22 & 0.45 & 3,510.00 & 0.65\\
-fixed & NA & LanguageNorwegian:Imagery & -0.07 & 0.19 & -0.35 & 3,510.00 & 0.73\\
-fixed & NA & LanguagePolish:Imagery & 0.29 & 0.31 & 0.91 & 3,510.00 & 0.36\\
-fixed & NA & LanguagePortuguese:Imagery & -0.05 & 0.32 & -0.15 & 3,510.00 & 0.88\\
-fixed & NA & LanguageSerbian:Imagery & -0.12 & 0.22 & -0.56 & 3,510.00 & 0.58\\
-fixed & NA & LanguageSimplified Chinese:Imagery & -0.32 & 0.24 & -1.32 & 3,510.00 & 0.19\\
-fixed & NA & LanguageSlovak:Imagery & 0.12 & 0.21 & 0.57 & 3,510.00 & 0.57\\
-fixed & NA & LanguageSpanish:Imagery & 0.05 & 0.17 & 0.28 & 3,510.00 & 0.78\\
-fixed & NA & LanguageThai:Imagery & -0.50 & 0.38 & -1.32 & 3,510.00 & 0.19\\
-fixed & NA & LanguageTraditional Chinese:Imagery & 0.13 & 0.23 & 0.59 & 3,510.00 & 0.56\\
-fixed & NA & LanguageTurkish:Imagery & -0.15 & 0.14 & -1.09 & 3,510.00 & 0.27\\
-ran\_pars & PSA\_ID & sd\_\_(Intercept) & 0.00 & NA & NA & NA & NA\\
-ran\_pars & Residual & sd\_\_Observation & 99.73 & NA & NA & NA & NA\\
+fixed & NA & LanguageArabic:Imagery & -0.37 & 0.24 & -1.55 & 3,510.00 & .122\\
+fixed & NA & LanguageBrazilian Portuguese:Imagery & 0.18 & 0.29 & 0.62 & 3,510.00 & .536\\
+fixed & NA & LanguageGerman:Imagery & -0.37 & 0.19 & -1.96 & 3,510.00 & .050\\
+fixed & NA & LanguageGreek:Imagery & -0.07 & 0.20 & -0.36 & 3,510.00 & .718\\
+fixed & NA & LanguageHindi:Imagery & -0.36 & 0.27 & -1.34 & 3,510.00 & .181\\
+fixed & NA & LanguageHungarian:Imagery & 0.10 & 0.22 & 0.45 & 3,510.00 & .653\\
+fixed & NA & LanguageNorwegian:Imagery & -0.07 & 0.19 & -0.35 & 3,510.00 & .726\\
+fixed & NA & LanguagePolish:Imagery & 0.29 & 0.31 & 0.91 & 3,510.00 & .363\\
+fixed & NA & LanguagePortuguese:Imagery & -0.05 & 0.32 & -0.15 & 3,510.00 & .884\\
+fixed & NA & LanguageSerbian:Imagery & -0.12 & 0.22 & -0.56 & 3,510.00 & .576\\
+fixed & NA & LanguageSimplified Chinese:Imagery & -0.32 & 0.24 & -1.32 & 3,510.00 & .187\\
+fixed & NA & LanguageSlovak:Imagery & 0.12 & 0.21 & 0.57 & 3,510.00 & .568\\
+fixed & NA & LanguageSpanish:Imagery & 0.05 & 0.17 & 0.28 & 3,510.00 & .781\\
+fixed & NA & LanguageThai:Imagery & -0.50 & 0.38 & -1.32 & 3,510.00 & .186\\
+fixed & NA & LanguageTraditional Chinese:Imagery & 0.13 & 0.23 & 0.59 & 3,510.00 & .556\\
+fixed & NA & LanguageTurkish:Imagery & -0.15 & 0.14 & -1.09 & 3,510.00 & .274\\
+ran\_pars & PSA\_ID & sd\_\_(Intercept) & 0.00 & NA & NA & NA & \\
+ran\_pars & Residual & sd\_\_Observation & 99.73 & NA & NA & NA & \\
 \bottomrule
 \end{tabular}
 
