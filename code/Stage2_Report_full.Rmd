@@ -1008,26 +1008,29 @@ appendix          :
 	echo = FALSE,
 	cache = TRUE
 )
- library(tidyverse)
- library(data.table)
- library(lubridate)
- library(magrittr)
- library(knitr)
+ # library(tidyverse)
+ # library(data.table)
+ # library(lubridate)
+ # library(magrittr)
+ # library(knitr)
  library(lme4)
  library(lmerTest)
- library(parameters)
+ # library(parameters)
  library(metafor)
- library(afex)
- library(standardize)
- library(sjPlot)
+ # library(afex)
+ # library(standardize)
+ # library(sjPlot)
+ library(dplyr)
  library(ggplot2)
- library("kableExtra")
+ # library("kableExtra")
  library("papaja")
  library(rio)
  library(broom)
  library(broom.mixed)
- options(scipen=999)
- library(rstatix)
+ library(stringr)
+ library(tidyr)
+ # options(scipen=999)
+ # library(rstatix)
 ```
 
 ```{r analysis-preferences}
@@ -1041,7 +1044,7 @@ knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
 # https://osf.io/dtfcg
 lab_info <- dir(path = "..", full.names = TRUE, recursive = TRUE, 
     include.dirs = TRUE, pattern = "Lab_Info.csv") %>%
- read_csv()
+ import()
 ```
 
 Mental simulation of object properties is a major topic in conceptual
@@ -1396,7 +1399,7 @@ merge_subjects <- merge_subjects %>% select(-PSA_ID.x, -PSA_ID.y)
 osweb_meta <- dir(path = ".."
                   ,full.names = TRUE, recursive = TRUE, 
                   include.dirs = TRUE, pattern = "jatos_meta.csv") %>%
-  read_csv() %>%
+  import() %>%
   unique() %>% 
   mutate(Batch = str_replace(Batch, "SRB_002B", "SRB_002")) %>% 
   mutate(gender = ifelse(gender==1,"FEMALE",ifelse(gender==2,"MALE","MISSING"))) %>%
