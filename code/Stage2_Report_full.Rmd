@@ -961,7 +961,8 @@ authornote: |
   
   **Ethical approval statement.** Authors who collected data on site and online had the ethical approval/agreement from their local institutions. The latest status of ethical approval for all the participating authors is available at the public OSF folder (https://osf.io/e428p/ "IRB approvals" in Files).
   
-  **Acknowledgement.** We thank the suggestions from the editor and two reviewers on our first and second proposals. 
+  **Acknowledgement.** We thank the suggestions from the editor and two reviewers on our first and second proposals. CB would like to thank Tyler McGee for help with data collection. PB would like to thank Liam Morgillo for help with data collection.
+  
 abstract: |
   Mental simulation theories of language comprehension propose that people automatically create mental representations of objects mentioned in sentences. Mental representation is often measured with the sentence-picture verification task, wherein participants first read a sentence that implies the object property (i.e., shape and orientation). Participants then respond to an image of an object by indicating whether it was an object from the sentence or not. Previous studies have shown matching advantages for shape, but findings concerning object orientation have not been robust across languages. This registered report investigated the match advantage of object orientation across 18 languages in nearly 4,000 participants. The preregistered analysis revealed no compelling evidence for a match advantage across languages. Additionally, the match advantage was not predicted by mental rotation scores. Overall, the results did not support current mental simulation theories.
   
@@ -990,7 +991,8 @@ bibliography: ["includes/bib/psa002.bib"]
 #       {0\baselineskip \@plus 0.2ex \@minus 0.2ex}%
 #       {-\z@\relax}%
 #       {\normalfont\normalsize\bfseries\itshape\hspace{\parindent}{#1}\textit{\addperi}}{\relax}}
-csl               : "`r system.file('rmd', 'apa7.csl', package = 'papaja')`"
+#csl               : "`r system.file('rmd', 'apa7.csl', package = 'papaja')`"
+csl               : "includes/bib/apa.csl"
 documentclass     : "apa7"
 output            : papaja::apa6_pdf
 appendix          :
@@ -1072,7 +1074,7 @@ picture showed a horizontally-oriented nail rather than a
 vertically-oriented one. The opposite would be true of the sentence *Tom
 hammered the nail into the floor plank*.
 
-```{r fig01, echo = FALSE, message = FALSE, warning = FALSE, results = 'asis', paged.print = TRUE, fig.cap = "Procedure of the sentence-picture verification task, with an example of matching orientation."}
+```{r fig01, echo = FALSE, message = FALSE, warning = FALSE, out.width="100%", fig.cap = "Procedure of the sentence-picture verification task, with an example of matching orientation."}
 knitr::include_graphics("includes/fig/fig2a.png")
 ```
 
@@ -1210,14 +1212,15 @@ and Chinese. Compared to the results of sentence-picture verification
 and picture-picture verification, @chenDoesObjectSize2020 converted the
 picture-picture verification times to the mental rotation scores that
 were the discrepancy of verification times between the identical and
-different orientations^[In the pre-registered plan, we used the term
-"imagery score" but this term was confusing. Therefore, we used "mental
-rotation scores" instead of "imagery scores" in the final report.].
-Their analysis showed that mental rotation affected the Dutch
-participants' sentence-picture verification performance. With the
-measurement of mental rotation scores, we explore the association of
-spatial cognition and the effect of orientation in comprehension across
-the investigated languages.
+different orientations[^1]. Their analysis showed that mental rotation
+affected the Dutch participants' sentence-picture verification
+performance. With the measurement of mental rotation scores, we explore
+the association of spatial cognition and the effect of orientation in
+comprehension across the investigated languages.
+
+[^1]: In the pre-registered plan, we used the term "imagery score" but
+    this term was confusing. Therefore, we used "mental rotation scores"
+    instead of "imagery scores" in the final report.
 
 ## Purposes of this study
 
@@ -1454,8 +1457,10 @@ follow a secondary plan: a team collected at least their pre-registered
 minimum sample size (suggested 100 to 160 participants, most implemented
 50), and then determine whether or not to continue data collection via
 Bayesian sequential analysis (stopping data collection if $BF_{10}$ = 10
-or 0.10)^[See details of power analysis in the pre-registered plan,
-pp. 13 - 15. <https://psyarxiv.com/t2pjv/>].
+or 0.10)[^2].
+
+[^2]: See details of power analysis in the pre-registered plan, pp. 13 -
+    15. <https://psyarxiv.com/t2pjv/>
 
 We collected data in `r length(unique(SP_V$Language))` languages from
 `r length(unique(c(SP_V$PSA_ID, PP$PSA_ID)))` laboratories. Each
@@ -1480,7 +1485,7 @@ unique participants completed the present study with
 `r format(length(unique(c(SP_V$Subject[SP_V$opensesame_codename != "osweb"], PP$Subject[PP$opensesame_codename != "osweb"]))), scientific = FALSE, big.mark = ",")`
 completing the in-person version and
 `r format(length(unique(c(SP_V$Subject[SP_V$opensesame_codename == "osweb"], PP$Subject[PP$opensesame_codename == "osweb"]))), scientific = FALSE, big.mark = ",")`
-completing the online version[^1]. The in-person version included
+completing the online version[^3]. The in-person version included
 `r length(unique(SP_V$PSA_ID[SP_V$opensesame_codename != "osweb"]))`
 research teams and the online version included
 `r length(unique(SP_V$PSA_ID[SP_V$opensesame_codename == "osweb"]))`
@@ -1496,7 +1501,7 @@ scripts are available on the source files
 (<https://codeocean.com/capsule/9287673>). Appendix B summarizes the
 average characteristics by language and laboratory.
 
-[^1]: Data for this study was collected together with another unrelated
+[^3]: Data for this study was collected together with another unrelated
     study [@phills_preregistration_2022] during the same data collection
     session, with the two studies using different data collection
     platforms. The demographic data was collected within the platform of
@@ -1537,6 +1542,7 @@ merge_subjects %>%
     Overall_Age = format(round(Overall_Age, 2), nsmall = 2), 
     Overall_SD = format(round(Overall_SD, 2), nsmall = 2)
   ) %>% 
+  mutate(Language = ifelse(Language == "Simple Chinese", "Simplified Chinese", Language)) %>% 
   apa_table(
  format = "latex",
  booktabs = TRUE,
@@ -1665,9 +1671,9 @@ presented in the center of the screen until the participant responded,
 or it disappeared after two seconds. Participants were instructed to
 verify, as quickly and accurately as possible, whether the object on
 screen had been mentioned in the probe sentence. Following
-[@stanfield_effect_2001], a memory check test was carried out after
-every three to eight trials to ensure that participants had read each
-sentence carefully.
+@stanfield_effect_2001, a memory check test was carried out after every
+three to eight trials to ensure that participants had read each sentence
+carefully.
 
 As shown in Table \@ref(tab:stim-table), the trials for the
 sentence-picture task were created by counterbalancing the sentence
@@ -1732,13 +1738,13 @@ scripts are available at the public OSF folder (<https://osf.io/e428p/>
 
 ## Analysis Plan
 
-To test hypothesis 1, our first planned analysis[^2] used a
+To test hypothesis 1, our first planned analysis[^4] used a
 random-effects meta-analysis model that estimated the match advantage
 across laboratories and languages. The meta-analysis summarized the
 median reaction times by match condition to determine the effect size by
 laboratory. The following formula was used:
 
-[^2]: See the analysis plan in the pre-registered plan, pp. 19 - 20,
+[^4]: See the analysis plan in the pre-registered plan, pp. 19 - 20,
     <https://psyarxiv.com/t2pjv/>. This plan was changed to a
     random-effects model to ensure that we did not assume the exact same
     effect size for each language and lab.
@@ -1968,6 +1974,7 @@ SP_V_noout %>%
       format(round(med_RT_Y, digits = 2), nsmall = 2), 
       " (",format(round(MAD_RT_Y, digits = 2), nsmall = 2),")"),
     Effect = Effect) %>%
+     mutate(Language = ifelse(Language == "Simple Chinese", "Simplified Chinese", Language)) %>% 
    arrange(desc(Language)),
    by = c("Language") 
   ) %>% 
@@ -2365,7 +2372,8 @@ showed a significant effect of object orientation, *b* =
 `r format(round(PP_output[2, 1], digits = 2), nsmall = 2)`, *SE* =
 `r format(round(PP_output[2,2], digits = 2), nsmall = 2)`,
 *t*(`r format(round(PP_output[2,3], digits = 2), nsmall = 2)`) =
-`r format(round(PP_output[2,4], digits = 2), nsmall = 2)`, *p* `r apa_p(PP_output[2, 5])`, such that identical orientations were
+`r format(round(PP_output[2,4], digits = 2), nsmall = 2)`, *p*
+`r apa_p(PP_output[2, 5])`, such that identical orientations were
 processed faster than rotated orientations. The point estimates of the
 orientation effect varied between 23.79--40.24, revealing a range of 14
 ms across languages. The coefficients of all mixed-effects models are
@@ -2539,7 +2547,7 @@ information using continuous variables, and observed significant effects
 contain more information, they may afford more statistical power
 [@cohen1983]. Furthermore, in addition to categorical versus continuous
 predictors, sensorimotor effects are likely to be moderated by factors
-influencing participants\' attention during experiments
+influencing participants' attention during experiments
 [@barsalouEstablishingGeneralizableMechanisms2019; @noah2018]. Last, and
 more certainly, sensorimotor effects are moderated by the sample size of
 studies, and the sample size needed to study these effects can exceed
@@ -2581,12 +2589,12 @@ In addition, further research should compare the size of mental
 simulation effects with the size of effects that are associated with the
 symbolic account of conceptual processing. The symbolic account posits
 that conceptual processing (i.e., the comprehension of the meaning of
-words) is not dependent on modality-specific systems (e.g., vision,
-hearing, touch, interoception, motor control, emotion, etc.). So far,
-some of these comparisons have supported both accounts. However, in some
-studies, the effects of the symbolic account have been larger than those
-of the embodied account [@bernabeu2022; @louwerse2015], whereas the
-reverse has been true in other studies [@fernandino2022; @tong2022].
+words) depends on the abstract symbols (e.g., propositions and
+production rules). So far, some of these comparisons have supported both
+accounts. However, in some studies, the effects of the symbolic account
+have been larger than those of the embodied account [@bernabeu2022;
+@louwerse2015], whereas the reverse has been true in other studies
+[@fernandino2022; @tong2022].
 
 ## Limitations
 

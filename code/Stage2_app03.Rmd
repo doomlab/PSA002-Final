@@ -11,6 +11,7 @@ knitr::opts_chunk$set(echo = FALSE, message = FALSE, include = FALSE, cache = TR
 ```{r make-table}
 ft <- 
   merge_subjects %>% 
+  mutate(Language = ifelse(Language == "Simple Chinese", "Simplified Chinese", Language)) %>% 
   arrange(Language) %>% 
   ungroup() %>% 
   filter(PSA_ID %in% unique(SP_V$PSA_ID)) %>%
@@ -31,7 +32,7 @@ ft <-
   mutate(
     Overall_Age = format(round(Overall_Age, 2), nsmall = 2), 
     Overall_SD = format(round(Overall_SD, 2), nsmall = 2)
-  )
+  ) 
 ```
 
 ```{r print-part1, results = 'asis', include = TRUE}
