@@ -1501,7 +1501,7 @@ provides a flow chart for participant exclusion and inclusion for
 analyses. All participating laboratories had either ethical approval or
 institutional evaluation before data collection. All data and analysis
 scripts are available on the source files
-(<https://codeocean.com/capsule/3916384>). Appendix B summarizes the
+(<https://codeocean.com/capsule/3994879>). Appendix B summarizes the
 average characteristics by language and laboratory.
 
 [^3]: Data for this study was collected together with another unrelated
