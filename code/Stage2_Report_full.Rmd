@@ -686,13 +686,6 @@ author:
       - Resources
       - Writing - review & editing
     email: cckung@kunglab-nckupsy.org
-  - name: Belemir Çoktok
-    affiliation: '57'
-    role:
-      - Investigation
-      - Resources
-      - Writing - review & editing
-    email: b.coktok@gmail.com
   - name: Asil Ali Özdoğru
     affiliation: '57'
     role:
@@ -700,6 +693,13 @@ author:
       - Resources
       - Writing - review & editing
     email: asil.ozdogru@uskudar.edu.tr
+  - name: Belemir Çoktok
+    affiliation: '57'
+    role:
+      - Investigation
+      - Resources
+      - Writing - review & editing
+    email: b.coktok@gmail.com
   - name: Çağlar Solak
     affiliation: '58'
     role:
@@ -1093,8 +1093,8 @@ do not provide much guidance regarding the potential causes for this
 discrepancy. With the accumulating concerns about the lack of
 reproducibility [e.g., @kaschakEmbodimentLabTheory2021], researchers
 have found it challenging to reconcile the theory of mental simulation
-with the failures to replicate some of the effects [e.g, @morey2022]. In
-an empirical discipline like cognitive science, a theory requires the
+with the failures to replicate some of the effects [e.g., @morey2022].
+In an empirical discipline like cognitive science, a theory requires the
 support of reproducible results.
 
 The reliability of match advantage effects seems to vary depending on
@@ -1125,7 +1125,7 @@ verification task.
 ## Cross-linguistic, Methodological, and Cognitive Factors
 
 Several factors might contribute to cross-linguistic differences in the
-match simulation effect of orientation. First, languages differ in how
+match advantage of object orientation. First, languages differ in how
 they encode motion and placement events in sentences
 [@newmanCrosslinguisticOverviewPosture2002; @verkerk2014]. Second, the
 potential role of mental rotation as a confound has been considered
@@ -1158,20 +1158,20 @@ each language, as the stimuli contain several placement events (e.g.,
 @chenDoesObjectSize2020 and @kosterMentalSimulationObject2018 noted that
 some Germanic languages, such as German and Dutch, often make the
 orientation of objects more explicit than English. In English, for
-example, the verb *put* does not imply orientation in the sentences *She
-put the book on the table* and *She put the bottle on the table.*
-However, in German and Dutch, speakers preferred the verbs *laid* or
-*stood* in the above sentences. In this case, the verb *lay* encodes a
-horizontal orientation, whereas the verb *stand* encodes a vertical
-orientation. This distinction extends to verbs indicating existence. As
-@newmanCrosslinguisticOverviewPosture2002 exemplified, an English
-speaker would be likely to say *There's a lamp in the corner,* whereas a
-Dutch speaker would be more likely to say *There 'stands' a lamp in the
-corner.* Nonetheless, we cannot conclude that these cross-linguistic
-differences are affecting the match advantage across languages because
-the current theories [e.g., Language and Situated Simulation,
-@barsalou_grounded_2008] have not addressed the potential influence of
-linguistic aspects such as the lexical encoding of events.
+example, the verb *put* does not convey a specific orientation in the
+sentences *She put the book on the table* and *She put the bottle on the
+table.* However, in German and Dutch, speakers preferred the verbs
+*laid* or *stood* in the above sentences. In this case, the verb *lay*
+encodes a horizontal orientation, whereas the verb *stand* encodes a
+vertical orientation. This distinction extends to verbs indicating
+existence. As @newmanCrosslinguisticOverviewPosture2002 exemplified, an
+English speaker would be likely to say *There's a lamp in the corner,*
+whereas a Dutch speaker would be more likely to say *There 'stands' a
+lamp in the corner.* Nonetheless, we cannot conclude that these
+cross-linguistic differences are affecting the match advantage across
+languages because the current theories [e.g., Language and Situated
+Simulation, @barsalou_grounded_2008] have not addressed the potential
+influence of linguistic aspects such as the lexical encoding of events.
 
 **Methodological factors.** Inconsistent findings on the match advantage
 of object orientation may be due to variability in task design. For
@@ -1234,10 +1234,10 @@ aimed at detecting a general match advantage of object orientation
 across languages and evaluated the magnitude of match advantage in each
 specific language. Additionally, we examined whether the match
 advantages were related to the mental rotation index. Thus, this study
-followed the original methods from [@stanfield_effect_2001] and
-addressed two primary questions: (1) How much of the match advantage of
-object orientation can be obtained within different languages, and (2)
-How do differences in the mental rotation index affect the match
+followed the original methods from @stanfield_effect_2001 and addressed
+two primary questions: (1) How much of the match advantage of object
+orientation can be obtained within different languages, and (2) How are
+differences in the mental rotation index associated with the match
 advantage across languages?
 
 # Method
@@ -1449,18 +1449,24 @@ merge_subjects <- merge_subjects %>%
 
 ## Participants
 
-The pre-registered power analysis indicated the need to include *n* =
-156 and 620 participants for 80% power for a directional one-sample
-*t*-test for a *d* = 0.20 and 0.10, respectively. A mixed-model
-simulation suggested that *n* = 400 participants with 100 items (i.e.,
-24 planned items nested within at least five languages) would produce
-90% power to detect the same effect as that reported in
-@zwaanRevisitingMentalSimulation2012. The laboratories were allowed to
-follow a secondary plan: a team collected at least their pre-registered
-minimum sample size (suggested 100 to 160 participants, most implemented
-50), and then determine whether or not to continue data collection via
-Bayesian sequential analysis (stopping data collection if $BF_{10}$ = 10
-or 0.10)[^2].
+We performed a pre-registered power analysis, which sought to achieve a
+power of 80% in a directional one-sample *t*-test. When an effect size
+of *d* = 0.20 was hypothesized, a sample size of *N* = 156 was required.
+Instead, for a hypothetical effect size *d* = 0.10, a sample size of *N*
+= 620 was required.'In addition, a power analysis tailored to
+mixed-effects models was performed. The effect size hypothesized in this
+analysis was equal to that observed by
+@zwaanRevisitingMentalSimulation2012, and the number of items was 100
+(i.e., 24 planned items nested within at least five languages). The
+result revealed that a sample size of *N* = 400 would be required to
+achieve a power of 90%. We expected laboratories to show differences in
+orientation effects, and therefore, the mixed effect analysis treated
+the laboratories as a random variable to account for different analyses.
+The laboratories were allowed to follow a secondary plan: a team
+collected at least their pre-registered minimum sample size (suggested
+100 to 160 participants, most implemented 50), and then determine
+whether or not to continue data collection via Bayesian sequential
+analysis (stopping data collection if $BF_{10}$ = 10 or 0.10)[^2].
 
 [^2]: See details of power analysis in the pre-registered plan, pp. 13 -
     15. <https://psyarxiv.com/t2pjv/>
@@ -1741,7 +1747,7 @@ scripts are available at the public OSF folder (<https://osf.io/e428p/>
 
 ## Analysis Plan
 
-To test hypothesis 1, our first planned analysis[^4] used a
+To test Hypothesis 1, our first planned analysis[^4] used a
 random-effects meta-analysis model that estimated the match advantage
 across laboratories and languages. The meta-analysis summarized the
 median reaction times by match condition to determine the effect size by
@@ -1759,10 +1765,10 @@ absolute deviation, and $r$ is correlation between match and mismatch
 condition. Meta-analytic effect sizes were computed for those languages
 that had data from more than one team.
 
-Continuing to test hypothesis 1, next, we ran planned mixed-effects
+Continuing to test Hypothesis 1, next, we ran planned mixed-effects
 models using each individual response time from the sentence-picture
 verification task as the dependent variable. In each analysis, we first
-built a simple linear regression model with a fixed intercept only.
+built a simple linear regression model with a fixed intercept-only.
 Then, we systematically added random intercepts and fixed effects,
 arriving at the final model. First, the random intercepts were added to
 the model one-by-one in the following order: participant ID, target,
@@ -1772,14 +1778,14 @@ fixed effect of matching condition (match vs. mismatch) was added to the
 model. Language-specific mixed-effects models were conducted in the same
 way if the meta-analysis showed a significant orientation effect.
 
-According to the pre-registration, we planned to test hypothesis 2 by
+According to the pre-registration, we planned to test Hypothesis 2 by
 first evaluating the equality of mental rotation scores across languages
 using an ANOVA. However, this plan was updated to use mixed models
 instead due to the nested structure of the data (Gelman, 2006). The same
 analysis plan was used for model building and selection as described
 above for the sentence-picture verification task.
 
-To further assess hypothesis 2, the last planned analysis was to use
+To further assess Hypothesis 2, the last planned analysis was to use
 mental rotation scores for the prediction of mental stimulation with an
 interaction between language and mental rotation scores computed from
 the picture-picture task to determine if there were differences in
@@ -2165,7 +2171,7 @@ knitr::include_graphics("includes/fig/meta-all.png")
 The planned meta-analysis examined the effect overall and within
 languages wherein at least two laboratories had collected data (Arabic,
 English, German, Norway, Simplified Chinese, Traditional Chinese,
-Slovakian, and Turkey). Figure \@ref(fig:meta-all-plot) showed a
+Slovakian, and Turkish). Figure \@ref(fig:meta-all-plot) showed a
 significant positive orientation effect across German laboratories (*b*
 = `r as.character(round(res.Germany$b,2))`, 95% CI
 [`r as.character(round(res.Germany$ci.lb,2))`,
@@ -2218,14 +2224,14 @@ fixed.model <- lmer(response_time ~ Match + (1|Subject) + (1|Target) + (1|PSA_ID
 SP_lme01_out <- summary(fixed.model)$coefficients
 ```
 
-First, an intercept only model of response times with no random
+First, an intercept-only model of response times with no random
 intercepts was computed for comparison purposes AIC =
 `r format(round(AIC(intercept.model), digits = 2), nsmall = 2)`. The
 model with the random intercept by participants was an improvement over
 this model, AIC =
 `r format(round(AIC(subject.model), digits = 2), nsmall = 2)`. The
 addition of a target random intercept improved model fit over the
-participant intercept only model, AIC =
+participant intercept-only model, AIC =
 `r format(round(AIC(item.model), digits = 2), nsmall = 2)`. Data
 collection lab was then added to the model as a random intercept, also
 showing model improvement, AIC =
@@ -2358,7 +2364,7 @@ max(lang_results$Coefficient)
 ```
 
 Using the same steps as described for the sentence-picture verification
-mixed model, we first started with an intercept only model with no
+mixed model, we first started with an intercept-only model with no
 random effects for comparison, AIC =
 `r format(round(AIC(PP.intercept.lme), digits = 2), nsmall = 2)`. The
 addition of random intercepts by subject, AIC =
@@ -2429,7 +2435,7 @@ pred_output <- summary(pred.interact)$coefficients
 
 The last analysis included a mixed effects regression model using the
 interaction of language and mental rotation scores to predict match
-advantage in the sentence-picture task. First, an intercept only model
+advantage in the sentence-picture task. First, an intercept-only model
 was calculated for comparison, AIC =
 `r format(round(AIC(pred.intercept), digits = 2), nsmall = 2)`, which
 was improved slightly by adding a random intercept by data collection
@@ -2448,19 +2454,19 @@ This study aimed to test a global object orientation effect and to
 estimate the magnitude of object orientation effect in each particular
 language. The findings of our study did not support the existence of the
 object orientation effect as an outcome of general cognitive function.
-Our data failed to replicate the effects in English and Chinese,
-languages in which the effect has been reported previously
+Furthermore, our data failed to replicate the effects in English and
+Chinese, languages in which the effect has been reported previously
 [@chenDoesObjectSize2020; @stanfield_effect_2001;
 @zwaanRevisitingMentalSimulation2012]. The only language in which we
 found an indication of the orientation effect in the predicted direction
 was German, but this effect was evident only in the meta-analysis and
-not in the mixed-effects model approach. Mixed-effects models indicated
-significant mental rotation scores for each language that was consistent
-with the assumption mental rotation is a general cognitive function.
-However, the mental rotation score did not predict the object
-orientation effects nor interact with language. Overall, the failure to
-replicate the previously reported object orientation effects casts doubt
-on the existence of the effect as a language-general phenomenon
+not in the mixed-effects model approach. Although tangential to our
+topic, an effect of mental rotation was observed, such that identical
+orientations were processed faster than rotated orientations. However,
+the mental rotation score did not predict the object orientation effects
+nor interact with language. Overall, the failure to replicate the
+previously reported object orientation effects casts doubt on the
+existence of the effect as a language-general phenomenon
 [@kaschakEmbodimentLabTheory2021]. Below, we summarize the lessons and
 limitations of the methodology and analysis, and discuss theoretical
 issues related to the orientation effect as an effective probe to
@@ -2510,7 +2516,7 @@ addition, we did not find that mental imagery predicted match advantage,
 which implies that this strategy to ensure linguistic processing had
 limited influence in our study.
 
-## Analysis Issues
+## Analysis Considerations
 
 The orientation effects were analyzed using a meta-analytic approach and
 mixed-effects models. Neither approach revealed an overall effect of
@@ -2551,14 +2557,15 @@ contain more information, they may afford more statistical power
 [@cohen1983]. Furthermore, in addition to categorical versus continuous
 predictors, sensorimotor effects are likely to be moderated by factors
 influencing participants' attention during experiments
-[@barsalouEstablishingGeneralizableMechanisms2019; @noah2018]. Last, and
-more certainly, sensorimotor effects are moderated by the sample size of
-studies, and the sample size needed to study these effects can exceed
-1,000 participants [@bernabeu2022]. Examining these and other sources of
-variation is likely to yield the degree of granularity needed for the
-present topic.
+[@barsalouEstablishingGeneralizableMechanisms2019; @noah2018]. Last, due
+to publication bias, the true size of sensorimotor effects is likely to
+be smaller than that observed in small-sample studies [@vasishth2021].
+Indeed, studying these effects reliably may require samples exceeding
+1,000 participants [@bernabeu2022]. In summary, addressing the above
+issues may permit the analytic sensitivity needed to observe the
+presence and causes of object orientation effects.
 
-## Theoretical Issues
+## Theoretical Considerations
 
 Scholars interested in mental simulation have investigated whether the
 human mind processes linguistic content as abstract symbols or as
@@ -2613,7 +2620,7 @@ times for both too fast (\< 160 ms) and too slow responses (2 MAD beyond
 the median for each participant individually). After these exclusions, a
 mixed-effects model confirmed no difference of response times between
 in-person and online data. Future studies could evaluate how the task
-environments alter the magnitude of orientation effect.
+environments alter the magnitude of the orientation effect.
 
 ## Conclusion
 
