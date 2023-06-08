@@ -19,7 +19,6 @@ author:
       - Writing - review & editing
     corresponding: yes
     email: csc2009@mail.tcu.edu.tw
-    address: "No. 67, Jei-Ren St., Hualien City, Taiwan"
   - name: Erin Buchanan
     affiliation: '2'
     role:
@@ -775,187 +774,164 @@ author:
 
 affiliation:
   - id: '1'
-    institution: Department of Human Development and Psychology, Tzu-Chi University,
-      Hualien, Taiwan
+    institution: Department of Human Development and Psychology, Tzu-Chi University
   - id: '2'
-    institution: Harrisburg University of Science and Technology, Harrisburg, PA,
-      USA
+    institution: Harrisburg University of Science and Technology
   - id: '3'
-    institution: Institute of Psychology, ELTE, Eotvos Lorand University, Budapest,
-      Hungary
+    institution: Institute of Psychology, ELTE, Eotvos Lorand University
   - id: '4'
-    institution: Department of Psychology, Willamette University,Salem OR, USA
+    institution: Department of Psychology, Willamette University
   - id: '5'
-    institution: Institute of Cognition and Culture, Queen’s University Belfast, UK
+    institution: Institute of Cognition and Culture, Queen’s University Belfast
   - id: '6'
-    institution: Department of Psychology, Lancaster University, Lancaster, United Kingdom
+    institution: Department of Psychology, Lancaster University
   - id: '7'
-    institution: LIP/PC2S, Université Grenoble Alpes, Grenoble, France
+    institution: LIP/PC2S, Université Grenoble Alpes
   - id: '8'
-    institution: Department of Clinical Psychology, United Arab Emirates University,
-      Al Ain, UAE
+    institution: Department of Clinical Psychology, United Arab Emirates University
   - id: '9'
     institution: Independent Researcher
   - id: '10'
-    institution: Psychology Department, College of Education, Sultan Qaboos University,
-      Muscat, Oman
+    institution: Psychology Department, College of Education, Sultan Qaboos University
   - id: '11'
     institution: Department of Experimental Psychology, Institute of Psychology, University
-      of Sao Paulo, Sao Paulo, Brazil
+      of Sao Paulo
   - id: '12'
-    institution: School of Psychology, University of Queensland, Brisbane, Australia
+    institution: School of Psychology, University of Queensland
   - id: '13'
-    institution: Department of Psychology, Macquarie University, Sydney, Australia
+    institution: Department of Psychology, Macquarie University
   - id: '14'
-    institution: Department of Philosophy, Macquarie University, Australia
+    institution: Department of Philosophy, Macquarie University
   - id: '15'
-    institution: Department of Psychology, Carleton University, Ottawa, Canada
+    institution: Department of Psychology, Carleton University
   - id: '16'
-    institution: Department of Psychology, University of Essex, Colchester, UK
+    institution: Department of Psychology, University of Essex
   - id: '17'
     institution: School of Social, Psychological and Behavioural Sciences, Coventry
-      University, Coventry, UK
+      University
   - id: '18'
-    institution: Department of Psychology, Maynooth University, Maynooth, Ireland
+    institution: Department of Psychology, Maynooth University
   - id: '19'
     institution: Division of Psychology, School of Social and Health Sciences, Abertay
-      University, Dundee, UK
+      University
   - id: '20'
     institution: School of Psychology, Faculty of Health Sciences and Wellbeing, University
-      of Sunderland, Sunderland, UK.
+      of Sunderland
   - id: '21'
-    institution: School of Psychology and Vision Sciences, University of Leicester,
-      Leicester, UK
+    institution: School of Psychology and Vision Sciences, University of Leicester
   - id: '22'
-    institution: School of Psychology, University of Nottingham Malaysia, Selangor,
-      Malaysia
+    institution: School of Psychology, University of Nottingham Malaysia
   - id: '23'
-    institution: Department of Psychology, Alex Ekwueme Federal University, Ndufu-Alike,
-      Nigeria
+    institution: Department of Psychology, Alex Ekwueme Federal University
   - id: '24'
-    institution: School of Psychology, University of Auckland, Auckland, NZ
+    institution: School of Psychology, University of Auckland
   - id: '25'
-    institution: Department of Psychology, Ashland University, Ashland, OH, USA
+    institution: Department of Psychology, Ashland University
   - id: '26'
-    institution: Department of Psychology, University of Alabama, Tuscaloosa, AL,
-      USA
+    institution: Department of Psychology, University of Alabama
   - id: '27'
-    institution: Hubbard Decision Research, Glen Ellyn, IL, USA
+    institution: Hubbard Decision Research
   - id: '28'
-    institution: Department of Psychology, Michigan State University, East Lansing,
-      MI, USA
+    institution: Department of Psychology, Michigan State University
   - id: '29'
-    institution: Department of Psychology, Ithaca College, Ithaca, NY, USA
+    institution: Department of Psychology, Ithaca College
   - id: '30'
-    institution: Department of Psychology, University of Louisiana at Lafayette, Lafayette,
-      LA, USA
+    institution: Department of Psychology, University of Louisiana at Lafayette
   - id: '31'
-    institution: Department of Cognitive Science, Occidental College, Los Angeles,
-      USA
+    institution: Department of Cognitive Science, Occidental College
   - id: '32'
-    institution: Department of Psychology, University of Denver, Denver, CO, USA
+    institution: Department of Psychology, University of Denver
   - id: '33'
-    institution: Department of Psychology, Franklin and Marshall College, Lancaster,
-      PA, USA
+    institution: Department of Psychology, Franklin and Marshall College
   - id: '34'
-    institution: Faculty of Psychology, University of Vienna, Wien, Austria
+    institution: Faculty of Psychology, University of Vienna
   - id: '35'
     institution: Department of Cognition, Emotion, and Methods in Psychology, Faculty
-      of Psychology, University of Vienna, Vienna, Austria
+      of Psychology, University of Vienna
   - id: '36'
-    institution: Department of Psychology and Psychotherapy, Witten/Herdecke University,
-      Germany
+    institution: Department of Psychology and Psychotherapy, Witten/Herdecke University
   - id: '37'
-    institution: School of Education, National and Kapodistrian University of Athens,
-      Athens, Greece
+    institution: School of Education, National and Kapodistrian University of Athens
   - id: '38'
     institution: Department of Psychology and School of Brain Sciences and Cognition,
-      Ben Gurion University, Beer Sheba, Israel
+      Ben Gurion University
   - id: '39'
-    institution: School of Studies in Life Science, Pt. Ravishankar Shukla University,
-      Raipur, India
+    institution: School of Studies in Life Science, Pt. Ravishankar Shukla University
   - id: '40'
     institution: Department of Health and Functioning, Western Norway University of
-      Applied Sciences, Bergen, Norway
+      Applied Sciences
   - id: '41'
-    institution: Department of Psychology, University of Oslo, Oslo, Norway
+    institution: Department of Psychology, University of Oslo
   - id: '42'
-    institution: Department of Psychology, UiT - The Arctic University of Norway,
-      Tromsø, Norway
+    institution: Department of Psychology, UiT - The Arctic University of Norway
   - id: '43'
-    institution: Institute of Psychology, Jagiellonian University, Krakow, Poland
+    institution: Institute of Psychology, Jagiellonian University
   - id: '44'
-    institution: Iscte-University Institute of Lisbon, CIS-IUL, Portugal
+    institution: Iscte-University Institute of Lisbon
   - id: '45'
     institution: Laboratory for Neurocognition and Applied Cognition, Faculty of Philosophy,
       University of Belgrade
   - id: '46'
-    institution: Department of Psychology, Hubei University, Wuhan, China
+    institution: Department of Psychology, Hubei University
   - id: '47'
-    institution: School of Psychology, Nanjing Normal University, Nanjing, China
+    institution: School of Psychology, Nanjing Normal University
   - id: '48'
-    institution: Faculty of Arts and Humanities, University of Macau, Macau, China
+    institution: Faculty of Arts and Humanities, University of Macau
   - id: '49'
     institution: Department of Psychology, Faculty of Arts, Pavol Jozef Šafarik University
-      in Košice, Slovakia
+      in Košice
   - id: '50'
     institution: Institute of Social Sciences, CSPS, Slovak Academy of Sciences
   - id: '51'
-    institution: Institute of Psychology, University of Presov, Slovakia
+    institution: Institute of Psychology, University of Presov
   - id: '52'
     institution: Institute for Research and Development of Education, Faculty of Education,
-      Charles university, Czechia
+      Charles University
   - id: '53'
-    institution: Faculty of Psychology, Fundación Universitaria Konrad Lorenz, Bogotá,
-      Colombia
+    institution: Faculty of Psychology, Fundación Universitaria Konrad Lorenz
   - id: '54'
-    institution: Ecosystem Engineer, Universidad Regional Amazónica Ikiam, Tena, Ecuador
+    institution: Ecosystem Engineer, Universidad Regional Amazónica Ikiam
   - id: '55'
-    institution: Faculty of Psychology, Chulalongkorn University, Thailand
+    institution: Faculty of Psychology, Chulalongkorn University
   - id: '56'
-    institution: Department of Psychology, National Cheng Kung University, Tainan,
-      Taiwan
+    institution: Department of Psychology, National Cheng Kung University
   - id: '57'
-    institution: Department of Psychology, Üsküdar University, İstanbul, Turkey
+    institution: Department of Psychology, Üsküdar University
   - id: '58'
-    institution: Department of Psychology, Manisa Celal Bayar University,  Manisa,Turkey
+    institution: Department of Psychology, Manisa Celal Bayar University
   - id: '59'
-    institution: Department of Psychology, Erzurum Technical University, Erzurum,
-      Turkey
+    institution: Department of Psychology, Erzurum Technical University
   - id: '60'
-    institution: Department of Psychology, Ankara Medipol University, Ankara, Turkey
+    institution: Department of Psychology, Ankara Medipol University
   - id: '61'
-    institution: Department of Vision Sciences, University of Leicester, United Kingdom
+    institution: Department of Vision Sciences, University of Leicester
   - id: '62'
-    institution: Bournemouth University,Talbot Campus, Poole, UK
+    institution: Bournemouth University, Talbot Campus
   - id: '63'
     institution: Department of Psychology and Psychodynamics, Karl Landsteiner University
-      of Health Sciences, Krems an der Donau, Austria
+      of Health Sciences
   - id: '64'
-    institution: Department of Evolutionary Anthropology, University of Vienna, Wien,
-      Austria
+    institution: Department of Evolutionary Anthropology, University of Vienna
   - id: '65'
-    institution: Department of Management Aarhus University, Aarhus, Denmark
+    institution: Department of Management Aarhus University
   - id: '66'
-    institution: Department of Psychology, Lund University, Lund, Sweden
+    institution: Department of Psychology, Lund University
   - id: '67'
     institution: Department of Language and Culture, UiT The Arctic University of
-      Norway, Tromsø, Norway
+      Norway
   - id: '68'
-    institution: Busara Center for Behavioral Economics, Nairobi, Kenya
+    institution: Busara Center for Behavioral Economics
   - id: '69'
-    institution: Psychology Department, Faculty of Arts, Menoufia University, Shebin
-      El-Kom, Egypt
+    institution: Psychology Department, Faculty of Arts, Menoufia University
   - id: '70'
-    institution: Department of Psychology, Nottingham Trent University, Nottingham,
-      UK
+    institution: Department of Psychology, Nottingham Trent University
   - id: '71'
     institution: University of Jyväskylä, Finland
   - id: '72'
-    institution: Faculty of Education, University of Presov, Slovakia
+    institution: Faculty of Education, University of Presov
   - id: '73'
     institution: Faculty of Behavioral Sciences, Education, & Languages, HELP University
-      Subang 2, Malaysia
+      Subang 2
 authornote: |
   **Funding statement.** Matúš Adamkovič was supported by APVV-20-0319; Robert M. Ross was supported by Australian Research Council (grant number: DP180102384) and the John Templeton Foundation (grant ID: 62631); Zoltan Kekecs was supported by János Bolyai Research Scholarship of the Hungarian Academy of Science; Mahmoud Elsherif was supported by Leverhulme Trust; Glenn P. Williams was supported by Leverhulme Trust Research Project Grant (RPG-2016-093); Ivan Ropovik was supported by NPO Systemic Risk Institute (LX22NPO5101); Krystian Barzykowski was supported by National Science Centre, Poland (2019/35/B/HS6/00528); Gabriel Baník was supported by PRIMUS/20/HUM/009; Patrícia Arriaga was supported by Portuguese National Foundation for Science and Technology (FCT UID/PSI/03125/2019); Monika Hricová was supported by VEGA 1/0145/23.
   
