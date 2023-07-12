@@ -30,7 +30,7 @@ author:
       - Writing - review & editing
     email: ebuchanan@harrisburgu.edu
   - name: Zoltan Kekecs
-    affiliation: '3,66'
+    affiliation: '3,64'
     role:
       - Project administration
       - Writing - review & editing
@@ -59,7 +59,7 @@ author:
       - Writing - review & editing
     email: balazs.aczel@gmail.com
   - name: Pablo Bernabeu
-    affiliation: '6,67'
+    affiliation: '6,65'
     role:
       - Investigation
       - Methodology
@@ -67,7 +67,7 @@ author:
       - Writing - review & editing
     email: pcbernabeu@gmail.com
   - name: Patrick Forscher
-    affiliation: '7,68'
+    affiliation: '7,66'
     role:
       - Methodology
       - Writing - review & editing
@@ -95,7 +95,7 @@ author:
       - Writing - review & editing
     email: hoorie_ali@hotmail.com
   - name: Mai Helmy
-    affiliation: '10,69'
+    affiliation: '10,67'
     role:
       - Investigation
       - Resources
@@ -187,7 +187,7 @@ author:
       - Writing - review & editing
     email: robross46@gmail.com
   - name: Ian D. Stephen
-    affiliation: '13,70'
+    affiliation: '13,68'
     role:
       - Investigation
       - Writing - review & editing
@@ -239,13 +239,13 @@ author:
     role:
       - Investigation
       - Writing - review & editing
-    email: "1804426@abertay.ac.uk"
+    email: 1804426@abertay.ac.uk
   - name: Danny Riis
     affiliation: '19'
     role:
       - Investigation
       - Writing - review & editing
-    email: "1702768@abertay.ac.uk"
+    email: 1702768@abertay.ac.uk
   - name: Glenn P. Williams
     affiliation: '20'
     role:
@@ -567,199 +567,181 @@ author:
       - Resources
       - Writing - review & editing
     email: vanja.kovic@f.bg.ac.rs
-  - name: Tao-tao Gan
-    affiliation: '46'
-    role:
-      - Investigation
-      - Writing - review & editing
-    email: ganttt@yeah.net
-  - name: Hu Chuan-Peng
-    affiliation: '47'
-    role:
-      - Investigation
-      - Writing - review & editing
-    email: hcp4715@gmail.com
-  - name: Qing-Lan Liu
-    affiliation: '46'
-    role:
-      - Investigation
-      - Writing - review & editing
-    email: Liuql16@outlook.com
   - name: Zhong Chen
-    affiliation: '48'
+    affiliation: '46'
     role:
       - Investigation
       - Writing - review & editing
     email: zhongchen@um.edu.mo
   - name: Fei Gao
-    affiliation: '48'
+    affiliation: '46'
     role:
       - Investigation
       - Resources
       - Writing - review & editing
     email: onegaofei@gmail.com
   - name: Lisa Li
-    affiliation: '48'
+    affiliation: '46'
     role:
       - Investigation
       - Resources
       - Writing - review & editing
     email: yb87720@um.edu.mo
   - name: Jozef Bavoľár
-    affiliation: '49'
+    affiliation: '47'
     role:
       - Investigation
       - Resources
       - Writing - review & editing
     email: jozef.bavolar@upjs.sk
   - name: Monika Hricová
-    affiliation: '49'
+    affiliation: '47'
     role:
       - Investigation
       - Resources
       - Writing - review & editing
     email: monika.hricova@upjs.sk
   - name: Pavol Kačmár
-    affiliation: '49'
+    affiliation: '47'
     role:
       - Investigation
       - Resources
       - Writing - review & editing
     email: pavol.kacmar@upjs.sk
   - name: Matúš Adamkovič
-    affiliation: '50,71'
+    affiliation: '48,69'
     role:
       - Investigation
       - Writing - review & editing
     email: matho.adamkovic@gmail.com
   - name: Peter Babinčák
-    affiliation: '51'
+    affiliation: '49'
     role:
       - Investigation
       - Writing - review & editing
     email: peter.babincak@unipo.sk
   - name: Gabriel Baník
-    affiliation: '51,52'
+    affiliation: '49,50'
     role:
       - Investigation
       - Writing - review & editing
     email: gabriel.banik@gmail.com
   - name: Ivan Ropovik
-    affiliation: '52,72'
+    affiliation: '50,70'
     role:
       - Investigation
       - Writing - review & editing
     email: ivan.ropovik@gmail.com
   - name: Danilo Zambrano Ricaurte
-    affiliation: '53'
+    affiliation: '51'
     role:
       - Investigation
       - Resources
       - Writing - review & editing
     email: danilozambrano@psicologos.com
   - name: Sara Álvarez Solas
-    affiliation: '54'
+    affiliation: '52'
     role:
       - Investigation
       - Resources
       - Writing - review & editing
     email: sara.alvarez.solas@gmail.com
   - name: Harry Manley
-    affiliation: '55,73'
+    affiliation: '53,71'
     role:
       - Investigation
       - Resources
       - Writing - review & editing
     email: harrisonmanley@gmail.com
   - name: Panita Suavansri
-    affiliation: '55'
+    affiliation: '53'
     role:
       - Investigation
       - Resources
       - Writing - review & editing
     email: p.suavansri@gmail.com
   - name: Chun-Chia Kung
-    affiliation: '56'
+    affiliation: '54'
     role:
       - Investigation
       - Resources
       - Writing - review & editing
     email: cckung@kunglab-nckupsy.org
-  - name: Asil Ali Özdoğru
-    affiliation: '57'
-    role:
-      - Investigation
-      - Resources
-      - Writing - review & editing
-    email: asil.ozdogru@uskudar.edu.tr
   - name: Belemir Çoktok
-    affiliation: '57'
+    affiliation: '55'
     role:
       - Investigation
       - Resources
       - Writing - review & editing
     email: b.coktok@gmail.com
+  - name: Asil Ali Özdoğru
+    affiliation: '55'
+    role:
+      - Investigation
+      - Resources
+      - Writing - review & editing
+    email: asil.ozdogru@uskudar.edu.tr
   - name: Çağlar Solak
-    affiliation: '58'
+    affiliation: '56'
     role:
       - Investigation
       - Writing - review & editing
     email: solakcaglar@gmail.com
   - name: Sinem Söylemez
-    affiliation: '58'
+    affiliation: '56'
     role:
       - Investigation
       - Writing - review & editing
     email: sinem.nokta@gmail.com
   - name: Sami Çoksan
-    affiliation: '59'
+    affiliation: '57'
     role:
       - Investigation
       - Resources
       - Writing - review & editing
     email: scoksan@metu.edu.tr
   - name: İlker Dalgar
-    affiliation: '60'
+    affiliation: '58'
     role:
       - Resources
       - Writing - review & editing
     email: ilkerdalgar@gmail.com
   - name: Mahmoud Elsherif
-    affiliation: '61'
+    affiliation: '59'
     role: 
       - Writing - review & editing
     email: mahmoud.medhat.elsherif@gmail.com
   - name: Martin Vasilev
-    affiliation: '62'
+    affiliation: '60'
     role: 
       - Writing - review & editing
     email: mvasilev@bournemouth.ac.uk
   - name: Vinka Mlakic
-    affiliation: '63'
+    affiliation: '61'
     role:
       - Resources
       - Writing - review & editing
     email: vinka.mlakic@gmail.com
   - name: Elisabeth Oberzaucher
-    affiliation: '64'
+    affiliation: '62'
     role:
       - Resources
       - Writing - review & editing
     email: elisabeth@oberzaucher.eu
   - name: Stefan Stieger
-    affiliation: '63'
+    affiliation: '61'
     role:
       - Resources
       - Writing - review & editing
     email: stefan.stieger@kl.ac.at
   - name: Selina Volsa
-    affiliation: '63'
+    affiliation: '61'
     role:
       - Resources
       - Writing - review & editing
     email: selina.volsa@kl.ac.at
   - name: Janis Zickfeld
-    affiliation: '65'
+    affiliation: '63'
     role:
       - Resources
       - Writing - review & editing
@@ -774,164 +756,185 @@ author:
 
 affiliation:
   - id: '1'
-    institution: Department of Human Development and Psychology, Tzu-Chi University
+    institution: Department of Human Development and Psychology, Tzu-Chi University,
+      Hualien, Taiwan
   - id: '2'
-    institution: Harrisburg University of Science and Technology
+    institution: Harrisburg University of Science and Technology, Harrisburg, PA,
+      USA
   - id: '3'
-    institution: Institute of Psychology, ELTE, Eotvos Lorand University
+    institution: Institute of Psychology, ELTE, Eotvos Lorand University, Budapest,
+      Hungary
   - id: '4'
-    institution: Department of Psychology, Willamette University
+    institution: Department of Psychology, Willamette University,Salem OR, USA
   - id: '5'
-    institution: Institute of Cognition and Culture, Queen’s University Belfast
+    institution: Institute of Cognition and Culture, Queen’s University Belfast, UK
   - id: '6'
-    institution: Department of Psychology, Lancaster University
+    institution: Department of Psychology, Lancaster University, Lancaster, United
+      Kingdom
   - id: '7'
-    institution: LIP/PC2S, Université Grenoble Alpes
+    institution: LIP/PC2S, Université Grenoble Alpes, Grenoble, France
   - id: '8'
-    institution: Department of Clinical Psychology, United Arab Emirates University
+    institution: Department of Clinical Psychology, United Arab Emirates University,
+      Al Ain, UAE
   - id: '9'
     institution: Independent Researcher
   - id: '10'
-    institution: Psychology Department, College of Education, Sultan Qaboos University
+    institution: Psychology Department, College of Education, Sultan Qaboos University,
+      Muscat, Oman
   - id: '11'
     institution: Department of Experimental Psychology, Institute of Psychology, University
-      of Sao Paulo
+      of Sao Paulo, Sao Paulo, Brazil
   - id: '12'
-    institution: School of Psychology, University of Queensland
+    institution: School of Psychology, University of Queensland, Brisbane, Australia
   - id: '13'
-    institution: Department of Psychology, Macquarie University
+    institution: Department of Psychology, Macquarie University, Sydney, Australia
   - id: '14'
-    institution: Department of Philosophy, Macquarie University
+    institution: Department of Philosophy, Macquarie University, Australia
   - id: '15'
-    institution: Department of Psychology, Carleton University
+    institution: Department of Psychology, Carleton University, Ottawa, Canada
   - id: '16'
-    institution: Department of Psychology, University of Essex
+    institution: Department of Psychology, University of Essex, Colchester, UK
   - id: '17'
     institution: School of Social, Psychological and Behavioural Sciences, Coventry
-      University
+      University, Coventry, UK
   - id: '18'
-    institution: Department of Psychology, Maynooth University
+    institution: Department of Psychology, Maynooth University, Maynooth, Ireland
   - id: '19'
     institution: Division of Psychology, School of Social and Health Sciences, Abertay
-      University
+      University, Dundee, UK
   - id: '20'
     institution: School of Psychology, Faculty of Health Sciences and Wellbeing, University
-      of Sunderland
+      of Sunderland, Sunderland, UK.
   - id: '21'
-    institution: School of Psychology and Vision Sciences, University of Leicester
+    institution: School of Psychology and Vision Sciences, University of Leicester,
+      Leicester, UK
   - id: '22'
-    institution: School of Psychology, University of Nottingham Malaysia
+    institution: School of Psychology, University of Nottingham Malaysia, Selangor,
+      Malaysia
   - id: '23'
-    institution: Department of Psychology, Alex Ekwueme Federal University
+    institution: Department of Psychology, Alex Ekwueme Federal University, Ndufu-Alike,
+      Nigeria
   - id: '24'
-    institution: School of Psychology, University of Auckland
+    institution: School of Psychology, University of Auckland, Auckland, NZ
   - id: '25'
-    institution: Department of Psychology, Ashland University
+    institution: Department of Psychology, Ashland University, Ashland, OH, USA
   - id: '26'
-    institution: Department of Psychology, University of Alabama
+    institution: Department of Psychology, University of Alabama, Tuscaloosa, AL,
+      USA
   - id: '27'
-    institution: Hubbard Decision Research
+    institution: Hubbard Decision Research, Glen Ellyn, IL, USA
   - id: '28'
-    institution: Department of Psychology, Michigan State University
+    institution: Department of Psychology, Michigan State University, East Lansing,
+      MI, USA
   - id: '29'
-    institution: Department of Psychology, Ithaca College
+    institution: Department of Psychology, Ithaca College, Ithaca, NY, USA
   - id: '30'
-    institution: Department of Psychology, University of Louisiana at Lafayette
+    institution: Department of Psychology, University of Louisiana at Lafayette, Lafayette,
+      LA, USA
   - id: '31'
-    institution: Department of Cognitive Science, Occidental College
+    institution: Department of Cognitive Science, Occidental College, Los Angeles,
+      USA
   - id: '32'
-    institution: Department of Psychology, University of Denver
+    institution: Department of Psychology, University of Denver, Denver, CO, USA
   - id: '33'
-    institution: Department of Psychology, Franklin and Marshall College
+    institution: Department of Psychology, Franklin and Marshall College, Lancaster,
+      PA, USA
   - id: '34'
-    institution: Faculty of Psychology, University of Vienna
+    institution: Faculty of Psychology, University of Vienna, Wien, Austria
   - id: '35'
     institution: Department of Cognition, Emotion, and Methods in Psychology, Faculty
-      of Psychology, University of Vienna
+      of Psychology, University of Vienna, Vienna, Austria
   - id: '36'
-    institution: Department of Psychology and Psychotherapy, Witten/Herdecke University
+    institution: Department of Psychology and Psychotherapy, Witten/Herdecke University,
+      Germany
   - id: '37'
-    institution: School of Education, National and Kapodistrian University of Athens
+    institution: School of Education, National and Kapodistrian University of Athens,
+      Athens, Greece
   - id: '38'
     institution: Department of Psychology and School of Brain Sciences and Cognition,
-      Ben Gurion University
+      Ben Gurion University, Beer Sheba, Israel
   - id: '39'
-    institution: School of Studies in Life Science, Pt. Ravishankar Shukla University
+    institution: School of Studies in Life Science, Pt. Ravishankar Shukla University,
+      Raipur, India
   - id: '40'
     institution: Department of Health and Functioning, Western Norway University of
-      Applied Sciences
+      Applied Sciences, Bergen, Norway
   - id: '41'
-    institution: Department of Psychology, University of Oslo
+    institution: Department of Psychology, University of Oslo, Oslo, Norway
   - id: '42'
-    institution: Department of Psychology, UiT - The Arctic University of Norway
+    institution: Department of Psychology, UiT - The Arctic University of Norway,
+      Tromsø, Norway
   - id: '43'
-    institution: Institute of Psychology, Jagiellonian University
+    institution: Institute of Psychology, Jagiellonian University, Krakow, Poland
   - id: '44'
-    institution: Iscte-University Institute of Lisbon
+    institution: Iscte-University Institute of Lisbon, CIS-IUL, Portugal
   - id: '45'
     institution: Laboratory for Neurocognition and Applied Cognition, Faculty of Philosophy,
       University of Belgrade
   - id: '46'
-    institution: Department of Psychology, Hubei University
+    institution: Faculty of Arts and Humanities, University of Macau, Macau, China
   - id: '47'
-    institution: School of Psychology, Nanjing Normal University
-  - id: '48'
-    institution: Faculty of Arts and Humanities, University of Macau
-  - id: '49'
     institution: Department of Psychology, Faculty of Arts, Pavol Jozef Šafarik University
-      in Košice
-  - id: '50'
+      in Košice, Slovakia
+  - id: '48'
     institution: Institute of Social Sciences, CSPS, Slovak Academy of Sciences
-  - id: '51'
-    institution: Institute of Psychology, University of Presov
-  - id: '52'
+  - id: '49'
+    institution: Institute of Psychology, University of Presov, Slovakia
+  - id: '50'
     institution: Institute for Research and Development of Education, Faculty of Education,
-      Charles University
+      Charles university, Czechia
+  - id: '51'
+    institution: Faculty of Psychology, Fundación Universitaria Konrad Lorenz, Bogotá,
+      Colombia
+  - id: '52'
+    institution: Ecosystem Engineer, Universidad Regional Amazónica Ikiam, Tena, Ecuador
   - id: '53'
-    institution: Faculty of Psychology, Fundación Universitaria Konrad Lorenz
+    institution: Faculty of Psychology, Chulalongkorn University, Thailand
   - id: '54'
-    institution: Ecosystem Engineer, Universidad Regional Amazónica Ikiam
+    institution: Department of Psychology, National Cheng Kung University, Tainan,
+      Taiwan
   - id: '55'
-    institution: Faculty of Psychology, Chulalongkorn University
+    institution: Department of Psychology, Üsküdar University, İstanbul, Turkey
   - id: '56'
-    institution: Department of Psychology, National Cheng Kung University
+    institution: Department of Psychology, Manisa Celal Bayar University,  Manisa,Turkey
   - id: '57'
-    institution: Department of Psychology, Üsküdar University
+    institution: Department of Psychology, Erzurum Technical University, Erzurum,
+      Turkey
   - id: '58'
-    institution: Department of Psychology, Manisa Celal Bayar University
+    institution: Department of Psychology, Ankara Medipol University, Ankara, Turkey
   - id: '59'
-    institution: Department of Psychology, Erzurum Technical University
+    institution: Department of Vision Sciences, University of Leicester, United Kingdom
   - id: '60'
-    institution: Department of Psychology, Ankara Medipol University
+    institution: Bournemouth University,Talbot Campus, Poole, UK
   - id: '61'
-    institution: Department of Vision Sciences, University of Leicester
-  - id: '62'
-    institution: Bournemouth University, Talbot Campus
-  - id: '63'
     institution: Department of Psychology and Psychodynamics, Karl Landsteiner University
-      of Health Sciences
+      of Health Sciences, Krems an der Donau, Austria
+  - id: '62'
+    institution: Department of Evolutionary Anthropology, University of Vienna, Wien,
+      Austria
+  - id: '63'
+    institution: Department of Management Aarhus University, Aarhus, Denmark
   - id: '64'
-    institution: Department of Evolutionary Anthropology, University of Vienna
+    institution: Department of Psychology, Lund University, Lund, Sweden
   - id: '65'
-    institution: Department of Management Aarhus University
-  - id: '66'
-    institution: Department of Psychology, Lund University
-  - id: '67'
     institution: Department of Language and Culture, UiT The Arctic University of
-      Norway
+      Norway, Tromsø, Norway
+  - id: '66'
+    institution: Busara Center for Behavioral Economics, Nairobi, Kenya
+  - id: '67'
+    institution: Psychology Department, Faculty of Arts, Menoufia University, Shebin
+      El-Kom, Egypt
   - id: '68'
-    institution: Busara Center for Behavioral Economics
+    institution: Department of Psychology, Nottingham Trent University, Nottingham,
+      UK
   - id: '69'
-    institution: Psychology Department, Faculty of Arts, Menoufia University
-  - id: '70'
-    institution: Department of Psychology, Nottingham Trent University
-  - id: '71'
     institution: University of Jyväskylä, Finland
-  - id: '72'
-    institution: Faculty of Education, University of Presov
-  - id: '73'
+  - id: '70'
+    institution: Faculty of Education, University of Presov, Slovakia
+  - id: '71'
     institution: Faculty of Behavioral Sciences, Education, & Languages, HELP University
-      Subang 2
+      Subang 2, Malaysia
+
 authornote: |
   **Funding statement.** Matúš Adamkovič was supported by APVV-20-0319; Robert M. Ross was supported by Australian Research Council (grant number: DP180102384) and the John Templeton Foundation (grant ID: 62631); Zoltan Kekecs was supported by János Bolyai Research Scholarship of the Hungarian Academy of Science; Mahmoud Elsherif was supported by Leverhulme Trust; Glenn P. Williams was supported by Leverhulme Trust Research Project Grant (RPG-2016-093); Ivan Ropovik was supported by NPO Systemic Risk Institute (LX22NPO5101); Krystian Barzykowski was supported by National Science Centre, Poland (2019/35/B/HS6/00528); Gabriel Baník was supported by PRIMUS/20/HUM/009; Patrícia Arriaga was supported by Portuguese National Foundation for Science and Technology (FCT UID/PSI/03125/2019); Monika Hricová was supported by VEGA 1/0145/23.
   

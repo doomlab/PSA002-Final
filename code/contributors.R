@@ -16,6 +16,11 @@ colnames(DF)[1:3] <- c("Order in publication",
 
 DF <- subset(DF, !is.na(Firstname))
 
+# remove chinese authors per request
+# remove <- c(86, 87, 85)
+# DF <- DF %>% filter(!(as.numeric(`Order in publication`) %in% remove))
+
+
 #DF$`Email address` <- paste0("'", DF$`Email address`, "'")
 
 cat(print_yaml(contributors_table = DF))
