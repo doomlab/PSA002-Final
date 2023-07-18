@@ -210,7 +210,7 @@ author:
       - Investigation
       - Writing - review & editing
     email: kaitlyn.werner@utoronto.ca
-  - name: Dawn L. Holford
+  - name: Dawn Liu Holford
     affiliation: '16'
     role:
       - Investigation
@@ -950,7 +950,7 @@ floatsintext      : yes
 figurelist        : no
 tablelist         : no
 footnotelist      : no
-linenumbers       : yes
+linenumbers       : no
 mask              : no
 draft             : no
 classoption       : "man"

@@ -9,7 +9,7 @@ DF <- read_sheet(
 
 DF$`Middle name` <- NA
 
-validate_contributors_table(contributors_table = DF)
+# validate_contributors_table(contributors_table = DF)
 
 colnames(DF)[1:3] <- c("Order in publication", 
                        "Firstname", "Surname")
