@@ -1249,7 +1249,7 @@ We pre-registered the following hypotheses:
     but no association between mental rotation scores and mental
     simulation effects [see @chenDoesObjectSize2020].
 
-```{r all_data, message = FALSE, warning = FALSE, include = FALSE}
+```{r all_data, message = FALSE, warning = FALSE, include = FALSE, eval = T}
 # Load raw SPV data 
 # Build data frame of valid SP verification responses
 all_files <- list.files(path = "../data",
@@ -1337,6 +1337,12 @@ SP_V$Subject[SP_V$opensesame_codename != "osweb"] <-
          SP_V$subject_nr[SP_V$opensesame_codename != "osweb"])
 
 PP$Subject[PP$opensesame_codename != "osweb"] <- paste0(PP$Source[PP$opensesame_codename != "osweb"],"_",PP$PSA_ID[PP$opensesame_codename != "osweb"],"_",PP$subject_nr[PP$opensesame_codename != "osweb"])
+```
+
+```{r include = F, message = F, eval = F}
+SP_V <- import("../data/SP_V.zip")
+PP <- import("../data/PP.zip")
+all_data <- import("../data/all_data.zip")
 ```
 
 ```{r fix_part_id, message = FALSE, warning = FALSE, include = FALSE}
