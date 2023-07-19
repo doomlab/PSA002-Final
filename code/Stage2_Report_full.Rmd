@@ -1349,7 +1349,8 @@ PP$Subject[PP$opensesame_codename != "osweb"] <- paste0(PP$Source[PP$opensesame_
 # export(all_data, "../data/all_data.csv", row.names = FALSE)
 ```
 
-```{r include = F, message = F, eval = T}
+```{r include = F, message = F, eval = F}
+# this part for code ocean
 SP_V <- import("../data/SP_V.zip")
 PP <- import("../data/PP.zip")
 all_data <- import("../data/all_data.zip")
