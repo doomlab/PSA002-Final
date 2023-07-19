@@ -1010,6 +1010,8 @@ appendix          :
  library(tidyr)
  # options(scipen=999)
  # library(rstatix)
+ # library(tinytex)
+ # tinytex::install_tinytex() # only necessary for this reproduction you would only need to run it once on your machine 
 ```
 
 ```{r analysis-preferences}
@@ -1021,9 +1023,12 @@ knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
 ```{r load_info, message = FALSE, warning = FALSE, include = FALSE}
 # Load lab information
 # https://osf.io/dtfcg
-lab_info <- dir(path = "..", full.names = TRUE, recursive = TRUE, 
-    include.dirs = TRUE, pattern = "Lab_Info.csv") %>%
- import()
+lab_info <- dir(path = "..", full.names = TRUE, recursive = TRUE,
+  include.dirs = TRUE, pattern = "Lab_Info.csv") %>%
+import()
+
+# this part for code ocean
+# lab_info <- import("includes/files/Lab_Info.csv")
 ```
 
 Mental simulation of object properties is a major topic in conceptual
@@ -1337,9 +1342,14 @@ SP_V$Subject[SP_V$opensesame_codename != "osweb"] <-
          SP_V$subject_nr[SP_V$opensesame_codename != "osweb"])
 
 PP$Subject[PP$opensesame_codename != "osweb"] <- paste0(PP$Source[PP$opensesame_codename != "osweb"],"_",PP$PSA_ID[PP$opensesame_codename != "osweb"],"_",PP$subject_nr[PP$opensesame_codename != "osweb"])
+
+# this part for code ocean
+# export(SP_V, "../data/SP_V.csv", row.names = FALSE)
+# export(PP, "../data/PP.csv", row.names = FALSE)
+# export(all_data, "../data/all_data.csv", row.names = FALSE)
 ```
 
-```{r include = F, message = F, eval = F}
+```{r include = F, message = F, eval = T}
 SP_V <- import("../data/SP_V.zip")
 PP <- import("../data/PP.zip")
 all_data <- import("../data/all_data.zip")
@@ -1379,9 +1389,11 @@ merge_subjects <- merge_subjects %>% select(-PSA_ID.x, -PSA_ID.y)
 
 ```{r import_gender}
 osweb_meta <- dir(path = ".."
-                  ,full.names = TRUE, recursive = TRUE, 
-                  include.dirs = TRUE, pattern = "jatos_meta.csv") %>%
-  import() %>%
+                 ,full.names = TRUE, recursive = TRUE,
+                 include.dirs = TRUE, pattern = "jatos_meta.csv") %>%
+ import() %>%
+# this part for code ocean
+# osweb_meta <- import("includes/files/jatos_meta.csv") %>%
   unique() %>% 
   mutate(Batch = str_replace(Batch, "SRB_002B", "SRB_002")) %>% 
   mutate(gender = ifelse(gender==1,"FEMALE",ifelse(gender==2,"MALE","MISSING"))) %>%
