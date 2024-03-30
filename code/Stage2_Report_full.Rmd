@@ -941,7 +941,7 @@ authornote: |
   **Acknowledgement.** We thank the suggestions from the editor and two reviewers on our first and second proposals. CB would like to thank Tyler McGee for help with data collection. PB would like to thank Liam Morgillo for help with data collection.
   
 abstract: |
-  Mental simulation theories of language comprehension propose that people automatically create mental representations of objects perception mentioned in sentences. Mental representation is often measured with the sentence-picture verification task, wherein participants first read a sentence that implies the object property (i.e., shape and orientation). Participants then respond to an image of an object by indicating whether it was an object from the sentence or not. Previous studies have shown matching advantages for shape, but findings concerning object orientation have not been robust across languages. This registered report investigated the match advantage of object orientation across 18 languages in nearly 4,000 participants. The preregistered analysis revealed no compelling evidence for a match advantage for orientation across languages. Additionally, the match advantage was not predicted by mental rotation scores, which denote objects perception. Overall, the results did not support the argument that object perception consistently reactivates during sentence reading.
+  Mental simulation theories of language comprehension propose that people automatically create mental representations of objects mentioned in sentences. Mental representation is often measured with the sentence-picture verification task, wherein participants first read a sentence that implies the object property (i.e., shape and orientation). Participants then respond to an image of an object by indicating whether it was an object from the sentence or not. Previous studies have shown matching advantages for shape, but findings concerning object orientation have not been robust across languages. This registered report investigated the match advantage of object orientation across 18 languages in nearly 4,000 participants. The preregistered analysis revealed no compelling evidence for a match advantage for orientation across languages. Additionally, the match advantage was not predicted by mental rotation scores. Overall, the results did not support current mental simulation theories.
   
 keywords          : "cross-lingual research, language comprehension, mental rotation, mental simulation"
 floatsintext      : yes
@@ -1103,7 +1103,7 @@ with the failures to replicate some of the effects [e.g., @morey2022].
 In an empirical discipline like cognitive science, a theory requires the
 support of reproducible results.
 
-The reliability of match advantage effects seems to vary depending on
+The reliability of mental simulation effects seems to vary depending on
 both the object properties and the languages under study. Mental
 simulation effects for object shape have consistently been found in
 English [@zwaanEmbodiedSentenceComprehension2005;
@@ -1142,7 +1142,7 @@ theoretical frameworks below.
 studies usually contain several motion events (e.g., *The ant walked
 towards the pot of honey and tried to climb in*). Languages encode
 motion events in different ways, and grammatical differences between
-lexical encodings could explain different match advantage results.
+lexical encodings could explain different mental simulation effects.
 According to @verkerk2014, Germanic languages (e.g., Dutch, English, and
 German) generally encode the manner of motion in the verb (e.g., *The
 ant dashed*), while conveying the path information through satellite
@@ -1173,11 +1173,10 @@ existence. As @newmanCrosslinguisticOverviewPosture2002 exemplified, an
 English speaker would be likely to say *There's a lamp in the corner,*
 whereas a Dutch speaker would be more likely to say *There 'stands' a
 lamp in the corner.* Nonetheless, we cannot conclude that these
-cross-linguistic differences are affecting the match advantage across
-languages because the current theories [e.g., Language and Situated
-Simulation, @barsalou_grounded_2008] have not addressed the potential
-influence of linguistic aspects such as the lexical encoding of
-placement.
+cross-linguistic differences are affecting results across languages
+because the current theories [e.g., Language and Situated Simulation,
+@barsalou_grounded_2008] have not addressed the potential influence of
+linguistic aspects such as the lexical encoding of placement.
 
 **Methodological factors.** Inconsistent findings on the match advantage
 of object orientation may be due to variability in task design. For
@@ -1185,8 +1184,8 @@ example, studies failing to detect the match advantage may not have
 required participants to verify the probe sentence after the response to
 the target picture [see @zwaan_embodiment_2014]. Without such a
 verification, participants might have paid less attention to the meaning
-of the probe sentences, in which they would have been less likely to
-form a mental representation of the objects [e.g.,
+of the probe sentences and target object, in which they would have been
+less likely to form a mental representation of the objects [e.g.,
 @zwaanReadersConstructSpatial1993]. In this regard, variability
 originating from differences in the characteristics of experiments can
 substantially influence the results
@@ -1239,18 +1238,18 @@ orientation mental simulation in the studied languages.
 
 ## Purposes of this study
 
-To scrutinize the discrepancies in findings across languages and
-cognitive factors, we examined the reproducibility of the object
-orientation effect in a multi-lab collaboration. Our pre-registered plan
-aimed at detecting a general match advantage of object orientation
-across languages and evaluated the magnitude of match advantage in each
-specific language. Additionally, we examined whether the match
-advantages were related to the mental rotation index. Thus, this study
-followed the original methods from @stanfield_effect_2001 and addressed
-two primary questions: (1) How much of the match advantage of object
-orientation can be obtained within different languages, and (2) How are
-differences in the mental rotation index associated with the match
-advantage across languages?
+To scrutinize the discrepancies in mental simulation effects across
+languages and cognitive factors, we examined the reproducibility of the
+match advantages of object orientation in a multi-lab collaboration. Our
+pre-registered plan aimed at detecting a general match advantage of
+object orientation across languages and evaluated the magnitude of match
+advantage in each specific language. Additionally, we examined whether
+the match advantages were related to the mental rotation index. Thus,
+this study followed the original methods from @stanfield_effect_2001 and
+addressed two primary questions: (1) How much of the match advantage of
+object orientation can be obtained within different languages, and (2)
+How are differences in the mental rotation index associated with the
+match advantage across languages?
 
 # Method
 
@@ -2422,13 +2421,13 @@ Appendix E.
 
 # Discussion
 
-This study examined the global object orientation effect in a culturally
-diverse sample and provided an exploratory first glance at the magnitude
-of object orientation effect in particular languages. The findings of
-our study did not support the existence of the object orientation effect
-as an outcome of general cognitive function. Furthermore, our data
-failed to replicate the effects in English and Chinese, languages in
-which the effect has been reported previously [@chenDoesObjectSize2020;
+This study examined the global mental simulation effect of object
+orientation in a culturally diverse sample and provided an exploratory
+first glance at this effect in specific languages. The findings of our
+study did not support the existence of the object orientation effect as
+an outcome of general cognitive function. Furthermore, our data failed
+to replicate the effects in English and Chinese, languages in which the
+effect has been reported previously [@chenDoesObjectSize2020;
 @stanfield_effect_2001; @zwaanRevisitingMentalSimulation2012]. The only
 language in which we found an indication of the orientation effect in
 the predicted direction was German, but the estimate of this potential
@@ -2438,16 +2437,16 @@ faster than rotated orientations. However, the mental rotation score did
 not predict the object orientation effects nor interact with language.
 The failed prediction of our second hypothesis revealed that the
 division between perceptual and language processing under mental
-simulation requires further examination. Researchers have shown that
-sentences can trigger more perceptual features than the target dimension
-of the sentence (shapes, colors, orientations)
-[@kaschakEmbodimentLabTheory2021], and that overlapping features among
-companion objects usually lack balanced control in experimental designs
-[@bocanegra2022]. With the results and knowledge gained from running
-this study, we summarize the lessons and limitations of the methodology
-and analysis, and discuss theoretical issues related to the orientation
-effect as an effective probe to investigate the mental simulation
-process.
+simulation of object orientation requires further examination.
+Researchers have shown that sentences can trigger more perceptual
+features than the target dimension of the sentence (shapes, colors,
+orientations) [@kaschakEmbodimentLabTheory2021], and that overlapping
+features among companion objects usually lack balanced control in
+experimental designs [@bocanegra2022]. With the results and knowledge
+gained from running this study, we summarize the lessons and limitations
+of the methodology and analysis, and discuss theoretical issues related
+to the implied object orientations as an effective probe to investigate
+the mental simulation process.
 
 ## Methodological Considerations
 
@@ -2487,11 +2486,12 @@ future studies could explore this distinction.
 Lastly, past studies that employed a secondary task among the
 experimental trials [@chenDoesObjectSize2020;
 @kaschakEmbodimentLabTheory2021; @stanfield_effect_2001] showed a
-positive object orientation effect. In our study, the memory check did
-not increase the likelihood to detect the mental simulation effects. In
-addition, we did not find that mental imagery predicted match advantage,
-which implies that this strategy to ensure linguistic processing had
-limited influence in our study.
+positive mental simulation effect of object orientation. In our study,
+the memory check did not increase the likelihood to detect the mental
+simulation effects. In addition, we did not find that mental imagery
+predicted the mental simulation effect of object orientation, which
+implies that this strategy to ensure linguistic processing had limited
+influence in our study.
 
 ## Analysis Considerations
 
@@ -2592,13 +2592,14 @@ environments alter the magnitude of the orientation effect.
 Based on the results of this project, we did not find evidence for a
 general object orientation effect in a culturally and linguistically
 diverse sample. Reliable measurement of orientation effects may require
-an increase in sample sizes carefully focusing on the interaction of
-language and cultural backgrounds. Theories of mental simulations should
-be refined to suggest which perceptual features and linguistic
-properties contribute to human mental simulations. Our findings on the
-orientation effects question the theoretical importance of mental
-simulation in linguistic processing, but they provide directions for
-further improvements on methodology, analysis, and theories.
+a comprehensive sample sizes justification carefully focusing on the
+interaction of language and cultural backgrounds. Theories of mental
+simulations should be refined to suggest which perceptual features and
+linguistic properties contribute to human mental simulations. Our
+findings on the orientation effects question the theoretical importance
+of mental simulation in linguistic processing, but they provide
+directions for further improvements on methodology, analysis, and
+theories.
 
 ```{r picture, include = FALSE, echo = FALSE}
 #overall
