@@ -187,7 +187,7 @@ author:
       - Writing - review & editing
     email: robross46@gmail.com
   - name: Ian D. Stephen
-    affiliation: '13,68'
+    affiliation: '68'
     role:
       - Investigation
       - Writing - review & editing
@@ -675,7 +675,7 @@ author:
       - Writing - review & editing
     email: b.coktok@gmail.com
   - name: Asil Ali Özdoğru
-    affiliation: '55'
+    affiliation: '55, 72'
     role:
       - Investigation
       - Resources
@@ -924,8 +924,7 @@ affiliation:
     institution: Psychology Department, Faculty of Arts, Menoufia University, Shebin
       El-Kom, Egypt
   - id: '68'
-    institution: Department of Psychology, Nottingham Trent University, Nottingham,
-      UK
+    institution: Department of Psychology, Bournemouth University, UK
   - id: '69'
     institution: University of Jyväskylä, Finland
   - id: '70'
@@ -933,10 +932,12 @@ affiliation:
   - id: '71'
     institution: Faculty of Behavioral Sciences, Education, & Languages, HELP University
       Subang 2, Malaysia
+  - id: '72'
+    institution: Department of Psychology, Marmara University, 
+      Istanbul, Turkey
+      
 authornote: |
   **Funding statement.** Matúš Adamkovič was supported by APVV-20-0319; Robert M. Ross was supported by Australian Research Council (grant number: DP180102384) and the John Templeton Foundation (grant ID: 62631); Zoltan Kekecs was supported by János Bolyai Research Scholarship of the Hungarian Academy of Science; Mahmoud Elsherif was supported by Leverhulme Trust; Glenn P. Williams was supported by Leverhulme Trust Research Project Grant (RPG-2016-093); Ivan Ropovik was supported by NPO Systemic Risk Institute (LX22NPO5101); Krystian Barzykowski was supported by National Science Centre, Poland (2019/35/B/HS6/00528); Gabriel Baník was supported by PRIMUS/20/HUM/009; Patrícia Arriaga was supported by Portuguese National Foundation for Science and Technology (FCT UID/PSI/03125/2019); Monika Hricová was supported by VEGA 1/0145/23.
-  
-  **Ethical approval statement.** Authors who collected data on site and online had the ethical approval/agreement from their local institutions. The latest status of ethical approval for all the participating authors is available at the public OSF folder (https://osf.io/e428p/ "IRB approvals" in Files).
   
   **Acknowledgement.** We thank the suggestions from the editor and two reviewers on our first and second proposals. CB would like to thank Tyler McGee for help with data collection. PB would like to thank Liam Morgillo for help with data collection.
   
@@ -1505,7 +1506,7 @@ lab codes: TUR_007, TWN_002), two sets of data were excluded from all
 analyses due to participants being non-native speakers. Figure
 \@ref(fig:sample-fig) provides a flow chart for participant exclusion
 and inclusion for analyses. All participating laboratories had either
-ethical approval or institutional evaluation before data collection. All
+ethical approval or institutional evaluation before data collection. All participants gave informed consent to participate in the study. All
 data and analysis scripts are available on the source files
 (<https://codeocean.com/capsule/3994879>). Appendix B summarizes the
 average characteristics by language and laboratory.
@@ -1603,7 +1604,7 @@ with a horizontally-oriented book, while *The librarian put the book
 back on the shelf* was matched with a vertically-oriented book. For
 counterbalancing, the mismatch between picture orientation and sentence
 was created, and the book would be shown in the respective opposite
-orientation (see orientation pairs at <https://osf.io/utqxb>). Another
+orientation (see orientation pairs at <https://osf.io/utqxb/?view_only=7094d5af798047b3a2ec01ea4930e3de>). Another
 48 pictures were included for the fillers which were unrelated to the
 corresponding sentence. Therefore, the answer to critical pairs was
 always "yes", while the filler sentence-picture combinations answer was
@@ -1691,7 +1692,7 @@ four possible combinations (sentence orientation 2 x object orientation
 2). For the filler items, sentences and pictures were randomly assigned
 in two separate patterns, and these were included with the critical
 pairs. Stimuli lists were created in Excel, and this information can be
-found at <https://osf.io/utqxb>.
+found at <https://osf.io/utqxb/?view_only=7094d5af798047b3a2ec01ea4930e3de>.
 
 **Translation of Sentences.** The translation of probe sentences
 followed our pre-registered plan. Every non-English language coordinator
@@ -1725,7 +1726,7 @@ possible combinations of critical orientations could be shown with the
 picture (same, different) by orientation (same, different). Each
 participant only saw one of the critical combinations, and filler items
 were randomly paired in two combinations to match. The stimuli lists can
-be found at <https://osf.io/utqxb>.
+be found at <https://osf.io/utqxb/?view_only=7094d5af798047b3a2ec01ea4930e3de>.
 
 **Software Implementation.** The study was executed using OpenSesame
 software for millisecond timing
@@ -2642,6 +2643,16 @@ nrow(model_data)
 nrow(model_data) - length(unique(SP_V_noout$Subject))
 nrow(model_data) - length(unique(PP_noout$Subject))
 ```
+
+## Data Avaliability 
+
+The project dataset and analysis scripts are available at https://osf.io/rgmky/?view_only=5210c1ec522049db8535f40bc9a07113. Materials are available at https://osf.io/74ujf/?view_only=7094d5af798047b3a2ec01ea4930e3de.
+
+## Ethics Declaration
+
+Authors who collected data on site and online had the ethical approval/agreement from their local institutions. The latest status of ethical approval for all the participating authors is available at the public OSF folder (https://osf.io/e428p/ "IRB approvals" in Files).
+
+The authors declare no conflicts of interest relevant to the content of the manuscript.
 
 \newpage
 
