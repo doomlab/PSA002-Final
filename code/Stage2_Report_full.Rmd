@@ -2650,7 +2650,7 @@ The project dataset and analysis scripts are available at https://osf.io/rgmky/?
 
 ## Ethics Declaration
 
-Authors who collected data on site and online had the ethical approval/agreement from their local institutions. The latest status of ethical approval for all the participating authors is available at the public OSF folder (https://osf.io/e428p/ "IRB approvals" in Files).
+Authors who collected data on site and online had the ethical approval/agreement from their local institutions. The latest status of ethical approval for all the participating authors is available at the public OSF folder (https://osf.io/e428p/?view_only=f9f24b72e54141dfb3e67586cfb2d7a0 "IRB approvals" in Files).
 
 The authors declare no conflicts of interest relevant to the content of the manuscript.
 
