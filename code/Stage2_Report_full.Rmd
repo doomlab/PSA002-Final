@@ -950,6 +950,7 @@ figurelist        : no
 tablelist         : no
 footnotelist      : no
 linenumbers       : no
+# mask              : yes
 mask              : no
 draft             : no
 classoption       : "man"
@@ -972,7 +973,7 @@ bibliography: ["includes/bib/psa002.bib"]
 #csl               : "`r system.file('rmd', 'apa7.csl', package = 'papaja')`"
 csl               : "includes/bib/apa.csl"
 documentclass     : "apa7"
-output            : papaja::apa6_pdf
+output            : papaja::apa6_docx
 appendix          :
   - "Stage2_app01.Rmd"
   - "Stage2_app02.Rmd"
