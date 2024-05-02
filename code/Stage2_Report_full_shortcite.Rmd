@@ -1,0 +1,2693 @@
+---
+title             : "Investigating Object Orientation Effects Across 18 Languages"
+shorttitle        : "OBJECT ORIENTATION EFFECTS"
+author:
+  - name: Sau-Chin Chen
+    affiliation: '1'
+    role:
+      - Conceptualization
+      - Data curation
+      - Formal analysis
+      - Investigation
+      - Methodology
+      - Resources
+      - Software
+      - Supervision
+      - Validation
+      - Visualization
+      - Writing - original draft
+      - Writing - review & editing
+    corresponding: yes
+    email: csc2009@mail.tcu.edu.tw
+  - name: Erin Buchanan
+    affiliation: '2'
+    role:
+      - Formal analysis
+      - Project administration
+      - Resources
+      - Software
+      - Validation
+      - Writing - review & editing
+    email: ebuchanan@harrisburgu.edu
+  - name: Zoltan Kekecs
+    affiliation: '3,64'
+    role:
+      - Project administration
+      - Writing - review & editing
+    email: zoltan.kekecs@psy.lu.se
+  - name: Jeremy K. Miller
+    affiliation: '4'
+    role:
+      - Project administration
+      - Resources
+      - Supervision
+      - Writing - review & editing
+    email: millerj@willamette.edu
+  - name: Anna Szabelska
+    affiliation: '5'
+    role:
+      - Project administration
+      - Writing - original draft
+      - Writing - review & editing
+    email: aszabelska01@qub.ac.uk
+  - name: Balazs Aczel
+    affiliation: '3'
+    role:
+      - Investigation
+      - Methodology
+      - Resources
+      - Writing - review & editing
+    email: balazs.aczel@gmail.com
+  - name: Pablo Bernabeu
+    affiliation: '6,65'
+    role:
+      - Investigation
+      - Methodology
+      - Visualization
+      - Writing - review & editing
+    email: pcbernabeu@gmail.com
+  - name: Patrick Forscher
+    affiliation: '7,66'
+    role:
+      - Methodology
+      - Writing - review & editing
+    email: schnarrd@gmail.com
+  - name: Attila Szuts
+    affiliation: '3'
+    role:
+      - Investigation
+      - Methodology
+      - Resources
+      - Writing - review & editing
+    email: szuts.attila97@gmail.com
+  - name: Zahir Vally
+    affiliation: '8'
+    role:
+      - Investigation
+      - Resources
+      - Writing - review & editing
+    email: zahir.vally@uaeu.ac.ae
+  - name: Ali H. Al-Hoorie
+    affiliation: '9'
+    role:
+      - Investigation
+      - Resources
+      - Writing - review & editing
+    email: hoorie_ali@hotmail.com
+  - name: Mai Helmy
+    affiliation: '10,67'
+    role:
+      - Investigation
+      - Resources
+      - Writing - review & editing
+    email: mai.helmy@art.menofia.edu.eg
+  - name: Caio Santos Alves da Silva
+    affiliation: '11'
+    role:
+      - Investigation
+      - Resources
+      - Writing - review & editing
+    email: caiosas@usp.br
+  - name: Luana Oliveira da Silva
+    affiliation: '11'
+    role:
+      - Investigation
+      - Resources
+      - Writing - review & editing
+    email: luana.oliveira.people@usp.br
+  - name: Yago Luksevicius de Moraes
+    affiliation: '11'
+    role:
+      - Investigation
+      - Resources
+      - Writing - review & editing
+    email: yagolmoraes@gmail.com
+  - name: Rafael Ming Chi Santos Hsu
+    affiliation: '11'
+    role:
+      - Investigation
+      - Resources
+      - Writing - review & editing
+    email: rafa.mcsh@gmail.com
+  - name: Anthonieta Looman Mafra
+    affiliation: '11'
+    role:
+      - Investigation
+      - Resources
+      - Writing - review & editing
+    email: looman.anthonieta@gmail.com
+  - name: Jaroslava V. Valentova
+    affiliation: '11'
+    role:
+      - Investigation
+      - Resources
+      - Writing - review & editing
+    email: jaroslava@usp.br
+  - name: Marco Antonio Correa Varella
+    affiliation: '11'
+    role:
+      - Investigation
+      - Resources
+      - Writing - review & editing
+    email: macvarella@gmail.com
+  - name: Barnaby Dixson
+    affiliation: '12'
+    role:
+      - Investigation
+      - Writing - review & editing
+    email: b.dixson@uq.edu.au
+  - name: Kim Peters
+    affiliation: '12'
+    role:
+      - Investigation
+      - Writing - review & editing
+    email: k.peters@uq.edu.au
+  - name: Nik Steffens
+    affiliation: '12'
+    role:
+      - Investigation
+      - Writing - review & editing
+    email: n.steffens@uq.edu.au
+  - name: Omid Ghasemi
+    affiliation: '13'
+    role:
+      - Investigation
+      - Writing - review & editing
+    email: omidreza.ghasemi@hdr.mq.edu.au
+  - name: Andrew Roberts
+    affiliation: '13'
+    role:
+      - Investigation
+      - Writing - review & editing
+    email: andrew.roberts@mq.edu.au
+  - name: Robert M. Ross
+    affiliation: '14'
+    role:
+      - Investigation
+      - Writing - review & editing
+    email: robross46@gmail.com
+  - name: Ian D. Stephen
+    affiliation: '68'
+    role:
+      - Investigation
+      - Writing - review & editing
+    email: ian.stephen@mq.edu.au
+  - name: Marina Milyavskaya
+    affiliation: '15'
+    role:
+      - Investigation
+      - Writing - review & editing
+    email: marina.milyavskaya@carleton.ca
+  - name: Kelly Wang
+    affiliation: '15'
+    role:
+      - Investigation
+      - Writing - review & editing
+    email: kelly.wang4@carleton.ca
+  - name: Kaitlyn M. Werner
+    affiliation: '15'
+    role:
+      - Investigation
+      - Writing - review & editing
+    email: kaitlyn.werner@utoronto.ca
+  - name: Dawn Liu Holford
+    affiliation: '16'
+    role:
+      - Investigation
+      - Writing - review & editing
+    email: dawn.liuholford@gmail.com
+  - name: Miroslav Sirota
+    affiliation: '16'
+    role:
+      - Investigation
+      - Writing - review & editing
+    email: msirota@essex.ac.uk
+  - name: Thomas Rhys Evans
+    affiliation: '17'
+    role:
+      - Investigation
+      - Writing - review & editing
+    email: Ab6443@coventry.ac.uk
+  - name: Dermot Lynott
+    affiliation: '18'
+    role:
+      - Investigation
+      - Writing - review & editing
+    email: dermot.lynott@mu.ie
+  - name: Bethany M. Lane
+    affiliation: '19'
+    role:
+      - Investigation
+      - Writing - review & editing
+    email: 1804426@abertay.ac.uk
+  - name: Danny Riis
+    affiliation: '19'
+    role:
+      - Investigation
+      - Writing - review & editing
+    email: 1702768@abertay.ac.uk
+  - name: Glenn P. Williams
+    affiliation: '20'
+    role:
+      - Investigation
+      - Writing - review & editing
+    email: g.williams@abertay.ac.uk
+  - name: Chrystalle B. Y. Tan
+    affiliation: '21'
+    role:
+      - Investigation
+      - Writing - review & editing
+    email: tan.chrystalle@gmail.com
+  - name: Alicia Foo
+    affiliation: '22'
+    role:
+      - Investigation
+      - Writing - review & editing
+    email: aliciafcm@hotmail.com
+  - name: Steve M. J. Janssen
+    affiliation: '22'
+    role:
+      - Investigation
+      - Writing - review & editing
+    email: steve.janssen@nottingham.edu.my
+  - name: Nwadiogo Chisom Arinze
+    affiliation: '23'
+    role:
+      - Investigation
+      - Writing - review & editing
+    email: arinzenwadiogo@gmail.com
+  - name: Izuchukwu Lawrence Gabriel Ndukaihe
+    affiliation: '23'
+    role:
+      - Investigation
+      - Writing - review & editing
+    email: izumario@yahoo.co.uk
+  - name: David Moreau
+    affiliation: '24'
+    role:
+      - Investigation
+      - Writing - review & editing
+    email: d.moreau@auckland.ac.nz
+  - name: Brianna Jurosic
+    affiliation: '25'
+    role:
+      - Investigation
+      - Writing - review & editing
+    email: brianna.jurosic17@gmail.com
+  - name: Brynna Leach
+    affiliation: '25'
+    role:
+      - Investigation
+      - Writing - review & editing
+    email: brynna.leach@gmail.com
+  - name: Savannah Lewis
+    affiliation: '26'
+    role:
+      - Investigation
+      - Writing - review & editing
+    email: slewis5920@gmail.com
+  - name: Peter R. Mallik
+    affiliation: '27'
+    role:
+      - Investigation
+      - Writing - review & editing
+    email: pmallik@hubbardresearch.com
+  - name: Kathleen Schmidt
+    affiliation: '25'
+    role:
+      - Investigation
+      - Resources
+      - Writing - review & editing
+    email: kschmi13@ashland.edu
+  - name: William J. Chopik
+    affiliation: '28'
+    role:
+      - Investigation
+      - Writing - review & editing
+    email: chopikwi@msu.edu
+  - name: Leigh Ann Vaughn
+    affiliation: '29'
+    role:
+      - Investigation
+      - Writing - review & editing
+    email: lvaughn@ithaca.edu
+  - name: Manyu Li
+    affiliation: '30'
+    role:
+      - Investigation
+      - Writing - review & editing
+    email: manyu.li@louisiana.edu
+  - name: Carmel A. Levitan
+    affiliation: '31'
+    role:
+      - Investigation
+      - Writing - review & editing
+    email: levitan@oxy.edu
+  - name: Daniel Storage
+    affiliation: '32'
+    role:
+      - Investigation
+      - Writing - review & editing
+    email: Daniel.Storage@du.edu
+  - name: Carlota Batres
+    affiliation: '33'
+    role:
+      - Investigation
+      - Writing - review & editing
+    email: cbatres@fandm.edu
+  - name: Janina Enachescu
+    affiliation: '34'
+    role:
+      - Investigation
+      - Resources
+      - Writing - review & editing
+    email: janina.enachescu@univie.ac.at
+  - name: Jerome Olsen
+    affiliation: '34'
+    role:
+      - Investigation
+      - Resources
+      - Writing - review & editing
+    email: jerome.olsen@univie.ac.at
+  - name: Martin Voracek
+    affiliation: '34'
+    role:
+      - Investigation
+      - Resources
+      - Writing - review & editing
+    email: martin.voracek@univie.ac.at
+  - name: Claus Lamm
+    affiliation: '35'
+    role:
+      - Investigation
+      - Resources
+      - Writing - review & editing
+    email: claus.lamm@univie.ac.at
+  - name: Ekaterina Pronizius
+    affiliation: '35'
+    role:
+      - Investigation
+      - Writing - review & editing
+    email: ekaterina.pronizius@univie.ac.at
+  - name: Tilli Ripp
+    affiliation: '36'
+    role:
+      - Investigation
+      - Writing - review & editing
+    email: tilli.ripp@uni-wh.de
+  - name: Jan Philipp Röer
+    affiliation: '36'
+    role:
+      - Investigation
+      - Writing - review & editing
+    email: jan.roeer@hhu.de
+  - name: Roxane Schnepper
+    affiliation: '36'
+    role:
+      - Investigation
+      - Writing - review & editing
+    email: roxane.schnepper@uni-wh.de
+  - name: Marietta Papadatou-Pastou
+    affiliation: '37'
+    role:
+      - Investigation
+      - Resources
+      - Writing - review & editing
+    email: marietta.papadatou@gmail.com
+  - name: Aviv Mokady
+    affiliation: '38'
+    role:
+      - Investigation
+      - Resources
+      - Writing - review & editing
+    email: avmokady@gmail.com
+  - name: Niv Reggev
+    affiliation: '38'
+    role:
+      - Investigation
+      - Resources
+      - Writing - review & editing
+    email: reggevn@bgu.ac.il
+  - name: Priyanka Chandel
+    affiliation: '39'
+    role:
+      - Investigation
+      - Resources
+      - Writing - review & editing
+    email: priyankachandel18@gmail.com
+  - name: Pratibha Kujur
+    affiliation: '39'
+    role:
+      - Investigation
+      - Resources
+      - Writing - review & editing
+    email: pratibhakujur0626@gmail.com
+  - name: Babita Pande
+    affiliation: '39'
+    role:
+      - Investigation
+      - Resources
+      - Supervision
+      - Writing - review & editing
+    email: babitatime14@gmail.com
+  - name: Arti Parganiha
+    affiliation: '39'
+    role:
+      - Investigation
+      - Resources
+      - Supervision
+      - Writing - review & editing
+    email: arti.parganiha@gmail.com
+  - name: Noorshama Parveen
+    affiliation: '39'
+    role:
+      - Investigation
+      - Resources
+      - Writing - review & editing
+    email: noorshama12@gmail.com
+  - name: Sraddha Pradhan
+    affiliation: '39'
+    role:
+      - Investigation
+      - Resources
+      - Writing - review & editing
+    email: sraddhapradhan11@gmail.com
+  - name: Margaret Messiah Singh
+    affiliation: '39'
+    role:
+      - Investigation
+      - Writing - review & editing
+    email: mmessiahsingh@gmail.com
+  - name: Max Korbmacher
+    affiliation: '40'
+    role:
+      - Investigation
+      - Writing - review & editing
+    email: max.korbmacher@gmail.com
+  - name: Jonas R. Kunst
+    affiliation: '41'
+    role:
+      - Investigation
+      - Resources
+      - Writing - review & editing
+    email: j.r.kunst@psykologi.uio.no
+  - name: Christian K. Tamnes
+    affiliation: '41'
+    role:
+      - Investigation
+      - Resources
+      - Writing - review & editing
+    email: c.k.tamnes@psykologi.uio.no
+  - name: Frederike S. Woelfert
+    affiliation: '41'
+    role:
+      - Investigation
+      - Writing - review & editing
+    email: frederwo@student.sv.uio.no
+  - name: Kristoffer Klevjer
+    affiliation: '42'
+    role:
+      - Investigation
+      - Writing - review & editing
+    email: klevjer@gmail.com
+  - name: Sarah E. Martiny
+    affiliation: '42'
+    role:
+      - Investigation
+      - Writing - review & editing
+    email: sarah.martiny@uit.no
+  - name: Gerit Pfuhl
+    affiliation: '42'
+    role:
+      - Investigation
+      - Resources
+      - Writing - review & editing
+    email: gerit.pfuhl@uit.no
+  - name: Sylwia Adamus
+    affiliation: '43'
+    role:
+      - Investigation
+      - Resources
+      - Writing - review & editing
+    email: sylwiadamus@gmail.com
+  - name: Krystian Barzykowski
+    affiliation: '43'
+    role:
+      - Investigation
+      - Resources
+      - Supervision
+      - Writing - review & editing
+    email: krystian.barzykowski@uj.edu.pl
+  - name: Katarzyna Filip
+    affiliation: '43'
+    role:
+      - Investigation
+      - Resources
+      - Writing - review & editing
+    email: kfilip2240@gmail.com
+  - name: Patrícia Arriaga
+    affiliation: '44'
+    role:
+      - Funding acquisition
+      - Investigation
+      - Resources
+      - Writing - review & editing
+    email: patricia.arriaga@iscte-iul.pt
+  - name: Vasilije Gvozdenović
+    affiliation: '45'
+    role:
+      - Investigation
+      - Resources
+      - Writing - review & editing
+    email: vgvozdenovic@gmail.com
+  - name: Vanja Ković
+    affiliation: '45'
+    role:
+      - Investigation
+      - Resources
+      - Writing - review & editing
+    email: vanja.kovic@f.bg.ac.rs
+  - name: Zhong Chen
+    affiliation: '46'
+    role:
+      - Investigation
+      - Writing - review & editing
+    email: zhongchen@um.edu.mo
+  - name: Fei Gao
+    affiliation: '46'
+    role:
+      - Investigation
+      - Resources
+      - Writing - review & editing
+    email: onegaofei@gmail.com
+  - name: Lisa Li
+    affiliation: '46'
+    role:
+      - Investigation
+      - Resources
+      - Writing - review & editing
+    email: yb87720@um.edu.mo
+  - name: Jozef Bavoľár
+    affiliation: '47'
+    role:
+      - Investigation
+      - Resources
+      - Writing - review & editing
+    email: jozef.bavolar@upjs.sk
+  - name: Monika Hricová
+    affiliation: '47'
+    role:
+      - Investigation
+      - Resources
+      - Writing - review & editing
+    email: monika.hricova@upjs.sk
+  - name: Pavol Kačmár
+    affiliation: '47'
+    role:
+      - Investigation
+      - Resources
+      - Writing - review & editing
+    email: pavol.kacmar@upjs.sk
+  - name: Matúš Adamkovič
+    affiliation: '48,69'
+    role:
+      - Investigation
+      - Writing - review & editing
+    email: matho.adamkovic@gmail.com
+  - name: Peter Babinčák
+    affiliation: '49'
+    role:
+      - Investigation
+      - Writing - review & editing
+    email: peter.babincak@unipo.sk
+  - name: Gabriel Baník
+    affiliation: '49,50'
+    role:
+      - Investigation
+      - Writing - review & editing
+    email: gabriel.banik@gmail.com
+  - name: Ivan Ropovik
+    affiliation: '50,70'
+    role:
+      - Investigation
+      - Writing - review & editing
+    email: ivan.ropovik@gmail.com
+  - name: Danilo Zambrano Ricaurte
+    affiliation: '51'
+    role:
+      - Investigation
+      - Resources
+      - Writing - review & editing
+    email: danilozambrano@psicologos.com
+  - name: Sara Álvarez Solas
+    affiliation: '52'
+    role:
+      - Investigation
+      - Resources
+      - Writing - review & editing
+    email: sara.alvarez.solas@gmail.com
+  - name: Harry Manley
+    affiliation: '53,71'
+    role:
+      - Investigation
+      - Resources
+      - Writing - review & editing
+    email: harrisonmanley@gmail.com
+  - name: Panita Suavansri
+    affiliation: '53'
+    role:
+      - Investigation
+      - Resources
+      - Writing - review & editing
+    email: p.suavansri@gmail.com
+  - name: Chun-Chia Kung
+    affiliation: '54'
+    role:
+      - Investigation
+      - Resources
+      - Writing - review & editing
+    email: cckung@kunglab-nckupsy.org
+  - name: Belemir Çoktok
+    affiliation: '55'
+    role:
+      - Investigation
+      - Resources
+      - Writing - review & editing
+    email: b.coktok@gmail.com
+  - name: Asil Ali Özdoğru
+    affiliation: '55, 72'
+    role:
+      - Investigation
+      - Resources
+      - Writing - review & editing
+    email: asil.ozdogru@uskudar.edu.tr
+  - name: Çağlar Solak
+    affiliation: '56'
+    role:
+      - Investigation
+      - Writing - review & editing
+    email: solakcaglar@gmail.com
+  - name: Sinem Söylemez
+    affiliation: '56'
+    role:
+      - Investigation
+      - Writing - review & editing
+    email: sinem.nokta@gmail.com
+  - name: Sami Çoksan
+    affiliation: '57'
+    role:
+      - Investigation
+      - Resources
+      - Writing - review & editing
+    email: scoksan@metu.edu.tr
+  - name: İlker Dalgar
+    affiliation: '58'
+    role:
+      - Resources
+      - Writing - review & editing
+    email: ilkerdalgar@gmail.com
+  - name: Mahmoud Elsherif
+    affiliation: '59'
+    role: 
+      - Writing - review & editing
+    email: mahmoud.medhat.elsherif@gmail.com
+  - name: Martin Vasilev
+    affiliation: '60'
+    role: 
+      - Writing - review & editing
+    email: mvasilev@bournemouth.ac.uk
+  - name: Vinka Mlakic
+    affiliation: '61'
+    role:
+      - Resources
+      - Writing - review & editing
+    email: vinka.mlakic@gmail.com
+  - name: Elisabeth Oberzaucher
+    affiliation: '62'
+    role:
+      - Resources
+      - Writing - review & editing
+    email: elisabeth@oberzaucher.eu
+  - name: Stefan Stieger
+    affiliation: '61'
+    role:
+      - Resources
+      - Writing - review & editing
+    email: stefan.stieger@kl.ac.at
+  - name: Selina Volsa
+    affiliation: '61'
+    role:
+      - Resources
+      - Writing - review & editing
+    email: selina.volsa@kl.ac.at
+  - name: Janis Zickfeld
+    affiliation: '63'
+    role:
+      - Resources
+      - Writing - review & editing
+    email: jhzickfeld@gmail.com
+  - name: Christopher R. Chartier
+    affiliation: '25'
+    role:
+      - Investigation
+      - Project administration
+      - Writing - review & editing
+    email: cchartie@ashland.edu
+affiliation:
+  - id: '1'
+    institution: Department of Human Development and Psychology, Tzu-Chi University,
+      Hualien, Taiwan
+  - id: '2'
+    institution: Harrisburg University of Science and Technology, Harrisburg, PA,
+      USA
+  - id: '3'
+    institution: Institute of Psychology, ELTE, Eotvos Lorand University, Budapest,
+      Hungary
+  - id: '4'
+    institution: Department of Psychology, Willamette University,Salem OR, USA
+  - id: '5'
+    institution: Institute of Cognition and Culture, Queen’s University Belfast, UK
+  - id: '6'
+    institution: Department of Psychology, Lancaster University, Lancaster, United
+      Kingdom
+  - id: '7'
+    institution: LIP/PC2S, Université Grenoble Alpes, Grenoble, France
+  - id: '8'
+    institution: Department of Clinical Psychology, United Arab Emirates University,
+      Al Ain, UAE
+  - id: '9'
+    institution: Independent Researcher
+  - id: '10'
+    institution: Psychology Department, College of Education, Sultan Qaboos University,
+      Muscat, Oman
+  - id: '11'
+    institution: Department of Experimental Psychology, Institute of Psychology, University
+      of Sao Paulo, Sao Paulo, Brazil
+  - id: '12'
+    institution: School of Psychology, University of Queensland, Brisbane, Australia
+  - id: '13'
+    institution: Department of Psychology, Macquarie University, Sydney, Australia
+  - id: '14'
+    institution: Department of Philosophy, Macquarie University, Australia
+  - id: '15'
+    institution: Department of Psychology, Carleton University, Ottawa, Canada
+  - id: '16'
+    institution: Department of Psychology, University of Essex, Colchester, UK
+  - id: '17'
+    institution: School of Social, Psychological and Behavioural Sciences, Coventry
+      University, Coventry, UK
+  - id: '18'
+    institution: Department of Psychology, Maynooth University, Maynooth, Ireland
+  - id: '19'
+    institution: Division of Psychology, School of Social and Health Sciences, Abertay
+      University, Dundee, UK
+  - id: '20'
+    institution: School of Psychology, Faculty of Health Sciences and Wellbeing, University
+      of Sunderland, Sunderland, UK.
+  - id: '21'
+    institution: School of Psychology and Vision Sciences, University of Leicester,
+      Leicester, UK
+  - id: '22'
+    institution: School of Psychology, University of Nottingham Malaysia, Selangor,
+      Malaysia
+  - id: '23'
+    institution: Department of Psychology, Alex Ekwueme Federal University, Ndufu-Alike,
+      Nigeria
+  - id: '24'
+    institution: School of Psychology, University of Auckland, Auckland, NZ
+  - id: '25'
+    institution: Department of Psychology, Ashland University, Ashland, OH, USA
+  - id: '26'
+    institution: Department of Psychology, University of Alabama, Tuscaloosa, AL,
+      USA
+  - id: '27'
+    institution: Hubbard Decision Research, Glen Ellyn, IL, USA
+  - id: '28'
+    institution: Department of Psychology, Michigan State University, East Lansing,
+      MI, USA
+  - id: '29'
+    institution: Department of Psychology, Ithaca College, Ithaca, NY, USA
+  - id: '30'
+    institution: Department of Psychology, University of Louisiana at Lafayette, Lafayette,
+      LA, USA
+  - id: '31'
+    institution: Department of Cognitive Science, Occidental College, Los Angeles,
+      USA
+  - id: '32'
+    institution: Department of Psychology, University of Denver, Denver, CO, USA
+  - id: '33'
+    institution: Department of Psychology, Franklin and Marshall College, Lancaster,
+      PA, USA
+  - id: '34'
+    institution: Faculty of Psychology, University of Vienna, Wien, Austria
+  - id: '35'
+    institution: Department of Cognition, Emotion, and Methods in Psychology, Faculty
+      of Psychology, University of Vienna, Vienna, Austria
+  - id: '36'
+    institution: Department of Psychology and Psychotherapy, Witten/Herdecke University,
+      Germany
+  - id: '37'
+    institution: School of Education, National and Kapodistrian University of Athens,
+      Athens, Greece
+  - id: '38'
+    institution: Department of Psychology and School of Brain Sciences and Cognition,
+      Ben Gurion University, Beer Sheba, Israel
+  - id: '39'
+    institution: School of Studies in Life Science, Pt. Ravishankar Shukla University,
+      Raipur, India
+  - id: '40'
+    institution: Department of Health and Functioning, Western Norway University of
+      Applied Sciences, Bergen, Norway
+  - id: '41'
+    institution: Department of Psychology, University of Oslo, Oslo, Norway
+  - id: '42'
+    institution: Department of Psychology, UiT - The Arctic University of Norway,
+      Tromsø, Norway
+  - id: '43'
+    institution: Institute of Psychology, Jagiellonian University, Krakow, Poland
+  - id: '44'
+    institution: Iscte-University Institute of Lisbon, CIS-IUL, Portugal
+  - id: '45'
+    institution: Laboratory for Neurocognition and Applied Cognition, Faculty of Philosophy,
+      University of Belgrade
+  - id: '46'
+    institution: Faculty of Arts and Humanities, University of Macau, Macau, China
+  - id: '47'
+    institution: Department of Psychology, Faculty of Arts, Pavol Jozef Šafarik University
+      in Košice, Slovakia
+  - id: '48'
+    institution: Institute of Social Sciences, CSPS, Slovak Academy of Sciences
+  - id: '49'
+    institution: Institute of Psychology, University of Presov, Slovakia
+  - id: '50'
+    institution: Institute for Research and Development of Education, Faculty of Education,
+      Charles university, Czechia
+  - id: '51'
+    institution: Faculty of Psychology, Fundación Universitaria Konrad Lorenz, Bogotá,
+      Colombia
+  - id: '52'
+    institution: Ecosystem Engineer, Universidad Regional Amazónica Ikiam, Tena, Ecuador
+  - id: '53'
+    institution: Faculty of Psychology, Chulalongkorn University, Thailand
+  - id: '54'
+    institution: Department of Psychology, National Cheng Kung University, Tainan,
+      Taiwan
+  - id: '55'
+    institution: Department of Psychology, Üsküdar University, İstanbul, Turkey
+  - id: '56'
+    institution: Department of Psychology, Manisa Celal Bayar University,  Manisa,Turkey
+  - id: '57'
+    institution: Department of Psychology, Erzurum Technical University, Erzurum,
+      Turkey
+  - id: '58'
+    institution: Department of Psychology, Ankara Medipol University, Ankara, Turkey
+  - id: '59'
+    institution: Department of Vision Sciences, University of Leicester, United Kingdom
+  - id: '60'
+    institution: Bournemouth University,Talbot Campus, Poole, UK
+  - id: '61'
+    institution: Department of Psychology and Psychodynamics, Karl Landsteiner University
+      of Health Sciences, Krems an der Donau, Austria
+  - id: '62'
+    institution: Department of Evolutionary Anthropology, University of Vienna, Wien,
+      Austria
+  - id: '63'
+    institution: Department of Management Aarhus University, Aarhus, Denmark
+  - id: '64'
+    institution: Department of Psychology, Lund University, Lund, Sweden
+  - id: '65'
+    institution: Department of Language and Culture, UiT The Arctic University of
+      Norway, Tromsø, Norway
+  - id: '66'
+    institution: Busara Center for Behavioral Economics, Nairobi, Kenya
+  - id: '67'
+    institution: Psychology Department, Faculty of Arts, Menoufia University, Shebin
+      El-Kom, Egypt
+  - id: '68'
+    institution: Department of Psychology, Bournemouth University, UK
+  - id: '69'
+    institution: University of Jyväskylä, Finland
+  - id: '70'
+    institution: Faculty of Education, University of Presov, Slovakia
+  - id: '71'
+    institution: Faculty of Behavioral Sciences, Education, & Languages, HELP University
+      Subang 2, Malaysia
+  - id: '72'
+    institution: Department of Psychology, Marmara University, 
+      Istanbul, Turkey
+      
+authornote: |
+  **Funding statement.** Matúš Adamkovič was supported by APVV-20-0319; Robert M. Ross was supported by Australian Research Council (grant number: DP180102384) and the John Templeton Foundation (grant ID: 62631); Zoltan Kekecs was supported by János Bolyai Research Scholarship of the Hungarian Academy of Science; Mahmoud Elsherif was supported by Leverhulme Trust; Glenn P. Williams was supported by Leverhulme Trust Research Project Grant (RPG-2016-093); Ivan Ropovik was supported by NPO Systemic Risk Institute (LX22NPO5101); Krystian Barzykowski was supported by National Science Centre, Poland (2019/35/B/HS6/00528); Gabriel Baník was supported by PRIMUS/20/HUM/009; Patrícia Arriaga was supported by Portuguese National Foundation for Science and Technology (FCT UID/PSI/03125/2019); Monika Hricová was supported by VEGA 1/0145/23.
+  
+  **Acknowledgement.** We thank the suggestions from the editor and two reviewers on our first and second proposals. CB would like to thank Tyler McGee for help with data collection. PB would like to thank Liam Morgillo for help with data collection.
+  
+abstract: |
+  Mental simulation theories of language comprehension propose that people automatically create mental representations of objects mentioned in sentences. Mental representation is often measured with the sentence-picture verification task, wherein participants first read a sentence that implies the object property (i.e., shape and orientation). Participants then respond to an image of an object by indicating whether it was an object from the sentence or not. Previous studies have shown matching advantages for shape, but findings concerning object orientation have not been robust across languages. This registered report investigated the match advantage of object orientation across 18 languages in nearly 4,000 participants. The preregistered analysis revealed no compelling evidence for a match advantage for orientation across languages. Additionally, the match advantage was not predicted by mental rotation scores. Overall, the results did not support current mental simulation theories.
+  
+keywords          : "cross-lingual research, language comprehension, mental rotation, mental simulation"
+floatsintext      : yes
+figurelist        : no
+tablelist         : no
+footnotelist      : no
+linenumbers       : no
+# mask              : yes
+mask              : no
+draft             : no
+classoption       : "man"
+  
+editor_options: 
+  markdown: 
+    wrap: 72
+  chunk_output_type: inline
+bibliography: ["includes/bib/psa002.bib"]
+# header-includes:
+#   - |
+#     \makeatletter
+#     \renewcommand{\paragraph}{\@startsection{paragraph}{4}{\parindent}%
+#       {0\baselineskip \@plus 0.2ex \@minus 0.2ex}%
+#       {-1em}%
+#       {\normalfont\normalsize\bfseries\typesectitle}}
+#       {0\baselineskip \@plus 0.2ex \@minus 0.2ex}%
+#       {-\z@\relax}%
+#       {\normalfont\normalsize\bfseries\itshape\hspace{\parindent}{#1}\textit{\addperi}}{\relax}}
+#csl               : "`r system.file('rmd', 'apa7.csl', package = 'papaja')`"
+csl               : "includes/bib/apa.csl"
+documentclass     : "apa7"
+output            : papaja::apa6_pdf
+appendix          :
+  - "Stage2_app01.Rmd"
+  - "Stage2_app02.Rmd"
+  - "Stage2_app03.Rmd"
+  - "Stage2_app04.Rmd"
+  - "Stage2_app05.Rmd"
+  - "Stage2_app06.Rmd"
+---
+
+```{r setup, include = FALSE}
+ knitr::opts_chunk$set(
+	echo = FALSE,
+	cache = TRUE
+)
+ # library(tidyverse)
+ # library(data.table)
+ # library(lubridate)
+ # library(magrittr)
+ # library(knitr)
+ library(lme4)
+ library(lmerTest)
+ # library(parameters)
+ library(metafor)
+ # library(afex)
+ # library(standardize)
+ # library(sjPlot)
+ library(dplyr)
+ library(ggplot2)
+ # library("kableExtra")
+ library("papaja")
+ library(rio)
+ library(broom)
+ library(broom.mixed)
+ library(stringr)
+ library(tidyr)
+ # options(scipen=999)
+ # library(rstatix)
+ # library(tinytex)
+ # tinytex::install_tinytex() # only necessary for this reproduction you would only need to run it once on your machine 
+```
+
+```{r trackdown, eval = F}
+library(trackdown)
+getwd()
+# devtools::install_github("ClaudioZandonella/trackdown")
+# initial set up 
+# upload_file(file = "code/Stage2_Report_full.Rmd",
+#       gfile = "Stage2_Report_trackdown",
+#       gpath = "Studies/PSA002 Object Orientation/New Submission",
+#       shared_drive = "Psychological Science Accelerator")
+# from google 
+download_file(file = "Stage2_Report_full.Rmd",
+              # file = "code/Stage2_Report_full.Rmd",
+      gfile = "Stage2_Report_trackdown",
+      gpath = "Studies/PSA002 Object Orientation/New Submission",
+      shared_drive = "Psychological Science Accelerator")
+# to google
+update_file(file = "Stage2_Report_full.Rmd",
+            # file = "code/Stage2_Report_full.Rmd",
+      gfile = "Stage2_Report_trackdown",
+      gpath = "Studies/PSA002 Object Orientation/New Submission",
+      shared_drive = "Psychological Science Accelerator",
+      rich_text = TRUE,
+      hide_code = TRUE)
+```
+
+```{r analysis-preferences}
+# Seed for random number generation
+set.seed(42)
+knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
+```
+
+```{r load_info, message = FALSE, warning = FALSE, include = FALSE}
+# Load lab information
+# https://osf.io/dtfcg
+lab_info <- dir(path = "..", full.names = TRUE, recursive = TRUE,
+  include.dirs = TRUE, pattern = "Lab_Info.csv") %>%
+import()
+# this part for code ocean
+# lab_info <- import("includes/files/Lab_Info.csv")
+```
+
+Mental simulation of object properties is a major topic in conceptual
+processing research [@ostarekSixChallengesEmbodiment2019;
+@scorolli2014embodiment]. Theoretical frameworks of conceptual
+processing describe the integration of linguistic representations and
+situated simulation [e.g., reading about bicycles integrates the
+situation in which bicycles would be used, @barsalou_grounded_2008;
+@zwaan_embodiment_2014]. Proponents of situated cognition contend that
+perceptual representations can be generated during language processing
+[@barsalouPerceptualSymbolSystems1999; @wilson2002], as cognition is
+thought to be an interaction of the body, environment, and processing
+[@barsalou2020]. Given this definition of situated cognition, it is
+important to investigate previously established embodied cognition
+effects across multiple environments (in this case, languages and
+cultures), especially as the credibility revolution has indicated that
+not all published findings are replicable [@vazire2018].
+
+One empirical index of situated simulation is the mental simulation
+effect measured in the sentence-picture verification task (see Figure
+\@ref(fig:fig01)). This task requires participants to read a probe
+sentence displayed on the screen. On the following screen, participants
+see a picture of an object and must verify whether the object was
+mentioned in the probe sentence. Verification response times are used to
+test the mental simulation effect, which occurs when people are faster
+to respond to pictures that match the properties implied by the probe
+sentences. For example, the orientation implied by the sentence *Tom
+hammered the nail into the wall* would be matched if the following
+picture showed a horizontally-oriented nail rather than a
+vertically-oriented one. The opposite would be true of the sentence *Tom
+hammered the nail into the floor plank*.
+
+```{r fig01, echo = FALSE, message = FALSE, warning = FALSE, out.width="100%", fig.cap = "Procedure of the sentence-picture verification task, with an example of matching orientation."}
+knitr::include_graphics("includes/fig/fig2a.png")
+```
+
+Mental simulation effects have been demonstrated for object shape
+[@zwaanLanguageComprehendersMentally2002], color
+[@connellRepresentingObjectColour2007], and orientation
+[@stanfield_effect_2001]. Subsequent replication studies revealed
+consistent results for shape but inconsistent findings for color and
+orientation effects [@koning_mental_2017;
+@rommersObjectShapeOrientation2013;
+@zwaanRevisitingMentalSimulation2012]. Existing theoretical frameworks
+do not provide much guidance regarding the potential causes for this
+discrepancy. With the accumulating concerns about the lack of
+reproducibility [e.g., @kaschakEmbodimentLabTheory2021], researchers
+have found it challenging to reconcile the theory of mental simulation
+with the failures to replicate some of the effects [e.g., @morey2022].
+In an empirical discipline like cognitive science, a theory requires the
+support of reproducible results.
+
+The reliability of mental simulation effects seems to vary depending on
+both the object properties and the languages under study. Mental
+simulation effects for object shape have consistently been found in
+English [@zwaanEmbodiedSentenceComprehension2005;
+@zwaanParticipantNonnaiveteReproducibility2017;
+@zwaanRevisitingMentalSimulation2012], Chinese [@liERPStudyMental2017],
+Dutch [@engelenPerceptualSimulationDeveloping2011; @koning_mental_2017;
+@pecherLanguageComprehendersRetain2009;
+@rommersObjectShapeOrientation2013], German
+[@kosterMentalSimulationObject2018], Croatian
+[@seticNumericalCongruencyEffect2017], and Japanese
+[@satoOneWordTime2013]. Object orientation, on the other hand, has
+produced mixed results across languages: namely, positive evidence in
+English [@stanfield_effect_2001; @zwaanRevisitingMentalSimulation2012]
+and in Chinese [@chenDoesObjectSize2020], and null evidence in Dutch
+[@rommersObjectShapeOrientation2013; @koning_mental_2017] and in German
+as a second language [@kosterMentalSimulationObject2018]. Among studies
+on shape and orientation, the effects of object orientation have been
+smaller than those of object shape (e.g., *d* = 0.10 vs. 0.17 in Zwaan &
+Pecher, 2012; *d* = 0.07 vs. 0.27 in De Koning et al., 2017). To
+understand the causes for the discrepancies among object properties and
+languages, it is imperative to consider the cross-linguistic and
+experimental factors of the sentence-picture verification task.
+
+## Cross-linguistic, Methodological, and Cognitive Factors
+
+Several factors might contribute to cross-linguistic differences in the
+match advantage of object orientation. First, languages differ in how
+they encode motion and placement events in sentences
+[@newmanCrosslinguisticOverviewPosture2002; @verkerk2014]. Second, the
+potential role of mental rotation as a confound has been considered
+[@rommersObjectShapeOrientation2013]. We expand on how linguistic,
+methodological, and cognitive factors hinder the improvement of
+theoretical frameworks below.
+
+**Linguistic Factors.** The probe sentences used in object orientation
+studies usually contain several motion events (e.g., *The ant walked
+towards the pot of honey and tried to climb in*). Languages encode
+motion events in different ways, and grammatical differences between
+lexical encodings could explain different mental simulation effects.
+According to @verkerk2014, Germanic languages (e.g., Dutch, English, and
+German) generally encode the manner of motion in the verb (e.g., *The
+ant dashed*), while conveying the path information through satellite
+adjuncts (e.g., *towards the pot of honey*). In contrast, other
+languages, such as the Romance family (e.g., Portuguese, Spanish), more
+often encode the path in the verb (e.g., *crossing*, *exiting*).
+Crucially, past research on the match advantage of object orientation is
+exclusively based on Germanic languages, and yet, there were differences
+across those languages, with English being the only one that
+consistently yielded the match advantage. As a minor difference across
+Germanic languages in this regard, @verkerk2014 notes that path-only
+constructions (e.g., *The ant went to the feast*) are more common in
+English than in other Germanic languages.
+
+Another topic to be considered is the lexical encoding of placement in
+each language, as the stimuli contain several placement events (e.g.,
+*Sara situated the expensive plate on its holder on the shelf*).
+@chenDoesObjectSize2020 and @kosterMentalSimulationObject2018 noted that
+some Germanic languages, such as German and Dutch, often make the
+orientation of objects more explicit than English. In English, for
+example, the verb *put* does not convey a specific orientation in the
+sentences *She put the book on the table* and *She put the bottle on the
+table.* However, in German and Dutch, speakers preferred the verbs
+*laid* or *stood* in the above sentences. In this case, the verb *lay*
+encodes a horizontal orientation, whereas the verb *stand* encodes a
+vertical orientation. This distinction extends to verbs indicating
+existence. As @newmanCrosslinguisticOverviewPosture2002 exemplified, an
+English speaker would be likely to say *There's a lamp in the corner,*
+whereas a Dutch speaker would be more likely to say *There 'stands' a
+lamp in the corner.* Nonetheless, we cannot conclude that these
+cross-linguistic differences are affecting results across languages
+because the current theories [e.g., Language and Situated Simulation,
+@barsalou_grounded_2008] have not addressed the potential influence of
+linguistic aspects such as the lexical encoding of placement.
+
+**Methodological factors.** Inconsistent findings on the match advantage
+of object orientation may be due to variability in task design. For
+example, studies failing to detect the match advantage may not have
+required participants to verify the probe sentence after the response to
+the target picture [see @zwaan_embodiment_2014]. Without such a
+verification, participants might have paid less attention to the meaning
+of the probe sentences and target object, in which they would have been
+less likely to form a mental representation of the objects [e.g.,
+@zwaanReadersConstructSpatial1993]. In this regard, variability
+originating from differences in the characteristics of experiments can
+substantially influence the results
+[@barsalouEstablishingGeneralizableMechanisms2019;
+@kaschakEmbodimentLabTheory2021].
+
+**Cognitive Factors.** Since @stanfield_effect_2001 showed a match
+advantage of object orientation, later studies on this topic have
+examined the association between the match advantage and alternative
+cognitive mechanisms rather than situated simulation. One of these
+potential mechanisms is spatial cognition, which can be measured with
+mental rotation tasks. Indeed, studies have suggested that mental
+rotation tasks offer valid reflections of previous spatial experience
+[@frickMentalObjectRotation2013] and of current spatial cognition
+[@chuSpontaneousGesturesMental2008; @pouwMoreEmbeddedExtended2014]. Some
+previous studies have drawn on mental rotation to study mental
+simulation. For instance, @koning_mental_2017 observed that the
+effectiveness of mental rotation increased with the size of the depicted
+object. @chenDoesObjectSize2020 examined the implication of this finding
+for the match advantage of object orientation [@stanfield_effect_2001],
+and implemented a picture-picture verification task using the mental
+rotation paradigm [@cohenMentalRotationMental1993]. In each trial, two
+pictures appeared on opposite sides of the screen. Participants had to
+verify whether the pictures represented identical or different objects.
+
+@chenDoesObjectSize2020 not only revealed shorter verification times for
+matching orientations (i.e., two identical pictures presented in
+horizontal or vertical orientation) but also replicated research showing
+larger effects for larger objects (i.e., pictures of bridges versus
+pictures of pens). The results were consistent across the three
+languages investigated: English, Dutch and Chinese. Thus, the mental
+representation of the object affected the participant's ability to
+confirm a match between identical pictures, partially supporting that
+mental rotation occurred during the task. The verification response
+latencies can then be converted to mental rotation scores by using the
+discrepancy of verification times between the identical and different
+orientations[^1]. These scores were used to predict sentence-picture
+verification times to determine how mental rotation ability (i.e., time
+to rotation and confirm object match) affected the ability to match
+sentence to picture (i.e., mental simulation). Given that larger objects
+take more time to rotate in previous studies, it is possible that mental
+rotation time can explain object orientation effects of small objects
+for some languages. Therefore, we explored the association of spatial
+cognition through mental rotation scores and the effect of object
+orientation mental simulation in the studied languages.
+
+[^1]: In the pre-registered plan, we used the term "imagery score" but
+    this term was confusing. Therefore, we used "mental rotation scores"
+    instead of "imagery scores" in the final report.
+
+## Purposes of this study
+
+To scrutinize the discrepancies in mental simulation effects across
+languages and cognitive factors, we examined the reproducibility of the
+match advantages of object orientation in a multi-lab collaboration. Our
+pre-registered plan aimed at detecting a general match advantage of
+object orientation across languages and evaluated the magnitude of match
+advantage in each specific language. Additionally, we examined whether
+the match advantages were related to the mental rotation index. Thus,
+this study followed the original methods from @stanfield_effect_2001 and
+addressed two primary questions: (1) How much of the match advantage of
+object orientation can be obtained within different languages, and (2)
+How are differences in the mental rotation index associated with the
+match advantage across languages?
+
+# Method
+
+## Hypotheses and Design
+
+The study design for the sentence-picture and picture-picture
+verification tasks was mixed, using between-participant (language) and
+within-participant (match versus mismatch object orientation)
+independent variables. In the sentence-picture verification task, the
+match condition reflects a match between the sentence and the picture,
+whereas in the picture-picture verification it reflects a match in
+orientation between two pictures. The only dependent variable for both
+tasks was response time. The time difference between match conditions in
+each task is the measurement of mental simulation effects (for the
+sentence-picture task) and mental rotation scores (for the
+picture-picture task). We did not select languages systematically, but
+instead based on our collaboration recruitment with the Psychological
+Science Accelerator [PSA, @moshontzPsychologicalScienceAccelerator2018].
+
+We pre-registered the following hypotheses:
+
+(1) In the sentence-picture verification task, we expected response
+    times to be shorter for matching compared to mismatching
+    orientations. In the picture-picture verification task, we expected
+    shorter response time for identical orientation compared to
+    different orientations. We did not have any specific hypotheses
+    about the relative size of the object orientation match advantage in
+    different languages.
+
+(2) Based on the assumption that 'mental rotation is a general cognitive
+    function', we expect equal mental rotation scores across languages,
+    but no association between mental rotation scores and mental
+    simulation effects may be found if @chenDoesObjectSize2020’s study
+    replicates. However, if mental rotation and mental simulation share
+    cognitive processing, mental rotation may predict mental simulation.
+
+```{r all_data, message = FALSE, warning = FALSE, include = FALSE, eval = T}
+# Load raw SPV data 
+# Build data frame of valid SP verification responses
+all_files <- list.files(path = "../data",
+                         pattern = ".csv", 
+                         full.names = TRUE,
+                         recursive = TRUE)
+all_files <- all_files[grepl("PP|SP|jatos_results|pp|sp|Pp|Sp", all_files)]
+all_files <- all_files[!grepl("CITATION", all_files)]
+all_list <- list()
+for (i in 1:length(all_files)){
+  all_list[[i]] <- import(all_files[i])
+  all_list[[i]]$unique_id <- all_files[i]
+  
+  all_list[[i]] <- all_list[[i]] %>% 
+    mutate(across(everything(), as.character))
+}
+all_data <- bind_rows(all_list) %>% 
+  select(subject_nr, 
+         LAB_SEED, 
+         datetime, 
+         logfile, 
+         task_order,
+         List, 
+         PList,
+         Match,
+         Orientation, 
+         Probe,
+         Target,
+         response_time, 
+         correct,
+         PPList, 
+         Orientation1,
+         Orientation2, 
+         Identical,
+         Picture1,
+         Picture2, 
+         opensesame_codename,
+         opensesame_version,
+         unique_id,
+         Task) %>% 
+  filter(!is.na(opensesame_codename))
+all_data$PSA_ID <- substr(all_data$unique_id, 9, 16)
+all_data$PSA_ID <- gsub("\\/", "", all_data$PSA_ID)
+all_data$subject_nr[na.omit(all_data$opensesame_codename != "osweb")] <- 
+  gsub("../data/|SP|PP|_|-| |.csv", "", all_data$unique_id[na.omit(all_data$opensesame_codename != "osweb")])
+SP_V <- all_data %>% select(
+  PSA_ID, subject_nr, LAB_SEED, datetime, logfile, task_order, List,
+  Match, Orientation, PList, Probe, Target, response_time, correct, 
+  opensesame_codename, opensesame_version, Task) %>% 
+  left_join(lab_info %>% select(PSA_ID, Language), by = "PSA_ID") %>% 
+  readr::type_convert() %>% 
+  distinct() %>% 
+  mutate(Language = ifelse(Language == "Magyar", "Hungarian", Language)) %>% ## Switch "Magyar" to "Hungarian"
+ mutate(Language = ifelse(Language == "Simple Chinese", "Simplified Chinese", Language)) %>% ## Switch "Simple Chinese" to "Simplified Chinese"
+ mutate(PSA_ID = str_replace(PSA_ID, "SRB_002B", "SRB_002")) %>% ## Combine two Serbian language groups based on the collectors' recommendation
+ mutate(Source = if_else(opensesame_codename == "osweb","osweb","site"), 
+  Subject = paste0(Source,"_",PSA_ID,"_",subject_nr, "_", datetime)) %>% ## Compose the unique participant id
+ subset(Match != "F") ## Exclude fillers in SP_V
+# Build data frame of valid PP responses
+PP <- all_data %>% select(
+  PSA_ID, LAB_SEED, datetime, logfile, subject_nr, PPList, 
+  Orientation1, Orientation2, Identical, Picture1, Picture2, 
+  response_time, correct, opensesame_codename, opensesame_version, Task) %>% 
+  left_join(lab_info %>% select(PSA_ID, Language), by = "PSA_ID") %>% 
+  readr::type_convert() %>% 
+  distinct() %>% 
+  mutate(Language = ifelse(Language == "Magyar", "Hungarian", Language)) %>% ## Switch "Magyar" to "Hungarian"
+  mutate(Language = ifelse(Language == "Simple Chinese", "Simplified Chinese", Language)) %>% ## Switch "Simple Chinese" to "Simplified Chinese"
+  mutate(PSA_ID = str_replace(PSA_ID, "SRB_002B", "SRB_002")) %>% ## Combine two Serbian language groups based on the collectors' recommendation
+  mutate(Source = if_else(opensesame_codename == "osweb","osweb","site"), 
+  Subject = paste0(Source,"_",PSA_ID,"_",subject_nr, "_", datetime)) %>%  ## Compose the unique participant id
+  filter(Identical != "F") # practice trials 
+SP_V$Subject[SP_V$opensesame_codename != "osweb"] <-
+  paste0(SP_V$Source[SP_V$opensesame_codename != "osweb"],
+         "_",
+         SP_V$PSA_ID[SP_V$opensesame_codename != "osweb"],
+         "_",
+         SP_V$subject_nr[SP_V$opensesame_codename != "osweb"])
+PP$Subject[PP$opensesame_codename != "osweb"] <- paste0(PP$Source[PP$opensesame_codename != "osweb"],"_",PP$PSA_ID[PP$opensesame_codename != "osweb"],"_",PP$subject_nr[PP$opensesame_codename != "osweb"])
+# this part for code ocean
+# export(SP_V, "../data/SP_V.csv", row.names = FALSE)
+# export(PP, "../data/PP.csv", row.names = FALSE)
+# export(all_data, "../data/all_data.csv", row.names = FALSE)
+```
+
+```{r include = F, message = F, eval = F}
+# this part for code ocean
+SP_V <- import("../data/SP_V.zip")
+PP <- import("../data/PP.zip")
+all_data <- import("../data/all_data.zip")
+```
+
+```{r fix_part_id, message = FALSE, warning = FALSE, include = FALSE}
+# PP$Subject[PP$Subject == "site_MYS_003_MYS003/MYS00324"] <- rep(c("site_MYS_003_MYS003/MYS00324", "site_MYS_003_MYS003/MYS00324_1"), each = 24)
+SP_V$Subject[SP_V$Subject == "site_USA_173_USA173/USA17328"] <- c(rep("site_USA_173_USA173_28", 30), rep("site_USA_173_USA173/USA17328_1", 29))
+# fix issues with duplicate trials 
+SP_V <- SP_V %>% 
+  filter(!duplicated(SP_V %>% select(Subject, Target)))
+PP <- PP %>% 
+  filter(!duplicated(PP %>% select(Subject, Picture1)))
+# test subjects counts
+SP_V_subjects <- SP_V %>% 
+  group_by(Subject, PSA_ID) %>% 
+  count() 
+PP_subjects <- PP %>% 
+  group_by(Subject, PSA_ID) %>% 
+  count()
+merge_subjects <- SP_V_subjects %>% 
+  full_join(PP_subjects, by = "Subject") %>% 
+  rename(SP_Data = n.x,
+         PP_Data = n.y)
+merge_subjects$PSA_ID.x[is.na(merge_subjects$PSA_ID.x)] <- merge_subjects$PSA_ID.y[is.na(merge_subjects$PSA_ID.x)]
+merge_subjects$PSA_ID <- merge_subjects$PSA_ID.x
+merge_subjects <- merge_subjects %>% select(-PSA_ID.x, -PSA_ID.y)
+```
+
+```{r import_gender}
+osweb_meta <- dir(path = ".."
+                 ,full.names = TRUE, recursive = TRUE,
+                 include.dirs = TRUE, pattern = "jatos_meta.csv") %>%
+ import() %>%
+# this part for code ocean
+# osweb_meta <- import("includes/files/jatos_meta.csv") %>%
+  unique() %>% 
+  mutate(Batch = str_replace(Batch, "SRB_002B", "SRB_002")) %>% 
+  mutate(gender = ifelse(gender==1,"FEMALE",ifelse(gender==2,"MALE","MISSING"))) %>%
+  # mutate(birth_year_tr = as.numeric(birth_year)) %>%
+  mutate(birth_year_tr = as.numeric(gsub(birth_year,pattern="NA|x",replacement = ""))) %>%
+  mutate(year = ifelse(birth_year_tr > 21 & !is.na(birth_year_tr), 1900 + birth_year_tr, 2000 + birth_year_tr)) %>%
+  mutate(age = ifelse(!is.na(year),2021-year,NA)) %>%
+  group_by(Batch) %>%
+  summarise(N = n(), 
+            Female_N = sum(gender=="FEMALE",na.rm = TRUE), 
+            Male_N = sum(gender=="MALE", na.rm = T), 
+            Age = mean(age, na.rm=TRUE), 
+            AgeSD = sd(age, na.rm=TRUE), 
+            Proficiency = mean(lang_prof),
+            missing_age = sum(is.na(age)))
+site_meta <- import("includes/files/insite_meta.csv") %>% 
+  mutate(gender = ifelse(gender=="female","FEMALE",ifelse(gender=="male","MALE","MISSING"))) %>%
+  unique() %>% 
+  group_by(PSA_ID) %>% 
+  summarize(N = n(), Female_N = sum(gender=="FEMALE", na.rm = TRUE), 
+            Male_N = sum(gender=="MALE", na.rm = T), 
+            Age = mean(age, na.rm=TRUE),
+            AgeSD = sd(age, na.rm=TRUE), 
+            missing_age = sum(is.na(age))
+            )
+merge_subjects <- merge_subjects %>% 
+  group_by(PSA_ID) %>% 
+  summarize(SP_N_trials = sum(SP_Data, na.rm = T),
+            PP_N_trials = sum(PP_Data, na.rm = T),
+            SP_N = length(na.omit(SP_Data)),
+            PP_N = length(na.omit(PP_Data))) %>% 
+  full_join(site_meta, by = "PSA_ID") %>% 
+  full_join(osweb_meta, by = c("PSA_ID" = "Batch"))
+merge_subjects <- merge_subjects %>% 
+  group_by(PSA_ID) %>% 
+  mutate(Overall_N_Gender = sum(c(N.x, N.y), na.rm = T),
+         Overall_N_Female = sum(c(Female_N.x, Female_N.y), na.rm = T),
+         Overall_N_Male = sum(c(Male_N.x, Male_N.y), na.rm = T),
+         Overall_Age = mean(c(Age.x, Age.y), na.rm = T), 
+         Overall_SD = mean(c(AgeSD.x, AgeSD.y), na.rm = T),
+         Overall_Missing_Age = sum(c(missing_age.x, missing_age.y), na.rm = T)) %>% 
+  left_join(lab_info %>% select(PSA_ID, Language) %>% unique(), by = "PSA_ID")
+```
+
+## Participants
+
+We performed a pre-registered power analysis, which sought to achieve a
+power of 80%. Based on this analysis, laboratories followed
+a sampling plan where they collected a pre-registered minimum sample
+size, and then determined whether or not to continue data collection via
+Bayesian sequential analysis (stopping data collection if $BF_{10}$ = 10
+or 0.10).
+
+However, due to the COVID pandemic many laboratories were unable to
+reach their pre-specified sample-size targets, making us realize that we
+will not be able to test for the presence of the orientations effect in
+each language separately as pre-registered. Thus, we re-calibrated our
+aim to test the presence of the effect in our full culturally diverse
+sample. Due to this change in focus, we completed a post-hoc sensitivity
+analysis to evaluate what is the smallest effect size detectable by our
+design given our final sample size. The result of this analysis
+indicated that if the difference in reaction time between the different
+orientations was overall 2.36 ms or higher, the effect would be detected
+as significant. For comparison, the average difference was 44 ms in the
+@stanfield_effect_2001, 35 ms in @zwaanRevisitingMentalSimulation2012, 1
+ms in @rommersObjectShapeOrientation2013, and 7 ms in
+@dekoningSizeDoesMatter2017. Appendix A summarizes the details of the
+sensitivity analysis.
+
+Ultimately, we collected data in `r length(unique(SP_V$Language))`
+languages from `r length(unique(c(SP_V$PSA_ID, PP$PSA_ID)))`
+laboratories. Each laboratory chose a maximal sample size and an
+incremental *n* for sequential analysis before their data collection.
+The original sample sizes are presented in Table \@ref(tab:sample-table)
+for the teams that provided raw data to the project. Data collection
+proceeded in two broad stages: initially we collected data in the
+laboratory. However, when the global COVID-19 pandemic made this
+practice impossible to continue, we moved data collection online. In
+total,
+`r format(length(unique(c(SP_V$Subject, PP$Subject))), scientific = FALSE, big.mark = ",")`
+unique participants completed the present study with
+`r format(length(unique(c(SP_V$Subject[SP_V$opensesame_codename != "osweb"], PP$Subject[PP$opensesame_codename != "osweb"]))), scientific = FALSE, big.mark = ",")`
+completing the in-person version and
+`r format(length(unique(c(SP_V$Subject[SP_V$opensesame_codename == "osweb"], PP$Subject[PP$opensesame_codename == "osweb"]))), scientific = FALSE, big.mark = ",")`
+completing the online version[^2]. The in-person version included
+`r length(unique(SP_V$PSA_ID[SP_V$opensesame_codename != "osweb"]))`
+research teams and the online version included
+`r length(unique(SP_V$PSA_ID[SP_V$opensesame_codename == "osweb"]))`
+with `r length(unique(SP_V$PSA_ID))` total teams across both data
+collection methods (i.e., some labs completed both in-person and online
+data collection). Based on recommendations from the research teams (data
+lab codes: TUR_007, TWN_002), two sets of data were excluded from all
+analyses due to participants being non-native speakers. Figure
+\@ref(fig:sample-fig) provides a flow chart for participant exclusion
+and inclusion for analyses. All participating laboratories had either
+ethical approval or institutional evaluation before data collection. All
+participants gave informed consent to participate in the study. All data
+and analysis scripts are available on the source files
+(<https://codeocean.com/capsule/3994879>). Appendix B summarizes the
+average characteristics by language and laboratory.
+
+[^2]: Data for this study was collected together with another unrelated
+    study during the same data collection
+    session, with the two studies using different data collection
+    platforms. See appendix for citation. The demographic data was collected within the platform of
+    the other study during the in-person sessions. Some participants
+    only completed the Phills et al. study and dropped out without
+    completing the present study, and there were also some data entry
+    errors in the demographic data. Thus, the demographic data of some
+    participants who took the present study are missing or
+    unidentifiable (*n* =
+    `r merge_subjects %>% filter(!(PSA_ID %in% unique(SP_V$PSA_ID))) %>% pull(Overall_N_Gender) %>% sum()`
+    cannot be matched to a lab, *n* =
+    `r format(sum(merge_subjects$Overall_N_Gender) - sum(c(merge_subjects$Overall_N_Female, merge_subjects$Overall_N_Male)), big.mark = ",")`
+    were missing gender information, and *n* =
+    `r sum(merge_subjects$Overall_Missing_Age)` were missing age
+    information). Importantly, this does not affect the integrity of the
+    experimental research data.
+
+```{r sample-table, results = 'asis'}
+merge_subjects %>% 
+  arrange(Language) %>% 
+  ungroup() %>% 
+  filter(PSA_ID %in% unique(SP_V$PSA_ID)) %>%
+  group_by(Language) %>% 
+  summarize(SP_N_trials = sum(SP_N_trials, na.rm = T), 
+            PP_N_trials = sum(PP_N_trials, na.rm = T), 
+            SP_N = sum(SP_N, na.rm = T),
+            PP_N = sum(PP_N, na.rm = T), 
+            Overall_N_Gender = sum(Overall_N_Gender, na.rm = T), 
+            Overall_N_Female = sum(Overall_N_Female, na.rm = T),
+            Overall_N_Male = sum(Overall_N_Male, na.rm = T), 
+            Overall_Age = mean(Overall_Age, na.rm = T), 
+            Overall_SD = mean(Overall_SD, na.rm = T)) %>% 
+  ungroup() %>% 
+  select(Language, SP_N_trials, PP_N_trials, SP_N, PP_N, 
+         Overall_N_Gender, Overall_N_Female, Overall_N_Male, 
+         Overall_Age, Overall_SD) %>% 
+  mutate(
+    Overall_Age = format(round(Overall_Age, 2), nsmall = 2), 
+    Overall_SD = format(round(Overall_SD, 2), nsmall = 2)
+  ) %>% 
+  mutate(Language = ifelse(Language == "Simple Chinese", "Simplified Chinese", Language)) %>% 
+  apa_table(
+ format = "latex",
+ booktabs = TRUE,
+ font_size = "footnotesize",
+ col.names = c("Language", "$SP_{Trials}$",
+               "$PP_{Trials}$", "$SP_N$", "$PP_N$", "$Demo_N$",
+               "$Female_N$", "$Male_N$","$M_{Age}$", "$SD_{Age}$"),
+ align = c("l", rep("c", 9)),
+ caption = "Demographic and Sample Size Characteristics",
+ note = "SP = Sentence Picture Verification, PP = Picture Picture Verification. Sample sizes for demographics may be higher than the sample size for the this study, as participants could have only completed the bundled experiment. Additionally, not all entries could be unambigously matched by lab ID, and therefore, demographic sample sizes could also be less than data collected."
+ ) 
+```
+
+```{r exclude-nonnative}
+SP_V_non <- SP_V %>% 
+  filter(PSA_ID != "TUR_007E" & PSA_ID != "TWN_002E")
+PP_non <- PP %>% 
+  filter(PSA_ID != "TUR_007E" & PSA_ID != "TWN_002E")
+```
+
+```{r sample-fig, echo = FALSE, message = FALSE, warning = FALSE, results = 'asis', paged.print = TRUE, fig.cap = "Sample size and exclusions. N = number of unique participants, T = number of trials. The final combined sample was summarized to a median score for each match/mismatch condition, and therefore, includes one summary score per person."}
+knitr::include_graphics("includes/fig/psa002_flow.drawio.png")
+```
+
+## Materials
+
+**Sentences.** 24 critical sentence pairs (48 total sentences) were
+included in this study following Stanfield and Zwaan (2001). Each pair
+consisted of versions that differed in their implied orientation of the
+object embedded in the sentence. For instance, the sentence *The
+librarian put the book back on the table* - which implies a horizontal
+orientation - had a counterpart in the sentence *The librarian put the
+book back on the shelf* - which implies a vertical orientation. Another
+two sets of 24 sentences were included as filler sentences for the task
+demand. These sentences were not matched to any particular orientation
+but included a potential object for depiction. For example, *After a
+week the painting arrived by mail*, and *The flowers that were planted
+last week had survived the storm* were included as filler sentences.
+Each participant was shown 24 critical sentences and 24 filler sentences
+in the study. The filler sentences were included to counterbalance the
+number of yes-no answers to create an even 50% ratio.
+
+**Pictures.** The study included 24 critical matched pictures that only
+varied in their orientation (vertical/horizontal) for a total of 48
+critical pictures [from @zwaanRevisitingMentalSimulation2012]. These
+pictures were matched to their respective sentences for implied
+orientation. *The librarian put the book back on the table* was matched
+with a horizontally-oriented book, while *The librarian put the book
+back on the shelf* was matched with a vertically-oriented book. For
+counterbalancing, the mismatch between picture orientation and sentence
+was created, and the book would be shown in the respective opposite
+orientation (see orientation pairs at
+<https://osf.io/utqxb/?view_only=7094d5af798047b3a2ec01ea4930e3de>).
+Another 48 pictures were included for the fillers which were unrelated
+to the corresponding sentence. Therefore, the answer to critical pairs
+was always "yes", while the filler sentence-picture combinations answer
+was always "no".
+
+**Picture-Picture Trials.** The picture-picture verification task used
+the same object pictures as the above task. The 24 critical picture
+pairs were included as match trials and were counterbalanced such as
+half the time they appeared with the same object and orientation (i.e.,
+the same picture), and half the time with the opposite orientation
+(i.e., horizontal and vertical). The filler pictures were randomly
+paired to create mismatch trials. Table \@ref(tab:stim-table) shows the
+counterbalancing and combinations for trials.
+
+```{r stim-table, results = 'asis'}
+data.frame(
+  "Condition" = c("Sentence-Picture\nCritical\nMatch", 
+                  "Sentence-Picture\nCritical\nMatch",
+                  "Sentence-Picture\nCritical\nMismatch",
+                  "Sentence-Picture\nCritical\nMismatch",
+                  "Sentence-Picture\nFiller",
+                  "Picture-Picture\nCritical\nMatch",
+                  "Picture-Picture\nCritical\nMatch",
+                  "Picture-Picture\nCritical\nMismatch",
+                  "Picture-Picture\nCritical\nMismatch", 
+                  "Picture-Picture\nFiller"), 
+  "Item 1" = c("Critical Sentence:\nHorizontal",
+               "Critical Sentence:\nVertical",
+               "Critical Sentence:\nHorizontal",
+               "Critical Sentence:\nVertical",
+               "Sentence",
+               "Critical Picture:\nHorizontal",
+               "Critical Picture:\nVertical",
+               "Critical Picture:\nHorizontal",
+               "Critical Picture:\nVertical",
+               "Picture"),
+  "Item 2" = c("Critical Picture:\nHorizontal",
+               "Critical Picture:\nVertical",
+               "Critical Picture:\nVertical",
+               "Critical Picture:\nHorizontal",
+               "Picture",
+               "Critical Picture:\nHorizontal",
+               "Critical Picture:\nVertical",
+               "Critical Picture:\nVertical",
+               "Critical Picture:\nHorizontal",
+               "Picture"),
+  "Participant Answer" = c("Yes", "Yes", "Yes", "Yes","No", 
+                           "Yes", "Yes", "Yes", "Yes", "No"),
+  "Number" = c(6,6,6,6,24,
+               6,6,6,6,24)
+  ) %>% 
+  mutate(Number = as.character(Number)) %>% 
+  apa_table(
+ format = "latex",
+ booktabs = TRUE,
+ font_size = "scriptsize",
+ col.names = c("Condition", "Item 1", "Item 2", "Answer", "Number"),
+ align = c(rep("l", 3), rep("c", 2)),
+ caption = "Trial conditions for the Sentence-Picture and Picture-Picture Verification Task"
+ ) 
+```
+
+## Procedure
+
+**Sentence-Picture Task.** The sentence-picture verification task was
+always administered first. This task began with six practice trials.
+Each trial started with a left-aligned vertically-centered fixation
+point displayed for 1,000 ms, immediately followed by the probe
+sentence. The sentence remained on the screen until the participant
+pressed the space key, acknowledging that they had read the sentence.
+Then, the object picture was presented in the center of the screen until
+the participant responded, or it disappeared after two seconds.
+Participants were instructed to verify, as quickly and accurately as
+possible, whether the object on screen had been mentioned in the probe
+sentence. Following @stanfield_effect_2001, a memory check test was
+carried out after every three to eight trials to ensure that
+participants had read each sentence carefully.
+
+As shown in Table \@ref(tab:stim-table), the trials for the
+sentence-picture task were created by counterbalancing the sentence
+implied orientation (vertical, horizontal) by the pictured object
+orientation creating a fully-crossed combination between matching
+sentences and objects. Therefore, each participant only saw one of the
+four possible combinations (sentence orientation 2 x object orientation
+2). For the filler items, sentences and pictures were randomly assigned
+in two separate patterns, and these were included with the critical
+pairs. Stimuli lists were created in Excel, and this information can be
+found at
+<https://osf.io/utqxb/?view_only=7094d5af798047b3a2ec01ea4930e3de>.
+
+**Translation of Sentences.** The translation of probe sentences
+followed our pre-registered plan. Every non-English language coordinator
+was required to recruit at least four translators who were fluent in
+both English and the target language. Every language coordinator
+supervised the translators using the Psychological Science Accelerator
+guidelines (<https://psysciacc.org/translation-process/>). In addition,
+the coordinator and participating laboratories consulted about each of
+the following points:
+
+1)  Four translators could denote the items that are unfamiliar to a
+    particular language based on object familiarity ratings. The two
+    forward translators would suggest alternative probe sentences and
+    object pictures to replace the unfamiliar objects. The two backward
+    translators would evaluate the suggested items.
+
+2)  Some objects in a particular language have different spellings or
+    pronunciations among countries and geographical zones due to
+    dialect. For example, American speakers tend to write *tire* whereas
+    British speakers tend to write *tyre.* Every coordinator would mark
+    these local translations in the final version of translated
+    materials. Participating laboratories could replace the names to
+    match the local dialect.
+
+**Picture-Picture Task.** Next, the picture-picture verification task
+was administered. In each trial, two objects appeared on either side of
+the central fixation point until either the participant indicated that
+the pictures displayed the same object or two different objects, or
+until two seconds elapsed. As shown in Table \@ref(tab:stim-table), four
+possible combinations of critical orientations could be shown with the
+picture (same, different) by orientation (same, different). Each
+participant only saw one of the critical combinations, and filler items
+were randomly paired in two combinations to match. The stimuli lists can
+be found at
+<https://osf.io/utqxb/?view_only=7094d5af798047b3a2ec01ea4930e3de>.
+
+**Software Implementation.** The study was executed using OpenSesame
+software for millisecond timing
+[@mathotOpenSesameOpensourceGraphical2012]. After data collection moved
+online, to minimize the differences between on-site and web-based
+studies, we converted the original Python code to Javascript and
+collected the data using OpenSesame through a JATOS server. We proceeded with
+the online study from February to June 2021 after the changes in the
+procedure were approved by the journal editor and reviewers. Following
+the literature, we did not anticipate any theoretically important
+differences between the two data collection methods (see references in appendix). The instructions and experimental
+scripts are available at the public OSF folder (<https://osf.io/e428p/>
+"Materials" in Files).
+
+## Analysis Plan
+
+To test Hypothesis 1, our first planned analysis[^3] used a
+random-effects meta-analysis model that estimated the match advantage
+across laboratories and languages. The meta-analysis summarized the
+median reaction times by match condition to determine the effect size by
+laboratory. The following formula was used:
+
+[^3]: See the analysis plan in the pre-registered plan, pp. 19 - 20,
+    <https://psyarxiv.com/t2pjv/>. This plan was changed to a
+    random-effects model to ensure that we did not assume the exact same
+    effect size for each language and lab.
+
+$$d = \frac{Mdn_{Mismatch} - Mdn_{Match}}{\sqrt{MAD_{Mismatch}^2 + MAD_{Match}^2-2\times r\times MAD_{Mismatch} \times MAD_{Match}}} \times \sqrt{2 \times (1-r)}$$
+
+where $d$ is Cohen's $d$, $Mdn$ is Median, $MAD$ is median
+absolute deviation, and $r$ is correlation between match and mismatch
+condition. Meta-analytic effect sizes were computed for those languages
+that had data from more than one team.
+
+Continuing to test Hypothesis 1, next, we ran planned mixed-effects
+models using each individual response time from the sentence-picture
+verification task as the dependent variable. In each analysis, we first
+built a simple linear regression model with a fixed intercept-only.
+Then, we systematically added random intercepts and fixed effects,
+arriving at the final model. First, the random intercepts were added to
+the model one-by-one in the following order: participant ID, target,
+laboratory ID, and finally language. See below section for decision
+criteria for determining the final random-effect structure. Then, the
+fixed effect of matching condition (match vs. mismatch) was added to the
+model. Language-specific mixed-effects models were conducted in the same
+way if the meta-analysis showed a significant orientation effect, which
+was deemed exploratory only given our change in sampling plan.
+
+According to the pre-registration, we planned to test Hypothesis 2 by
+first evaluating the equality of mental rotation scores across languages
+using an ANOVA. However, this plan was updated to use mixed models
+instead due to the nested structure of the data. The same analysis plan was used for model
+building and selection as described above for the sentence-picture
+verification task.
+
+To further assess Hypothesis 2, the last planned analysis was to use
+mental rotation scores for the prediction of mental stimulation with an
+interaction between language and mental rotation scores computed from
+the picture-picture task to determine if there were differences in
+prediction of match advantage in the sentence-picture task. Here, we
+used a mixed-effects model as well to control for the random effect of
+the data collection lab, and with language, mental rotation score, and
+their interaction as fixed effect predictors.
+
+**Decision criterion for model selection and hypothesis testing.** The
+inclusion of both random and fixed effects in models was assessed using
+model comparison based on the Akaike information criterion (AIC). While
+this method is less conservative than alternatives such as the
+likelihood ratio test, the AIC was deemed appropriate
+due to the modest effect sizes that tend to be produced by mental
+simulation effects, and the limited sample sizes in the present study
+(albeit larger samples than those of most previous studies). Models with
+lower AIC were preferred over models with higher AIC, and in cases where
+the difference in AIC did not reach 2, the model with
+fewer parameters was preferred.
+
+*p*-values for each effect were calculated using the Satterthwaite
+approximation for degrees of freedom for individual predictor
+coefficients. *p*-values were
+interpreted using the pre-registered $\alpha$ level of .05.
+
+**Intra-lab analysis during data collection.**
+
+Before data collection, each lab decided whether they wanted to apply a
+sequential analysis or
+whether they wanted to settle for a fixed sample size. The
+pre-registered protocol for labs applying sequential analysis
+established that they could stop data collection upon reaching the
+pre-registered criterion ($BF_{10}$ = 10 or .10), or the maximal sample
+size. Each laboratory chose a fixed sample size and an incremental n for
+sequential analysis before their data collection. Two laboratories
+(HUN_001, TWN_001) stopped data collection at the pre-registered
+criterion, $BF_{10}$ = .10. Fourteen laboratories did not finish the
+sequential analysis because (1) twelve laboratories were interrupted by
+the pandemic outbreak; (2) two laboratories (TUR_007E, TWN_002E)
+recruited English-speaking participants to comply with institutional
+policies. Lab-based records were reported on a public website as each
+laboratory completed data collection (details are available in Appendix
+C).
+
+# Results
+
+## Data Screening
+
+```{r}
+SP_V_acc_summary <- SP_V_non %>% 
+  group_by(Subject) %>% 
+  summarize(accuracy = sum(correct)/n())
+SP_V_acc <- SP_V_non %>% 
+  filter(Subject %in% (SP_V_acc_summary %>% 
+                         filter(accuracy >=.70) %>% 
+                         pull(Subject) %>% 
+                         unique()))
+PP_acc_summary <- PP_non %>% 
+  group_by(Subject) %>% 
+  summarize(accuracy = sum(correct)/n())
+PP_acc <- PP_non %>% 
+  filter(Subject %in% (PP_acc_summary %>% 
+                         filter(accuracy >=.70) %>% 
+                         pull(Subject) %>% 
+                         unique()))
+```
+
+As shown in Figure \@ref(fig:sample-fig), participants' data were
+deleted listwise from the sentence-picture and picture-picture tasks if
+they did not perform with at least 70% accuracy. Next, the data were
+screened for outliers. Our pre-registered plan excluded outliers based
+on a linear mixed-model analysis for participants in the third quantile
+of the grand intercept (i.e., participants with the longest average
+response times). After examining the data from both online and in-person
+data collection, it became clear that both a minimum response latency
+and maximum response latency should be employed, as improbable times
+existed at both ends of the distribution. The minimum response time was
+set to 160 ms based on Hick's Law. The maximum response latency was calculated
+as two times the mean absolute deviation plus the median calculated
+separately for each participant. Exclusions were performed at the trial
+level for these outlier response times.
+
+```{r outliers}
+SP_V_noout <- SP_V_acc %>% 
+ group_by(Subject) %>% 
+ mutate(MAD = mad(response_time),
+  med = median(response_time),
+  Outlier = response_time <= 160 | response_time >= (med + 2*MAD)) %>% 
+  filter(Outlier == FALSE)
+PP_noout <- PP_acc %>% 
+ group_by(Subject) %>% 
+ mutate(MAD = mad(response_time),
+  med = median(response_time), 
+  Outlier = response_time <= 160 | response_time >= (med + 2*MAD)) %>% 
+  filter(Outlier == FALSE)
+```
+
+```{r SP-source-lme, message = FALSE, warning = FALSE, include = FALSE}
+SP_V_noout$r_Source <- SP_V_noout$opensesame_codename == "osweb"
+source_cor.lmer <- lmerTest::lmer(
+ response_time ~ Match*r_Source + 
+ (1|Subject) + 
+ (r_Source|PSA_ID) + 
+ (r_Source|Language), 
+ control = lmerControl(optimizer = "bobyqa",
+   optCtrl = list(maxfun = 1e6)), 
+ data = SP_V_noout)
+source_cor_lmer_out <- summary(source_cor.lmer)
+# summary(source_cor.lmer)
+```
+
+To ensure equivalence between data collection methods, we evaluated the
+response times predicted by the fixed effects of the interaction between
+match (match vs. mismatch) and data collection source (in-person vs.
+online). We included random intercepts for participants, lab, language,
+and random slopes for source by lab and source by language. This
+analysis showed no difference between data sources: *b* =
+`r format(round(source_cor_lmer_out$coefficients[4,1], 2), nsmall = 2)`,
+*SE* =
+`r format(round(source_cor_lmer_out$coefficients[4,2], 2), nsmall = 2)`,
+*t*(`r format(round(source_cor_lmer_out$coefficients[4,3], 2), nsmall = 2)`)
+=
+`r format(round(source_cor_lmer_out$coefficients[4,4], 2), nsmall = 2)`,
+*p* = `r  apa_p(source_cor_lmer_out$coefficients[4,5])`. Therefore, the
+following analyses did not separate in-person and online data. Table
+\@ref(tab:summary-languages) provides a summary of the match advantage
+by language for the sentence-picture verification task.
+
+```{r limitations, message=FALSE, warning=FALSE, include=FALSE}
+SP_V_correct_temp <- SP_V_noout %>% 
+  filter(correct == 1)
+SP_M_out <- all_data %>% 
+  filter(Task == "M" | Task == "Prac") %>% 
+  left_join(lab_info %>% select(PSA_ID, Language), by = "PSA_ID") %>% 
+  readr::type_convert() %>% 
+  distinct() %>% 
+  mutate(Language = ifelse(Language == "Magyar", "Hungarian", Language)) %>% ## Switch "Magyar" to "Hungarian"
+ mutate(Language = ifelse(Language == "Simple Chinese", "Simplified Chinese", Language)) %>% ## Switch "Simple Chinese" to "Simplified Chinese"
+ mutate(PSA_ID = str_replace(PSA_ID, "SRB_002B", "SRB_002")) %>% ## Combine two Serbian language groups based on the collectors' recommendation
+ mutate(Source = if_else(opensesame_codename == "osweb","osweb","site"), 
+  Subject = paste0(Source,"_",PSA_ID,"_",subject_nr, "_", datetime)) %>% ## Compose the unique participant id
+  filter(PSA_ID %in% SP_V_correct_temp$PSA_ID) %>% 
+  group_by(Source, Subject) %>% 
+  summarise(M_acc = mean(correct)) 
+t_test <- t.test(SP_M_out$M_acc ~ SP_M_out$Source, 
+                 var.equal = FALSE, paired = FALSE)
+```
+
+Although we combined the two data sets in the final data analysis, it is
+worth considering that online participants' attention may be easily
+distracted given the lack of environmental control and experimenter
+overview. However, this secondary task revealed that online participants
+had a higher percent correct than in-person participants,
+*t*(`r apa_num(t_test$parameter)`) = `r apa_num(t_test$statistic)`, *p*
+`r apa_p(t_test$p.value)`, $M_{online}$ =
+`r apa_num(mean(SP_M_out$M_acc[SP_M_out$Source == "osweb"], na.rm = T)*100)`
+(*SD* =
+`r apa_num(sd(SP_M_out$M_acc[SP_M_out$Source == "osweb"], na.rm = T)*100)`)
+and $M_{in-person}$ =
+`r apa_num(mean(SP_M_out$M_acc[SP_M_out$Source == "site"], na.rm = T)*100)`
+(*SD* =
+`r apa_num(sd(SP_M_out$M_acc[SP_M_out$Source == "site"], na.rm = T)*100)`).
+
+```{r summary-languages, echo = FALSE, message = FALSE, warning = FALSE, paged.print = TRUE}
+# Table in the final report.
+# Summarize the participants' accuracy by language.
+SP_V_noout %>% 
+  group_by(Language, Subject) %>% 
+  summarize(accuracy = sum(correct)/n()) %>% 
+  group_by(Language) %>% 
+  summarize(mean_ACC = format(round(mean(accuracy)*100, digits = 2), nsmall = 2)) %>% 
+  left_join(
+    SP_V_noout %>% 
+      filter(correct == 1) %>% 
+      group_by(Language, Subject, Match) %>%
+   summarise(subject_M = median(response_time)) %>%
+   group_by(Language, Match) %>%
+   summarise(med_RT = median(subject_M), MAD_RT = mad(subject_M)) %>%
+   pivot_wider(names_from = Match, values_from = c(med_RT, MAD_RT)) %>%
+   mutate(Effect = (med_RT_N - med_RT_Y) ) %>%
+   transmute(Mismatch_stat = paste0(
+     format(round(med_RT_N, digits = 2), nsmall = 2),
+     " (", format(round(MAD_RT_N, digits = 2), nsmall = 2),")"),
+    Match_stat = paste0(
+      format(round(med_RT_Y, digits = 2), nsmall = 2), 
+      " (",format(round(MAD_RT_Y, digits = 2), nsmall = 2),")"),
+    Effect = Effect) %>%
+     mutate(Language = ifelse(Language == "Simple Chinese", "Simplified Chinese", Language)) %>% 
+   arrange(desc(Language)),
+   by = c("Language") 
+  ) %>% 
+ apa_table( 
+ format = "latex",
+ booktabs = TRUE,
+ escape = FALSE,
+ col.names = c("Language","Accuracy Percent","Mismatching","Matching","Match Advantage"),
+ align = c("l",rep("c",4)),
+ caption = "Descriptive Summary of Sentence-Picture Verification Task by Language",
+ note = "Average accuracy percentage, Median response times and median absolute deviations (in parentheses) per match condition (Mismatching, Matching); Match advantage (difference in response times)."
+ ) 
+```
+
+## Hypothesis 1: Meta-Analysis of the Orientation Effect
+
+```{r}
+SP_V_correct <- SP_V_noout %>% 
+  filter(correct == 1)
+PP_correct <- PP_noout %>% 
+  filter(correct == 1)
+```
+
+```{r meta_setup, message = FALSE, warning = FALSE, include = FALSE}
+## Prepare the data sets for the meta analysis
+SP_V_meta_data <- SP_V_correct %>% 
+ group_by(Language, PSA_ID, Subject, Match) %>%
+ summarize(RT = median(response_time)) %>%
+ pivot_wider(
+ names_from = Match,
+ values_from = c(RT)
+ ) %>%
+ group_by(Language, PSA_ID) %>%
+ summarise(m_match = median(Y,na.rm = TRUE),
+           m_mismatch = median(N,na.rm = TRUE),
+           sd_match = mad(Y,na.rm = TRUE),
+           sd_mismatch = mad(N,na.rm = TRUE),
+           ni = n(),
+           ri = cor(Y, N)) 
+```
+
+```{r meta-plot, echo = F, include = F, message = F, warning=FALSE}
+### a little helper function to add Q-test, I^2, and tau^2 estimate info
+mlabfun <- function(text, res) {
+ list(bquote(paste(.(text),
+   " (Q = ", .(formatC(res$QE, digits = 2, format = "f")),
+   ", df = ", .(res$k - res$p),
+   ", p ", .(metafor:::.pval(res$QEp, digits = 2, showeq = TRUE, sep = " ")), "; ",
+   I^2, " = ", .(formatC(res$I2, digits = 1, format = "f")), "%, ",
+   tau^2, " = ", .(formatC(res$tau2, digits = 2, format = "f")), ")")))}
+# calculate effect size
+SP_V_es <- escalc(measure = "MC", 
+                  m1i = m_mismatch, 
+                  m2i = m_match, 
+                  sd1i = sd_mismatch, 
+                  sd2i = sd_match,
+                  ni = ni, 
+                  ri = ri, 
+                  slab = PSA_ID, 
+                  data = SP_V_meta_data[
+                    c(4:23, 24:26, 31:33, 46:48, 1:2, 37:38, 39:40, 41:42, 
+                      44:45, 3, 27, 28, 29, 30, 34, 35, 36, 43),
+                  ])
+SP_V_meta_all <- rma.uni(yi, vi, data = SP_V_es, method = "REML", digits = 2)
+{
+  ## save the plot
+  png(file = "includes/fig/meta-all.png", width=1400*3, height=1400*3, res = 225)
+  
+  forest(SP_V_meta_all,
+   xlim = c(-300, 200), 
+    olim = c(-100, 125),
+   ilab = cbind(ni, 
+                paste0(round(m_mismatch,2),
+                      "(",round(sd_mismatch,2),")"), 
+                paste0(round(m_match,2),
+                       "(",round(sd_match,2),")")), 
+   ilab.xpos = c(-250,-200,-150), 
+   ylim = c(-1,40+4*17+6), 
+   rows = c(
+     21:40+4*17, # English
+    18:20+4*16, # Germany
+    15:17+4*15, # Norway
+    12:14+4*14, # Turkish
+    10:11+4*13, # Arabic
+    8:9+4*12, # Simplified Chinese
+    6:7+4*11, # Slovak
+    4:5+4*10, # Spanish
+    2:3+4*9, # Traditional Chinese
+    1+4*8,  # Brazilian Portuguese
+    1+4*7,  # Greek
+    1+4*6,  # Hebrew
+    1+4*5,  # Hindi
+    1+4*4,  # Hungarian
+    1+4*3,  # Polish
+    1+4*2,  # Portuguese
+    1+4,  # Serbian
+    1  # Thai
+   ), 
+   mlab = mlabfun("REML model for All Teams", SP_V_meta_all),
+   xlab = "", psize = 0.7)
+  
+  ### set font expansion factor (as in forest() above) and use a bold font
+    op <- par(cex = 1, font = 1)
+    ### add additional column headings to the plot
+    text(c(-290,-250,-200,-150,170),39+4*17+7,c("Team","N","Mismatching","Matching" ,"Match Advantage [95% CI]"))
+  ### switch to bold italic font
+  par(font = 2)
+  ### add text for the subgroups
+  text(-300, c(40+4*17, # English
+    20+4*16, # Germany
+    17+4*15, # Norway
+    14+4*14, # Turkish
+    11+4*13, # Arabic
+    9+4*12, # Simplified Chinese
+    7+4*11, # Slovak
+    5+4*10, # Spanish
+    3+4*9, # Traditional Chinese
+    1+4*8,  # Brazilian Portuguese
+    1+4*7,  # Greek
+    1+4*6,  # Hebrew
+    1+4*5,  # Hindi
+    1+4*4,  # Hungarian
+    1+4*3,  # Polish
+    1+4*2,  # Portuguese
+    1+4,  # Serbian
+    1  # Thai
+    ) + 2, #pos = 2, 
+    adj = c(0,1),
+      c("English",
+      "German",
+      "Norwegian",
+      "Turkish",
+      "Arabic",
+      "Simplified Chinese",
+      "Slovakian",
+      "Spanish",
+      "Traditional Chinese",
+      "Brazilian Portuguese",
+      "Greek",
+      "Hebrew",
+      "Hindi",
+      "Hungarian",
+      "Polish",
+      "Portuguese",
+      "Serbian",
+      "Thai"))
+  
+  ### set par back to the original settings
+  par(op)
+  ### fit fixed-effects model in the language groups
+  res.English <- rma.uni(yi, vi, subset = (Language == "English"), data = SP_V_es, method = "REML", digits = 2)
+  res.Germany <- rma.uni(yi, vi, subset = (Language == "German"), data = SP_V_es, method = "REML", digits = 2)
+  res.Norway <- rma.uni(yi, vi, subset = (Language == "Norwegian"), data = SP_V_es, method = "REML", digits = 2)
+  res.Turkish <- rma.uni(yi, vi, subset = (Language == "Turkish"), data = SP_V_es, method = "REML", digits = 2)
+  res.Arabic <- rma.uni(yi, vi, subset = (Language == "Arabic"), data = SP_V_es, method = "REML", digits = 2)
+  #res.Serbian <- rma.uni(yi, vi, subset = (Language == "Serbian"), data = SP_V_es, method = "REML", digits = 2)
+  res.SC <- rma.uni(yi, vi, subset = (Language == "Simplified Chinese"), data = SP_V_es, method = "REML", digits = 2)
+  res.Slovak <- rma.uni(yi, vi, subset = (Language == "Slovak"), data = SP_V_es, method = "REML", digits = 2)
+  res.Spanish <- rma.uni(yi, vi, subset = (Language == "Spanish"), data = SP_V_es, method = "REML", digits = 2)
+  res.TC <- rma.uni(yi, vi, subset = (Language == "Traditional Chinese"), data = SP_V_es, method = "REML", digits = 2)
+  
+  ### add summary polygons for the three subgroups
+  addpoly(res.English, row = 21+4*17-1.5, mlab = mlabfun("RE Model for English", res.English))
+  addpoly(res.Germany, row = 18+4*16-1.5, mlab = mlabfun("RE Model for German", res.Germany))
+  addpoly(res.Norway, row = 15+4*15-1.5, mlab = mlabfun("RE Model for Norwegian", res.Norway))
+  addpoly(res.Turkish, row = 12+4*14-1.5, mlab = mlabfun("RE Model for Turkish", res.Turkish))
+  addpoly(res.Arabic, row = 10+4*13-1.5, mlab = mlabfun("RE Model for Arabic", res.Arabic))
+  addpoly(res.SC, row = 8+4*12-1.5, mlab = mlabfun("RE Model for Simplified Chinese", res.SC))
+  addpoly(res.Slovak, row = 6+4*11-1.5, mlab = mlabfun("RE Model for Slovak", res.Slovak))
+  addpoly(res.Spanish, row = 4+4*10-1.5, mlab = mlabfun("RE Model for Spanish", res.Spanish))
+  addpoly(res.TC, row = 2+4*9-1.5, mlab = mlabfun("RE Model for Traditional Chinese", res.TC))
+  dev.off()
+}
+```
+
+```{r meta-all-plot, echo = FALSE, out.width="100%", out.height="90%",  fig.cap = "Meta-analysis on match advantage of object orientation for all languages. Diamonds indicate summary estimates, the midpoint of the diamond indicating the point estimate, and the left and right endpoints indicating the lower and upper bounds of the confidence interval of the estimated effect size. The lowermost diamond represents the estimate derived from the whole dataset."}
+knitr::include_graphics("includes/fig/meta-all.png")
+```
+
+The planned meta-analysis examined the effect overall and within
+languages wherein at least two laboratories had collected data (Arabic,
+English, German, Norway, Simplified Chinese, Traditional Chinese,
+Slovakian, and Turkish). Figure \@ref(fig:meta-all-plot) showed a
+significant positive orientation effect across German laboratories (*b*
+= `r as.character(round(res.Germany$b,2))`, 95% CI
+[`r as.character(round(res.Germany$ci.lb,2))`,
+`r as.character(round(res.Germany$ci.ub,2))`]) but did not reveal a
+significant overall effect (*b* =
+`r as.character(round(SP_V_meta_all$b,2))`, 95% CI
+[`r as.character(round(SP_V_meta_all$ci.lb,2))`,
+`r as.character(round(SP_V_meta_all$ci.ub,2))`]). Also, a significant
+negative orientation effect was found in the Hungarian (*b* = -20.00,
+95% CI [-29.60, -10.40]) and the Serbian laboratory (*b* = -17.25, 95%
+CI [-32.26, -2.24]), although in these languages only a single
+laboratory participated, so no language-specific meta-analysis was
+conducted.
+
+## Hypothesis 1: Mixed-Linear Modeling of the Orientation Effect
+
+```{r SP-lang-lme, message = FALSE, warning = FALSE, include = FALSE}
+SP_V_correct$Match <- factor(SP_V_correct$Match, 
+                             levels = c("Y", "N"))
+# Null effect models
+#only intercept
+intercept.model <- lm(response_time ~ 1, 
+   data = SP_V_correct)
+#add random intercept of subject
+subject.model <- lmer(response_time ~ 1 + (1|Subject), 
+   control = lmerControl(optimizer = "bobyqa",
+      optCtrl = list(maxfun = 1e6)), 
+   data = SP_V_correct)
+# add random intercept of item
+item.model <- lmer(response_time ~ 1 + (1|Subject) + (1|Target), 
+   control = lmerControl(optimizer = "bobyqa",
+      optCtrl = list(maxfun = 1e6)), 
+   data = SP_V_correct)
+# add random intercept of lab
+lab.model <- lmer(response_time ~ 1 + (1|Subject) + (1|Target) + (1|PSA_ID), 
+   control = lmerControl(optimizer = "bobyqa",
+      optCtrl = list(maxfun = 1e6)), 
+   data = SP_V_correct)
+# add random intercept of language
+language.model <- lmer(response_time ~ 1 + (1|Subject) + (1|Target) + (1|PSA_ID) + (1|Language), 
+   control = lmerControl(optimizer = "bobyqa",
+      optCtrl = list(maxfun = 1e6)), 
+   data = SP_V_correct)
+# add fixed effects 
+fixed.model <- lmer(response_time ~ Match + (1|Subject) + (1|Target) + (1|PSA_ID), 
+   control = lmerControl(optimizer = "bobyqa",
+      optCtrl = list(maxfun = 1e6)), 
+   data = SP_V_correct)
+SP_lme01_out <- summary(fixed.model)$coefficients
+```
+
+First, an intercept-only model of response times with no random
+intercepts was computed for comparison purposes AIC =
+`r format(round(AIC(intercept.model), digits = 2), nsmall = 2)`. The
+model with the random intercept by participants was an improvement over
+this model, AIC =
+`r format(round(AIC(subject.model), digits = 2), nsmall = 2)`. The
+addition of a target random intercept improved model fit over the
+participant intercept-only model, AIC =
+`r format(round(AIC(item.model), digits = 2), nsmall = 2)`. Data
+collection lab was then added to the model as a random intercept, also
+showing model improvement, AIC =
+`r format(round(AIC(lab.model), digits = 2), nsmall = 2)`, and the
+random intercept of language was added last, AIC =
+`r format(round(AIC(language.model), digits = 2), nsmall = 2)` which did
+not show model improvement at least 2 points change. Last, the fixed
+effect of match advantage was added with approximately the same fit as
+the three random-intercept model, AIC =
+`r format(round(AIC(fixed.model), digits = 2), nsmall = 2)`. This model
+did not reveal a significant effect of match advantage: *b* =
+`r format(round(SP_lme01_out[2, 1], digits = 2), nsmall = 2)`, *SE* =
+`r format(round(SP_lme01_out[2,2], digits = 2), nsmall = 2)`,
+*t*(`r format(round(SP_lme01_out[2,3], digits = 2), nsmall = 2)`) =
+`r format(round(SP_lme01_out[2,4], digits = 2), nsmall = 2)`, *p* =
+`r apa_p(SP_lme01_out[2, 5])`.
+
+```{r SP-ger-lme, message = FALSE, warning = FALSE, include = FALSE}
+# add random intercept of lab
+german.lab.model <- lmer(response_time ~ 1 + (1|Subject) + (1|Target) + (1|PSA_ID), 
+   control = lmerControl(optimizer = "bobyqa",
+      optCtrl = list(maxfun = 1e6)), 
+   data = subset(SP_V_correct, Language == "German"))
+german.fixed.three.model <- lmer(response_time ~ Match + (1|Subject) + (1|Target) + (1|PSA_ID) , 
+   control = lmerControl(optimizer = "bobyqa",
+      optCtrl = list(maxfun = 1e6)), 
+   data = subset(SP_V_correct, Language == "German"))
+german_output <- summary(german.fixed.three.model)$coefficients
+```
+
+We conducted an exploratory mixed-effects model on German data as this
+was the only language where the confidence interval did not overlap with
+a zero effect in the meta-analysis. An intercept-only model with random
+effects for participants, target, and lab was used as a comparison, AIC
+= `r format(round(AIC(german.lab.model), digits = 2), nsmall = 2)`. The
+addition of the fixed effect of match showed a small improvement over
+this random-intercept model, AIC =
+`r format(round(AIC(german.fixed.three.model), digits = 2), nsmall = 2)`.
+Whereas the AIC values indicated a better fit for the model including
+matching orientation as a predictor, the advantage provided by matching
+orientation was small: *b* =
+`r format(round(german_output[2, 1], digits = 2), nsmall = 2)`, *SE* =
+`r format(round(german_output[2,2], digits = 2), nsmall = 2)`,
+*t*(`r format(round(german_output[2,3], digits = 2), nsmall = 2)`) =
+`r format(round(german_output[2,4], digits = 2), nsmall = 2)`, *p* =
+`r apa_p(german_output[2, 5])`. All the details of the above fixed
+effects and random intercepts are summarized in Appendix D.
+
+## Hypothesis 2: Mental Rotation Scores
+
+```{r PP-null-lme, message = FALSE, warning = FALSE, include = FALSE}
+PP_correct$Identical <- factor(PP_correct$Identical, 
+                               levels = c("Y", "N"))
+PP.intercept.lme <- lm(response_time ~ 1,
+   data = PP_correct) 
+PP.subject.lme <- lmerTest::lmer(response_time ~ 1 +
+   (1 | Subject), # By-subject random intercept
+  data = PP_correct,
+   control = lmerControl(optimizer = "bobyqa",
+                         optCtrl = list(maxfun = 1e6)) # Increase maximum number of iterations to facilitate model convergence 
+   ) 
+PP.item.lme <- lmerTest::lmer(response_time ~ 1 +
+   (1 | Subject) + # By-subject random intercept
+   (1 | Picture1), # By-item random intercept
+  data = PP_correct,
+   control = lmerControl(optimizer = "bobyqa",
+                         optCtrl = list(maxfun = 1e6)) # Increase maximum number of iterations to facilitate model convergence 
+   ) 
+PP.lab.lme <- lmerTest::lmer(response_time ~ 1 +
+   (1 | Subject) + # By-subject random intercept
+   (1 | Picture1) + # By-item random intercept
+   (1 | PSA_ID), # By-lab random intercept
+   data = PP_correct,
+   control = lmerControl(optimizer = "bobyqa", 
+                         optCtrl = list(maxfun = 1e6)) # Increase maximum number of iterations to facilitate model convergence 
+   ) 
+PP.lang.lme <- lmerTest::lmer(response_time ~ 1 +
+   (1 | Subject) + # By-subject random intercept
+   (1 | Picture1) + # By-item random intercept
+   (1 | PSA_ID) + # By-lab random intercept
+   (1 | Language),
+   data = PP_correct,
+   control = lmerControl(optimizer = "bobyqa", 
+                         optCtrl = list(maxfun = 1e6)) # Increase maximum number of iterations to facilitate model convergence 
+   ) 
+PP.fixed.lme <- lmerTest::lmer(response_time ~ 1 +
+   (1 | Subject) + # By-subject random intercept
+   (1 | Picture1) + # By-item random intercept
+   (1 | PSA_ID) + # By-lab random intercept
+   (1 | Language) + 
+     Identical,
+   data = PP_correct,
+   control = lmerControl(optimizer = "bobyqa", 
+                         optCtrl = list(maxfun = 1e6)) # Increase maximum number of iterations to facilitate model convergence 
+   ) 
+PP_output <- summary(PP.fixed.lme)$coefficients
+lang_results <- data.frame(
+  Language = unique(PP_correct$Language), 
+  Coefficient = rep(NA, length(unique(PP_correct$Language))),
+  SE = rep(NA, length(unique(PP_correct$Language)))
+)
+for (language in unique(PP_correct$Language)) {
+  
+  temp <- lmerTest::lmer(response_time ~ 1 +
+   (1 | Subject) + # By-subject random intercept
+   (1 | Picture1) + # By-item random intercept
+     Identical,
+   data = PP_correct %>% filter(Language == language),
+   control = lmerControl(optimizer = "bobyqa", 
+                         optCtrl = list(maxfun = 1e6)) # Increase maximum number of iterations to facilitate model convergence 
+   ) 
+  
+  temp_table <- tidy(temp)
+  lang_results$Coefficient[lang_results$Language == language] <- temp_table$estimate[2]
+  lang_results$SE[lang_results$Language == language] <- temp_table$std.error[2]
+  
+}
+min(lang_results$Coefficient)
+max(lang_results$Coefficient)
+```
+
+Using the same steps as described for the sentence-picture verification
+mixed model, we first started with an intercept-only model with no
+random effects for comparison, AIC =
+`r format(round(AIC(PP.intercept.lme), digits = 2), nsmall = 2)`. The
+addition of random intercepts by subject, AIC =
+`r format(round(AIC(PP.subject.lme), digits = 2), nsmall = 2)`, by item,
+AIC = `r format(round(AIC(PP.item.lme), digits = 2), nsmall = 2)`, by
+lab, AIC = `r format(round(AIC(PP.lab.lme), digits = 2), nsmall = 2)`,
+and by language, AIC =
+`r format(round(AIC(PP.lang.lme), digits = 2), nsmall = 2)`, all
+subsequently improved model fit. Next, the match effect for object
+orientation was entered as the fixed effect for mental rotation score,
+AIC = `r format(round(AIC(PP.fixed.lme), digits = 2), nsmall = 2)`,
+which showed improvement over the random intercepts model. This model
+showed a significant effect of object orientation, *b* =
+`r format(round(PP_output[2, 1], digits = 2), nsmall = 2)`, *SE* =
+`r format(round(PP_output[2,2], digits = 2), nsmall = 2)`,
+*t*(`r format(round(PP_output[2,3], digits = 2), nsmall = 2)`) =
+`r format(round(PP_output[2,4], digits = 2), nsmall = 2)`, *p*
+`r apa_p(PP_output[2, 5])`, such that identical orientations were
+processed faster than rotated orientations. The point estimates of the
+orientation effect varied between 23.79--40.24, revealing a range of 14
+ms across languages. The coefficients of all mixed-effects models are
+reported in Appendix E, along with all estimates presented by language.
+
+## Hypothesis 2: Prediction of Match Advantage
+
+```{r prediction_data, message=FALSE, warning=FALSE, include=FALSE}
+## Dataset for prediction model
+model_data <- PP_correct %>% 
+  group_by(Language, Subject, Identical) %>%
+  summarise(subject_M = median(response_time)) %>% 
+  pivot_wider(names_from = Identical, values_from = subject_M) %>%
+  mutate(Imagery = (N - Y)) %>% 
+  full_join(
+    SP_V_correct %>% 
+      group_by(Language, Subject, Match) %>%
+      summarise(subject_M = median(response_time)) %>% 
+      pivot_wider(names_from = Match, values_from = c(subject_M)) %>%
+  mutate(Effect = (N - Y)), 
+    by = c("Language", "Subject")
+  ) %>% 
+  left_join(
+    bind_rows(SP_V_correct, PP_correct) %>% 
+      select(PSA_ID, Subject) %>% 
+      unique(), 
+    by = "Subject"
+  )  %>% select(PSA_ID, Effect, Language, Imagery) %>% 
+  na.omit()
+```
+
+```{r prediction_model, message=FALSE, warning=FALSE, include=FALSE}
+model_data$Language <- factor(model_data$Language, 
+                              levels = unique(model_data$Language)[c(3, 1:2, 4:17)])
+pred.intercept <- lm(Effect ~ 1, 
+                     data = model_data)
+pred.lab <- lmer(Effect ~ 1 + (1|PSA_ID), 
+                control = lmerControl(optimizer = "bobyqa",
+                           optCtrl = list(maxfun = 1e6)), 
+                               data = model_data)
+pred.interact <- lmer(Effect ~ Language*Imagery + (1|PSA_ID), 
+                control = lmerControl(optimizer = "bobyqa",
+                           optCtrl = list(maxfun = 1e6)), 
+                               data = model_data)
+pred_output <- summary(pred.interact)$coefficients
+```
+
+The last analysis included a mixed effects regression model using the
+interaction of language and mental rotation scores to predict match
+advantage in the sentence-picture task. First, an intercept-only model
+was calculated for comparison, AIC =
+`r format(round(AIC(pred.intercept), digits = 2), nsmall = 2)`, which
+was improved slightly by adding a random intercept by data collection
+lab, AIC = `r format(round(AIC(pred.lab), digits = 2), nsmall = 2)`. The
+addition of the fixed effects interaction of language and mental
+rotation score improved the overall model, AIC =
+`r format(round(AIC(pred.interact), digits = 2), nsmall = 2)`. English
+was used as the comparison group for all language comparisons. Neither
+the mental rotation score nor the interaction of mental rotation score
+and language were significant, and these results are detailed in
+Appendix E.
+
+# Discussion
+
+This study examined the global mental simulation effect of object
+orientation in a culturally diverse sample and provided an exploratory
+first glance at this effect in specific languages. The findings of our
+study did not support the existence of the object orientation effect as
+an outcome of general cognitive function. Furthermore, our data failed
+to replicate the effects in English and Chinese, languages in which the
+effect has been reported previously [@chenDoesObjectSize2020;
+@stanfield_effect_2001; @zwaanRevisitingMentalSimulation2012]. The only
+language in which we found an indication of the orientation effect in
+the predicted direction was German, but the estimate of this potential
+effect was small. Although tangential to our topic, an effect of mental
+rotation was observed, such that identical orientations were processed
+faster than rotated orientations. However, the mental rotation score did
+not predict the object orientation effects nor interact with language.
+The failed prediction of our second hypothesis revealed that the
+division between perceptual and language processing under mental
+simulation of object orientation requires further examination.
+Researchers have shown that sentences can trigger more perceptual
+features than the target dimension of the sentence (shapes, colors,
+orientations) [@kaschakEmbodimentLabTheory2021], and that overlapping
+features among companion objects usually lack balanced control in
+experimental designs [@bocanegra2022]. With the results and knowledge
+gained from running this study, we summarize the lessons and limitations
+of the methodology and analysis, and discuss theoretical issues related
+to the implied object orientations as an effective probe to investigate
+the mental simulation process.
+
+## Methodological Considerations
+
+By examining the failed replications of the object orientation effect in
+the English-language labs (see Figure 3), researchers can further
+identify the possible factors that may have contributed to the
+discrepancies between the results of this project and the original
+studies. Although our project had a larger sample of English-speaking
+participants compared to the original studies [i.e.,
+@stanfield_effect_2001; @zwaanRevisitingMentalSimulation2012], our
+English-speaking participants came from multiple countries where the
+participants' lexical knowledge is not completely consistent with
+American English. Although we prepared an alternative version of the
+stimuli for British English, these two versions of English stimuli did
+not cover all English language backgrounds, such as participants from
+Malaysia and Africa. Despite the overall non-significant effect in all
+English-language data, the meta-analysis indicated three significant
+positive team-based effects (USA_173, USA_030 and USA_032, see Figure 3)
+but also three significant negative effects (USA_33, USA_20, and
+GBR_005, see Figure 3). Future cross-linguistic studies should attempt
+to balance cultural backgrounds across languages to allow reliable
+cross-linguistic comparisons.
+
+Regarding the failed replication of Chinese orientation effects, the
+past study used simpler sentence content compared to this project.
+@chenDoesObjectSize2020 used probe sentences in which the target objects
+were the subject of sentences (e.g., *The **nail** was hammered into the
+wall*; bold added to mark the subject noun). The Chinese probe sentences
+in this project were translated from the English sentences used in
+@stanfield_effect_2001, in which the target objects are the object of
+sentences (e.g., *The carpenter hammered the **nail** into the wall*;
+bold added to mark object noun). It is possible that the object
+orientation effect may be present or stronger when the target objects
+are the subject of the sentence, rather than the direct object, and
+future studies could explore this distinction.
+
+Lastly, past studies that employed a secondary task among the
+experimental trials [@chenDoesObjectSize2020;
+@kaschakEmbodimentLabTheory2021; @stanfield_effect_2001] showed a
+positive mental simulation effect of object orientation. In our study,
+the memory check did not increase the likelihood to detect the mental
+simulation effects. In addition, we did not find that mental imagery
+predicted the mental simulation effect of object orientation, which
+implies that this strategy to ensure linguistic processing had limited
+influence in our study.
+
+## Analysis Considerations
+
+The orientation effects were analyzed using a meta-analytic approach and
+mixed-effects models. Neither approach revealed an overall effect of
+object orientation. In the exploratory language-by-language analysis, an
+indication of the orientation effect was found in the German language
+data in the meta-analysis. However, the estimate of this effect was
+small in the mixed-model analysis, and considered in the general context
+including all the other results, the present exploratory result for
+German could stem from measurement error or from family-wise error.
+
+When a topic area yields inconsistent or small effects, some researchers
+have questioned the utility of further research. However, in our view, research on embodied cognition should
+continue with the aim of determining the factors behind the variability
+of the effects. One of these factors could be the nature of the
+variables used - for instance, categorical versus continuous. The object
+orientation design is a factorial congruency paradigm, based on
+congruent (matching) and incongruent (mismatching) conditions. Another
+paradigm of similar characteristics, namely the action sentence
+compatibility effect, similarly failed to replicate in a large-scale
+study [@morey2022]. Whereas factorial paradigms require the use of
+categorical variables, other studies have operationalized sensorimotor
+information using continuous variables, and observed significant effects
+[@bernabeu2022; @lynott2020; @petilli2021]. Since continuous variables
+contain more information, they may afford more statistical power. In addition to categorical versus continuous predictors, a
+categorical design may underestimate the complexity of perceptual
+features constituted the target objects. Object shapes and colors are
+disjunctive from the other perceptual properties, whereas orientations
+of objects are usually conjunctive with shape, texture, and other
+explicit features. In summary, addressing the above issues may permit
+the analytic sensitivity needed to observe the presence and causes of
+object orientation effects.
+
+## Theoretical Considerations
+
+Scholars interested in mental simulation have investigated whether the
+human mind processes linguistic content as abstract symbols or as
+grounded mental representations [@barsalou_grounded_2008;
+@barsalouPerceptualSymbolSystems1999; @zwaanReplicationsShouldBe2014].
+Some of the tasks used to test these theories-such as the
+sentence-verification task-rely on priming-based logic, whereby a
+designed sentence generates representations along some dimension (such
+as orientation) that facilitates or interferes with the processing of
+the subsequent stimulus [@roelke2018]. Furthermore, embodied cognition
+theories suggest that the reading of the sentence will activate
+perceptual experience, thus facilitating a matching object picture and
+causing interference for a mismatching picture
+[@kaschakEmbodimentLabTheory2021;
+@mcnamaraSemanticPrimingPerspectives2005]. To scrutinize these effects,
+future studies could augment the sentence-picture verification task to
+compare the degree of priming based on object orientation with the
+priming based on other semantic information. The present study
+constitutes the first large-scale, cross-linguistic approach to the
+object orientation effect. Cross-linguistic studies are rare in the
+present topic, and generally in the topic of conceptual/semantic
+processing. In future studies, the basis for cross-linguistic
+comparisons in conceptual processing should be expanded, for instance,
+by studying the lexicosemantic features of the stimuli used, how those
+differ across languages, and how those differences may influence
+psycholinguistic processing. For the development of this founding work,
+the field of linguistic relativity may be useful as a model [e.g.,
+@athanasopoulos2023].
+
+In addition, further research should compare the size of mental
+simulation effects with the size of effects that are associated with the
+symbolic account of conceptual processing. The symbolic account posits
+that conceptual processing (i.e., the comprehension of the meaning of
+words) depends on the abstract symbols (e.g., propositions and
+production rules). So far, some of these comparisons have supported both
+accounts. However, in some studies, the effects of the symbolic account
+have been larger than those of the embodied account [@bernabeu2022;
+@louwerse2015], whereas the reverse has been true in other studies
+[@fernandino2022; @tong2022].
+
+## Limitations
+
+This study reflects the challenges to assess the mental simulation of
+object orientation across languages, especially when dealing with
+effects that require large sample sizes. Our data collection deviated from
+the pre-registered plan because of the COVID-19 pandemic. Due to the
+lack of participant monitoring online, and an inspection of the data, we
+post-hoc used filtering on outliers in terms of participants' response
+times for both too fast (\< 160 ms) and too slow responses (2 MAD beyond
+the median for each participant individually). After these exclusions, a
+mixed-effects model confirmed no difference of response times between
+in-person and online data. Future studies could evaluate how the task
+environments alter the magnitude of the orientation effect.
+
+## Conclusion
+
+Based on the results of this project, we did not find evidence for a
+general object orientation effect in a culturally and linguistically
+diverse sample. Reliable measurement of orientation effects may require
+a comprehensive sample sizes justification carefully focusing on the
+interaction of language and cultural backgrounds. Theories of mental
+simulations should be refined to suggest which perceptual features and
+linguistic properties contribute to human mental simulations. Our
+findings on the orientation effects question the theoretical importance
+of mental simulation in linguistic processing, but they provide
+directions for further improvements on methodology, analysis, and
+theories.
+
+```{r picture, include = FALSE, echo = FALSE}
+#overall
+nrow(SP_V)
+sum(merge_subjects$SP_N_trials, na.rm = T)
+length(unique(SP_V$Subject))
+sum(merge_subjects$SP_N, na.rm = T)
+nrow(PP)
+sum(merge_subjects$PP_N_trials, na.rm = T)
+length(unique(PP$Subject))
+sum(merge_subjects$PP_N, na.rm = T)
+# non native
+nrow(SP_V_non)
+length(unique(SP_V_non$Subject))
+nrow(SP_V_non) - nrow(SP_V)
+length(unique(SP_V_non$Subject)) - length(unique(SP_V$Subject))
+nrow(PP_non)
+length(unique(PP_non$Subject))
+nrow(PP_non) - nrow(PP)
+length(unique(PP_non$Subject)) - length(unique(PP$Subject))
+# accuracy
+nrow(SP_V_acc)
+length(unique(SP_V_acc$Subject))
+nrow(SP_V_non) - nrow(SP_V_acc)
+length(unique(SP_V_non$Subject)) - length(unique(SP_V_acc$Subject))
+nrow(PP_acc)
+length(unique(PP_acc$Subject))
+nrow(PP_non) - nrow(PP_acc)
+length(unique(PP_non$Subject)) - length(unique(PP_acc$Subject))
+# outliers
+nrow(SP_V_noout)
+length(unique(SP_V_noout$Subject))
+nrow(SP_V_noout) - nrow(SP_V_acc)
+length(unique(SP_V_noout$Subject)) - length(unique(SP_V_acc$Subject))
+nrow(PP_noout)
+length(unique(PP_noout$Subject))
+nrow(PP_noout) - nrow(PP_acc)
+length(unique(PP_noout$Subject)) - length(unique(PP_acc$Subject))
+nrow(model_data)
+nrow(model_data) - length(unique(SP_V_noout$Subject))
+nrow(model_data) - length(unique(PP_noout$Subject))
+```
+
+## Data Avaliability
+
+The project dataset and analysis scripts are available at
+<https://osf.io/rgmky/?view_only=5210c1ec522049db8535f40bc9a07113>.
+Materials are available at
+<https://osf.io/74ujf/?view_only=7094d5af798047b3a2ec01ea4930e3de>.
+
+## Ethics Declaration
+
+Authors who collected data on site and online had the ethical
+approval/agreement from their local institutions. The latest status of
+ethical approval for all the participating authors is available at the
+public OSF folder
+(<https://osf.io/e428p/?view_only=f9f24b72e54141dfb3e67586cfb2d7a0> "IRB
+approvals" in Files).
+
+The authors declare no conflicts of interest relevant to the content of
+the manuscript.
+
+\newpage
+
+# References
+
+```{r create_r-references, warning = FALSE, cache = FALSE}
+r_refs(file = "includes/bib/psa002_r.bib", append = TRUE)
+```
+
+::: {#refs}
+:::
+
+\newpage
+
+# (APPENDIX) Appendix {.unnumbered}
+
+```{r child = "Stage2_app01.Rmd"}
+```
+
+```{r child = "Stage2_app02.Rmd"}
+```
+
+```{r child = "Stage2_app03.Rmd"}
+```
+
+```{r child = "Stage2_app04.Rmd"}
+```
+
+```{r child = "Stage2_app05.Rmd"}
+```
+
+```{r child = "Stage2_app06.Rmd"}
+```

@@ -1,0 +1,136 @@
+---
+appendix: Stage2_app06.Rmd
+bibliography: includes/bib/psa002.bib
+csl: includes/bib/apa.csl
+output: 
+  pdf_document:
+    keep_tex: true
+---
+
+# Additional References
+
+Additional references are provided below.
+
+\phantomsection\label{refs}
+\begin{CSLReferences}{1}{0}
+\bibitem[\citeproctext]{ref-anwyl-irvineGorillaOurMidst2020}
+Anwyl-Irvine, A. L., Massonnié, J., Flitton, A., Kirkham, N., \&
+Evershed, J. K. (2020). Gorilla in our midst: {An} online behavioral
+experiment builder. \emph{Behavior Research Methods}, \emph{52}(1),
+388--407. \url{https://doi.org/10.3758/s13428-019-01237-x}
+
+\bibitem[\citeproctext]{ref-armstrongWhenUseBonferroni2014}
+Armstrong, R. A. (2014). When to use the {Bonferroni} correction.
+\emph{Ophthalmic and Physiological Optics}, \emph{34}(5), 502--508.
+\url{https://doi.org/10.1111/opo.12131}
+
+\bibitem[\citeproctext]{ref-bridgesTimingMegastudyComparing2020a}
+Bridges, D., Pitiot, A., MacAskill, M. R., \& Peirce, J. W. (2020). The
+timing mega-study: Comparing a range of experiment generators, both
+lab-based and online. \emph{PeerJ}, \emph{8}, e9414.
+\url{https://doi.org/10.7717/peerj.9414}
+
+\bibitem[\citeproctext]{ref-brysbaert2020}
+Brysbaert, M. (2020). Power considerations in bilingualism research:
+Time to step up our game. \emph{Bilingualism: Language and Cognition},
+\emph{24}(5), 813--818. \url{https://doi.org/10.1017/s1366728920000437}
+
+\bibitem[\citeproctext]{ref-burnham1998}
+Burnham, K. P., \& Anderson, D. R. (1998). \emph{Practical use of the
+information-theoretic approach} (pp. 75--117). Springer New York.
+\url{https://doi.org/10.1007/978-1-4757-2917-7_3}
+
+\bibitem[\citeproctext]{ref-chen2018}
+Chen, S.-C., Buchanan, E., Kekecs, Z., Miller, J., Szabelska, A., Aczel,
+B., Bernabeu, P., Forscher, P., Szuts, A., Vally, Z., Al-Hoorie, A.,
+Helmy, M., Silva, C. de, Silva, L. da, Moraes, Y. de, Hsu, R., Mafra,
+A., Valentova, J., Varella, M., \ldots{} Chartier, C. (2018).
+\emph{Investigating object orientation effects across 14 languages}.
+\url{https://doi.org/10.31234/osf.io/t2pjv}
+
+\bibitem[\citeproctext]{ref-cohen1983}
+Cohen, J. (1983). The Cost of Dichotomization. \emph{Applied
+Psychological Measurement}, \emph{7}(3), 249--253.
+\url{https://doi.org/10.1177/014662168300700301}
+
+\bibitem[\citeproctext]{ref-deleeuwPsychophysicsWebBrowser2016}
+de Leeuw, J. R., \& Motz, B. A. (2016). Psychophysics in a {Web}
+browser? {Comparing} response times collected with {JavaScript} and
+{Psychophysics Toolbox} in a visual search task. \emph{Behavior Research
+Methods}, \emph{48}(1), 1--12.
+\url{https://doi.org/10.3758/s13428-015-0567-2}
+
+\bibitem[\citeproctext]{ref-fritz2012}
+Fritz, C. O., Morris, P. E., \& Richler, J. J. (2012). Effect size
+estimates: Current use, calculations, and interpretation. \emph{Journal
+of Experimental Psychology: General}, \emph{141}(1), 2--18.
+\url{https://doi.org/10.1037/a0024338}
+
+\bibitem[\citeproctext]{ref-gelman_multilevel_2006}
+Gelman, A. (2006). Multilevel (hierarchical) modeling: {What} it can and
+cannot do. \emph{Technometrics}, \emph{48}(3), 432--435.
+\url{https://doi.org/10.1198/004017005000000661}
+
+\bibitem[\citeproctext]{ref-kvalsethHickLawEquivalent2021}
+Kvålseth, T. O. (2021). Hick's law equivalent for reaction time to
+individual stimuli. \emph{British Journal of Mathematical and
+Statistical Psychology}, \emph{74}(S1), 275--293.
+\url{https://doi.org/10.1111/bmsp.12232}
+
+\bibitem[\citeproctext]{ref-langeJustAnotherTool2015}
+Lange, K., Kühn, S., \& Filevich, E. (2015). "{Just Another Tool} for
+{Online Studies}'' ({JATOS}): {An} easy solution for setup and
+management of web servers supporting online studies. \emph{PLOS ONE},
+\emph{10}(6), e0130834.
+\url{https://doi.org/10.1371/journal.pone.0130834}
+
+\bibitem[\citeproctext]{ref-lokenMeasurementErrorReplication2017}
+Loken, E., \& Gelman, A. (2017). Measurement error and the replication
+crisis. \emph{Science}, \emph{355}(6325), 584--585.
+\url{https://doi.org/10.1126/science.aal3618}
+
+\bibitem[\citeproctext]{ref-lukeEvaluatingSignificanceLinear2017}
+Luke, S. G. (2017). Evaluating significance in linear mixed-effects
+models in {R}. \emph{Behavior Research Methods}, \emph{49}(4),
+1494--1502. \url{https://doi.org/10.3758/s13428-016-0809-y}
+
+\bibitem[\citeproctext]{ref-mathot_conducting_2022}
+Mathôt, S., \& March, J. (2022). Conducting {linguistic} {experiments}
+{online} {with} {OpenSesame} and {OSWeb}. \emph{Language Learning},
+\emph{72}(4), 1017--1048. \url{https://doi.org/10.1111/lang.12509}
+
+\bibitem[\citeproctext]{ref-matuschek2017}
+Matuschek, H., Kliegl, R., Vasishth, S., Baayen, H., \& Bates, D.
+(2017). Balancing Type I error and power in linear mixed models.
+\emph{Journal of Memory and Language}, \emph{94}, 305--315.
+\url{https://doi.org/10.1016/j.jml.2017.01.001}
+
+\bibitem[\citeproctext]{ref-phills_preregistration_2022}
+Phills, C., Kekecs, Z., \& Chartier, C. (2022).
+\emph{Pre-{Registration}}. \url{https://doi.org/10.17605/OSF.IO/4HMGS}
+
+\bibitem[\citeproctext]{ref-proctorHickLawChoice2018}
+Proctor, R. W., \& Schneider, D. W. (2018). Hick's law for choice
+reaction time: {A} review. \emph{Quarterly Journal of Experimental
+Psychology}, \emph{71}(6), 1281--1299.
+\url{https://doi.org/10.1080/17470218.2017.1322622}
+
+\bibitem[\citeproctext]{ref-sala2017}
+Sala, G., \& Gobet, F. (2017). Does Far Transfer Exist? Negative
+Evidence From Chess, Music, and Working Memory Training. \emph{Current
+Directions in Psychological Science}, \emph{26}(6), 515--520.
+\url{https://doi.org/10.1177/0963721417712760}
+
+\bibitem[\citeproctext]{ref-schonbrodtSequentialHypothesisTesting2017}
+Schönbrodt, F. D., Wagenmakers, E.-J., Zehetleitner, M., \& Perugini, M.
+(2017). Sequential hypothesis testing with {Bayes} factors:
+{Efficiently} testing mean differences. \emph{Psychological Methods},
+\emph{22}(2), 322--339. \url{https://doi.org/10.1037/met0000061}
+
+\bibitem[\citeproctext]{ref-vadilloUnderpoweredSamplesFalse2016}
+Vadillo, M. A., Konstantinidis, E., \& Shanks, D. R. (2016).
+Underpowered samples, false negatives, and unconscious learning.
+\emph{Psychonomic Bulletin \& Review}, \emph{23}(1), 87--102.
+\url{https://doi.org/10.3758/s13423-015-0892-6}
+
+\end{CSLReferences}

@@ -62,28 +62,38 @@
   \let\oldsubparagraph\subparagraph
   \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
 \fi
+% definitions for citeproc citations
+\NewDocumentCommand\citeproctext{}{}
+\NewDocumentCommand\citeproc{mm}{%
+  \begingroup\def\citeproctext{#2}\cite{#1}\endgroup}
+\makeatletter
+ % allow citations to break across lines
+ \let\@cite@ofmt\@firstofone
+ % avoid brackets around text for \cite:
+ \def\@biblabel#1{}
+ \def\@cite#1#2{{#1\if@tempswa , #2\fi}}
+\makeatother
 \newlength{\cslhangindent}
 \setlength{\cslhangindent}{1.5em}
 \newlength{\csllabelwidth}
 \setlength{\csllabelwidth}{3em}
-\newlength{\cslentryspacingunit} % times entry-spacing
-\setlength{\cslentryspacingunit}{\parskip}
-\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
- {% don't indent paragraphs
-  \setlength{\parindent}{0pt}
+\newenvironment{CSLReferences}[2] % #1 hanging-indent, #2 entry-spacing
+ {\begin{list}{}{%
+  \setlength{\itemindent}{0pt}
+  \setlength{\leftmargin}{0pt}
+  \setlength{\parsep}{0pt}
   % turn on hanging indent if param 1 is 1
   \ifodd #1
-  \let\oldpar\par
-  \def\par{\hangindent=\cslhangindent\oldpar}
+   \setlength{\leftmargin}{\cslhangindent}
+   \setlength{\itemindent}{-1\cslhangindent}
   \fi
   % set entry spacing
-  \setlength{\parskip}{#2\cslentryspacingunit}
- }%
- {}
+  \setlength{\itemsep}{#2\baselineskip}}}
+ {\end{list}}
 \usepackage{calc}
-\newcommand{\CSLBlock}[1]{#1\hfill\break}
-\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
-\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
+\newcommand{\CSLBlock}[1]{\hfill\break\parbox[t]{\linewidth}{\strut\ignorespaces#1\strut}}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{\strut#1\strut}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{\strut#1\strut}}
 \newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
 \ifLuaTeX
 \usepackage[bidi=basic]{babel}
@@ -163,7 +173,7 @@
 \ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
-\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\usepackage{bookmark}
 \IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
 \urlstyle{same}
 \hypersetup{
@@ -269,8 +279,7 @@ understand the causes for the discrepancies among object properties and
 languages, it is imperative to consider the cross-linguistic and
 experimental factors of the sentence-picture verification task.
 
-\hypertarget{cross-linguistic-methodological-and-cognitive-factors}{%
-\subsection{Cross-linguistic, Methodological, and Cognitive Factors}\label{cross-linguistic-methodological-and-cognitive-factors}}
+\subsection{Cross-linguistic, Methodological, and Cognitive Factors}\label{cross-linguistic-methodological-and-cognitive-factors}
 
 Several factors might contribute to cross-linguistic differences in the
 match advantage of object orientation. First, languages differ in how
@@ -347,7 +356,7 @@ effectiveness of mental rotation increased with the size of the depicted
 object. Chen et al. (2020) examined the implication of this finding
 for the match advantage of object orientation (Stanfield \& Zwaan, 2001),
 and implemented a picture-picture verification task using the mental
-rotation paradigm (D. Cohen \& Kubovy, 1993). In each trial, two
+rotation paradigm (Cohen \& Kubovy, 1993). In each trial, two
 pictures appeared on opposite sides of the screen. Participants had to
 verify whether the pictures represented identical or different objects.
 
@@ -374,8 +383,7 @@ for some languages. Therefore, we explored the association of spatial
 cognition through mental rotation scores and the effect of object
 orientation mental simulation in the studied languages.
 
-\hypertarget{purposes-of-this-study}{%
-\subsection{Purposes of this study}\label{purposes-of-this-study}}
+\subsection{Purposes of this study}\label{purposes-of-this-study}
 
 To scrutinize the discrepancies in mental simulation effects across
 languages and cognitive factors, we examined the reproducibility of the
@@ -390,11 +398,9 @@ object orientation can be obtained within different languages, and (2)
 How are differences in the mental rotation index associated with the
 match advantage across languages?
 
-\hypertarget{method}{%
-\section{Method}\label{method}}
+\section{Method}\label{method}
 
-\hypertarget{hypotheses-and-design}{%
-\subsection{Hypotheses and Design}\label{hypotheses-and-design}}
+\subsection{Hypotheses and Design}\label{hypotheses-and-design}
 
 The study design for the sentence-picture and picture-picture
 verification tasks was mixed, using between-participant (language) and
@@ -431,11 +437,10 @@ We pre-registered the following hypotheses:
   cognitive processing, mental rotation may predict mental simulation.
 \end{enumerate}
 
-\hypertarget{participants}{%
-\subsection{Participants}\label{participants}}
+\subsection{Participants}\label{participants}
 
 We performed a pre-registered power analysis, which sought to achieve a
-power of 80\% (Chen et al., 2018). Based on this analysis, laboratories followed
+power of 80\%. Based on this analysis, laboratories followed
 a sampling plan where they collected a pre-registered minimum sample
 size, and then determined whether or not to continue data collection via
 Bayesian sequential analysis (stopping data collection if \(BF_{10}\) = 10
@@ -473,9 +478,9 @@ unique participants completed the present study with
 completing the in-person version and
 1,405
 completing the online version\footnote{Data for this study was collected together with another unrelated
-  study (Phills et al., 2022) during the same data collection
+  study during the same data collection
   session, with the two studies using different data collection
-  platforms. The demographic data was collected within the platform of
+  platforms. See appendix for citation. The demographic data was collected within the platform of
   the other study during the in-person sessions. Some participants
   only completed the Phills et al.~study and dropped out without
   completing the present study, and there were also some data entry
@@ -499,8 +504,9 @@ lab codes: TUR\_007, TWN\_002), two sets of data were excluded from all
 analyses due to participants being non-native speakers. Figure
 \ref{fig:sample-fig} provides a flow chart for participant exclusion
 and inclusion for analyses. All participating laboratories had either
-ethical approval or institutional evaluation before data collection. All participants gave informed consent to participate in the study. All
-data and analysis scripts are available on the source files
+ethical approval or institutional evaluation before data collection. All
+participants gave informed consent to participate in the study. All data
+and analysis scripts are available on the source files
 (\url{https://codeocean.com/capsule/3994879}). Appendix B summarizes the
 average characteristics by language and laboratory.
 
@@ -554,8 +560,7 @@ Turkish & 6456 & 6432 & 269 & 268 & 274 & 36 & 14 & 21.38 & 4.59\\
 \includegraphics[width=5.71in]{includes/fig/psa002_flow.drawio} \caption{Sample size and exclusions. N = number of unique participants, T = number of trials. The final combined sample was summarized to a median score for each match/mismatch condition, and therefore, includes one summary score per person.}\label{fig:sample-fig}
 \end{figure}
 
-\hypertarget{materials}{%
-\subsection{Materials}\label{materials}}
+\subsection{Materials}\label{materials}
 
 \textbf{Sentences.} 24 critical sentence pairs (48 total sentences) were
 included in this study following Stanfield and Zwaan (2001). Each pair
@@ -582,11 +587,12 @@ with a horizontally-oriented book, while \emph{The librarian put the book
 back on the shelf} was matched with a vertically-oriented book. For
 counterbalancing, the mismatch between picture orientation and sentence
 was created, and the book would be shown in the respective opposite
-orientation (see orientation pairs at \url{https://osf.io/utqxb/?view_only=7094d5af798047b3a2ec01ea4930e3de}). Another
-48 pictures were included for the fillers which were unrelated to the
-corresponding sentence. Therefore, the answer to critical pairs was
-always ``yes'', while the filler sentence-picture combinations answer was
-always ``no''.
+orientation (see orientation pairs at
+\url{https://osf.io/utqxb/?view_only=7094d5af798047b3a2ec01ea4930e3de}).
+Another 48 pictures were included for the fillers which were unrelated
+to the corresponding sentence. Therefore, the answer to critical pairs
+was always ``yes'', while the filler sentence-picture combinations answer
+was always ``no''.
 
 \textbf{Picture-Picture Trials.} The picture-picture verification task used
 the same object pictures as the above task. The 24 critical picture
@@ -664,8 +670,7 @@ Filler & Picture & Picture & No & 24\\
 
 \end{table}
 
-\hypertarget{procedure}{%
-\subsection{Procedure}\label{procedure}}
+\subsection{Procedure}\label{procedure}
 
 \textbf{Sentence-Picture Task.} The sentence-picture verification task was
 always administered first. This task began with six practice trials.
@@ -690,7 +695,8 @@ four possible combinations (sentence orientation 2 x object orientation
 2). For the filler items, sentences and pictures were randomly assigned
 in two separate patterns, and these were included with the critical
 pairs. Stimuli lists were created in Excel, and this information can be
-found at \url{https://osf.io/utqxb/?view_only=7094d5af798047b3a2ec01ea4930e3de}.
+found at
+\url{https://osf.io/utqxb/?view_only=7094d5af798047b3a2ec01ea4930e3de}.
 
 \textbf{Translation of Sentences.} The translation of probe sentences
 followed our pre-registered plan. Every non-English language coordinator
@@ -728,24 +734,23 @@ possible combinations of critical orientations could be shown with the
 picture (same, different) by orientation (same, different). Each
 participant only saw one of the critical combinations, and filler items
 were randomly paired in two combinations to match. The stimuli lists can
-be found at \url{https://osf.io/utqxb/?view_only=7094d5af798047b3a2ec01ea4930e3de}.
+be found at
+\url{https://osf.io/utqxb/?view_only=7094d5af798047b3a2ec01ea4930e3de}.
 
 \textbf{Software Implementation.} The study was executed using OpenSesame
 software for millisecond timing
 (Mathôt et al., 2012). After data collection moved
 online, to minimize the differences between on-site and web-based
 studies, we converted the original Python code to Javascript and
-collected the data using OpenSesame through a JATOS server
-(Lange et al., 2015; Mathôt \& March, 2022). We proceeded with
+collected the data using OpenSesame through a JATOS server. We proceeded with
 the online study from February to June 2021 after the changes in the
 procedure were approved by the journal editor and reviewers. Following
 the literature, we did not anticipate any theoretically important
-differences between the two data collection methods (see Anwyl-Irvine et al., 2020; Bridges et al., 2020; de Leeuw \& Motz, 2016). The instructions and experimental
+differences between the two data collection methods (see references in appendix). The instructions and experimental
 scripts are available at the public OSF folder (\url{https://osf.io/e428p/}
 ``Materials'' in Files).
 
-\hypertarget{analysis-plan}{%
-\subsection{Analysis Plan}\label{analysis-plan}}
+\subsection{Analysis Plan}\label{analysis-plan}
 
 To test Hypothesis 1, our first planned analysis\footnote{See the analysis plan in the pre-registered plan, pp.~19 - 20,
   \url{https://psyarxiv.com/t2pjv/}. This plan was changed to a
@@ -758,7 +763,7 @@ laboratory. The following formula was used:
 
 \[d = \frac{Mdn_{Mismatch} - Mdn_{Match}}{\sqrt{MAD_{Mismatch}^2 + MAD_{Match}^2-2\times r\times MAD_{Mismatch} \times MAD_{Match}}} \times \sqrt{2 \times (1-r)}\]
 
-where \(d\) is Cohen's \(d\) (Fritz et al., 2012), \(Mdn\) is Median, \(MAD\) is median
+where \(d\) is Cohen's \(d\), \(Mdn\) is Median, \(MAD\) is median
 absolute deviation, and \(r\) is correlation between match and mismatch
 condition. Meta-analytic effect sizes were computed for those languages
 that had data from more than one team.
@@ -780,9 +785,9 @@ was deemed exploratory only given our change in sampling plan.
 According to the pre-registration, we planned to test Hypothesis 2 by
 first evaluating the equality of mental rotation scores across languages
 using an ANOVA. However, this plan was updated to use mixed models
-instead due to the nested structure of the data (Gelman, 2006). The same
-analysis plan was used for model building and selection as described
-above for the sentence-picture verification task.
+instead due to the nested structure of the data. The same analysis plan was used for model
+building and selection as described above for the sentence-picture
+verification task.
 
 To further assess Hypothesis 2, the last planned analysis was to use
 mental rotation scores for the prediction of mental stimulation with an
@@ -797,23 +802,23 @@ their interaction as fixed effect predictors.
 inclusion of both random and fixed effects in models was assessed using
 model comparison based on the Akaike information criterion (AIC). While
 this method is less conservative than alternatives such as the
-likelihood ratio test (Matuschek et al., 2017), the AIC was deemed appropriate
+likelihood ratio test, the AIC was deemed appropriate
 due to the modest effect sizes that tend to be produced by mental
 simulation effects, and the limited sample sizes in the present study
 (albeit larger samples than those of most previous studies). Models with
 lower AIC were preferred over models with higher AIC, and in cases where
-the difference in AIC did not reach 2 (Burnham \& Anderson, 1998), the model with
+the difference in AIC did not reach 2, the model with
 fewer parameters was preferred.
 
 \emph{p}-values for each effect were calculated using the Satterthwaite
 approximation for degrees of freedom for individual predictor
-coefficients (Luke, 2017). \emph{p}-values were
+coefficients. \emph{p}-values were
 interpreted using the pre-registered \(\alpha\) level of .05.
 
 \textbf{Intra-lab analysis during data collection.}
 
 Before data collection, each lab decided whether they wanted to apply a
-sequential analysis (Schönbrodt et al., 2017) or
+sequential analysis or
 whether they wanted to settle for a fixed sample size. The
 pre-registered protocol for labs applying sequential analysis
 established that they could stop data collection upon reaching the
@@ -829,11 +834,9 @@ policies. Lab-based records were reported on a public website as each
 laboratory completed data collection (details are available in Appendix
 C).
 
-\hypertarget{results}{%
-\section{Results}\label{results}}
+\section{Results}\label{results}
 
-\hypertarget{data-screening}{%
-\subsection{Data Screening}\label{data-screening}}
+\subsection{Data Screening}\label{data-screening}
 
 As shown in Figure \ref{fig:sample-fig}, participants' data were
 deleted listwise from the sentence-picture and picture-picture tasks if
@@ -845,7 +848,7 @@ response times). After examining the data from both online and in-person
 data collection, it became clear that both a minimum response latency
 and maximum response latency should be employed, as improbable times
 existed at both ends of the distribution. The minimum response time was
-set to 160 ms based on Hick's Law (Kvålseth, 2021; Proctor \& Schneider, 2018). The maximum response latency was calculated
+set to 160 ms based on Hick's Law. The maximum response latency was calculated
 as two times the mean absolute deviation plus the median calculated
 separately for each participant. Exclusions were performed at the trial
 level for these outlier response times.
@@ -924,8 +927,7 @@ Turkish & 95.38 & 654.50 (146.04) & 637.00 (126.02) & 17.50\\
 
 \end{table}
 
-\hypertarget{hypothesis-1-meta-analysis-of-the-orientation-effect}{%
-\subsection{Hypothesis 1: Meta-Analysis of the Orientation Effect}\label{hypothesis-1-meta-analysis-of-the-orientation-effect}}
+\subsection{Hypothesis 1: Meta-Analysis of the Orientation Effect}\label{hypothesis-1-meta-analysis-of-the-orientation-effect}
 
 \begin{figure}
 \includegraphics[width=1\linewidth,height=0.9\textheight]{includes/fig/meta-all} \caption{Meta-analysis on match advantage of object orientation for all languages. Diamonds indicate summary estimates, the midpoint of the diamond indicating the point estimate, and the left and right endpoints indicating the lower and upper bounds of the confidence interval of the estimated effect size. The lowermost diamond represents the estimate derived from the whole dataset.}\label{fig:meta-all-plot}
@@ -949,8 +951,7 @@ CI {[}-32.26, -2.24{]}), although in these languages only a single
 laboratory participated, so no language-specific meta-analysis was
 conducted.
 
-\hypertarget{hypothesis-1-mixed-linear-modeling-of-the-orientation-effect}{%
-\subsection{Hypothesis 1: Mixed-Linear Modeling of the Orientation Effect}\label{hypothesis-1-mixed-linear-modeling-of-the-orientation-effect}}
+\subsection{Hypothesis 1: Mixed-Linear Modeling of the Orientation Effect}\label{hypothesis-1-mixed-linear-modeling-of-the-orientation-effect}
 
 First, an intercept-only model of response times with no random
 intercepts was computed for comparison purposes AIC =
@@ -995,8 +996,7 @@ orientation was small: \emph{b} =
 .241. All the details of the above fixed
 effects and random intercepts are summarized in Appendix D.
 
-\hypertarget{hypothesis-2-mental-rotation-scores}{%
-\subsection{Hypothesis 2: Mental Rotation Scores}\label{hypothesis-2-mental-rotation-scores}}
+\subsection{Hypothesis 2: Mental Rotation Scores}\label{hypothesis-2-mental-rotation-scores}
 
 Using the same steps as described for the sentence-picture verification
 mixed model, we first started with an intercept-only model with no
@@ -1023,8 +1023,7 @@ orientation effect varied between 23.79--40.24, revealing a range of 14
 ms across languages. The coefficients of all mixed-effects models are
 reported in Appendix E, along with all estimates presented by language.
 
-\hypertarget{hypothesis-2-prediction-of-match-advantage}{%
-\subsection{Hypothesis 2: Prediction of Match Advantage}\label{hypothesis-2-prediction-of-match-advantage}}
+\subsection{Hypothesis 2: Prediction of Match Advantage}\label{hypothesis-2-prediction-of-match-advantage}
 
 The last analysis included a mixed effects regression model using the
 interaction of language and mental rotation scores to predict match
@@ -1041,8 +1040,7 @@ the mental rotation score nor the interaction of mental rotation score
 and language were significant, and these results are detailed in
 Appendix E.
 
-\hypertarget{discussion}{%
-\section{Discussion}\label{discussion}}
+\section{Discussion}\label{discussion}
 
 This study examined the global mental simulation effect of object
 orientation in a culturally diverse sample and provided an exploratory
@@ -1070,8 +1068,7 @@ of the methodology and analysis, and discuss theoretical issues related
 to the implied object orientations as an effective probe to investigate
 the mental simulation process.
 
-\hypertarget{methodological-considerations}{%
-\subsection{Methodological Considerations}\label{methodological-considerations}}
+\subsection{Methodological Considerations}\label{methodological-considerations}
 
 By examining the failed replications of the object orientation effect in
 the English-language labs (see Figure 3), researchers can further
@@ -1114,8 +1111,7 @@ predicted the mental simulation effect of object orientation, which
 implies that this strategy to ensure linguistic processing had limited
 influence in our study.
 
-\hypertarget{analysis-considerations}{%
-\subsection{Analysis Considerations}\label{analysis-considerations}}
+\subsection{Analysis Considerations}\label{analysis-considerations}
 
 The orientation effects were analyzed using a meta-analytic approach and
 mixed-effects models. Neither approach revealed an overall effect of
@@ -1124,12 +1120,10 @@ indication of the orientation effect was found in the German language
 data in the meta-analysis. However, the estimate of this effect was
 small in the mixed-model analysis, and considered in the general context
 including all the other results, the present exploratory result for
-German could stem from measurement error
-(Loken \& Gelman, 2017) or from family-wise error
-(Armstrong, 2014).
+German could stem from measurement error or from family-wise error.
 
 When a topic area yields inconsistent or small effects, some researchers
-have questioned the utility of further research (Brysbaert, 2020; Sala \& Gobet, 2017). However, in our view, research on embodied cognition should
+have questioned the utility of further research. However, in our view, research on embodied cognition should
 continue with the aim of determining the factors behind the variability
 of the effects. One of these factors could be the nature of the
 variables used - for instance, categorical versus continuous. The object
@@ -1141,8 +1135,7 @@ study (Morey et al., 2022). Whereas factorial paradigms require the use of
 categorical variables, other studies have operationalized sensorimotor
 information using continuous variables, and observed significant effects
 (Bernabeu, 2022; Lynott et al., 2020; Petilli et al., 2021). Since continuous variables
-contain more information, they may afford more statistical power
-(J. Cohen, 1983). In addition to categorical versus continuous predictors, a
+contain more information, they may afford more statistical power. In addition to categorical versus continuous predictors, a
 categorical design may underestimate the complexity of perceptual
 features constituted the target objects. Object shapes and colors are
 disjunctive from the other perceptual properties, whereas orientations
@@ -1151,8 +1144,7 @@ explicit features. In summary, addressing the above issues may permit
 the analytic sensitivity needed to observe the presence and causes of
 object orientation effects.
 
-\hypertarget{theoretical-considerations}{%
-\subsection{Theoretical Considerations}\label{theoretical-considerations}}
+\subsection{Theoretical Considerations}\label{theoretical-considerations}
 
 Scholars interested in mental simulation have investigated whether the
 human mind processes linguistic content as abstract symbols or as
@@ -1189,12 +1181,11 @@ accounts. However, in some studies, the effects of the symbolic account
 have been larger than those of the embodied account (Bernabeu, 2022; Louwerse et al., 2015), whereas the reverse has been true in other studies
 (Fernandino et al., 2022; Tong et al., 2022).
 
-\hypertarget{limitations}{%
-\subsection{Limitations}\label{limitations}}
+\subsection{Limitations}\label{limitations}
 
 This study reflects the challenges to assess the mental simulation of
 object orientation across languages, especially when dealing with
-effects that require large sample sizes (see Loken \& Gelman, 2017; Vadillo et al., 2016). Our data collection deviated from
+effects that require large sample sizes. Our data collection deviated from
 the pre-registered plan because of the COVID-19 pandemic. Due to the
 lack of participant monitoring online, and an inspection of the data, we
 post-hoc used filtering on outliers in terms of participants' response
@@ -1204,8 +1195,7 @@ mixed-effects model confirmed no difference of response times between
 in-person and online data. Future studies could evaluate how the task
 environments alter the magnitude of the orientation effect.
 
-\hypertarget{conclusion}{%
-\subsection{Conclusion}\label{conclusion}}
+\subsection{Conclusion}\label{conclusion}
 
 Based on the results of this project, we did not find evidence for a
 general object orientation effect in a culturally and linguistically
@@ -1219,256 +1209,196 @@ of mental simulation in linguistic processing, but they provide
 directions for further improvements on methodology, analysis, and
 theories.
 
-\hypertarget{data-avaliability}{%
-\subsection{Data Avaliability}\label{data-avaliability}}
+\subsection{Data Avaliability}\label{data-avaliability}
 
-The project dataset and analysis scripts are available at \url{https://osf.io/rgmky/?view_only=5210c1ec522049db8535f40bc9a07113}. Materials are available at \url{https://osf.io/74ujf/?view_only=7094d5af798047b3a2ec01ea4930e3de}.
+The project dataset and analysis scripts are available at
+\url{https://osf.io/rgmky/?view_only=5210c1ec522049db8535f40bc9a07113}.
+Materials are available at
+\url{https://osf.io/74ujf/?view_only=7094d5af798047b3a2ec01ea4930e3de}.
 
-\hypertarget{ethics-declaration}{%
-\subsection{Ethics Declaration}\label{ethics-declaration}}
+\subsection{Ethics Declaration}\label{ethics-declaration}
 
-Authors who collected data on site and online had the ethical approval/agreement from their local institutions. The latest status of ethical approval for all the participating authors is available at the public OSF folder (\url{https://osf.io/e428p/?view_only=f9f24b72e54141dfb3e67586cfb2d7a0} ``IRB approvals'' in Files).
+Authors who collected data on site and online had the ethical
+approval/agreement from their local institutions. The latest status of
+ethical approval for all the participating authors is available at the
+public OSF folder
+(\url{https://osf.io/e428p/?view_only=f9f24b72e54141dfb3e67586cfb2d7a0} ``IRB
+approvals'' in Files).
 
-The authors declare no conflicts of interest relevant to the content of the manuscript.
+The authors declare no conflicts of interest relevant to the content of
+the manuscript.
 
 \newpage
 
-\hypertarget{references}{%
-\section{References}\label{references}}
+\section{References}\label{references}
 
-\hypertarget{refs}{}
+\phantomsection\label{refs}
 \begin{CSLReferences}{1}{0}
-\leavevmode\vadjust pre{\hypertarget{ref-anwyl-irvineGorillaOurMidst2020}{}}%
-Anwyl-Irvine, A. L., Massonnié, J., Flitton, A., Kirkham, N., \& Evershed, J. K. (2020). Gorilla in our midst: {An} online behavioral experiment builder. \emph{Behavior Research Methods}, \emph{52}(1), 388--407. \url{https://doi.org/10.3758/s13428-019-01237-x}
-
-\leavevmode\vadjust pre{\hypertarget{ref-armstrongWhenUseBonferroni2014}{}}%
-Armstrong, R. A. (2014). When to use the {Bonferroni} correction. \emph{Ophthalmic and Physiological Optics}, \emph{34}(5), 502--508. \url{https://doi.org/10.1111/opo.12131}
-
-\leavevmode\vadjust pre{\hypertarget{ref-athanasopoulos2023}{}}%
+\bibitem[\citeproctext]{ref-athanasopoulos2023}
 Athanasopoulos, P. (2023). \emph{Linguistic relativity} (J. Culpeper, Ed.; pp. 469--477). Routledge.
 
-\leavevmode\vadjust pre{\hypertarget{ref-barsalouPerceptualSymbolSystems1999}{}}%
+\bibitem[\citeproctext]{ref-barsalouPerceptualSymbolSystems1999}
 Barsalou, L. W. (1999). Perceptual symbol systems. \emph{Behavioral and Brain Sciences}, \emph{22}, 577--660. \url{https://doi.org/10.1017/S0140525X99002149}
 
-\leavevmode\vadjust pre{\hypertarget{ref-barsalou_grounded_2008}{}}%
+\bibitem[\citeproctext]{ref-barsalou_grounded_2008}
 Barsalou, L. W. (2008). Grounded cognition. \emph{Annual Review of Psychology}, \emph{59}, 617--645. \url{https://doi.org/10.1146/annurev.psych.59.103006.093639}
 
-\leavevmode\vadjust pre{\hypertarget{ref-barsalouEstablishingGeneralizableMechanisms2019}{}}%
+\bibitem[\citeproctext]{ref-barsalouEstablishingGeneralizableMechanisms2019}
 Barsalou, L. W. (2019). Establishing generalizable mechanisms. \emph{Psychological Inquiry}, \emph{30}(4), 220--230. \url{https://doi.org/10.1080/1047840X.2019.1693857}
 
-\leavevmode\vadjust pre{\hypertarget{ref-barsalou2020}{}}%
+\bibitem[\citeproctext]{ref-barsalou2020}
 Barsalou, L. W. (2020). Challenges and opportunities for grounding cognition. \emph{Journal of Cognition}, \emph{3}(1), 31. \url{https://doi.org/10.5334/joc.116}
 
-\leavevmode\vadjust pre{\hypertarget{ref-bernabeu2022}{}}%
+\bibitem[\citeproctext]{ref-bernabeu2022}
 Bernabeu, P. (2022). \emph{Language and sensorimotor simulation in conceptual processing: Multilevel analysis and statistical power}. \url{https://doi.org/10.17635/LANCASTER/THESIS/1795}
 
-\leavevmode\vadjust pre{\hypertarget{ref-bocanegra2022}{}}%
+\bibitem[\citeproctext]{ref-bocanegra2022}
 Bocanegra, B. R., Poletiek, F. H., \& Zwaan, R. A. (2022). Language concatenates perceptual features into representations during comprehension. \emph{Journal of Memory and Language}, \emph{127}, 104355. \url{https://doi.org/10.1016/j.jml.2022.104355}
 
-\leavevmode\vadjust pre{\hypertarget{ref-bridgesTimingMegastudyComparing2020a}{}}%
-Bridges, D., Pitiot, A., MacAskill, M. R., \& Peirce, J. W. (2020). The timing mega-study: Comparing a range of experiment generators, both lab-based and online. \emph{PeerJ}, \emph{8}, e9414. \url{https://doi.org/10.7717/peerj.9414}
-
-\leavevmode\vadjust pre{\hypertarget{ref-brysbaert2020}{}}%
-Brysbaert, M. (2020). Power considerations in bilingualism research: Time to step up our game. \emph{Bilingualism: Language and Cognition}, \emph{24}(5), 813--818. \url{https://doi.org/10.1017/s1366728920000437}
-
-\leavevmode\vadjust pre{\hypertarget{ref-burnham1998}{}}%
-Burnham, K. P., \& Anderson, D. R. (1998). \emph{Practical use of the information-theoretic approach} (pp. 75--117). Springer New York. \url{https://doi.org/10.1007/978-1-4757-2917-7_3}
-
-\leavevmode\vadjust pre{\hypertarget{ref-chen2018}{}}%
-Chen, S.-C., Buchanan, E., Kekecs, Z., Miller, J., Szabelska, A., Aczel, B., Bernabeu, P., Forscher, P., Szuts, A., Vally, Z., Al-Hoorie, A., Helmy, M., Silva, C. de, Silva, L. da, Moraes, Y. de, Hsu, R., Mafra, A., Valentova, J., Varella, M., \ldots{} Chartier, C. (2018). \emph{Investigating object orientation effects across 14 languages}. \url{https://doi.org/10.31234/osf.io/t2pjv}
-
-\leavevmode\vadjust pre{\hypertarget{ref-chenDoesObjectSize2020}{}}%
+\bibitem[\citeproctext]{ref-chenDoesObjectSize2020}
 Chen, S.-C., de Koning, B. B., \& Zwaan, R. A. (2020). Does object size matter with regard to the mental simulation of object orientation? \emph{Experimental Psychology}, \emph{67}(1), 56--72. \url{https://doi.org/10.1027/1618-3169/a000468}
 
-\leavevmode\vadjust pre{\hypertarget{ref-chuSpontaneousGesturesMental2008}{}}%
+\bibitem[\citeproctext]{ref-chuSpontaneousGesturesMental2008}
 Chu, M., \& Kita, S. (2008). Spontaneous gestures during mental rotation tasks: {Insights} into the microdevelopment of the motor strategy. \emph{Journal of Experimental Psychology: General}, \emph{137}(4), 706--723. \url{https://doi.org/10.1037/a0013157}
 
-\leavevmode\vadjust pre{\hypertarget{ref-cohenMentalRotationMental1993}{}}%
+\bibitem[\citeproctext]{ref-cohenMentalRotationMental1993}
 Cohen, D., \& Kubovy, M. (1993). Mental rotation, mental representation, and flat slopes. \emph{Cognitive Psychology}, \emph{25}, 351--382. \url{https://doi.org/10.1006/cogp.1993.1009}
 
-\leavevmode\vadjust pre{\hypertarget{ref-cohen1983}{}}%
-Cohen, J. (1983). The Cost of Dichotomization. \emph{Applied Psychological Measurement}, \emph{7}(3), 249--253. \url{https://doi.org/10.1177/014662168300700301}
-
-\leavevmode\vadjust pre{\hypertarget{ref-connellRepresentingObjectColour2007}{}}%
+\bibitem[\citeproctext]{ref-connellRepresentingObjectColour2007}
 Connell, L. (2007). Representing object colour in language comprehension. \emph{Cognition}, \emph{102}, 476--485. \url{https://doi.org/10.1016/j.cognition.2006.02.009}
 
-\leavevmode\vadjust pre{\hypertarget{ref-koning_mental_2017}{}}%
+\bibitem[\citeproctext]{ref-koning_mental_2017}
 De Koning, B. B., Wassenburg, S. I., Bos, L. T., \& Van der Schoot, M. (2017a). Mental simulation of four visual object properties: Similarities and differences as assessed by the sentence-picture verification task. \emph{Journal of Cognitive Psychology}, \emph{29}(4), 420--432. \url{https://doi.org/10.1080/20445911.2017.1281283}
 
-\leavevmode\vadjust pre{\hypertarget{ref-dekoningSizeDoesMatter2017}{}}%
+\bibitem[\citeproctext]{ref-dekoningSizeDoesMatter2017}
 De Koning, B. B., Wassenburg, S. I., Bos, L. T., \& Van der Schoot, M. (2017b). Size does matter: {Implied} object size is mentally simulated during language comprehension. \emph{Discourse Processes}, \emph{54}(7), 493--503. \url{https://doi.org/10.1080/0163853X.2015.1119604}
 
-\leavevmode\vadjust pre{\hypertarget{ref-deleeuwPsychophysicsWebBrowser2016}{}}%
-de Leeuw, J. R., \& Motz, B. A. (2016). Psychophysics in a {Web} browser? {Comparing} response times collected with {JavaScript} and {Psychophysics Toolbox} in a visual search task. \emph{Behavior Research Methods}, \emph{48}(1), 1--12. \url{https://doi.org/10.3758/s13428-015-0567-2}
-
-\leavevmode\vadjust pre{\hypertarget{ref-engelenPerceptualSimulationDeveloping2011}{}}%
+\bibitem[\citeproctext]{ref-engelenPerceptualSimulationDeveloping2011}
 Engelen, J. A. A., Bouwmeester, S., de Bruin, A. B. H., \& Zwaan, R. A. (2011). Perceptual simulation in developing language comprehension. \emph{Journal of Experimental Child Psychology}, \emph{110}(4), 659--675. \url{https://doi.org/10.1016/j.jecp.2011.06.009}
 
-\leavevmode\vadjust pre{\hypertarget{ref-fernandino2022}{}}%
+\bibitem[\citeproctext]{ref-fernandino2022}
 Fernandino, L., Tong, J.-Q., Conant, L. L., Humphries, C. J., \& Binder, J. R. (2022). Decoding the information structure underlying the neural representation of concepts. \emph{Proceedings of the National Academy of Sciences}, \emph{119}(6), e2108091119. \url{https://doi.org/10.1073/pnas.2108091119}
 
-\leavevmode\vadjust pre{\hypertarget{ref-frickMentalObjectRotation2013}{}}%
+\bibitem[\citeproctext]{ref-frickMentalObjectRotation2013}
 Frick, A., \& Möhring, W. (2013). Mental object rotation and motor development in 8- and 10-month-old infants. \emph{Journal of Experimental Child Psychology}, \emph{115}(4), 708--720. \url{https://doi.org/10.1016/j.jecp.2013.04.001}
 
-\leavevmode\vadjust pre{\hypertarget{ref-fritz2012}{}}%
-Fritz, C. O., Morris, P. E., \& Richler, J. J. (2012). Effect size estimates: Current use, calculations, and interpretation. \emph{Journal of Experimental Psychology: General}, \emph{141}(1), 2--18. \url{https://doi.org/10.1037/a0024338}
-
-\leavevmode\vadjust pre{\hypertarget{ref-kaschakEmbodimentLabTheory2021}{}}%
+\bibitem[\citeproctext]{ref-kaschakEmbodimentLabTheory2021}
 Kaschak, M. P., \& Madden, J. (2021). Embodiment in the {lab}: {Theory}, {measurement}, and {reproducibility}. In M. D. Robinson \& L. E. Thomas (Eds.), \emph{Handbook of {Embodied Psychology}} (pp. 619--635). {Springer International Publishing}. \url{https://doi.org/10.1007/978-3-030-78471-3_27}
 
-\leavevmode\vadjust pre{\hypertarget{ref-kosterMentalSimulationObject2018}{}}%
+\bibitem[\citeproctext]{ref-kosterMentalSimulationObject2018}
 Koster, D., Cadierno, T., \& Chiarandini, M. (2018). Mental simulation of object orientation and size: {A} conceptual replication with second language learners. \emph{Journal of the European Second Language Association}, \emph{2}(1). \url{https://doi.org/10.22599/jesla.39}
 
-\leavevmode\vadjust pre{\hypertarget{ref-kvalsethHickLawEquivalent2021}{}}%
-Kvålseth, T. O. (2021). Hick's law equivalent for reaction time to individual stimuli. \emph{British Journal of Mathematical and Statistical Psychology}, \emph{74}(S1), 275--293. \url{https://doi.org/10.1111/bmsp.12232}
-
-\leavevmode\vadjust pre{\hypertarget{ref-langeJustAnotherTool2015}{}}%
-Lange, K., Kühn, S., \& Filevich, E. (2015). "{Just Another Tool} for {Online Studies}'' ({JATOS}): {An} easy solution for setup and management of web servers supporting online studies. \emph{PLOS ONE}, \emph{10}(6), e0130834. \url{https://doi.org/10.1371/journal.pone.0130834}
-
-\leavevmode\vadjust pre{\hypertarget{ref-liERPStudyMental2017}{}}%
+\bibitem[\citeproctext]{ref-liERPStudyMental2017}
 Li, Y., \& Shang, L. (2017). {An ERP study on the mental simulation of implied object color information during Chinese sentence comprehension}. \emph{Journal of Psychological Science}, \emph{40}(1), 29--36. \url{https://doi.org/10.16719/j.cnki.1671-6981.20170105}
 
-\leavevmode\vadjust pre{\hypertarget{ref-lokenMeasurementErrorReplication2017}{}}%
-Loken, E., \& Gelman, A. (2017). Measurement error and the replication crisis. \emph{Science}, \emph{355}(6325), 584--585. \url{https://doi.org/10.1126/science.aal3618}
-
-\leavevmode\vadjust pre{\hypertarget{ref-louwerse2015}{}}%
+\bibitem[\citeproctext]{ref-louwerse2015}
 Louwerse, M. M., Hutchinson, S., Tillman, R., \& Recchia, G. (2015). Effect size matters: the role of language statistics and perceptual simulation in conceptual processing. \emph{Language, Cognition and Neuroscience}, \emph{30}(4), 430--447. \url{https://doi.org/10.1080/23273798.2014.981552}
 
-\leavevmode\vadjust pre{\hypertarget{ref-lukeEvaluatingSignificanceLinear2017}{}}%
-Luke, S. G. (2017). Evaluating significance in linear mixed-effects models in {R}. \emph{Behavior Research Methods}, \emph{49}(4), 1494--1502. \url{https://doi.org/10.3758/s13428-016-0809-y}
-
-\leavevmode\vadjust pre{\hypertarget{ref-lynott2020}{}}%
+\bibitem[\citeproctext]{ref-lynott2020}
 Lynott, D., Connell, L., Brysbaert, M., Brand, J., \& Carney, J. (2020). The Lancaster Sensorimotor Norms: multidimensional measures of perceptual and action strength for 40,000 English words. \emph{Behavior Research Methods}, \emph{52}(3), 1271--1291. \url{https://doi.org/10.3758/s13428-019-01316-z}
 
-\leavevmode\vadjust pre{\hypertarget{ref-mathot_conducting_2022}{}}%
-Mathôt, S., \& March, J. (2022). Conducting {linguistic} {experiments} {online} {with} {OpenSesame} and {OSWeb}. \emph{Language Learning}, \emph{72}(4), 1017--1048. \url{https://doi.org/10.1111/lang.12509}
-
-\leavevmode\vadjust pre{\hypertarget{ref-mathotOpenSesameOpensourceGraphical2012}{}}%
+\bibitem[\citeproctext]{ref-mathotOpenSesameOpensourceGraphical2012}
 Mathôt, S., Schreij, D., \& Theeuwes, J. (2012). {OpenSesame}: {An} open-source, graphical experiment builder for the social sciences. \emph{Behavior Research Methods}, \emph{44}(2), 314--324. \url{https://doi.org/10.3758/s13428-011-0168-7}
 
-\leavevmode\vadjust pre{\hypertarget{ref-matuschek2017}{}}%
-Matuschek, H., Kliegl, R., Vasishth, S., Baayen, H., \& Bates, D. (2017). Balancing Type I error and power in linear mixed models. \emph{Journal of Memory and Language}, \emph{94}, 305--315. \url{https://doi.org/10.1016/j.jml.2017.01.001}
-
-\leavevmode\vadjust pre{\hypertarget{ref-mcnamaraSemanticPrimingPerspectives2005}{}}%
+\bibitem[\citeproctext]{ref-mcnamaraSemanticPrimingPerspectives2005}
 McNamara, T. P. (2005). \emph{Semantic {priming}: {Perspectives from memory} and {word recognition}}. {Psychology Press}.
 
-\leavevmode\vadjust pre{\hypertarget{ref-morey2022}{}}%
+\bibitem[\citeproctext]{ref-morey2022}
 Morey, R. D., Kaschak, M. P., Díez-Álamo, A. M., Glenberg, A. M., Zwaan, R. A., Lakens, D., Ibáñez, A., García, A., Gianelli, C., Jones, J. L., Madden, J., Alifano, F., Bergen, B., Bloxsom, N. G., Bub, D. N., Cai, Z. G., Chartier, C. R., Chatterjee, A., Conwell, E., \ldots{} Ziv-Crispel, N. (2022). A pre-registered, multi-lab non-replication of the action-sentence compatibility effect (ACE). \emph{Psychonomic Bulletin \& Review}, \emph{29}(2), 613--626. \url{https://doi.org/10.3758/s13423-021-01927-8}
 
-\leavevmode\vadjust pre{\hypertarget{ref-moshontzPsychologicalScienceAccelerator2018}{}}%
+\bibitem[\citeproctext]{ref-moshontzPsychologicalScienceAccelerator2018}
 Moshontz, H., Campbell, L., Ebersole, C. R., IJzerman, H., Urry, H. L., Forscher, P. S., Grahe, J. E., McCarthy, R. J., Musser, E. D., Antfolk, J., Castille, C. M., Evans, T. R., Fiedler, S., Flake, J. K., Forero, D. A., Janssen, S. M. J., Keene, J. R., Protzko, J., Aczel, B., \ldots{} Chartier, C. R. (2018). The {Psychological Science Accelerator}: {Advancing} psychology through a distributed collaborative network. \emph{Advances in Methods and Practices in Psychological Science}, \emph{1}(4), 501--515. \url{https://doi.org/10.1177/2515245918797607}
 
-\leavevmode\vadjust pre{\hypertarget{ref-newmanCrosslinguisticOverviewPosture2002}{}}%
+\bibitem[\citeproctext]{ref-newmanCrosslinguisticOverviewPosture2002}
 Newman, J. (2002). 1. {A} cross-linguistic overview of the posture verbs {``{Sit},''} {``{Stand},''} and {``{Lie}.''} In J. Newman (Ed.), \emph{Typological {Studies} in {Language}} (Vol. 51, pp. 1--24). {John Benjamins Publishing Company}. \url{https://doi.org/10.1075/tsl.51.02new}
 
-\leavevmode\vadjust pre{\hypertarget{ref-ostarekSixChallengesEmbodiment2019}{}}%
+\bibitem[\citeproctext]{ref-ostarekSixChallengesEmbodiment2019}
 Ostarek, M., \& Huettig, F. (2019). Six challenges for {embodiment research}. \emph{Current Directions in Psychological Science}, \emph{28}(6), 593--599. \url{https://doi.org/10.1177/0963721419866441}
 
-\leavevmode\vadjust pre{\hypertarget{ref-pecherLanguageComprehendersRetain2009}{}}%
+\bibitem[\citeproctext]{ref-pecherLanguageComprehendersRetain2009}
 Pecher, D., van Dantzig, S., Zwaan, R. A., \& Zeelenberg, R. (2009). Language comprehenders retain implied shape and orientation of objects. \emph{The Quarterly Journal of Experimental Psychology}, \emph{62}(6), 1108--1114. \url{https://doi.org/10.1080/17470210802633255}
 
-\leavevmode\vadjust pre{\hypertarget{ref-petilli2021}{}}%
+\bibitem[\citeproctext]{ref-petilli2021}
 Petilli, M. A., Günther, F., Vergallito, A., Ciapparelli, M., \& Marelli, M. (2021). Data-driven computational models reveal perceptual simulation in word processing. \emph{Journal of Memory and Language}, \emph{117}, 104194. \url{https://doi.org/10.1016/j.jml.2020.104194}
 
-\leavevmode\vadjust pre{\hypertarget{ref-phills_preregistration_2022}{}}%
-Phills, C., Kekecs, Z., \& Chartier, C. (2022). \emph{Pre-{Registration}}. \url{https://doi.org/10.17605/OSF.IO/4HMGS}
-
-\leavevmode\vadjust pre{\hypertarget{ref-pouwMoreEmbeddedExtended2014}{}}%
+\bibitem[\citeproctext]{ref-pouwMoreEmbeddedExtended2014}
 Pouw, W. T. J. L., de Nooijer, J. A., van Gog, T., Zwaan, R. A., \& Paas, F. (2014). Toward a more embedded/extended perspective on the cognitive function of gestures. \emph{Frontiers in Psychology}, \emph{5}. \url{https://doi.org/10.3389/fpsyg.2014.00359}
 
-\leavevmode\vadjust pre{\hypertarget{ref-proctorHickLawChoice2018}{}}%
-Proctor, R. W., \& Schneider, D. W. (2018). Hick's law for choice reaction time: {A} review. \emph{Quarterly Journal of Experimental Psychology}, \emph{71}(6), 1281--1299. \url{https://doi.org/10.1080/17470218.2017.1322622}
-
-\leavevmode\vadjust pre{\hypertarget{ref-roelke2018}{}}%
+\bibitem[\citeproctext]{ref-roelke2018}
 Roelke, A., Franke, N., Biemann, C., Radach, R., Jacobs, A. M., \& Hofmann, M. J. (2018). A novel co-occurrence-based approach to predict pure associative and semantic priming. \emph{Psychonomic Bulletin \& Review}, \emph{25}(4), 1488--1493. \url{https://doi.org/10.3758/s13423-018-1453-6}
 
-\leavevmode\vadjust pre{\hypertarget{ref-rommersObjectShapeOrientation2013}{}}%
+\bibitem[\citeproctext]{ref-rommersObjectShapeOrientation2013}
 Rommers, J., Meyer, A. S., \& Huettig, F. (2013). Object shape and orientation do not routinely influence performance during language processing. \emph{Psychological Science}, \emph{24}(11), 2218--2225. \url{https://doi.org/10.1177/0956797613490746}
 
-\leavevmode\vadjust pre{\hypertarget{ref-sala2017}{}}%
-Sala, G., \& Gobet, F. (2017). Does Far Transfer Exist? Negative Evidence From Chess, Music, and Working Memory Training. \emph{Current Directions in Psychological Science}, \emph{26}(6), 515--520. \url{https://doi.org/10.1177/0963721417712760}
-
-\leavevmode\vadjust pre{\hypertarget{ref-satoOneWordTime2013}{}}%
+\bibitem[\citeproctext]{ref-satoOneWordTime2013}
 Sato, M., Schafer, A. J., \& Bergen, B. K. (2013). One word at a time: {Mental} representations of object shape change incrementally during sentence processing. \emph{Language and Cognition}, \emph{5}(04), 345--373. \url{https://doi.org/10.1515/langcog-2013-0022}
 
-\leavevmode\vadjust pre{\hypertarget{ref-schonbrodtSequentialHypothesisTesting2017}{}}%
-Schönbrodt, F. D., Wagenmakers, E.-J., Zehetleitner, M., \& Perugini, M. (2017). Sequential hypothesis testing with {Bayes} factors: {Efficiently} testing mean differences. \emph{Psychological Methods}, \emph{22}(2), 322--339. \url{https://doi.org/10.1037/met0000061}
-
-\leavevmode\vadjust pre{\hypertarget{ref-scorolli2014embodiment}{}}%
+\bibitem[\citeproctext]{ref-scorolli2014embodiment}
 Scorolli, C. (2014). Embodiment and language. In L. Shapiro (Ed.), \emph{The {Routledge} handbook of embodied cognition} (pp. 145--156). {Routledge}.
 
-\leavevmode\vadjust pre{\hypertarget{ref-seticNumericalCongruencyEffect2017}{}}%
+\bibitem[\citeproctext]{ref-seticNumericalCongruencyEffect2017}
 Šetić, M., \& Domijan, D. (2017). Numerical {congruency effect} in the {sentence-picture verification task}. \emph{Experimental Psychology}, \emph{64}(3), 159--169. \url{https://doi.org/10.1027/1618-3169/a000358}
 
-\leavevmode\vadjust pre{\hypertarget{ref-stanfield_effect_2001}{}}%
+\bibitem[\citeproctext]{ref-stanfield_effect_2001}
 Stanfield, R. A., \& Zwaan, R. A. (2001). The effect of implied orientation derived from verbal context on picture recognition. \emph{Psychological Science}, \emph{12}(2), 153--156. \url{https://doi.org/10.1111/1467-9280.00326}
 
-\leavevmode\vadjust pre{\hypertarget{ref-tong2022}{}}%
+\bibitem[\citeproctext]{ref-tong2022}
 Tong, J., Binder, J. R., Humphries, C., Mazurchuk, S., Conant, L. L., \& Fernandino, L. (2022). A distributed network for multimodal experiential representation of concepts. \emph{The Journal of Neuroscience}, \emph{42}(37), 7121--7130. \url{https://doi.org/10.1523/JNEUROSCI.1243-21.2022}
 
-\leavevmode\vadjust pre{\hypertarget{ref-vadilloUnderpoweredSamplesFalse2016}{}}%
-Vadillo, M. A., Konstantinidis, E., \& Shanks, D. R. (2016). Underpowered samples, false negatives, and unconscious learning. \emph{Psychonomic Bulletin \& Review}, \emph{23}(1), 87--102. \url{https://doi.org/10.3758/s13423-015-0892-6}
-
-\leavevmode\vadjust pre{\hypertarget{ref-vazire2018}{}}%
+\bibitem[\citeproctext]{ref-vazire2018}
 Vazire, S. (2018). Implications of the credibility revolution for productivity, creativity, and progress. \emph{Perspectives on Psychological Science}, \emph{13}(4), 411--417. \url{https://doi.org/10.1177/1745691617751884}
 
-\leavevmode\vadjust pre{\hypertarget{ref-verkerk2014}{}}%
+\bibitem[\citeproctext]{ref-verkerk2014}
 Verkerk, A. (2014). The correlation between motion event encoding and path verb lexicon size in the indo-european language family. \emph{Folia Linguistica}, \emph{35}(1). \url{https://doi.org/10.1515/flih.2014.009}
 
-\leavevmode\vadjust pre{\hypertarget{ref-wilson2002}{}}%
+\bibitem[\citeproctext]{ref-wilson2002}
 Wilson, M. (2002). Six views of embodied cognition. \emph{Psychonomic Bulletin \& Review}, \emph{9}(4), 625--636. \url{https://doi.org/10.3758/BF03196322}
 
-\leavevmode\vadjust pre{\hypertarget{ref-zwaan_embodiment_2014}{}}%
+\bibitem[\citeproctext]{ref-zwaan_embodiment_2014}
 Zwaan, R. A. (2014a). Embodiment and language comprehension: Reframing the discussion. \emph{Trends in Cognitive Sciences}, \emph{18}(5), 229--234. \url{https://doi.org/10.1016/j.tics.2014.02.008}
 
-\leavevmode\vadjust pre{\hypertarget{ref-zwaanReplicationsShouldBe2014}{}}%
+\bibitem[\citeproctext]{ref-zwaanReplicationsShouldBe2014}
 Zwaan, R. A. (2014b). Replications {should be performed With power} and {precision}: {A response} to {Rommers}, {Meyer}, and {Huettig} (2013). \emph{Psychological Science}, \emph{25}(1), 305--307. \url{https://doi.org/10.1177/0956797613509634}
 
-\leavevmode\vadjust pre{\hypertarget{ref-zwaanParticipantNonnaiveteReproducibility2017}{}}%
+\bibitem[\citeproctext]{ref-zwaanParticipantNonnaiveteReproducibility2017}
 Zwaan, R. A., Diane Pecher, Paolacci, G., Bouwmeester, S., Verkoeijen, P., Dijkstra, K., \& Zeelenberg, R. (2017). Participant {Nonnaiveté} and the reproducibility of cognitive psychology. \emph{Psychonomic Bulletin \& Review}, 1--5. \url{https://doi.org/10.3758/s13423-017-1348-y}
 
-\leavevmode\vadjust pre{\hypertarget{ref-zwaanEmbodiedSentenceComprehension2005}{}}%
+\bibitem[\citeproctext]{ref-zwaanEmbodiedSentenceComprehension2005}
 Zwaan, R. A., \& Madden, C. J. (2005). Embodied sentence comprehension. In D. Pecher \& R. A. Zwaan (Eds.), \emph{Grounding cognition: {The} role of perception and action in memory, language, and thinking} (pp. 224--245). {Cambridge University Press}.
 
-\leavevmode\vadjust pre{\hypertarget{ref-zwaanRevisitingMentalSimulation2012}{}}%
+\bibitem[\citeproctext]{ref-zwaanRevisitingMentalSimulation2012}
 Zwaan, R. A., \& Pecher, D. (2012). Revisiting mental simulation in language comprehension: Six replication attempts. \emph{PLoS ONE}, \emph{7}, e51382. \url{https://doi.org/10.1371/journal.pone.0051382}
 
-\leavevmode\vadjust pre{\hypertarget{ref-zwaanLanguageComprehendersMentally2002}{}}%
+\bibitem[\citeproctext]{ref-zwaanLanguageComprehendersMentally2002}
 Zwaan, R. A., Stanfield, R. A., \& Yaxley, R. H. (2002). Language comprehenders mentally represent the shapes of objects. \emph{Psychological Science}, \emph{13}, 168--171. \url{https://doi.org/10.1111/1467-9280.00430}
 
-\leavevmode\vadjust pre{\hypertarget{ref-zwaanReadersConstructSpatial1993}{}}%
+\bibitem[\citeproctext]{ref-zwaanReadersConstructSpatial1993}
 Zwaan, R. A., \& van Oostendorp, H. (1993). Do readers construct spatial representations in naturalistic story comprehension? \emph{Discourse Processes}, \emph{16}(1-2), 125--143. \url{https://doi.org/10.1080/01638539309544832}
 
 \end{CSLReferences}
 
 \newpage
 
-\hypertarget{appendix-appendix}{%
-\appendix}
+\appendix
 
 
-\hypertarget{sensitivity-analyses}{%
-\section{Sensitivity Analyses}\label{sensitivity-analyses}}
+\section{Sensitivity Analyses}\label{sensitivity-analyses}
 
 The R codes for the sensitivity analysis on the trial level were written by Erin M. Buchanan.
 
-\hypertarget{load-data-and-run-models}{%
-\subsection{Load data and run models}\label{load-data-and-run-models}}
+\subsection{Load data and run models}\label{load-data-and-run-models}
 
 The data for the sensitivity analysis shared the same exclusion criterion for the pre-registered mixed-effects models. The first step is to determine if there is a minimum number of trials required for stable results.
 
-\hypertarget{view-the-results}{%
-\subsection{View the Results}\label{view-the-results}}
+\subsection{View the Results}\label{view-the-results}
 
-\hypertarget{b-values}{%
-\subsubsection{b values}\label{b-values}}
+\subsubsection{b values}\label{b-values}
 
 These values represent the \emph{b} values found for each run of 3 up to 12 trials.
 
 -0.17, -0.17, -0.17, -0.17, -0.18, -0.12, 0.49, -0.14, 0.67, and 3.11
 
-\hypertarget{p-values}{%
-\subsubsection{p values}\label{p-values}}
+\subsubsection{p values}\label{p-values}
 
 These values represent the \emph{p} values found for each run of 7 up to 12 trials.
 
@@ -1476,8 +1406,7 @@ These values represent the \emph{p} values found for each run of 7 up to 12 tria
 
 As we can see, the effect is generally negative until participants were required to have 7-12 correct trials. When participants accurately answer all 12 trials the effect is approximately 3 ms. Examination of the \emph{p}-values indicates that no coefficients would have been considered significant.
 
-\hypertarget{calculate-the-sensitivity}{%
-\subsection{Calculate the Sensitivity}\label{calculate-the-sensitivity}}
+\subsection{Calculate the Sensitivity}\label{calculate-the-sensitivity}
 
 Given we used all data points, the smallest detectable effect with our standard error and degrees of freedom would have been:
 
@@ -1485,8 +1414,7 @@ Given we used all data points, the smallest detectable effect with our standard 
 ## [1] 2.356441
 \end{verbatim}
 
-\hypertarget{data-collection-logs}{%
-\section{Data Collection Logs}\label{data-collection-logs}}
+\section{Data Collection Logs}\label{data-collection-logs}
 
 The log website was initiated since the data collection began. The public logs were updated when a laboratory updated their data for the sequential analysis. The link to access the public site is: \url{https://scgeeker.github.io/PSA002_log_site/index.html}
 
@@ -1503,13 +1431,11 @@ The R code to conduct the Bayesian sequential analysis is available at ``data\_s
 
 \textbf{Note 2} Some mistakes happened between the collaborators' communications and required advanced data wrangling. For example, some AUS\_091 participants were assigned to NZL\_005. The Rmd file in NZL\_005 folder were used to identify the AUS\_091 participants' data then move them to AUS\_091 folder.
 
-\hypertarget{datasets}{%
-\subsection{Datasets}\label{datasets}}
+\subsection{Datasets}\label{datasets}
 
 Complete data can be found online with this manuscript or on each collaborators OSF page. Please see the \texttt{Lab\_Info.csv} on \url{https://osf.io/e428p/}.
 
-\hypertarget{flunecy-test-for-the-online-study}{%
-\subsection{Flunecy test for the online study}\label{flunecy-test-for-the-online-study}}
+\subsection{Flunecy test for the online study}\label{flunecy-test-for-the-online-study}
 
 At the beginning of the online study, participants will hear the verbal instruction narrated by a native speaker. The original English transcript is as below:
 
@@ -1535,13 +1461,11 @@ The fluency test are three multiple choice questions. The question text and the 
   C: Judge sentences for their accuracy
 \end{itemize}
 
-\hypertarget{distributions-of-scripts}{%
-\subsection{Distributions of scripts}\label{distributions-of-scripts}}
+\subsection{Distributions of scripts}\label{distributions-of-scripts}
 
 The instructions and experimental scripts are available at the public OSF folder (\url{https://osf.io/e428p/} ``Materials/js'' folder in Files). To upload to a jatos server, a script had to be converted to the compatible package. Researchers could do this conversion by ``OSWEB'' package in OpenSesame. We rent an remote server for the distributions during the data collection period. Any researcher would distribute the scripts on a free jatos server such as MindProbe (\url{https://www.mindprobe.eu/}).
 
-\hypertarget{demographic-characteristics-by-language}{%
-\section{Demographic Characteristics by Language}\label{demographic-characteristics-by-language}}
+\section{Demographic Characteristics by Language}\label{demographic-characteristics-by-language}
 
 \begin{table}[tbp]
 
@@ -1681,8 +1605,7 @@ Turkish & 2376 & 2352 & 99 & 98 & 101 & 0 & 0 & 21.63 & 2.19\\
 
 \end{table}
 
-\hypertarget{model-estimates-for-mental-simulation}{%
-\section{Model Estimates for Mental Simulation}\label{model-estimates-for-mental-simulation}}
+\section{Model Estimates for Mental Simulation}\label{model-estimates-for-mental-simulation}
 
 All model estimates are given below for the planned mixed linear model to estimate the matching effect for object orientation in the sentence picture verification task.
 
@@ -1815,7 +1738,7 @@ ran\_pars & Residual & sd\_\_Observation & 162.17 & NA & NA & NA & \\
 \toprule
 Effect & Group & Term & Estimate ($b$) & $SE$ & $t$ & $df$ & $p$\\
 \midrule
-fixed & NA & (Intercept) & 659.71 & 9.68 & 68.12 & 66.04 & < .001\\
+fixed & NA & (Intercept) & 659.71 & 9.68 & 68.12 & 66.05 & < .001\\
 fixed & NA & MatchN & -0.17 & 1.20 & -0.14 & 69,830.14 & .887\\
 ran\_pars & Subject & sd\_\_(Intercept) & 153.76 & NA & NA & NA & \\
 ran\_pars & Target & sd\_\_(Intercept) & 30.56 & NA & NA & NA & \\
@@ -1878,8 +1801,7 @@ ran\_pars & Residual & sd\_\_Observation & 134.88 & NA & NA & NA & \\
 
 \end{table}
 
-\hypertarget{model-estimates-for-mental-rotation}{%
-\section{Model Estimates for Mental Rotation}\label{model-estimates-for-mental-rotation}}
+\section{Model Estimates for Mental Rotation}\label{model-estimates-for-mental-rotation}
 
 All model estimates are given below for the mixed linear model for the prediction of mental rotation scores by orientation, and the effects of predicting mental simulation effects (object orientation) with the mental rotation scores.
 
@@ -1963,7 +1885,7 @@ ran\_pars & Residual & sd\_\_Observation & 77.56 & NA & NA & NA & \\
 \toprule
 Effect & Group & Term & Estimate ($b$) & $SE$ & $t$ & $df$ & $p$\\
 \midrule
-fixed & NA & (Intercept) & 590.18 & 5.16 & 114.34 & 69.45 & < .001\\
+fixed & NA & (Intercept) & 590.18 & 5.16 & 114.35 & 69.45 & < .001\\
 ran\_pars & Subject & sd\_\_(Intercept) & 78.36 & NA & NA & NA & \\
 ran\_pars & Picture1 & sd\_\_(Intercept) & 16.32 & NA & NA & NA & \\
 ran\_pars & PSA\_ID & sd\_\_(Intercept) & 30.12 & NA & NA & NA & \\
@@ -1987,7 +1909,7 @@ ran\_pars & Residual & sd\_\_Observation & 77.56 & NA & NA & NA & \\
 \toprule
 Effect & Group & Term & Estimate ($b$) & $SE$ & $t$ & $df$ & $p$\\
 \midrule
-fixed & NA & (Intercept) & 596.71 & 6.98 & 85.47 & 22.17 & < .001\\
+fixed & NA & (Intercept) & 596.71 & 6.98 & 85.46 & 22.17 & < .001\\
 ran\_pars & Subject & sd\_\_(Intercept) & 78.37 & NA & NA & NA & \\
 ran\_pars & Picture1 & sd\_\_(Intercept) & 16.32 & NA & NA & NA & \\
 ran\_pars & PSA\_ID & sd\_\_(Intercept) & 24.00 & NA & NA & NA & \\
@@ -2187,6 +2109,135 @@ ran\_pars & Residual & sd\_\_Observation & 99.73 & NA & NA & NA & \\
 \end{center}
 
 \end{table}
+
+\section{Additional References}\label{additional-references}
+
+Additional references are provided below.
+
+\phantomsection\label{refs}
+
+\begin{CSLReferences}{1}{0}
+\bibitem[\citeproctext]{ref-anwyl-irvineGorillaOurMidst2020}
+Anwyl-Irvine, A. L., Massonnié, J., Flitton, A., Kirkham, N., \&
+Evershed, J. K. (2020). Gorilla in our midst: {An} online behavioral
+experiment builder. \emph{Behavior Research Methods}, \emph{52}(1),
+388--407. \url{https://doi.org/10.3758/s13428-019-01237-x}
+
+\bibitem[\citeproctext]{ref-armstrongWhenUseBonferroni2014}
+Armstrong, R. A. (2014). When to use the {Bonferroni} correction.
+\emph{Ophthalmic and Physiological Optics}, \emph{34}(5), 502--508.
+\url{https://doi.org/10.1111/opo.12131}
+
+\bibitem[\citeproctext]{ref-bridgesTimingMegastudyComparing2020a}
+Bridges, D., Pitiot, A., MacAskill, M. R., \& Peirce, J. W. (2020). The
+timing mega-study: Comparing a range of experiment generators, both
+lab-based and online. \emph{PeerJ}, \emph{8}, e9414.
+\url{https://doi.org/10.7717/peerj.9414}
+
+\bibitem[\citeproctext]{ref-brysbaert2020}
+Brysbaert, M. (2020). Power considerations in bilingualism research:
+Time to step up our game. \emph{Bilingualism: Language and Cognition},
+\emph{24}(5), 813--818. \url{https://doi.org/10.1017/s1366728920000437}
+
+\bibitem[\citeproctext]{ref-burnham1998}
+Burnham, K. P., \& Anderson, D. R. (1998). \emph{Practical use of the
+information-theoretic approach} (pp. 75--117). Springer New York.
+\url{https://doi.org/10.1007/978-1-4757-2917-7_3}
+
+\bibitem[\citeproctext]{ref-chen2018}
+Chen, S.-C., Buchanan, E., Kekecs, Z., Miller, J., Szabelska, A., Aczel,
+B., Bernabeu, P., Forscher, P., Szuts, A., Vally, Z., Al-Hoorie, A.,
+Helmy, M., Silva, C. de, Silva, L. da, Moraes, Y. de, Hsu, R., Mafra,
+A., Valentova, J., Varella, M., \ldots{} Chartier, C. (2018).
+\emph{Investigating object orientation effects across 14 languages}.
+\url{https://doi.org/10.31234/osf.io/t2pjv}
+
+\bibitem[\citeproctext]{ref-cohen1983}
+Cohen, J. (1983). The Cost of Dichotomization. \emph{Applied
+Psychological Measurement}, \emph{7}(3), 249--253.
+\url{https://doi.org/10.1177/014662168300700301}
+
+\bibitem[\citeproctext]{ref-deleeuwPsychophysicsWebBrowser2016}
+de Leeuw, J. R., \& Motz, B. A. (2016). Psychophysics in a {Web}
+browser? {Comparing} response times collected with {JavaScript} and
+{Psychophysics Toolbox} in a visual search task. \emph{Behavior Research
+Methods}, \emph{48}(1), 1--12.
+\url{https://doi.org/10.3758/s13428-015-0567-2}
+
+\bibitem[\citeproctext]{ref-fritz2012}
+Fritz, C. O., Morris, P. E., \& Richler, J. J. (2012). Effect size
+estimates: Current use, calculations, and interpretation. \emph{Journal
+of Experimental Psychology: General}, \emph{141}(1), 2--18.
+\url{https://doi.org/10.1037/a0024338}
+
+\bibitem[\citeproctext]{ref-gelman_multilevel_2006}
+Gelman, A. (2006). Multilevel (hierarchical) modeling: {What} it can and
+cannot do. \emph{Technometrics}, \emph{48}(3), 432--435.
+\url{https://doi.org/10.1198/004017005000000661}
+
+\bibitem[\citeproctext]{ref-kvalsethHickLawEquivalent2021}
+Kvålseth, T. O. (2021). Hick's law equivalent for reaction time to
+individual stimuli. \emph{British Journal of Mathematical and
+Statistical Psychology}, \emph{74}(S1), 275--293.
+\url{https://doi.org/10.1111/bmsp.12232}
+
+\bibitem[\citeproctext]{ref-langeJustAnotherTool2015}
+Lange, K., Kühn, S., \& Filevich, E. (2015). "{Just Another Tool} for
+{Online Studies}'' ({JATOS}): {An} easy solution for setup and
+management of web servers supporting online studies. \emph{PLOS ONE},
+\emph{10}(6), e0130834.
+\url{https://doi.org/10.1371/journal.pone.0130834}
+
+\bibitem[\citeproctext]{ref-lokenMeasurementErrorReplication2017}
+Loken, E., \& Gelman, A. (2017). Measurement error and the replication
+crisis. \emph{Science}, \emph{355}(6325), 584--585.
+\url{https://doi.org/10.1126/science.aal3618}
+
+\bibitem[\citeproctext]{ref-lukeEvaluatingSignificanceLinear2017}
+Luke, S. G. (2017). Evaluating significance in linear mixed-effects
+models in {R}. \emph{Behavior Research Methods}, \emph{49}(4),
+1494--1502. \url{https://doi.org/10.3758/s13428-016-0809-y}
+
+\bibitem[\citeproctext]{ref-mathot_conducting_2022}
+Mathôt, S., \& March, J. (2022). Conducting {linguistic} {experiments}
+{online} {with} {OpenSesame} and {OSWeb}. \emph{Language Learning},
+\emph{72}(4), 1017--1048. \url{https://doi.org/10.1111/lang.12509}
+
+\bibitem[\citeproctext]{ref-matuschek2017}
+Matuschek, H., Kliegl, R., Vasishth, S., Baayen, H., \& Bates, D.
+(2017). Balancing Type I error and power in linear mixed models.
+\emph{Journal of Memory and Language}, \emph{94}, 305--315.
+\url{https://doi.org/10.1016/j.jml.2017.01.001}
+
+\bibitem[\citeproctext]{ref-phills_preregistration_2022}
+Phills, C., Kekecs, Z., \& Chartier, C. (2022).
+\emph{Pre-{Registration}}. \url{https://doi.org/10.17605/OSF.IO/4HMGS}
+
+\bibitem[\citeproctext]{ref-proctorHickLawChoice2018}
+Proctor, R. W., \& Schneider, D. W. (2018). Hick's law for choice
+reaction time: {A} review. \emph{Quarterly Journal of Experimental
+Psychology}, \emph{71}(6), 1281--1299.
+\url{https://doi.org/10.1080/17470218.2017.1322622}
+
+\bibitem[\citeproctext]{ref-sala2017}
+Sala, G., \& Gobet, F. (2017). Does Far Transfer Exist? Negative
+Evidence From Chess, Music, and Working Memory Training. \emph{Current
+Directions in Psychological Science}, \emph{26}(6), 515--520.
+\url{https://doi.org/10.1177/0963721417712760}
+
+\bibitem[\citeproctext]{ref-schonbrodtSequentialHypothesisTesting2017}
+Schönbrodt, F. D., Wagenmakers, E.-J., Zehetleitner, M., \& Perugini, M.
+(2017). Sequential hypothesis testing with {Bayes} factors:
+{Efficiently} testing mean differences. \emph{Psychological Methods},
+\emph{22}(2), 322--339. \url{https://doi.org/10.1037/met0000061}
+
+\bibitem[\citeproctext]{ref-vadilloUnderpoweredSamplesFalse2016}
+Vadillo, M. A., Konstantinidis, E., \& Shanks, D. R. (2016).
+Underpowered samples, false negatives, and unconscious learning.
+\emph{Psychonomic Bulletin \& Review}, \emph{23}(1), 87--102.
+\url{https://doi.org/10.3758/s13423-015-0892-6}
+
+\end{CSLReferences}
 
 
 \end{document}
