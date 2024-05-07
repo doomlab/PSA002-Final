@@ -2519,7 +2519,7 @@ compatibility effect, similarly failed to replicate in a large-scale
 study [@morey2022]. Whereas factorial paradigms require the use of
 categorical variables, other studies have operationalized sensorimotor
 information using continuous variables, and observed significant effects
-[@bernabeu2022; @lynott2020; @petilli2021]. Since continuous variables
+[@bernabeu2022]. Since continuous variables
 contain more information, they may afford more statistical power. In addition to categorical versus continuous predictors, a
 categorical design may underestimate the complexity of perceptual
 features constituted the target objects. Object shapes and colors are

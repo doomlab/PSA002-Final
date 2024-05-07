@@ -94,6 +94,13 @@ Luke, S. G. (2017). Evaluating significance in linear mixed-effects
 models in {R}. \emph{Behavior Research Methods}, \emph{49}(4),
 1494--1502. \url{https://doi.org/10.3758/s13428-016-0809-y}
 
+\bibitem[\citeproctext]{ref-lynott2020}
+Lynott, D., Connell, L., Brysbaert, M., Brand, J., \& Carney, J. (2020).
+The Lancaster Sensorimotor Norms: multidimensional measures of
+perceptual and action strength for 40,000 English words. \emph{Behavior
+Research Methods}, \emph{52}(3), 1271--1291.
+\url{https://doi.org/10.3758/s13428-019-01316-z}
+
 \bibitem[\citeproctext]{ref-mathot_conducting_2022}
 Mathôt, S., \& March, J. (2022). Conducting {linguistic} {experiments}
 {online} {with} {OpenSesame} and {OSWeb}. \emph{Language Learning},
@@ -104,6 +111,12 @@ Matuschek, H., Kliegl, R., Vasishth, S., Baayen, H., \& Bates, D.
 (2017). Balancing Type I error and power in linear mixed models.
 \emph{Journal of Memory and Language}, \emph{94}, 305--315.
 \url{https://doi.org/10.1016/j.jml.2017.01.001}
+
+\bibitem[\citeproctext]{ref-petilli2021}
+Petilli, M. A., Günther, F., Vergallito, A., Ciapparelli, M., \&
+Marelli, M. (2021). Data-driven computational models reveal perceptual
+simulation in word processing. \emph{Journal of Memory and Language},
+\emph{117}, 104194. \url{https://doi.org/10.1016/j.jml.2020.104194}
 
 \bibitem[\citeproctext]{ref-phills_preregistration_2022}
 Phills, C., Kekecs, Z., \& Chartier, C. (2022).
