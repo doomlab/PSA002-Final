@@ -24,7 +24,7 @@ All model estimates are given below for the mixed linear model for the predictio
 temp <- tidy(PP.intercept.lme)
 temp[ , 5] <- apply(temp[ , 5], 2, apa_p)
 apa_table(temp, 
-          format = "latex", 
+          #format = "latex", 
           col.names = c("Term", "Estimate ($b$)", "$SE$", "$t$", "$p$"), 
           caption = "Intercept Only Mental Rotation Results") 
 ```
@@ -34,7 +34,7 @@ temp <- tidy(PP.subject.lme)
 temp[ , 8] <- apply(temp[ , 8], 2, apa_p)
 
 apa_table(temp, 
-          format = "latex", 
+          #format = "latex", 
           col.names = c("Effect", "Group", "Term", "Estimate ($b$)", "$SE$",  "$t$", "$df$", "$p$"), 
           caption = "Subject-Random Intercept Mental Rotation Results") 
 ```
@@ -44,7 +44,7 @@ temp <- tidy(PP.item.lme)
 temp[ , 8] <- apply(temp[ , 8], 2, apa_p)
 
 apa_table(temp,
-          format = "latex", 
+          #format = "latex", 
           col.names = c("Effect", "Group", "Term", "Estimate ($b$)", "$SE$",  "$t$", "$df$", "$p$"), 
           caption = "Subject and Item-Random Intercept Mental Rotation Results") 
 ```
@@ -54,7 +54,7 @@ temp <- tidy(PP.lab.lme)
 temp[ , 8] <- apply(temp[ , 8], 2, apa_p)
 
 apa_table(temp,
-          format = "latex", 
+          #format = "latex", 
           col.names = c("Effect", "Group", "Term", "Estimate ($b$)", "$SE$",  "$t$", "$df$", "$p$"), 
           caption = "Subject, Item, and Lab-Random Intercept Mental Rotation Results") 
 ```
@@ -64,7 +64,7 @@ temp <- tidy(PP.lang.lme)
 temp[ , 8] <- apply(temp[ , 8], 2, apa_p)
 
 apa_table(temp, 
-          format = "latex", 
+          #format = "latex", 
           col.names = c("Effect", "Group", "Term", "Estimate ($b$)", "$SE$",  "$t$", "$df$", "$p$"), 
           caption = "Subject, Item, Lab, and Language-Random Intercept Mental Rotation Results") 
 ```
@@ -74,14 +74,14 @@ temp <- tidy(PP.fixed.lme)
 temp[ , 8] <- apply(temp[ , 8], 2, apa_p)
 
 apa_table(temp, 
-          format = "latex", 
+          #format = "latex", 
           col.names = c("Effect", "Group", "Term", "Estimate ($b$)", "$SE$",  "$t$", "$df$", "$p$"), 
           caption = "Fixed Effects Mental Rotation Results") 
 ```
 
 ```{r random_e, results='asis'}
 apa_table(lang_results, 
-          format = "latex",
+          #format = "latex",
           col.names = c("Language", "Coefficient ($b$)", "$SE$"),
           row.names = F, 
           caption = "Language Specific Mental Rotation Results")
@@ -92,7 +92,7 @@ temp <- tidy(pred.intercept)
 temp[ , 5] <- apply(temp[ , 5], 2, apa_p)
 
 apa_table(temp, 
-          format = "latex", 
+          #format = "latex", 
           col.names = c("Term", "Estimate ($b$)", "$SE$", "$t$", "$p$"), 
           caption = "Intercept Only Predicting Mental Simulation Results") 
 ```
@@ -102,7 +102,7 @@ temp <- tidy(pred.lab)
 temp[ , 8] <- apply(temp[ , 8], 2, apa_p)
 
 apa_table(temp, 
-          format = "latex", 
+          #format = "latex", 
           col.names = c("Effect", "Group", "Term", "Estimate ($b$)", "$SE$",  "$t$", "$df$", "$p$"), 
           caption = "Lab-Random Intercept Predicting Mental Simulation Results") 
 ```
@@ -112,7 +112,7 @@ temp <- tidy(pred.interact)[1:18 , ]
 temp[ , 8] <- apply(temp[ , 8], 2, apa_p)
 
 apa_table(temp, 
-          format = "latex", 
+          #format = "latex", 
           font_size = "small",
           col.names = c("Effect", "Group", "Term", "Estimate ($b$)", "$SE$",  "$t$", "$df$", "$p$"), 
           caption = "Fixed Effects Interaction Language and Rotation Predicting Mental Simulation Results Part 1") 
@@ -123,7 +123,7 @@ temp <- tidy(pred.interact)[19:36, ]
 temp[ , 8] <- apply(temp[ , 8], 2, apa_p)
 
 apa_table(temp, 
-          format = "latex", 
+          #format = "latex", 
           font_size = "footnotesize",
           col.names = c("Effect", "Group", "Term", "Estimate ($b$)", "$SE$",  "$t$", "$df$", "$p$"), 
           caption = "Fixed Effects Interaction Language and Rotation Predicting Mental Simulation Results Part 2") 

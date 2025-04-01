@@ -6,7 +6,7 @@ appendix: "Stage2_app001.Rmd"
 
 ```{r setup_a, include=FALSE}
 knitr::opts_chunk$set(
-	echo = FALSE,
+	echo = TRUE,
 	message = FALSE,
 	warning = FALSE,
 	cache = TRUE

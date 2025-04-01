@@ -25,7 +25,7 @@ temp <- tidy(intercept.model)
 temp[ , 5] <- apply(temp[ , 5], 2, apa_p)
 
 apa_table(temp, 
-          format = "latex", 
+          #format = "latex", 
           col.names = c("Term", "Estimate ($b$)", "$SE$", "$t$", "$p$"), 
           caption = "Intercept Only Object Orientation Results") 
 ```
@@ -35,7 +35,7 @@ temp <- tidy(subject.model)
 temp[ , 8] <- apply(temp[ , 8], 2, apa_p)
 
 apa_table(temp, 
-          format = "latex", 
+          #format = "latex", 
           col.names = c("Effect", "Group", "Term", "Estimate ($b$)", "$SE$",  "$t$", "$df$", "$p$"), 
           caption = "Subject-Random Intercept Object Orientation Results") 
 ```
@@ -45,7 +45,7 @@ temp <- tidy(item.model)
 temp[ , 8] <- apply(temp[ , 8], 2, apa_p)
 
 apa_table(temp, 
-          format = "latex", 
+          #format = "latex", 
           col.names = c("Effect", "Group", "Term", "Estimate ($b$)", "$SE$",  "$t$", "$df$", "$p$"), 
           caption = "Subject and Item-Random Intercept Object Orientation Results") 
 ```
@@ -55,7 +55,7 @@ temp <- tidy(lab.model)
 temp[ , 8] <- apply(temp[ , 8], 2, apa_p)
 
 apa_table(temp, 
-          format = "latex", 
+          #format = "latex", 
           col.names = c("Effect", "Group", "Term", "Estimate ($b$)", "$SE$",  "$t$", "$df$", "$p$"), 
           caption = "Subject, Item, and Lab-Random Intercept Object Orientation Results") 
 ```
@@ -65,7 +65,7 @@ temp <- tidy(language.model)
 temp[ , 8] <- apply(temp[ , 8], 2, apa_p)
 
 apa_table(temp, 
-          format = "latex", 
+          #format = "latex", 
           col.names = c("Effect", "Group", "Term", "Estimate ($b$)", "$SE$",  "$t$", "$df$", "$p$"), 
           caption = "Subject, Item, Lab, and Language-Random Intercept Object Orientation Results") 
 ```
@@ -75,7 +75,7 @@ temp <- tidy(fixed.model)
 temp[ , 8] <- apply(temp[ , 8], 2, apa_p)
 
 apa_table(temp, 
-          format = "latex", 
+          #format = "latex", 
           col.names = c("Effect", "Group", "Term", "Estimate ($b$)", "$SE$",  "$t$", "$df$", "$p$"), 
           caption = "Fixed Effects Object Orientation Results") 
 ```
@@ -85,7 +85,7 @@ temp <- tidy(german.lab.model)
 temp[ , 8] <- apply(temp[ , 8], 2, apa_p)
 
 apa_table(temp, 
-          format = "latex", 
+          #format = "latex", 
           col.names = c("Effect", "Group", "Term", "Estimate ($b$)", "$SE$",  "$t$", "$df$", "$p$"), 
           caption = "Random Effects German Object Orientation Results") 
 ```
@@ -95,7 +95,7 @@ temp <- tidy(german.fixed.three.model)
 temp[ , 8] <- apply(temp[ , 8], 2, apa_p)
 
 apa_table(temp, 
-          format = "latex", 
+          #format = "latex", 
           col.names = c("Effect", "Group", "Term", "Estimate ($b$)", "$SE$",  "$t$", "$df$", "$p$"), 
           caption = "Fixed Effects German Object Orientation Results") 
 ```

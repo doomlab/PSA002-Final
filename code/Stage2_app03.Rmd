@@ -38,7 +38,7 @@ ft <-
 ```{r print-part1, results = 'asis', include = TRUE}
 ft[1:15, ] %>% 
   apa_table(
- format = "latex",
+ #format = "latex",
  booktabs = TRUE,
  font_size = "footnotesize",
  col.names = c("Language", "$SP_{Trials}$",
@@ -55,7 +55,7 @@ ft[1:15, ] %>%
 ```{r print-part2, results = 'asis', include = TRUE}
 ft[16:35, ] %>% 
   apa_table(
- format = "latex",
+ #format = "latex",
  booktabs = TRUE,
  font_size = "footnotesize",
  col.names = c("Language", "$SP_{Trials}$",
@@ -72,7 +72,7 @@ ft[16:35, ] %>%
 ```{r print-part3, results = 'asis', include = TRUE}
 ft[36:50, ] %>% 
   apa_table(
- format = "latex",
+ #format = "latex",
  booktabs = TRUE,
  font_size = "footnotesize",
 col.names = c("Language", "$SP_{Trials}$",

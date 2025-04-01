@@ -25,6 +25,9 @@ DF <- subset(DF, !is.na(Firstname))
 
 cat(print_yaml(contributors_table = DF))
 
+writeLines(print_yaml(contributors_table = DF),
+           con = "author_yaml.txt")
+
 "No. 67, Jei-Ren St., Hualien City, Taiwan"
 
 cat(print_funding(contributors_table = DF))

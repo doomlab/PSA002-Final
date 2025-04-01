@@ -2,939 +2,1183 @@
 title             : "Investigating Object Orientation Effects Across 18 Languages"
 shorttitle        : "OBJECT ORIENTATION EFFECTS"
 author:
-  - name: Sau-Chin Chen
+  Sau-Chin Chen:
+    name: Sau-Chin Chen
     affiliation: '1'
     role:
       - Conceptualization
       - Data curation
-      - Formal analysis
+      - Funding acquisition
       - Investigation
       - Methodology
+      - Project administration
       - Resources
       - Software
       - Supervision
-      - Validation
       - Visualization
-      - Writing - original draft
-      - Writing - review & editing
     corresponding: yes
     email: csc2009@mail.tcu.edu.tw
-  - name: Erin Buchanan
+    address: "No. 67, Jei-Ren St., Hualien City, Taiwan"
+  Erin Buchanan:
+    name: Erin Buchanan
     affiliation: '2'
     role:
       - Formal analysis
-      - Project administration
-      - Resources
-      - Software
-      - Validation
-      - Writing - review & editing
-    email: ebuchanan@harrisburgu.edu
-  - name: Zoltan Kekecs
-    affiliation: '3,64'
-    role:
-      - Project administration
-      - Writing - review & editing
-    email: zoltan.kekecs@psy.lu.se
-  - name: Jeremy K. Miller
-    affiliation: '4'
-    role:
-      - Project administration
-      - Resources
-      - Supervision
-      - Writing - review & editing
-    email: millerj@willamette.edu
-  - name: Anna Szabelska
-    affiliation: '5'
-    role:
-      - Project administration
-      - Writing - original draft
-      - Writing - review & editing
-    email: aszabelska01@qub.ac.uk
-  - name: Balazs Aczel
-    affiliation: '3'
-    role:
-      - Investigation
-      - Methodology
-      - Resources
-      - Writing - review & editing
-    email: balazs.aczel@gmail.com
-  - name: Pablo Bernabeu
-    affiliation: '6,65'
-    role:
-      - Investigation
-      - Methodology
-      - Visualization
-      - Writing - review & editing
-    email: pcbernabeu@gmail.com
-  - name: Patrick Forscher
-    affiliation: '7,66'
-    role:
-      - Methodology
-      - Writing - review & editing
-    email: schnarrd@gmail.com
-  - name: Attila Szuts
-    affiliation: '3'
-    role:
-      - Investigation
-      - Methodology
-      - Resources
-      - Writing - review & editing
-    email: szuts.attila97@gmail.com
-  - name: Zahir Vally
-    affiliation: '8'
-    role:
-      - Investigation
-      - Resources
-      - Writing - review & editing
-    email: zahir.vally@uaeu.ac.ae
-  - name: Ali H. Al-Hoorie
-    affiliation: '9'
-    role:
-      - Investigation
-      - Resources
-      - Writing - review & editing
-    email: hoorie_ali@hotmail.com
-  - name: Mai Helmy
-    affiliation: '10,67'
-    role:
-      - Investigation
-      - Resources
-      - Writing - review & editing
-    email: mai.helmy@art.menofia.edu.eg
-  - name: Caio Santos Alves da Silva
-    affiliation: '11'
-    role:
-      - Investigation
-      - Resources
-      - Writing - review & editing
-    email: caiosas@usp.br
-  - name: Luana Oliveira da Silva
-    affiliation: '11'
-    role:
-      - Investigation
-      - Resources
-      - Writing - review & editing
-    email: luana.oliveira.people@usp.br
-  - name: Yago Luksevicius de Moraes
-    affiliation: '11'
-    role:
-      - Investigation
-      - Resources
-      - Writing - review & editing
-    email: yagolmoraes@gmail.com
-  - name: Rafael Ming Chi Santos Hsu
-    affiliation: '11'
-    role:
-      - Investigation
-      - Resources
-      - Writing - review & editing
-    email: rafa.mcsh@gmail.com
-  - name: Anthonieta Looman Mafra
-    affiliation: '11'
-    role:
-      - Investigation
-      - Resources
-      - Writing - review & editing
-    email: looman.anthonieta@gmail.com
-  - name: Jaroslava V. Valentova
-    affiliation: '11'
-    role:
-      - Investigation
-      - Resources
-      - Writing - review & editing
-    email: jaroslava@usp.br
-  - name: Marco Antonio Correa Varella
-    affiliation: '11'
-    role:
-      - Investigation
-      - Resources
-      - Writing - review & editing
-    email: macvarella@gmail.com
-  - name: Barnaby Dixson
-    affiliation: '12'
-    role:
-      - Investigation
-      - Writing - review & editing
-    email: b.dixson@uq.edu.au
-  - name: Kim Peters
-    affiliation: '12'
-    role:
-      - Investigation
-      - Writing - review & editing
-    email: k.peters@uq.edu.au
-  - name: Nik Steffens
-    affiliation: '12'
-    role:
-      - Investigation
-      - Writing - review & editing
-    email: n.steffens@uq.edu.au
-  - name: Omid Ghasemi
-    affiliation: '13'
-    role:
-      - Investigation
-      - Writing - review & editing
-    email: omidreza.ghasemi@hdr.mq.edu.au
-  - name: Andrew Roberts
-    affiliation: '13'
-    role:
-      - Investigation
-      - Writing - review & editing
-    email: andrew.roberts@mq.edu.au
-  - name: Robert M. Ross
-    affiliation: '14'
-    role:
-      - Investigation
-      - Writing - review & editing
-    email: robross46@gmail.com
-  - name: Ian D. Stephen
-    affiliation: '68'
-    role:
-      - Investigation
-      - Writing - review & editing
-    email: ian.stephen@mq.edu.au
-  - name: Marina Milyavskaya
-    affiliation: '15'
-    role:
-      - Investigation
-      - Writing - review & editing
-    email: marina.milyavskaya@carleton.ca
-  - name: Kelly Wang
-    affiliation: '15'
-    role:
-      - Investigation
-      - Writing - review & editing
-    email: kelly.wang4@carleton.ca
-  - name: Kaitlyn M. Werner
-    affiliation: '15'
-    role:
-      - Investigation
-      - Writing - review & editing
-    email: kaitlyn.werner@utoronto.ca
-  - name: Dawn Liu Holford
-    affiliation: '16'
-    role:
-      - Investigation
-      - Writing - review & editing
-    email: dawn.liuholford@gmail.com
-  - name: Miroslav Sirota
-    affiliation: '16'
-    role:
-      - Investigation
-      - Writing - review & editing
-    email: msirota@essex.ac.uk
-  - name: Thomas Rhys Evans
-    affiliation: '17'
-    role:
-      - Investigation
-      - Writing - review & editing
-    email: Ab6443@coventry.ac.uk
-  - name: Dermot Lynott
-    affiliation: '18'
-    role:
-      - Investigation
-      - Writing - review & editing
-    email: dermot.lynott@mu.ie
-  - name: Bethany M. Lane
-    affiliation: '19'
-    role:
-      - Investigation
-      - Writing - review & editing
-    email: 1804426@abertay.ac.uk
-  - name: Danny Riis
-    affiliation: '19'
-    role:
-      - Investigation
-      - Writing - review & editing
-    email: 1702768@abertay.ac.uk
-  - name: Glenn P. Williams
-    affiliation: '20'
-    role:
-      - Investigation
-      - Writing - review & editing
-    email: g.williams@abertay.ac.uk
-  - name: Chrystalle B. Y. Tan
-    affiliation: '21'
-    role:
-      - Investigation
-      - Writing - review & editing
-    email: tan.chrystalle@gmail.com
-  - name: Alicia Foo
-    affiliation: '22'
-    role:
-      - Investigation
-      - Writing - review & editing
-    email: aliciafcm@hotmail.com
-  - name: Steve M. J. Janssen
-    affiliation: '22'
-    role:
-      - Investigation
-      - Writing - review & editing
-    email: steve.janssen@nottingham.edu.my
-  - name: Nwadiogo Chisom Arinze
-    affiliation: '23'
-    role:
-      - Investigation
-      - Writing - review & editing
-    email: arinzenwadiogo@gmail.com
-  - name: Izuchukwu Lawrence Gabriel Ndukaihe
-    affiliation: '23'
-    role:
-      - Investigation
-      - Writing - review & editing
-    email: izumario@yahoo.co.uk
-  - name: David Moreau
-    affiliation: '24'
-    role:
-      - Investigation
-      - Writing - review & editing
-    email: d.moreau@auckland.ac.nz
-  - name: Brianna Jurosic
-    affiliation: '25'
-    role:
-      - Investigation
-      - Writing - review & editing
-    email: brianna.jurosic17@gmail.com
-  - name: Brynna Leach
-    affiliation: '25'
-    role:
-      - Investigation
-      - Writing - review & editing
-    email: brynna.leach@gmail.com
-  - name: Savannah Lewis
-    affiliation: '26'
-    role:
-      - Investigation
-      - Writing - review & editing
-    email: slewis5920@gmail.com
-  - name: Peter R. Mallik
-    affiliation: '27'
-    role:
-      - Investigation
-      - Writing - review & editing
-    email: pmallik@hubbardresearch.com
-  - name: Kathleen Schmidt
-    affiliation: '25'
-    role:
-      - Investigation
-      - Resources
-      - Writing - review & editing
-    email: kschmi13@ashland.edu
-  - name: William J. Chopik
-    affiliation: '28'
-    role:
-      - Investigation
-      - Writing - review & editing
-    email: chopikwi@msu.edu
-  - name: Leigh Ann Vaughn
-    affiliation: '29'
-    role:
-      - Investigation
-      - Writing - review & editing
-    email: lvaughn@ithaca.edu
-  - name: Manyu Li
-    affiliation: '30'
-    role:
-      - Investigation
-      - Writing - review & editing
-    email: manyu.li@louisiana.edu
-  - name: Carmel A. Levitan
-    affiliation: '31'
-    role:
-      - Investigation
-      - Writing - review & editing
-    email: levitan@oxy.edu
-  - name: Daniel Storage
-    affiliation: '32'
-    role:
-      - Investigation
-      - Writing - review & editing
-    email: Daniel.Storage@du.edu
-  - name: Carlota Batres
-    affiliation: '33'
-    role:
-      - Investigation
-      - Writing - review & editing
-    email: cbatres@fandm.edu
-  - name: Janina Enachescu
-    affiliation: '34'
-    role:
-      - Investigation
-      - Resources
-      - Writing - review & editing
-    email: janina.enachescu@univie.ac.at
-  - name: Jerome Olsen
-    affiliation: '34'
-    role:
-      - Investigation
-      - Resources
-      - Writing - review & editing
-    email: jerome.olsen@univie.ac.at
-  - name: Martin Voracek
-    affiliation: '34'
-    role:
-      - Investigation
-      - Resources
-      - Writing - review & editing
-    email: martin.voracek@univie.ac.at
-  - name: Claus Lamm
-    affiliation: '35'
-    role:
-      - Investigation
-      - Resources
-      - Writing - review & editing
-    email: claus.lamm@univie.ac.at
-  - name: Ekaterina Pronizius
-    affiliation: '35'
-    role:
-      - Investigation
-      - Writing - review & editing
-    email: ekaterina.pronizius@univie.ac.at
-  - name: Tilli Ripp
-    affiliation: '36'
-    role:
-      - Investigation
-      - Writing - review & editing
-    email: tilli.ripp@uni-wh.de
-  - name: Jan Philipp Röer
-    affiliation: '36'
-    role:
-      - Investigation
-      - Writing - review & editing
-    email: jan.roeer@hhu.de
-  - name: Roxane Schnepper
-    affiliation: '36'
-    role:
-      - Investigation
-      - Writing - review & editing
-    email: roxane.schnepper@uni-wh.de
-  - name: Marietta Papadatou-Pastou
-    affiliation: '37'
-    role:
-      - Investigation
-      - Resources
-      - Writing - review & editing
-    email: marietta.papadatou@gmail.com
-  - name: Aviv Mokady
-    affiliation: '38'
-    role:
-      - Investigation
-      - Resources
-      - Writing - review & editing
-    email: avmokady@gmail.com
-  - name: Niv Reggev
-    affiliation: '38'
-    role:
-      - Investigation
-      - Resources
-      - Writing - review & editing
-    email: reggevn@bgu.ac.il
-  - name: Priyanka Chandel
-    affiliation: '39'
-    role:
-      - Investigation
-      - Resources
-      - Writing - review & editing
-    email: priyankachandel18@gmail.com
-  - name: Pratibha Kujur
-    affiliation: '39'
-    role:
-      - Investigation
-      - Resources
-      - Writing - review & editing
-    email: pratibhakujur0626@gmail.com
-  - name: Babita Pande
-    affiliation: '39'
-    role:
-      - Investigation
-      - Resources
-      - Supervision
-      - Writing - review & editing
-    email: babitatime14@gmail.com
-  - name: Arti Parganiha
-    affiliation: '39'
-    role:
-      - Investigation
-      - Resources
-      - Supervision
-      - Writing - review & editing
-    email: arti.parganiha@gmail.com
-  - name: Noorshama Parveen
-    affiliation: '39'
-    role:
-      - Investigation
-      - Resources
-      - Writing - review & editing
-    email: noorshama12@gmail.com
-  - name: Sraddha Pradhan
-    affiliation: '39'
-    role:
-      - Investigation
-      - Resources
-      - Writing - review & editing
-    email: sraddhapradhan11@gmail.com
-  - name: Margaret Messiah Singh
-    affiliation: '39'
-    role:
-      - Investigation
-      - Writing - review & editing
-    email: mmessiahsingh@gmail.com
-  - name: Max Korbmacher
-    affiliation: '40'
-    role:
-      - Investigation
-      - Writing - review & editing
-    email: max.korbmacher@gmail.com
-  - name: Jonas R. Kunst
-    affiliation: '41'
-    role:
-      - Investigation
-      - Resources
-      - Writing - review & editing
-    email: j.r.kunst@psykologi.uio.no
-  - name: Christian K. Tamnes
-    affiliation: '41'
-    role:
-      - Investigation
-      - Resources
-      - Writing - review & editing
-    email: c.k.tamnes@psykologi.uio.no
-  - name: Frederike S. Woelfert
-    affiliation: '41'
-    role:
-      - Investigation
-      - Writing - review & editing
-    email: frederwo@student.sv.uio.no
-  - name: Kristoffer Klevjer
-    affiliation: '42'
-    role:
-      - Investigation
-      - Writing - review & editing
-    email: klevjer@gmail.com
-  - name: Sarah E. Martiny
-    affiliation: '42'
-    role:
-      - Investigation
-      - Writing - review & editing
-    email: sarah.martiny@uit.no
-  - name: Gerit Pfuhl
-    affiliation: '42'
-    role:
-      - Investigation
-      - Resources
-      - Writing - review & editing
-    email: gerit.pfuhl@uit.no
-  - name: Sylwia Adamus
-    affiliation: '43'
-    role:
-      - Investigation
-      - Resources
-      - Writing - review & editing
-    email: sylwiadamus@gmail.com
-  - name: Krystian Barzykowski
-    affiliation: '43'
-    role:
-      - Investigation
-      - Resources
-      - Supervision
-      - Writing - review & editing
-    email: krystian.barzykowski@uj.edu.pl
-  - name: Katarzyna Filip
-    affiliation: '43'
-    role:
-      - Investigation
-      - Resources
-      - Writing - review & editing
-    email: kfilip2240@gmail.com
-  - name: Patrícia Arriaga
-    affiliation: '44'
-    role:
       - Funding acquisition
       - Investigation
+      - Project administration
+      - Supervision
+    corresponding: no
+    email: ebuchanan@harrisburgu.edu
+  Zoltan Kekecs:
+    name: Zoltan Kekecs
+    affiliation: '3,4'
+    role:
+      - Formal analysis
+      - Supervision
+    corresponding: no
+    email: zoltan.kekecs@psy.lu.se
+  Jeremy K. Miller:
+    name: Jeremy K. Miller
+    affiliation: '5'
+    role:
+      - Formal analysis
+      - Funding acquisition
+      - Methodology
+      - Supervision
+    corresponding: no
+    email: millerj@willamette.edu
+  Anna Szabelska:
+    name: Anna Szabelska
+    affiliation: '6'
+    role:
+      - Formal analysis
+      - Software
+      - Supervision
+    corresponding: no
+    email: aszabelska01@qub.ac.uk
+  Balazs Aczel:
+    name: Balazs Aczel
+    affiliation: '3'
+    role:
+      - Conceptualization
+      - Data curation
+      - Funding acquisition
+      - Supervision
+    corresponding: no
+    email: balazs.aczel@gmail.com
+  Pablo Bernabeu:
+    name: Pablo Bernabeu
+    affiliation: '7,8'
+    role:
+      - Conceptualization
+      - Data curation
       - Resources
-      - Writing - review & editing
-    email: patricia.arriaga@iscte-iul.pt
-  - name: Vasilije Gvozdenović
-    affiliation: '45'
+      - Supervision
+    corresponding: no
+    email: pcbernabeu@gmail.com
+  Patrick Forscher:
+    name: Patrick Forscher
+    affiliation: '9,10'
     role:
-      - Investigation
-      - Resources
-      - Writing - review & editing
-    email: vgvozdenovic@gmail.com
-  - name: Vanja Ković
-    affiliation: '45'
+      - Data curation
+      - Supervision
+    corresponding: no
+    email: schnarrd@gmail.com
+  Attila Szuts:
+    name: Attila Szuts
+    affiliation: '3'
     role:
-      - Investigation
-      - Resources
-      - Writing - review & editing
-    email: vanja.kovic@f.bg.ac.rs
-  - name: Zhong Chen
-    affiliation: '46'
+      - Conceptualization
+      - Data curation
+      - Funding acquisition
+      - Supervision
+    corresponding: no
+    email: szuts.attila97@gmail.com
+  Zahir Vally:
+    name: Zahir Vally
+    affiliation: '11'
     role:
-      - Investigation
-      - Writing - review & editing
-    email: zhongchen@um.edu.mo
-  - name: Fei Gao
-    affiliation: '46'
+      - Conceptualization
+      - Funding acquisition
+      - Supervision
+    corresponding: no
+    email: zahir.vally@uaeu.ac.ae
+  Ali H. Al-Hoorie:
+    name: Ali H. Al-Hoorie
+    affiliation: '12'
     role:
-      - Investigation
-      - Resources
-      - Writing - review & editing
-    email: onegaofei@gmail.com
-  - name: Lisa Li
-    affiliation: '46'
+      - Conceptualization
+      - Funding acquisition
+      - Supervision
+    corresponding: no
+    email: hoorie_ali@hotmail.com
+  Mai Helmy:
+    name: Mai Helmy
+    affiliation: '13,14'
     role:
-      - Investigation
-      - Resources
-      - Writing - review & editing
-    email: yb87720@um.edu.mo
-  - name: Jozef Bavoľár
-    affiliation: '47'
+      - Conceptualization
+      - Funding acquisition
+      - Supervision
+    corresponding: no
+    email: mai.helmy@art.menofia.edu.eg
+  Caio Santos Alves da Silva:
+    name: Caio Santos Alves da Silva
+    affiliation: '15'
     role:
-      - Investigation
-      - Resources
-      - Writing - review & editing
-    email: jozef.bavolar@upjs.sk
-  - name: Monika Hricová
-    affiliation: '47'
+      - Conceptualization
+      - Funding acquisition
+      - Supervision
+    corresponding: no
+    email: caiosas@usp.br
+  Luana Oliveira da Silva:
+    name: Luana Oliveira da Silva
+    affiliation: '15'
     role:
-      - Investigation
-      - Resources
-      - Writing - review & editing
-    email: monika.hricova@upjs.sk
-  - name: Pavol Kačmár
-    affiliation: '47'
+      - Conceptualization
+      - Funding acquisition
+      - Supervision
+    corresponding: no
+    email: luana.oliveira.people@usp.br
+  Yago Luksevicius de Moraes:
+    name: Yago Luksevicius de Moraes
+    affiliation: '15'
     role:
-      - Investigation
-      - Resources
-      - Writing - review & editing
-    email: pavol.kacmar@upjs.sk
-  - name: Matúš Adamkovič
-    affiliation: '48,69'
+      - Conceptualization
+      - Funding acquisition
+      - Supervision
+    corresponding: no
+    email: yagolmoraes@gmail.com
+  Rafael Ming Chi Santos Hsu:
+    name: Rafael Ming Chi Santos Hsu
+    affiliation: '15'
     role:
-      - Investigation
-      - Writing - review & editing
-    email: matho.adamkovic@gmail.com
-  - name: Peter Babinčák
-    affiliation: '49'
+      - Conceptualization
+      - Funding acquisition
+      - Supervision
+    corresponding: no
+    email: rafa.mcsh@gmail.com
+  Anthonieta Looman Mafra:
+    name: Anthonieta Looman Mafra
+    affiliation: '15'
     role:
-      - Investigation
-      - Writing - review & editing
-    email: peter.babincak@unipo.sk
-  - name: Gabriel Baník
-    affiliation: '49,50'
+      - Conceptualization
+      - Funding acquisition
+      - Supervision
+    corresponding: no
+    email: looman.anthonieta@gmail.com
+  Jaroslava V. Valentova:
+    name: Jaroslava V. Valentova
+    affiliation: '15'
     role:
-      - Investigation
-      - Writing - review & editing
-    email: gabriel.banik@gmail.com
-  - name: Ivan Ropovik
-    affiliation: '50,70'
+      - Conceptualization
+      - Funding acquisition
+      - Supervision
+    corresponding: no
+    email: jaroslava@usp.br
+  Marco Antonio Correa Varella:
+    name: Marco Antonio Correa Varella
+    affiliation: '15'
     role:
-      - Investigation
-      - Writing - review & editing
-    email: ivan.ropovik@gmail.com
-  - name: Danilo Zambrano Ricaurte
-    affiliation: '51'
+      - Conceptualization
+      - Funding acquisition
+      - Supervision
+    corresponding: no
+    email: macvarella@gmail.com
+  Barnaby Dixson:
+    name: Barnaby Dixson
+    affiliation: '16'
     role:
-      - Investigation
-      - Resources
-      - Writing - review & editing
-    email: danilozambrano@psicologos.com
-  - name: Sara Álvarez Solas
-    affiliation: '52'
+      - Conceptualization
+      - Supervision
+    corresponding: no
+    email: b.dixson@uq.edu.au
+  Kim Peters:
+    name: Kim Peters
+    affiliation: '16'
     role:
-      - Investigation
-      - Resources
-      - Writing - review & editing
-    email: sara.alvarez.solas@gmail.com
-  - name: Harry Manley
-    affiliation: '53,71'
+      - Conceptualization
+      - Supervision
+    corresponding: no
+    email: k.peters@uq.edu.au
+  Nik Steffens:
+    name: Nik Steffens
+    affiliation: '16'
     role:
-      - Investigation
-      - Resources
-      - Writing - review & editing
-    email: harrisonmanley@gmail.com
-  - name: Panita Suavansri
-    affiliation: '53'
+      - Conceptualization
+      - Supervision
+    corresponding: no
+    email: n.steffens@uq.edu.au
+  Omid Ghasemi:
+    name: Omid Ghasemi
+    affiliation: '17'
     role:
-      - Investigation
-      - Resources
-      - Writing - review & editing
-    email: p.suavansri@gmail.com
-  - name: Chun-Chia Kung
-    affiliation: '54'
+      - Conceptualization
+      - Supervision
+    corresponding: no
+    email: omidreza.ghasemi@hdr.mq.edu.au
+  Andrew Roberts:
+    name: Andrew Roberts
+    affiliation: '17'
     role:
-      - Investigation
-      - Resources
-      - Writing - review & editing
-    email: cckung@kunglab-nckupsy.org
-  - name: Belemir Çoktok
-    affiliation: '55'
+      - Conceptualization
+      - Supervision
+    corresponding: no
+    email: andrew.roberts@mq.edu.au
+  Robert M. Ross:
+    name: Robert M. Ross
+    affiliation: '18'
     role:
-      - Investigation
-      - Resources
-      - Writing - review & editing
-    email: b.coktok@gmail.com
-  - name: Asil Ali Özdoğru
-    affiliation: '55, 72'
+      - Conceptualization
+      - Supervision
+    corresponding: no
+    email: robross46@gmail.com
+  Ian D. Stephen:
+    name: Ian D. Stephen
+    affiliation: '17,19'
     role:
-      - Investigation
-      - Resources
-      - Writing - review & editing
-    email: asil.ozdogru@uskudar.edu.tr
-  - name: Çağlar Solak
-    affiliation: '56'
+      - Conceptualization
+      - Supervision
+    corresponding: no
+    email: stepheni@bournemouth.ac.uk
+  Marina Milyavskaya:
+    name: Marina Milyavskaya
+    affiliation: '20'
     role:
-      - Investigation
-      - Writing - review & editing
-    email: solakcaglar@gmail.com
-  - name: Sinem Söylemez
-    affiliation: '56'
+      - Conceptualization
+      - Supervision
+    corresponding: no
+    email: marina.milyavskaya@carleton.ca
+  Kelly Wang:
+    name: Kelly Wang
+    affiliation: '20'
     role:
-      - Investigation
-      - Writing - review & editing
-    email: sinem.nokta@gmail.com
-  - name: Sami Çoksan
-    affiliation: '57'
+      - Conceptualization
+      - Supervision
+    corresponding: no
+    email: kelly.wang4@carleton.ca
+  Kaitlyn M. Werner:
+    name: Kaitlyn M. Werner
+    affiliation: '20'
     role:
-      - Investigation
-      - Resources
-      - Writing - review & editing
-    email: scoksan@metu.edu.tr
-  - name: İlker Dalgar
-    affiliation: '58'
+      - Conceptualization
+      - Supervision
+    corresponding: no
+    email: kaitlyn.werner@utoronto.ca
+  Dawn Liu Holford:
+    name: Dawn Liu Holford
+    affiliation: '21'
     role:
-      - Resources
-      - Writing - review & editing
-    email: ilkerdalgar@gmail.com
-  - name: Mahmoud Elsherif
-    affiliation: '59'
-    role: 
-      - Writing - review & editing
-    email: mahmoud.medhat.elsherif@gmail.com
-  - name: Martin Vasilev
-    affiliation: '60'
-    role: 
-      - Writing - review & editing
-    email: mvasilev@bournemouth.ac.uk
-  - name: Vinka Mlakic
-    affiliation: '61'
+      - Conceptualization
+      - Supervision
+    corresponding: no
+    email: dawn.liuholford@gmail.com
+  Miroslav Sirota:
+    name: Miroslav Sirota
+    affiliation: '21'
     role:
-      - Resources
-      - Writing - review & editing
-    email: vinka.mlakic@gmail.com
-  - name: Elisabeth Oberzaucher
-    affiliation: '62'
+      - Conceptualization
+      - Supervision
+    corresponding: no
+    email: msirota@essex.ac.uk
+  Thomas Rhys Evans:
+    name: Thomas Rhys Evans
+    affiliation: '22'
     role:
-      - Resources
-      - Writing - review & editing
-    email: elisabeth@oberzaucher.eu
-  - name: Stefan Stieger
-    affiliation: '61'
+      - Conceptualization
+      - Supervision
+    corresponding: no
+    email: Ab6443@coventry.ac.uk
+  Dermot Lynott:
+    name: Dermot Lynott
+    affiliation: '23'
     role:
-      - Resources
-      - Writing - review & editing
-    email: stefan.stieger@kl.ac.at
-  - name: Selina Volsa
-    affiliation: '61'
+      - Conceptualization
+      - Supervision
+    corresponding: no
+    email: dermot.lynott@mu.ie
+  Bethany M. Lane:
+    name: Bethany M. Lane
+    affiliation: '24'
     role:
-      - Resources
-      - Writing - review & editing
-    email: selina.volsa@kl.ac.at
-  - name: Janis Zickfeld
-    affiliation: '63'
+      - Conceptualization
+      - Supervision
+    corresponding: no
+    email: 1804426@abertay.ac.uk
+  Danny Riis:
+    name: Danny Riis
+    affiliation: '24'
     role:
-      - Resources
-      - Writing - review & editing
-    email: jhzickfeld@gmail.com
-  - name: Christopher R. Chartier
+      - Conceptualization
+      - Supervision
+    corresponding: no
+    email: 1702768@abertay.ac.uk
+  Glenn P. Williams:
+    name: Glenn P. Williams
     affiliation: '25'
     role:
-      - Investigation
-      - Project administration
-      - Writing - review & editing
+      - Conceptualization
+      - Supervision
+    corresponding: no
+    email: g.williams@abertay.ac.uk
+  Chrystalle B. Y. Tan:
+    name: Chrystalle B. Y. Tan
+    affiliation: '26'
+    role:
+      - Conceptualization
+      - Supervision
+    corresponding: no
+    email: tan.chrystalle@gmail.com
+  Alicia Foo:
+    name: Alicia Foo
+    affiliation: '27'
+    role:
+      - Conceptualization
+      - Supervision
+    corresponding: no
+    email: aliciafcm@hotmail.com
+  Steve M. J. Janssen:
+    name: Steve M. J. Janssen
+    affiliation: '27'
+    role:
+      - Conceptualization
+      - Supervision
+    corresponding: no
+    email: steve.janssen@nottingham.edu.my
+  Nwadiogo Chisom Arinze:
+    name: Nwadiogo Chisom Arinze
+    affiliation: '28'
+    role:
+      - Conceptualization
+      - Supervision
+    corresponding: no
+    email: arinzenwadiogo@gmail.com
+  Izuchukwu Lawrence Gabriel Ndukaihe:
+    name: Izuchukwu Lawrence Gabriel Ndukaihe
+    affiliation: '28'
+    role:
+      - Conceptualization
+      - Supervision
+    corresponding: no
+    email: izumario@yahoo.co.uk
+  David Moreau:
+    name: David Moreau
+    affiliation: '29'
+    role:
+      - Conceptualization
+      - Supervision
+    corresponding: no
+    email: d.moreau@auckland.ac.nz
+  Brianna Jurosic:
+    name: Brianna Jurosic
+    affiliation: '30'
+    role:
+      - Conceptualization
+      - Supervision
+    corresponding: no
+    email: brianna.jurosic17@gmail.com
+  Brynna Leach:
+    name: Brynna Leach
+    affiliation: '30'
+    role:
+      - Conceptualization
+      - Supervision
+    corresponding: no
+    email: brynna.leach@gmail.com
+  Savannah Lewis:
+    name: Savannah Lewis
+    affiliation: '31'
+    role:
+      - Conceptualization
+      - Supervision
+    corresponding: no
+    email: slewis5920@gmail.com
+  Peter R. Mallik:
+    name: Peter R. Mallik
+    affiliation: '32'
+    role:
+      - Conceptualization
+      - Supervision
+    corresponding: no
+    email: pmallik@hubbardresearch.com
+  Kathleen Schmidt:
+    name: Kathleen Schmidt
+    affiliation: '30'
+    role:
+      - Conceptualization
+      - Funding acquisition
+      - Supervision
+    corresponding: no
+    email: kschmi13@ashland.edu
+  William J. Chopik:
+    name: William J. Chopik
+    affiliation: '33'
+    role:
+      - Conceptualization
+      - Supervision
+    corresponding: no
+    email: chopikwi@msu.edu
+  Leigh Ann Vaughn:
+    name: Leigh Ann Vaughn
+    affiliation: '34'
+    role:
+      - Conceptualization
+      - Supervision
+    corresponding: no
+    email: lvaughn@ithaca.edu
+  Manyu Li:
+    name: Manyu Li
+    affiliation: '35'
+    role:
+      - Conceptualization
+      - Supervision
+    corresponding: no
+    email: manyu.li@louisiana.edu
+  Carmel A. Levitan:
+    name: Carmel A. Levitan
+    affiliation: '36'
+    role:
+      - Conceptualization
+      - Supervision
+    corresponding: no
+    email: levitan@oxy.edu
+  Daniel Storage:
+    name: Daniel Storage
+    affiliation: '37'
+    role:
+      - Conceptualization
+      - Supervision
+    corresponding: no
+    email: Daniel.Storage@du.edu
+  Carlota Batres:
+    name: Carlota Batres
+    affiliation: '38'
+    role:
+      - Conceptualization
+      - Supervision
+    corresponding: no
+    email: cbatres@fandm.edu
+  Tyler McGee:
+    name: Tyler McGee
+    affiliation: '38'
+    role: []
+    corresponding: no
+    email: Tyler_Mcgee@protonmail.com
+  Janina Enachescu:
+    name: Janina Enachescu
+    affiliation: '39'
+    role:
+      - Conceptualization
+      - Funding acquisition
+      - Supervision
+    corresponding: no
+    email: janina.enachescu@univie.ac.at
+  Jerome Olsen:
+    name: Jerome Olsen
+    affiliation: '39'
+    role:
+      - Conceptualization
+      - Funding acquisition
+      - Supervision
+    corresponding: no
+    email: jerome.olsen@univie.ac.at
+  Martin Voracek:
+    name: Martin Voracek
+    affiliation: '39'
+    role:
+      - Conceptualization
+      - Funding acquisition
+      - Supervision
+    corresponding: no
+    email: martin.voracek@univie.ac.at
+  Claus Lamm:
+    name: Claus Lamm
+    affiliation: '40'
+    role:
+      - Conceptualization
+      - Funding acquisition
+      - Supervision
+    corresponding: no
+    email: claus.lamm@univie.ac.at
+  Ekaterina Pronizius:
+    name: Ekaterina Pronizius
+    affiliation: '40'
+    role:
+      - Conceptualization
+      - Supervision
+    corresponding: no
+    email: ekaterina.pronizius@univie.ac.at
+  Tilli Ripp:
+    name: Tilli Ripp
+    affiliation: '41'
+    role:
+      - Conceptualization
+      - Supervision
+    corresponding: no
+    email: tilli.ripp@uni-wh.de
+  Jan Philipp Röer:
+    name: Jan Philipp Röer
+    affiliation: '41'
+    role:
+      - Conceptualization
+      - Supervision
+    corresponding: no
+    email: jan.roeer@hhu.de
+  Roxane Schnepper:
+    name: Roxane Schnepper
+    affiliation: '41'
+    role:
+      - Conceptualization
+      - Supervision
+    corresponding: no
+    email: roxane.schnepper@uni-wh.de
+  Marietta Papadatou-Pastou:
+    name: Marietta Papadatou-Pastou
+    affiliation: '42'
+    role:
+      - Conceptualization
+      - Funding acquisition
+      - Supervision
+    corresponding: no
+    email: marietta.papadatou@gmail.com
+  Aviv Mokady:
+    name: Aviv Mokady
+    affiliation: '43'
+    role:
+      - Conceptualization
+      - Funding acquisition
+      - Supervision
+    corresponding: no
+    email: avmokady@gmail.com
+  Niv Reggev:
+    name: Niv Reggev
+    affiliation: '43'
+    role:
+      - Conceptualization
+      - Funding acquisition
+      - Supervision
+    corresponding: no
+    email: reggevn@bgu.ac.il
+  Priyanka Chandel:
+    name: Priyanka Chandel
+    affiliation: '44'
+    role:
+      - Conceptualization
+      - Funding acquisition
+      - Supervision
+    corresponding: no
+    email: priyankachandel18@gmail.com
+  Pratibha Kujur:
+    name: Pratibha Kujur
+    affiliation: '44'
+    role:
+      - Conceptualization
+      - Funding acquisition
+      - Supervision
+    corresponding: no
+    email: pratibhakujur0626@gmail.com
+  Babita Pande:
+    name: Babita Pande
+    affiliation: '44'
+    role:
+      - Conceptualization
+      - Funding acquisition
+      - Methodology
+      - Supervision
+    corresponding: no
+    email: babitatime14@gmail.com
+  Arti Parganiha:
+    name: Arti Parganiha
+    affiliation: '44'
+    role:
+      - Conceptualization
+      - Funding acquisition
+      - Methodology
+      - Supervision
+    corresponding: no
+    email: arti.parganiha@gmail.com
+  Noorshama Parveen:
+    name: Noorshama Parveen
+    affiliation: '44'
+    role:
+      - Conceptualization
+      - Funding acquisition
+      - Supervision
+    corresponding: no
+    email: noorshama12@gmail.com
+  Sraddha Pradhan:
+    name: Sraddha Pradhan
+    affiliation: '44'
+    role:
+      - Conceptualization
+      - Funding acquisition
+      - Supervision
+    corresponding: no
+    email: sraddhapradhan11@gmail.com
+  Margaret Messiah Singh:
+    name: Margaret Messiah Singh
+    affiliation: '44'
+    role:
+      - Conceptualization
+      - Supervision
+    corresponding: no
+    email: mmessiahsingh@gmail.com
+  Max Korbmacher:
+    name: Max Korbmacher
+    affiliation: '45'
+    role:
+      - Conceptualization
+      - Supervision
+    corresponding: no
+    email: max.korbmacher@gmail.com
+  Jonas R. Kunst:
+    name: Jonas R. Kunst
+    affiliation: '46'
+    role:
+      - Conceptualization
+      - Funding acquisition
+      - Supervision
+    corresponding: no
+    email: j.r.kunst@psykologi.uio.no
+  Christian K. Tamnes:
+    name: Christian K. Tamnes
+    affiliation: '46'
+    role:
+      - Conceptualization
+      - Funding acquisition
+      - Supervision
+    corresponding: no
+    email: c.k.tamnes@psykologi.uio.no
+  Frederike S. Woelfert:
+    name: Frederike S. Woelfert
+    affiliation: '46'
+    role:
+      - Conceptualization
+      - Supervision
+    corresponding: no
+    email: frederwo@student.sv.uio.no
+  Kristoffer Klevjer:
+    name: Kristoffer Klevjer
+    affiliation: '47'
+    role:
+      - Conceptualization
+      - Supervision
+    corresponding: no
+    email: klevjer@gmail.com
+  Sarah E. Martiny:
+    name: Sarah E. Martiny
+    affiliation: '47'
+    role:
+      - Conceptualization
+      - Supervision
+    corresponding: no
+    email: sarah.martiny@uit.no
+  Gerit Pfuhl:
+    name: Gerit Pfuhl
+    affiliation: '47,48'
+    role:
+      - Conceptualization
+      - Funding acquisition
+      - Supervision
+    corresponding: no
+    email: gerit.pfuhl@uit.no
+  Sylwia Adamus:
+    name: Sylwia Adamus
+    affiliation: '49'
+    role:
+      - Conceptualization
+      - Funding acquisition
+      - Supervision
+    corresponding: no
+    email: sylwiadamus@gmail.com
+  Krystian Barzykowski:
+    name: Krystian Barzykowski
+    affiliation: '49'
+    role:
+      - Conceptualization
+      - Funding acquisition
+      - Methodology
+      - Supervision
+    corresponding: no
+    email: krystian.barzykowski@uj.edu.pl
+  Katarzyna Filip:
+    name: Katarzyna Filip
+    affiliation: '49'
+    role:
+      - Conceptualization
+      - Funding acquisition
+      - Supervision
+    corresponding: no
+    email: kfilip2240@gmail.com
+  Patrícia Arriaga:
+    name: Patrícia Arriaga
+    affiliation: '50'
+    role:
+      - Conceptualization
+      - Funding acquisition
+      - Supervision
+    corresponding: no
+    email: patricia.arriaga@iscte-iul.pt
+  Vasilije Gvozdenović:
+    name: Vasilije Gvozdenović
+    affiliation: '51'
+    role:
+      - Conceptualization
+      - Funding acquisition
+      - Supervision
+    corresponding: no
+    email: vgvozdenovic@gmail.com
+  Vanja Ković:
+    name: Vanja Ković
+    affiliation: '51'
+    role:
+      - Conceptualization
+      - Funding acquisition
+      - Supervision
+    corresponding: no
+    email: vanja.kovic@f.bg.ac.rs
+  Zhong Chen:
+    name: Zhong Chen
+    affiliation: '52'
+    role:
+      - Conceptualization
+      - Supervision
+    corresponding: no
+    email: zhongchen@um.edu.mo
+  Fei Gao:
+    name: Fei Gao
+    affiliation: '52'
+    role:
+      - Conceptualization
+      - Funding acquisition
+      - Supervision
+    corresponding: no
+    email: onegaofei@gmail.com
+  Lisa Li:
+    name: Lisa Li
+    affiliation: '52'
+    role:
+      - Conceptualization
+      - Funding acquisition
+      - Supervision
+    corresponding: no
+    email: yb87720@um.edu.mo
+  Jozef Bavoľár:
+    name: Jozef Bavoľár
+    affiliation: '53'
+    role:
+      - Conceptualization
+      - Funding acquisition
+      - Supervision
+    corresponding: no
+    email: jozef.bavolar@upjs.sk
+  Monika Hricová:
+    name: Monika Hricová
+    affiliation: '53'
+    role:
+      - Conceptualization
+      - Funding acquisition
+      - Supervision
+    corresponding: no
+    email: monika.hricova@upjs.sk
+  Pavol Kačmár:
+    name: Pavol Kačmár
+    affiliation: '53'
+    role:
+      - Conceptualization
+      - Funding acquisition
+      - Supervision
+    corresponding: no
+    email: pavol.kacmar@upjs.sk
+  Matúš Adamkovič:
+    name: Matúš Adamkovič
+    affiliation: '54,55'
+    role:
+      - Conceptualization
+      - Supervision
+    corresponding: no
+    email: matho.adamkovic@gmail.com
+  Peter Babinčák:
+    name: Peter Babinčák
+    affiliation: '56'
+    role:
+      - Conceptualization
+      - Supervision
+    corresponding: no
+    email: peter.babincak@unipo.sk
+  Gabriel Baník:
+    name: Gabriel Baník
+    affiliation: '56,57'
+    role:
+      - Conceptualization
+      - Supervision
+    corresponding: no
+    email: gabriel.banik@gmail.com
+  Ivan Ropovik:
+    name: Ivan Ropovik
+    affiliation: '57,58'
+    role:
+      - Conceptualization
+      - Supervision
+    corresponding: no
+    email: ivan.ropovik@gmail.com
+  Danilo Zambrano Ricaurte:
+    name: Danilo Zambrano Ricaurte
+    affiliation: '59'
+    role:
+      - Conceptualization
+      - Funding acquisition
+      - Supervision
+    corresponding: no
+    email: danilozambrano@psicologos.com
+  Sara Álvarez-Solas:
+    name: Sara Álvarez-Solas
+    affiliation: '60'
+    role:
+      - Conceptualization
+      - Funding acquisition
+      - Supervision
+    corresponding: no
+    email: sara.alvarez.solas@gmail.com
+  Harry Manley:
+    name: Harry Manley
+    affiliation: '61,62'
+    role:
+      - Conceptualization
+      - Funding acquisition
+      - Supervision
+    corresponding: no
+    email: harrisonmanley@gmail.com
+  Panita Suavansri:
+    name: Panita Suavansri
+    affiliation: '61'
+    role:
+      - Conceptualization
+      - Funding acquisition
+      - Supervision
+    corresponding: no
+    email: p.suavansri@gmail.com
+  Chun-Chia Kung:
+    name: Chun-Chia Kung
+    affiliation: '63'
+    role:
+      - Conceptualization
+      - Funding acquisition
+      - Supervision
+    corresponding: no
+    email: cckung@kunglab-nckupsy.org
+  Belemir Çoktok:
+    name: Belemir Çoktok
+    affiliation: '64'
+    role:
+      - Conceptualization
+      - Funding acquisition
+      - Supervision
+    corresponding: no
+    email: b.coktok@gmail.com
+  Asil Ali Özdoğru:
+    name: Asil Ali Özdoğru
+    affiliation: '64,65'
+    role:
+      - Conceptualization
+      - Funding acquisition
+      - Supervision
+    corresponding: no
+    email: asil.ozdogru@uskudar.edu.tr
+  Çağlar Solak:
+    name: Çağlar Solak
+    affiliation: '66'
+    role:
+      - Conceptualization
+      - Supervision
+    corresponding: no
+    email: solakcaglar@gmail.com
+  Sinem Söylemez:
+    name: Sinem Söylemez
+    affiliation: '66'
+    role:
+      - Conceptualization
+      - Supervision
+    corresponding: no
+    email: sinem.nokta@gmail.com
+  Sami Çoksan:
+    name: Sami Çoksan
+    affiliation: '67,68'
+    role:
+      - Conceptualization
+      - Funding acquisition
+      - Supervision
+    corresponding: no
+    email: sami.coksan@erzurum.edu.tr
+  İlker Dalgar:
+    name: İlker Dalgar
+    affiliation: '69'
+    role:
+      - Funding acquisition
+      - Supervision
+    corresponding: no
+    email: ilkerdalgar@gmail.com
+  Mahmoud Elsherif:
+    name: Mahmoud Elsherif
+    affiliation: '70'
+    role: Supervision
+    corresponding: no
+    email: mahmoud.medhat.elsherif@gmail.com
+  Martin Vasilev:
+    name: Martin Vasilev
+    affiliation: '71'
+    role: Supervision
+    corresponding: no
+    email: m.vasilev@ucl.ac.uk
+  Vinka Mlakic:
+    name: Vinka Mlakic
+    affiliation: '72'
+    role:
+      - Funding acquisition
+      - Supervision
+    corresponding: no
+    email: vinka.mlakic@gmail.com
+  Elisabeth Oberzaucher:
+    name: Elisabeth Oberzaucher
+    affiliation: '73'
+    role:
+      - Funding acquisition
+      - Supervision
+    corresponding: no
+    email: elisabeth@oberzaucher.eu
+  Stefan Stieger:
+    name: Stefan Stieger
+    affiliation: '72'
+    role:
+      - Funding acquisition
+      - Supervision
+    corresponding: no
+    email: stefan.stieger@kl.ac.at
+  Selina Volsa:
+    name: Selina Volsa
+    affiliation: '72'
+    role:
+      - Funding acquisition
+      - Supervision
+    corresponding: no
+    email: selina.volsa@kl.ac.at
+  Janis Zickfeld:
+    name: Janis Zickfeld
+    affiliation: '74'
+    role:
+      - Funding acquisition
+      - Supervision
+    corresponding: no
+    email: jhzickfeld@gmail.com
+  Christopher R. Chartier:
+    name: Christopher R. Chartier
+    affiliation: '30'
+    role:
+      - Conceptualization
+      - Formal analysis
+      - Supervision
+    corresponding: no
     email: cchartie@ashland.edu
+
 affiliation:
-  - id: '1'
+  - id: 1
     institution: Department of Human Development and Psychology, Tzu-Chi University,
       Hualien, Taiwan
-  - id: '2'
-    institution: Harrisburg University of Science and Technology, Harrisburg, PA,
-      USA
-  - id: '3'
+  - id: 2
+    institution: Harrisburg University of Science and Technology, Harrisburg, United
+      States of America
+  - id: 3
     institution: Institute of Psychology, ELTE, Eotvos Lorand University, Budapest,
       Hungary
-  - id: '4'
-    institution: Department of Psychology, Willamette University,Salem OR, USA
-  - id: '5'
-    institution: Institute of Cognition and Culture, Queen’s University Belfast, UK
-  - id: '6'
+  - id: 4
+    institution: Department of Psychology, Lund University, Lund, Sweden
+  - id: 5
+    institution: Department of Psychology, Willamette University, Salem, United States
+      of America
+  - id: 6
+    institution: Institute of Cognition and Culture, Queen’s University Belfast, Belfast, United
+      Kingdom
+  - id: 7
     institution: Department of Psychology, Lancaster University, Lancaster, United
       Kingdom
-  - id: '7'
-    institution: LIP/PC2S, Université Grenoble Alpes, Grenoble, France
-  - id: '8'
-    institution: Department of Clinical Psychology, United Arab Emirates University,
-      Al Ain, UAE
-  - id: '9'
-    institution: Independent Researcher
-  - id: '10'
-    institution: Psychology Department, College of Education, Sultan Qaboos University,
-      Muscat, Oman
-  - id: '11'
-    institution: Department of Experimental Psychology, Institute of Psychology, University
-      of Sao Paulo, Sao Paulo, Brazil
-  - id: '12'
-    institution: School of Psychology, University of Queensland, Brisbane, Australia
-  - id: '13'
-    institution: Department of Psychology, Macquarie University, Sydney, Australia
-  - id: '14'
-    institution: Department of Philosophy, Macquarie University, Australia
-  - id: '15'
-    institution: Department of Psychology, Carleton University, Ottawa, Canada
-  - id: '16'
-    institution: Department of Psychology, University of Essex, Colchester, UK
-  - id: '17'
-    institution: School of Social, Psychological and Behavioural Sciences, Coventry
-      University, Coventry, UK
-  - id: '18'
-    institution: Department of Psychology, Maynooth University, Maynooth, Ireland
-  - id: '19'
-    institution: Division of Psychology, School of Social and Health Sciences, Abertay
-      University, Dundee, UK
-  - id: '20'
-    institution: School of Psychology, Faculty of Health Sciences and Wellbeing, University
-      of Sunderland, Sunderland, UK.
-  - id: '21'
-    institution: School of Psychology and Vision Sciences, University of Leicester,
-      Leicester, UK
-  - id: '22'
-    institution: School of Psychology, University of Nottingham Malaysia, Selangor,
-      Malaysia
-  - id: '23'
-    institution: Department of Psychology, Alex Ekwueme Federal University, Ndufu-Alike,
-      Nigeria
-  - id: '24'
-    institution: School of Psychology, University of Auckland, Auckland, NZ
-  - id: '25'
-    institution: Department of Psychology, Ashland University, Ashland, OH, USA
-  - id: '26'
-    institution: Department of Psychology, University of Alabama, Tuscaloosa, AL,
-      USA
-  - id: '27'
-    institution: Hubbard Decision Research, Glen Ellyn, IL, USA
-  - id: '28'
-    institution: Department of Psychology, Michigan State University, East Lansing,
-      MI, USA
-  - id: '29'
-    institution: Department of Psychology, Ithaca College, Ithaca, NY, USA
-  - id: '30'
-    institution: Department of Psychology, University of Louisiana at Lafayette, Lafayette,
-      LA, USA
-  - id: '31'
-    institution: Department of Cognitive Science, Occidental College, Los Angeles,
-      USA
-  - id: '32'
-    institution: Department of Psychology, University of Denver, Denver, CO, USA
-  - id: '33'
-    institution: Department of Psychology, Franklin and Marshall College, Lancaster,
-      PA, USA
-  - id: '34'
-    institution: Faculty of Psychology, University of Vienna, Wien, Austria
-  - id: '35'
-    institution: Department of Cognition, Emotion, and Methods in Psychology, Faculty
-      of Psychology, University of Vienna, Vienna, Austria
-  - id: '36'
-    institution: Department of Psychology and Psychotherapy, Witten/Herdecke University,
-      Germany
-  - id: '37'
-    institution: School of Education, National and Kapodistrian University of Athens,
-      Athens, Greece
-  - id: '38'
-    institution: Department of Psychology and School of Brain Sciences and Cognition,
-      Ben Gurion University, Beer Sheba, Israel
-  - id: '39'
-    institution: School of Studies in Life Science, Pt. Ravishankar Shukla University,
-      Raipur, India
-  - id: '40'
-    institution: Department of Health and Functioning, Western Norway University of
-      Applied Sciences, Bergen, Norway
-  - id: '41'
-    institution: Department of Psychology, University of Oslo, Oslo, Norway
-  - id: '42'
-    institution: Department of Psychology, UiT - The Arctic University of Norway,
-      Tromsø, Norway
-  - id: '43'
-    institution: Institute of Psychology, Jagiellonian University, Krakow, Poland
-  - id: '44'
-    institution: Iscte-University Institute of Lisbon, CIS-IUL, Portugal
-  - id: '45'
-    institution: Laboratory for Neurocognition and Applied Cognition, Faculty of Philosophy,
-      University of Belgrade
-  - id: '46'
-    institution: Faculty of Arts and Humanities, University of Macau, Macau, China
-  - id: '47'
-    institution: Department of Psychology, Faculty of Arts, Pavol Jozef Šafarik University
-      in Košice, Slovakia
-  - id: '48'
-    institution: Institute of Social Sciences, CSPS, Slovak Academy of Sciences
-  - id: '49'
-    institution: Institute of Psychology, University of Presov, Slovakia
-  - id: '50'
-    institution: Institute for Research and Development of Education, Faculty of Education,
-      Charles university, Czechia
-  - id: '51'
-    institution: Faculty of Psychology, Fundación Universitaria Konrad Lorenz, Bogotá,
-      Colombia
-  - id: '52'
-    institution: Ecosystem Engineer, Universidad Regional Amazónica Ikiam, Tena, Ecuador
-  - id: '53'
-    institution: Faculty of Psychology, Chulalongkorn University, Thailand
-  - id: '54'
-    institution: Department of Psychology, National Cheng Kung University, Tainan,
-      Taiwan
-  - id: '55'
-    institution: Department of Psychology, Üsküdar University, İstanbul, Turkey
-  - id: '56'
-    institution: Department of Psychology, Manisa Celal Bayar University,  Manisa,Turkey
-  - id: '57'
-    institution: Department of Psychology, Erzurum Technical University, Erzurum,
-      Turkey
-  - id: '58'
-    institution: Department of Psychology, Ankara Medipol University, Ankara, Turkey
-  - id: '59'
-    institution: Department of Vision Sciences, University of Leicester, United Kingdom
-  - id: '60'
-    institution: Bournemouth University,Talbot Campus, Poole, UK
-  - id: '61'
-    institution: Department of Psychology and Psychodynamics, Karl Landsteiner University
-      of Health Sciences, Krems an der Donau, Austria
-  - id: '62'
-    institution: Department of Evolutionary Anthropology, University of Vienna, Wien,
-      Austria
-  - id: '63'
-    institution: Department of Management Aarhus University, Aarhus, Denmark
-  - id: '64'
-    institution: Department of Psychology, Lund University, Lund, Sweden
-  - id: '65'
+  - id: 8
     institution: Department of Language and Culture, UiT The Arctic University of
       Norway, Tromsø, Norway
-  - id: '66'
+  - id: 9
+    institution: LIP/PC2S, Université Grenoble Alpes, Grenoble, France
+  - id: 10
     institution: Busara Center for Behavioral Economics, Nairobi, Kenya
-  - id: '67'
+  - id: 11
+    institution: Department of Clinical Psychology, United Arab Emirates University,
+      Al Ain, United Arab Emirates
+  - id: 12
+    institution: Independent Researcher
+  - id: 13
+    institution: Psychology Department, College of Education, Sultan Qaboos University,
+      Muscat, Oman
+  - id: 14
     institution: Psychology Department, Faculty of Arts, Menoufia University, Shebin
       El-Kom, Egypt
-  - id: '68'
-    institution: Department of Psychology, Bournemouth University, UK
-  - id: '69'
+  - id: 15
+    institution: Department of Experimental Psychology, Institute of Psychology, University
+      of Sao Paulo, Sao Paulo, Brazil
+  - id: 16
+    institution: School of Psychology, University of Queensland, Brisbane, Australia
+  - id: 17
+    institution: Department of Psychology, Macquarie University, Sydney, Australia
+  - id: 18
+    institution: Department of Philosophy, Macquarie University, Sydney, Australia
+  - id: 19
+    institution: Department of Psychology, Bournemouth University, Bournemouth, United
+      Kingdom
+  - id: 20
+    institution: Department of Psychology, Carleton University, Ottawa, Canada
+  - id: 21
+    institution: Department of Psychology, University of Essex, Colchester, United
+      Kingdom
+  - id: 22
+    institution: School of Social, Psychological and Behavioural Sciences, Coventry
+      University, Coventry, United Kingdom
+  - id: 23
+    institution: Department of Psychology, Maynooth University, Maynooth, Ireland
+  - id: 24
+    institution: Division of Psychology, School of Social and Health Sciences, Abertay
+      University, Dundee, United Kingdom
+  - id: 25
+    institution: School of Psychology, Faculty of Health Sciences and Wellbeing, University
+      of Sunderland, Sunderland, United Kingdom
+  - id: 26
+    institution: School of Psychology and Vision Sciences, University of Leicester,
+      Leicester, United Kingdom
+  - id: 27
+    institution: School of Psychology, University of Nottingham Malaysia, Selangor,
+      Malaysia
+  - id: 28
+    institution: Department of Psychology, Alex Ekwueme Federal University, Ndufu-Alike,
+      Nigeria
+  - id: 29
+    institution: School of Psychology, University of Auckland, Auckland, New Zealand
+  - id: 30
+    institution: Department of Psychology, Ashland University, Ashland, United States
+      of America
+  - id: 31
+    institution: Department of Psychology, University of Alabama, Tuscaloosa, United
+      States of America
+  - id: 32
+    institution: Hubbard Decision Research, Glen Ellyn, United States of America
+  - id: 33
+    institution: Department of Psychology, Michigan State University, East Lansing,
+      United States of America
+  - id: 34
+    institution: Department of Psychology, Ithaca College, Ithaca, United States of
+      America
+  - id: 35
+    institution: Department of Psychology, University of Louisiana at Lafayette, Lafayette,
+      United States of America
+  - id: 36
+    institution: Department of Cognitive Science, Occidental College, Los Angeles,
+      United States of America
+  - id: 37
+    institution: Department of Psychology, University of Denver, Denver, United States
+      of America
+  - id: 38
+    institution: Department of Psychology, Franklin and Marshall College, Lancaster,
+      United States of America
+  - id: 39
+    institution: Faculty of Psychology, University of Vienna, Wien, Austria
+  - id: 40
+    institution: Department of Cognition, Emotion, and Methods in Psychology, Faculty
+      of Psychology, University of Vienna, Vienna, Austria
+  - id: 41
+    institution: Department of Psychology and Psychotherapy, Witten/Herdecke University, Witten, 
+      Germany
+  - id: 42
+    institution: School of Education, National and Kapodistrian University of Athens,
+      Athens, Greece
+  - id: 43
+    institution: Department of Psychology and School of Brain Sciences and Cognition,
+      Ben Gurion University, Beer Sheba, Israel
+  - id: 44
+    institution: School of Studies in Life Science, Pt. Ravishankar Shukla University,
+      Raipur, India
+  - id: 45
+    institution: Department of Health and Functioning, Western Norway University of
+      Applied Sciences, Bergen, Norway
+  - id: 46
+    institution: Department of Psychology, University of Oslo, Oslo, Norway
+  - id: 47
+    institution: Department of Psychology, UiT - The Arctic University of Norway,
+      Tromsø, Norway
+  - id: 48
+    institution: Department of Psychology, Norwegian University of Science and Technology,
+      Trondheim, Norway
+  - id: 49
+    institution: Institute of Psychology, Jagiellonian University, Krakow, Poland
+  - id: 50
+    institution: Iscte-University Institute of Lisbon, CIS-IUL, Lisbon, Portugal
+  - id: 51
+    institution: Laboratory for Neurocognition and Applied Cognition, Faculty of Philosophy,
+      University of Belgrade, Belgrade, Serbia
+  - id: 52
+    institution: Faculty of Arts and Humanities, University of Macau, Macau, China
+  - id: 53
+    institution: Department of Psychology, Faculty of Arts, Pavol Jozef Šafarik University
+      in Košice, Košice, Slovakia
+  - id: 54
+    institution: Institute of Social Sciences, CSPS, Slovak Academy of Sciences, Košice, Slovakia
+  - id: 55
     institution: University of Jyväskylä, Finland
-  - id: '70'
-    institution: Faculty of Education, University of Presov, Slovakia
-  - id: '71'
+  - id: 56
+    institution: Institute of Psychology, Faculty of Arts, University of Presov, Presov,
+      Slovakia
+  - id: 57
+    institution: Institute for Research and Development of Education, Faculty of Education,
+      Charles University, Prague, Czechia
+  - id: 58
+    institution: Institute of Psychology, Czech Academy of Sciences, Prague, Czechia
+  - id: 59
+    institution: Faculty of Psychology, Fundación Universitaria Konrad Lorenz, Bogotá,
+      Colombia
+  - id: 60
+    institution: Faculty of Health, International University of La Rioja (UNIR), Logroño,
+      Spain
+  - id: 61
+    institution: Faculty of Psychology, Chulalongkorn University, Bangkok, Thailand
+  - id: 62
     institution: Faculty of Behavioral Sciences, Education, & Languages, HELP University
       Subang 2, Malaysia
-  - id: '72'
-    institution: Department of Psychology, Marmara University, 
-      Istanbul, Turkey
+  - id: 63
+    institution: Department of Psychology, National Cheng Kung University, Tainan,
+      Taiwan
+  - id: 64
+    institution: Department of Psychology, Üsküdar University, İstanbul, Turkey
+  - id: 65
+    institution: Department of Psychology, Marmara University, İstanbul, Turkey
+  - id: 66
+    institution: Department of Psychology, Manisa Celal Bayar University, Manisa,
+      Turkey
+  - id: 67
+    institution: Department of Psychology, Erzurum Technical University, Erzurum,
+      Turkey
+  - id: 68
+    institution: Network for Economic and Social Trends, Western University, London,
+      Canada
+  - id: 69
+    institution: Department of Psychology, Ankara Medipol University, Ankara, Turkey
+  - id: 70
+    institution: Department of Psychology and Vision Sciences, University of Leicester,
+      Leicester, United Kingdom
+  - id: 71
+    institution: Department of Experimental Psychology, University College London,
+      London, United Kingdom
+  - id: 72
+    institution: Department of Psychology and Psychodynamics, Karl Landsteiner University
+      of Health Sciences, Krems an der Donau, Austria
+  - id: 73
+    institution: Department of Evolutionary Anthropology, University of Vienna, Wien,
+      Austria
+  - id: 74
+    institution: Department of Management Aarhus University, Aarhus, Denmark
       
 authornote: |
   **Funding statement.** Matúš Adamkovič was supported by APVV-20-0319; Ivan Ropovik was supported by APVV-23-0421 and Mediated Society (MEDIS:ON) CZ.02.01.01/00/23_025/0008713, co-financed by the European Union; Peter Babinčák was supported by APVV-23-0647; Robert M. Ross was supported by Australian Research Council (grant number: DP180102384) and the John Templeton Foundation (grant ID: 62631); Zoltan Kekecs was supported by János Bolyai Research Scholarship of the Hungarian Academy of Science; Mahmoud Elsherif was supported by Leverhulme Trust; Glenn P. Williams was supported by Leverhulme Trust Research Project Grant (RPG-2016-093); Krystian Barzykowski was supported by National Science Centre, Poland (2019/35/B/HS6/00528); Gabriel Baník was supported by PRIMUS/20/HUM/009; Patrícia Arriaga was supported by Portuguese National Foundation for Science and Technology (FCT UID/PSI/03125/2019); Monika Hricová was supported by VEGA 1/0145/23.
@@ -1085,9 +1329,7 @@ Another topic to be considered is the lexical encoding of placement in each lang
 @zwaanReadersConstructSpatial1993] In this regard, variability originating from differences in the characteristics of experiments can substantially influence the results [@barsalouEstablishingGeneralizableMechanisms2019;
 @kaschakEmbodimentLabTheory2021].
 
-**Cognitive Factors.** 
-
-Since @stanfield_effect_2001 showed a match advantage of object orientation, later studies on this topic have examined the association between the match advantage and visual imagery rather than situated simulation. Visual imagery can be measured with indirect measurements such as vividness questionnaires [@zwaanRevisitingMentalSimulation2012] and via more direct measurements such as mental rotation tasks [@chenDoesObjectSize2020]. Indeed, studies have suggested that mental rotation tasks offer valid reflections of previous spatial experience [@frickMentalObjectRotation2013] and of current spatial cognition [@chuSpontaneousGesturesMental2008; @pouwMoreEmbeddedExtended2014]. Some previous studies have drawn on mental rotation to study mental simulation. For instance, @koning_mental_2017 observed that the effectiveness of mental rotation increased with the size of the depicted object. @chenDoesObjectSize2020 examined the implication of this finding for the match advantage of object orientation [@stanfield_effect_2001], and implemented a picture-picture verification task using the mental rotation paradigm [@cohenMentalRotationMental1993]. In each trial, two pictures appeared on opposite sides of the screen. Participants had to verify whether the pictures represented identical or different objects in which the two objects presented in congruent orientations (both are horizontal or vertical) or in incongruent orientations (one is horizontal and one is vertical). 
+**Cognitive Factors.** Since @stanfield_effect_2001 showed a match advantage of object orientation, later studies on this topic have examined the association between the match advantage and visual imagery rather than situated simulation. Visual imagery can be measured with indirect measurements such as vividness questionnaires [@zwaanRevisitingMentalSimulation2012] and via more direct measurements such as mental rotation tasks [@chenDoesObjectSize2020]. Indeed, studies have suggested that mental rotation tasks offer valid reflections of previous spatial experience [@frickMentalObjectRotation2013] and of current spatial cognition [@chuSpontaneousGesturesMental2008; @pouwMoreEmbeddedExtended2014]. Some previous studies have drawn on mental rotation to study mental simulation. For instance, @koning_mental_2017 observed that the effectiveness of mental rotation increased with the size of the depicted object. @chenDoesObjectSize2020 examined the implication of this finding for the match advantage of object orientation [@stanfield_effect_2001], and implemented a picture-picture verification task using the mental rotation paradigm [@cohenMentalRotationMental1993]. In each trial, two pictures appeared on opposite sides of the screen. Participants had to verify whether the pictures represented identical or different objects in which the two objects presented in congruent orientations (both are horizontal or vertical) or in incongruent orientations (one is horizontal and one is vertical). 
 
 @chenDoesObjectSize2020 not only revealed shorter verification times for congruent orientations (i.e., two identical pictures presented in horizontal or vertical orientation) but also replicated the advantage for larger objects (i.e., "*pictures of bridges versus pictures of pens*"). The results were consistent across the three languages investigated—English, Dutch and Chinese. @chenDoesObjectSize2020 converted the picture-picture verification times to the mental rotation scores that were the discrepancy of verification times between the identical and different orientations. Their analysis showed that mental rotation affected the Dutch participants' sentence-picture verification performance. With the measurement of mental rotation scores[^1], we explore the association of spatial cognition and the effect of orientation in comprehension across the investigated languages.
 
@@ -1316,7 +1558,7 @@ merge_subjects %>%
   ) %>% 
   mutate(Language = ifelse(Language == "Simple Chinese", "Simplified Chinese", Language)) %>% 
   apa_table(
- format = "latex",
+ #format = "latex",
  booktabs = TRUE,
  font_size = "footnotesize",
  col.names = c("Language", "$SP_{Trials}$",
@@ -1387,7 +1629,7 @@ data.frame(
   ) %>% 
   mutate(Number = as.character(Number)) %>% 
   apa_table(
- format = "latex",
+ #format = "latex",
  booktabs = TRUE,
  font_size = "scriptsize",
  col.names = c("Condition", "Item 1", "Item 2", "Answer", "Number"),
@@ -1465,7 +1707,7 @@ native_n <- length(unique(c(SP_V_non$Subject, PP_non$Subject)))
 accuracy_n <- length(unique(c(SP_V_acc$Subject, PP_acc$Subject)))
 ```
 
-As shown in Figure \@ref(fig:sample-fig), we recruited `r format(total_n, scientific = FALSE, big.mark = ",")` participants. After removing the non-native speakers ($n_{total}$ = `r format(total_n-native_n, scientific = FALSE, big.mark = ",")`, `r format(native_n, scientific = FALSE, big.mark = ",")` were then examined for accuracy. Following our pre-registered plan, participants' data were excluded from analyses of the sentence-picture and picture-picture tasks if their accuracy was below 70%. This threshold is common in research of this kind and helps ensure that the data reflect meaningful cognitive processing rather than random or inattentive responses. Overall, $n_{total}$ = `r native_n - accuracy_n` participants were removed for low accuracy across both tasks, leaving `r format(accuracy_n, scientific = FALSE, big.mark = ",")` participants. Figure \@ref(fig:sample-fig) indicates the sample sizes for each task. Please note that each task was examined separately, and participants were excluded when their accuracy was low for each task separately. 
+As shown in Figure \@ref(fig:sample-fig), we recruited `r format(total_n, scientific = FALSE, big.mark = ",")` participants. After removing the non-native speakers ($n_{total}$ = `r format(total_n-native_n, scientific = FALSE, big.mark = ",")`), `r format(native_n, scientific = FALSE, big.mark = ",")` were then examined for accuracy. Following our pre-registered plan, participants' data were excluded from analyses of the sentence-picture and picture-picture tasks if their accuracy was below 70%. This threshold is common in research of this kind and helps ensure that the data reflect meaningful cognitive processing rather than random or inattentive responses. Overall, $n_{total}$ = `r native_n - accuracy_n` participants were removed for low accuracy across both tasks, leaving `r format(accuracy_n, scientific = FALSE, big.mark = ",")` participants. Figure \@ref(fig:sample-fig) indicates the sample sizes for each task. Please note that each task was examined separately, and participants were excluded when their accuracy was low for each task separately. 
 
 ```{r outliers}
 SP_V_noout <- SP_V_acc %>% 
@@ -1527,7 +1769,7 @@ SP_M_out <- all_data %>%
   group_by(Source, Subject) %>% 
   summarise(M_acc = mean(correct)) 
 t_test <- t.test(SP_M_out$M_acc ~ SP_M_out$Source, 
-                 var.equal = FALSE, paired = FALSE)
+                 var.equal = FALSE)
 ```
 
 Although we combined the two data sets in the final data analysis, it is worth considering that online participants' attention may be easily distracted given the lack of environmental control and experimenter overview. However, this secondary task revealed that online participants had a higher percent correct than in-person participants,
@@ -1570,7 +1812,7 @@ SP_V_noout %>%
    by = c("Language") 
   ) %>% 
  apa_table( 
- format = "latex",
+ #format = "latex",
  booktabs = TRUE,
  escape = FALSE,
  col.names = c("Language","Accuracy Percent","Mismatching","Matching","Match Advantage"),
@@ -2012,7 +2254,7 @@ Appendix E.
 
 # Discussion
 
-This study aimed to test a global object orientation effect and to estimate the magnitude of object orientation effect in each particular language. The findings of our study did not support the existence of the object orientation effect as an outcome of general cognitive function. Furthermore, our data failed to replicate the effects in English and Chinese, languages in which the effect has been reported previously  [@chenDoesObjectSize2020; @stanfield_effect_2001; @zwaanRevisitingMentalSimulation2012]. The only language in which we found an indication of the orientation effect in the predicted direction was German, but this effect was evident only in the meta-analysis and not in the mixed-effects model approach. Although tangential to our topic, an effect of mental rotation was observed, such that identical orientations were processed faster than rotated orientations. However, the mental rotation score did not predict the object orientation effects nor interact with language. Overall, the failure to replicate the previously reported object orientation effects casts doubt on the existence of the effect as a language-general phenomenon [@kaschakEmbodimentLabTheory2021]. Critically, our experiment has some important methodological strengths. We recruited a large, globally diverse sample of participants. Our pre-registered research protocol was developed in collaboration between experts in object orientation and methodological experts who were agnostic regarding the presence or absence of an effect. For these reasons, the current experiment can be seen as a strong test of the object orientation effect in the sentence picture verification paradigm. Below, we further delineate the lessons and limitations of the methodology and analysis, and discuss theoretical issues related to the orientation effect as an effective probe to investigate the mental simulation process.
+This study aimed to test a global object orientation effect and to estimate the magnitude of object orientation effect in each particular language. The findings of our study did not support the existence of the object orientation effect as an outcome of general cognitive function. Furthermore, our data failed to replicate the effects in English and Chinese, languages in which the effect has been reported previously [@chenDoesObjectSize2020; @stanfield_effect_2001; @zwaanRevisitingMentalSimulation2012]. The only language in which we found an indication of the orientation effect in the predicted direction was German, but this effect was evident only in the meta-analysis and not in the mixed-effects model approach. Although tangential to our topic, an effect of mental rotation was observed, such that identical orientations were processed faster than rotated orientations. However, the mental rotation score did not predict the object orientation effects nor interact with language. Overall, the failure to replicate the previously reported object orientation effects casts doubt on the existence of the effect as a language-general phenomenon [@kaschakEmbodimentLabTheory2021]. Critically, our experiment has some important methodological strengths. We recruited a large, globally diverse sample of participants. Our pre-registered research protocol was developed in collaboration between experts in object orientation and methodological experts who were agnostic regarding the presence or absence of an effect. For these reasons, the current experiment can be seen as a strong test of the object orientation effect in the sentence picture verification paradigm. Below, we further delineate the lessons and limitations of the methodology and analysis, and discuss theoretical issues related to the orientation effect as an effective probe to investigate the mental simulation process.
 
 ## Methodological Considerations
 
@@ -2037,7 +2279,7 @@ German could stem from measurement error or from family-wise error.
 
 The orientation effects were analyzed using a meta-analytic approach and mixed-effects models. Neither approach revealed an overall effect of object orientation. In the language-by-language analysis, a significant orientation effect was found in the German language data in the meta-analysis. The mixed model analysis did not confirm this result because the effect in the German data was not significant according to our pre-registered test criteria. There is considerable debate in the statistical community regarding the precision of the *p* values computed for linear mixed models [@bolker2015]. One alternative, less-conservative approach to testing the significance of a fixed effect predictor is assessing the difference in the AIC model fit index between a model that contains a fixed effect predictor and one that does not. Using this approach in an exploratory analysis, we found that the effect of orientation in the German language data was not negligible, rendering this result compatible with the result obtained for German in the meta-analysis. However, considered in the general context including all the other results, the present exploratory result for German could stem from measurement error [@lokenMeasurementErrorReplication2017] or from family-wise error.
 
-When a topic area yields inconsistent or small effects, some researchers have questioned the utility of further research. However, research on embodied cognition should continue with the aim of determining the factors behind the variability of the effects. One of these factors could be the nature of the variables used — for instance, categorical versus continuous. The object orientation design is a factorial, congruency paradigm, based on congruent (matching) and incongruent (mismatching) conditions. Another paradigm of similar characteristics, namely the action sentence compatibility effect, similarly failed to replicate in a large-scale study [@morey2022]. Whereas factorial paradigms require the use of categorical variables, other studies have operationalized sensorimotor information using continuous variables, and observed significant effects [@bernabeu2022]. Since continuous variables contain more information, they may afford more statistical power. Furthermore, in addition to categorical versus continuous predictors, sensorimotor effects are likely to be moderated by factors influencing participants’ attention during experiments [@barsalou2019; @noah2018]. Last, due to publication bias, the true size of sensorimotor effects is likely to be smaller than that observed in small-sample studies [@vasishth]. Indeed, studying these effects reliably may require samples exceeding 1,000 participants [@bernabeu2022]. In summary, addressing the above issues may permit the analytic sensitivity needed to observe the presence and causes of object orientation effects.
+When a topic area yields inconsistent or small effects, some researchers have questioned the utility of further research. However, research on embodied cognition should continue with the aim of determining the factors behind the variability of the effects. One of these factors could be the nature of the variables used — for instance, categorical versus continuous. The object orientation design is a factorial, congruency paradigm, based on congruent (matching) and incongruent (mismatching) conditions. Another paradigm of similar characteristics, namely the action sentence compatibility effect, similarly failed to replicate in a large-scale study [@morey2022]. Whereas factorial paradigms require the use of categorical variables, other studies have operationalized sensorimotor information using continuous variables, and observed significant effects [@bernabeu2022]. Since continuous variables contain more information, they may afford more statistical power. Furthermore, in addition to categorical versus continuous predictors, sensorimotor effects are likely to be moderated by factors influencing participants’ attention during experiments [@barsalouEstablishingGeneralizableMechanisms2019; @noah2018]. Last, due to publication bias, the true size of sensorimotor effects is likely to be smaller than that observed in small-sample studies [@vasishth2021]. Indeed, studying these effects reliably may require samples exceeding 1,000 participants [@bernabeu2022]. In summary, addressing the above issues may permit the analytic sensitivity needed to observe the presence and causes of object orientation effects.
 
 ## Theoretical Considerations
 
@@ -2111,7 +2353,7 @@ nrow(model_data) - length(unique(PP_noout$Subject))
 
 ## Declarations
 
-This study is the collaborative research project launched by Psychological Science Accelerator [@moshontz2018]. The initial preregistered plan is available at https://osf.io/preprints/psyarxiv/t2pjv_v1.
+This study is the collaborative research project launched by Psychological Science Accelerator [@moshontzPsychologicalScienceAccelerator2018]. The initial preregistered plan is available at https://osf.io/preprints/psyarxiv/t2pjv_v1.
 
 ## Data Avaliability
 
