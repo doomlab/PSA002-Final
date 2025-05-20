@@ -8,14 +8,16 @@ author:
     role:
       - Conceptualization
       - Data curation
-      - Funding acquisition
+      - Formal analysis
       - Investigation
       - Methodology
-      - Project administration
       - Resources
       - Software
       - Supervision
+      - Validation
       - Visualization
+      - Writing - original draft
+      - Writing - review & editing
     corresponding: yes
     email: csc2009@mail.tcu.edu.tw
     address: "No. 67, Jei-Ren St., Hualien City, Taiwan"
@@ -24,959 +26,961 @@ author:
     affiliation: '2'
     role:
       - Formal analysis
-      - Funding acquisition
-      - Investigation
       - Project administration
-      - Supervision
+      - Resources
+      - Software
+      - Validation
+      - Writing - review & editing
     corresponding: no
     email: ebuchanan@harrisburgu.edu
   Zoltan Kekecs:
     name: Zoltan Kekecs
     affiliation: '3,4'
     role:
-      - Formal analysis
-      - Supervision
+      - Project administration
+      - Writing - review & editing
     corresponding: no
-    email: zoltan.kekecs@psy.lu.se
+    email: kekecs.zoltan@ppk.elte.hu
   Jeremy K. Miller:
     name: Jeremy K. Miller
     affiliation: '5'
     role:
-      - Formal analysis
-      - Funding acquisition
-      - Methodology
+      - Project administration
+      - Resources
       - Supervision
+      - Writing - review & editing
     corresponding: no
     email: millerj@willamette.edu
   Anna Szabelska:
     name: Anna Szabelska
     affiliation: '6'
     role:
-      - Formal analysis
-      - Software
-      - Supervision
+      - Project administration
+      - Writing - original draft
+      - Writing - review & editing
     corresponding: no
     email: aszabelska01@qub.ac.uk
   Balazs Aczel:
     name: Balazs Aczel
     affiliation: '3'
     role:
-      - Conceptualization
-      - Data curation
-      - Funding acquisition
-      - Supervision
+      - Investigation
+      - Methodology
+      - Resources
+      - Writing - review & editing
     corresponding: no
     email: balazs.aczel@gmail.com
   Pablo Bernabeu:
     name: Pablo Bernabeu
     affiliation: '7,8'
     role:
-      - Conceptualization
-      - Data curation
-      - Resources
-      - Supervision
+      - Investigation
+      - Methodology
+      - Visualization
+      - Writing - review & editing
     corresponding: no
     email: pcbernabeu@gmail.com
   Patrick Forscher:
     name: Patrick Forscher
     affiliation: '9,10'
     role:
-      - Data curation
-      - Supervision
+      - Methodology
+      - Writing - review & editing
     corresponding: no
     email: schnarrd@gmail.com
   Attila Szuts:
     name: Attila Szuts
     affiliation: '3'
     role:
-      - Conceptualization
-      - Data curation
-      - Funding acquisition
-      - Supervision
+      - Investigation
+      - Methodology
+      - Resources
+      - Writing - review & editing
     corresponding: no
     email: szuts.attila97@gmail.com
   Zahir Vally:
     name: Zahir Vally
     affiliation: '11'
     role:
-      - Conceptualization
-      - Funding acquisition
-      - Supervision
+      - Investigation
+      - Resources
+      - Writing - review & editing
     corresponding: no
     email: zahir.vally@uaeu.ac.ae
   Ali H. Al-Hoorie:
     name: Ali H. Al-Hoorie
     affiliation: '12'
     role:
-      - Conceptualization
-      - Funding acquisition
-      - Supervision
+      - Investigation
+      - Resources
+      - Writing - review & editing
     corresponding: no
     email: hoorie_ali@hotmail.com
   Mai Helmy:
     name: Mai Helmy
     affiliation: '13,14'
     role:
-      - Conceptualization
-      - Funding acquisition
-      - Supervision
+      - Investigation
+      - Resources
+      - Writing - review & editing
     corresponding: no
-    email: mai.helmy@art.menofia.edu.eg
+    email: m.helmy@squ.edu.om
   Caio Santos Alves da Silva:
     name: Caio Santos Alves da Silva
     affiliation: '15'
     role:
-      - Conceptualization
-      - Funding acquisition
-      - Supervision
+      - Investigation
+      - Resources
+      - Writing - review & editing
     corresponding: no
-    email: caiosas@usp.br
+    email: caiosanto@gmail.com
   Luana Oliveira da Silva:
     name: Luana Oliveira da Silva
     affiliation: '15'
     role:
-      - Conceptualization
-      - Funding acquisition
-      - Supervision
+      - Investigation
+      - Resources
+      - Writing - review & editing
     corresponding: no
     email: luana.oliveira.people@usp.br
   Yago Luksevicius de Moraes:
     name: Yago Luksevicius de Moraes
-    affiliation: '15'
+    affiliation: '15,16'
     role:
-      - Conceptualization
-      - Funding acquisition
-      - Supervision
+      - Investigation
+      - Resources
+      - Writing - review & editing
     corresponding: no
     email: yagolmoraes@gmail.com
   Rafael Ming Chi Santos Hsu:
     name: Rafael Ming Chi Santos Hsu
     affiliation: '15'
     role:
-      - Conceptualization
-      - Funding acquisition
-      - Supervision
+      - Investigation
+      - Resources
+      - Writing - review & editing
     corresponding: no
     email: rafa.mcsh@gmail.com
   Anthonieta Looman Mafra:
     name: Anthonieta Looman Mafra
     affiliation: '15'
     role:
-      - Conceptualization
-      - Funding acquisition
-      - Supervision
+      - Investigation
+      - Resources
+      - Writing - review & editing
     corresponding: no
     email: looman.anthonieta@gmail.com
   Jaroslava V. Valentova:
     name: Jaroslava V. Valentova
     affiliation: '15'
     role:
-      - Conceptualization
-      - Funding acquisition
-      - Supervision
+      - Investigation
+      - Resources
+      - Writing - review & editing
     corresponding: no
     email: jaroslava@usp.br
   Marco Antonio Correa Varella:
     name: Marco Antonio Correa Varella
     affiliation: '15'
     role:
-      - Conceptualization
-      - Funding acquisition
-      - Supervision
+      - Investigation
+      - Resources
+      - Writing - review & editing
     corresponding: no
     email: macvarella@gmail.com
   Barnaby Dixson:
     name: Barnaby Dixson
-    affiliation: '16'
+    affiliation: '17'
     role:
-      - Conceptualization
-      - Supervision
+      - Investigation
+      - Writing - review & editing
     corresponding: no
-    email: b.dixson@uq.edu.au
+    email: bdixson@usc.edu.au
   Kim Peters:
     name: Kim Peters
-    affiliation: '16'
+    affiliation: '17'
     role:
-      - Conceptualization
-      - Supervision
+      - Investigation
+      - Writing - review & editing
     corresponding: no
     email: k.peters@uq.edu.au
   Nik Steffens:
     name: Nik Steffens
-    affiliation: '16'
+    affiliation: '17'
     role:
-      - Conceptualization
-      - Supervision
+      - Investigation
+      - Writing - review & editing
     corresponding: no
     email: n.steffens@uq.edu.au
   Omid Ghasemi:
     name: Omid Ghasemi
-    affiliation: '17'
+    affiliation: '18'
     role:
-      - Conceptualization
-      - Supervision
+      - Investigation
+      - Writing - review & editing
     corresponding: no
     email: omidreza.ghasemi@hdr.mq.edu.au
   Andrew Roberts:
     name: Andrew Roberts
-    affiliation: '17'
-    role:
-      - Conceptualization
-      - Supervision
-    corresponding: no
-    email: andrew.roberts@mq.edu.au
-  Robert M. Ross:
-    name: Robert M. Ross
     affiliation: '18'
     role:
-      - Conceptualization
-      - Supervision
+      - Investigation
+      - Writing - review & editing
+    corresponding: no
+    email: Andrew.roberts@dcceew.gov.au
+  Robert M. Ross:
+    name: Robert M. Ross
+    affiliation: '19'
+    role:
+      - Investigation
+      - Writing - review & editing
     corresponding: no
     email: robross46@gmail.com
   Ian D. Stephen:
     name: Ian D. Stephen
-    affiliation: '17,19'
+    affiliation: '18,20'
     role:
-      - Conceptualization
-      - Supervision
+      - Investigation
+      - Writing - review & editing
     corresponding: no
     email: stepheni@bournemouth.ac.uk
   Marina Milyavskaya:
     name: Marina Milyavskaya
-    affiliation: '20'
+    affiliation: '21'
     role:
-      - Conceptualization
-      - Supervision
+      - Investigation
+      - Writing - review & editing
     corresponding: no
     email: marina.milyavskaya@carleton.ca
   Kelly Wang:
     name: Kelly Wang
-    affiliation: '20'
-    role:
-      - Conceptualization
-      - Supervision
-    corresponding: no
-    email: kelly.wang4@carleton.ca
-  Kaitlyn M. Werner:
-    name: Kaitlyn M. Werner
-    affiliation: '20'
-    role:
-      - Conceptualization
-      - Supervision
-    corresponding: no
-    email: kaitlyn.werner@utoronto.ca
-  Dawn Liu Holford:
-    name: Dawn Liu Holford
     affiliation: '21'
     role:
-      - Conceptualization
-      - Supervision
+      - Investigation
+      - Writing - review & editing
+    corresponding: no
+    email: jingfeiw999@gmail.com
+  Kaitlyn M. Werner:
+    name: Kaitlyn M. Werner
+    affiliation: '22'
+    role:
+      - Investigation
+      - Writing - review & editing
+    corresponding: no
+    email: kmwerner@uoregon.edu
+  Dawn Liu Holford:
+    name: Dawn Liu Holford
+    affiliation: '23'
+    role:
+      - Investigation
+      - Writing - review & editing
     corresponding: no
     email: dawn.liuholford@gmail.com
   Miroslav Sirota:
     name: Miroslav Sirota
-    affiliation: '21'
+    affiliation: '23'
     role:
-      - Conceptualization
-      - Supervision
+      - Investigation
+      - Writing - review & editing
     corresponding: no
     email: msirota@essex.ac.uk
   Thomas Rhys Evans:
     name: Thomas Rhys Evans
-    affiliation: '22'
+    affiliation: '24'
     role:
-      - Conceptualization
-      - Supervision
+      - Investigation
+      - Writing - review & editing
     corresponding: no
-    email: Ab6443@coventry.ac.uk
+    email: Thomas.Evans@greenwich.ac.uk
   Dermot Lynott:
     name: Dermot Lynott
-    affiliation: '23'
+    affiliation: '25'
     role:
-      - Conceptualization
-      - Supervision
+      - Investigation
+      - Writing - review & editing
     corresponding: no
     email: dermot.lynott@mu.ie
   Bethany M. Lane:
     name: Bethany M. Lane
-    affiliation: '24'
-    role:
-      - Conceptualization
-      - Supervision
-    corresponding: no
-    email: 1804426@abertay.ac.uk
-  Danny Riis:
-    name: Danny Riis
-    affiliation: '24'
-    role:
-      - Conceptualization
-      - Supervision
-    corresponding: no
-    email: 1702768@abertay.ac.uk
-  Glenn P. Williams:
-    name: Glenn P. Williams
-    affiliation: '25'
-    role:
-      - Conceptualization
-      - Supervision
-    corresponding: no
-    email: g.williams@abertay.ac.uk
-  Chrystalle B. Y. Tan:
-    name: Chrystalle B. Y. Tan
     affiliation: '26'
     role:
-      - Conceptualization
-      - Supervision
+      - Investigation
+      - Writing - review & editing
+    corresponding: no
+    email: 1804426@abertay.ac.uk
+  Danny Riis Sahlholdt:
+    name: Danny Riis Sahlholdt
+    affiliation: '26'
+    role:
+      - Investigation
+      - Writing - review & editing
+    corresponding: no
+    email: dannyriis@gmail.com
+  Glenn P. Williams:
+    name: Glenn P. Williams
+    affiliation: '27'
+    role:
+      - Investigation
+      - Writing - review & editing
+    corresponding: no
+    email: glenn88.williams@gmail.com
+  Chrystalle B. Y. Tan:
+    name: Chrystalle B. Y. Tan
+    affiliation: '28'
+    role:
+      - Investigation
+      - Writing - review & editing
     corresponding: no
     email: tan.chrystalle@gmail.com
   Alicia Foo:
     name: Alicia Foo
-    affiliation: '27'
+    affiliation: '29'
     role:
-      - Conceptualization
-      - Supervision
+      - Investigation
+      - Writing - review & editing
     corresponding: no
     email: aliciafcm@hotmail.com
   Steve M. J. Janssen:
     name: Steve M. J. Janssen
-    affiliation: '27'
+    affiliation: '29'
     role:
-      - Conceptualization
-      - Supervision
+      - Investigation
+      - Writing - review & editing
     corresponding: no
     email: steve.janssen@nottingham.edu.my
   Nwadiogo Chisom Arinze:
     name: Nwadiogo Chisom Arinze
-    affiliation: '28'
+    affiliation: '30'
     role:
-      - Conceptualization
-      - Supervision
+      - Investigation
+      - Writing - review & editing
     corresponding: no
     email: arinzenwadiogo@gmail.com
   Izuchukwu Lawrence Gabriel Ndukaihe:
     name: Izuchukwu Lawrence Gabriel Ndukaihe
-    affiliation: '28'
+    affiliation: '30'
     role:
-      - Conceptualization
-      - Supervision
+      - Investigation
+      - Writing - review & editing
     corresponding: no
     email: izumario@yahoo.co.uk
   David Moreau:
     name: David Moreau
-    affiliation: '29'
+    affiliation: '31'
     role:
-      - Conceptualization
-      - Supervision
+      - Investigation
+      - Writing - review & editing
     corresponding: no
     email: d.moreau@auckland.ac.nz
   Brianna Jurosic:
     name: Brianna Jurosic
-    affiliation: '30'
+    affiliation: '32'
     role:
-      - Conceptualization
-      - Supervision
+      - Investigation
+      - Writing - review & editing
     corresponding: no
     email: brianna.jurosic17@gmail.com
   Brynna Leach:
     name: Brynna Leach
-    affiliation: '30'
+    affiliation: '32'
     role:
-      - Conceptualization
-      - Supervision
+      - Investigation
+      - Writing - review & editing
     corresponding: no
     email: brynna.leach@gmail.com
   Savannah Lewis:
     name: Savannah Lewis
-    affiliation: '31'
+    affiliation: '33'
     role:
-      - Conceptualization
-      - Supervision
+      - Investigation
+      - Writing - review & editing
     corresponding: no
     email: slewis5920@gmail.com
   Peter R. Mallik:
     name: Peter R. Mallik
-    affiliation: '32'
+    affiliation: '34'
     role:
-      - Conceptualization
-      - Supervision
+      - Investigation
+      - Writing - review & editing
     corresponding: no
     email: pmallik@hubbardresearch.com
   Kathleen Schmidt:
     name: Kathleen Schmidt
-    affiliation: '30'
+    affiliation: '32'
     role:
-      - Conceptualization
-      - Funding acquisition
-      - Supervision
+      - Investigation
+      - Resources
+      - Writing - review & editing
     corresponding: no
     email: kschmi13@ashland.edu
   William J. Chopik:
     name: William J. Chopik
-    affiliation: '33'
+    affiliation: '35'
     role:
-      - Conceptualization
-      - Supervision
+      - Investigation
+      - Writing - review & editing
     corresponding: no
     email: chopikwi@msu.edu
   Leigh Ann Vaughn:
     name: Leigh Ann Vaughn
-    affiliation: '34'
+    affiliation: '36'
     role:
-      - Conceptualization
-      - Supervision
+      - Investigation
+      - Writing - review & editing
     corresponding: no
     email: lvaughn@ithaca.edu
   Manyu Li:
     name: Manyu Li
-    affiliation: '35'
+    affiliation: '37'
     role:
-      - Conceptualization
-      - Supervision
+      - Investigation
+      - Writing - review & editing
     corresponding: no
     email: manyu.li@louisiana.edu
   Carmel A. Levitan:
     name: Carmel A. Levitan
-    affiliation: '36'
+    affiliation: '38'
     role:
-      - Conceptualization
-      - Supervision
+      - Investigation
+      - Writing - review & editing
     corresponding: no
     email: levitan@oxy.edu
   Daniel Storage:
     name: Daniel Storage
-    affiliation: '37'
+    affiliation: '39'
     role:
-      - Conceptualization
-      - Supervision
+      - Investigation
+      - Writing - review & editing
     corresponding: no
     email: Daniel.Storage@du.edu
   Carlota Batres:
     name: Carlota Batres
-    affiliation: '38'
+    affiliation: '40'
     role:
-      - Conceptualization
-      - Supervision
+      - Investigation
+      - Writing - review & editing
     corresponding: no
     email: cbatres@fandm.edu
   Tyler McGee:
     name: Tyler McGee
-    affiliation: '38'
-    role: []
+    affiliation: '40'
+    role:
+      - Investigation
+      - Writing - review & editing
     corresponding: no
     email: Tyler_Mcgee@protonmail.com
   Janina Enachescu:
     name: Janina Enachescu
-    affiliation: '39'
+    affiliation: '41'
     role:
-      - Conceptualization
-      - Funding acquisition
-      - Supervision
+      - Investigation
+      - Resources
+      - Writing - review & editing
     corresponding: no
-    email: janina.enachescu@univie.ac.at
+    email: Janina.enachescu@gmail.com
   Jerome Olsen:
     name: Jerome Olsen
-    affiliation: '39'
+    affiliation: '42'
     role:
-      - Conceptualization
-      - Funding acquisition
-      - Supervision
+      - Investigation
+      - Resources
+      - Writing - review & editing
     corresponding: no
-    email: jerome.olsen@univie.ac.at
+    email: jerome.olsen@destatis.de
   Martin Voracek:
     name: Martin Voracek
-    affiliation: '39'
+    affiliation: '43'
     role:
-      - Conceptualization
-      - Funding acquisition
-      - Supervision
+      - Investigation
+      - Resources
+      - Writing - review & editing
     corresponding: no
     email: martin.voracek@univie.ac.at
   Claus Lamm:
     name: Claus Lamm
-    affiliation: '40'
+    affiliation: '43'
     role:
-      - Conceptualization
-      - Funding acquisition
-      - Supervision
+      - Investigation
+      - Resources
+      - Writing - review & editing
     corresponding: no
     email: claus.lamm@univie.ac.at
   Ekaterina Pronizius:
     name: Ekaterina Pronizius
-    affiliation: '40'
+    affiliation: '43'
     role:
-      - Conceptualization
-      - Supervision
+      - Investigation
+      - Writing - review & editing
     corresponding: no
     email: ekaterina.pronizius@univie.ac.at
   Tilli Ripp:
     name: Tilli Ripp
-    affiliation: '41'
+    affiliation: '44'
     role:
-      - Conceptualization
-      - Supervision
+      - Investigation
+      - Writing - review & editing
     corresponding: no
     email: tilli.ripp@uni-wh.de
   Jan Philipp Röer:
     name: Jan Philipp Röer
-    affiliation: '41'
+    affiliation: '44'
     role:
-      - Conceptualization
-      - Supervision
+      - Investigation
+      - Writing - review & editing
     corresponding: no
     email: jan.roeer@hhu.de
   Roxane Schnepper:
     name: Roxane Schnepper
-    affiliation: '41'
+    affiliation: '44'
     role:
-      - Conceptualization
-      - Supervision
+      - Investigation
+      - Writing - review & editing
     corresponding: no
     email: roxane.schnepper@uni-wh.de
   Marietta Papadatou-Pastou:
     name: Marietta Papadatou-Pastou
-    affiliation: '42'
+    affiliation: '45'
     role:
-      - Conceptualization
-      - Funding acquisition
-      - Supervision
+      - Investigation
+      - Resources
+      - Writing - review & editing
     corresponding: no
     email: marietta.papadatou@gmail.com
   Aviv Mokady:
     name: Aviv Mokady
-    affiliation: '43'
+    affiliation: '46'
     role:
-      - Conceptualization
-      - Funding acquisition
-      - Supervision
+      - Investigation
+      - Resources
+      - Writing - review & editing
     corresponding: no
     email: avmokady@gmail.com
   Niv Reggev:
     name: Niv Reggev
-    affiliation: '43'
+    affiliation: '46'
     role:
-      - Conceptualization
-      - Funding acquisition
-      - Supervision
+      - Investigation
+      - Resources
+      - Writing - review & editing
     corresponding: no
     email: reggevn@bgu.ac.il
   Priyanka Chandel:
     name: Priyanka Chandel
-    affiliation: '44'
+    affiliation: '47'
     role:
-      - Conceptualization
-      - Funding acquisition
-      - Supervision
+      - Investigation
+      - Resources
+      - Writing - review & editing
     corresponding: no
     email: priyankachandel18@gmail.com
   Pratibha Kujur:
     name: Pratibha Kujur
-    affiliation: '44'
+    affiliation: '47'
     role:
-      - Conceptualization
-      - Funding acquisition
-      - Supervision
+      - Investigation
+      - Resources
+      - Writing - review & editing
     corresponding: no
     email: pratibhakujur0626@gmail.com
   Babita Pande:
     name: Babita Pande
-    affiliation: '44'
+    affiliation: '47'
     role:
-      - Conceptualization
-      - Funding acquisition
-      - Methodology
+      - Investigation
+      - Resources
       - Supervision
+      - Writing - review & editing
     corresponding: no
     email: babitatime14@gmail.com
   Arti Parganiha:
     name: Arti Parganiha
-    affiliation: '44'
+    affiliation: '47'
     role:
-      - Conceptualization
-      - Funding acquisition
-      - Methodology
+      - Investigation
+      - Resources
       - Supervision
+      - Writing - review & editing
     corresponding: no
     email: arti.parganiha@gmail.com
   Noorshama Parveen:
     name: Noorshama Parveen
-    affiliation: '44'
+    affiliation: '47'
     role:
-      - Conceptualization
-      - Funding acquisition
-      - Supervision
+      - Investigation
+      - Resources
+      - Writing - review & editing
     corresponding: no
     email: noorshama12@gmail.com
   Sraddha Pradhan:
     name: Sraddha Pradhan
-    affiliation: '44'
+    affiliation: '47'
     role:
-      - Conceptualization
-      - Funding acquisition
-      - Supervision
+      - Investigation
+      - Resources
+      - Writing - review & editing
     corresponding: no
     email: sraddhapradhan11@gmail.com
   Margaret Messiah Singh:
     name: Margaret Messiah Singh
-    affiliation: '44'
+    affiliation: '47'
     role:
-      - Conceptualization
-      - Supervision
+      - Investigation
+      - Writing - review & editing
     corresponding: no
     email: mmessiahsingh@gmail.com
   Max Korbmacher:
     name: Max Korbmacher
-    affiliation: '45'
+    affiliation: '48'
     role:
-      - Conceptualization
-      - Supervision
+      - Investigation
+      - Writing - review & editing
     corresponding: no
     email: max.korbmacher@gmail.com
   Jonas R. Kunst:
     name: Jonas R. Kunst
-    affiliation: '46'
+    affiliation: '49'
     role:
-      - Conceptualization
-      - Funding acquisition
-      - Supervision
+      - Investigation
+      - Resources
+      - Writing - review & editing
     corresponding: no
     email: j.r.kunst@psykologi.uio.no
   Christian K. Tamnes:
     name: Christian K. Tamnes
-    affiliation: '46'
+    affiliation: '50'
     role:
-      - Conceptualization
-      - Funding acquisition
-      - Supervision
+      - Investigation
+      - Resources
+      - Writing - review & editing
     corresponding: no
     email: c.k.tamnes@psykologi.uio.no
   Frederike S. Woelfert:
     name: Frederike S. Woelfert
-    affiliation: '46'
+    affiliation: '50'
     role:
-      - Conceptualization
-      - Supervision
+      - Investigation
+      - Writing - review & editing
     corresponding: no
-    email: frederwo@student.sv.uio.no
+    email: frederike.woelfert@posteo.de
   Kristoffer Klevjer:
     name: Kristoffer Klevjer
-    affiliation: '47'
+    affiliation: '51'
     role:
-      - Conceptualization
-      - Supervision
+      - Investigation
+      - Writing - review & editing
     corresponding: no
     email: klevjer@gmail.com
   Sarah E. Martiny:
     name: Sarah E. Martiny
-    affiliation: '47'
+    affiliation: '51'
     role:
-      - Conceptualization
-      - Supervision
+      - Investigation
+      - Writing - review & editing
     corresponding: no
     email: sarah.martiny@uit.no
   Gerit Pfuhl:
     name: Gerit Pfuhl
-    affiliation: '47,48'
+    affiliation: '51,52'
     role:
-      - Conceptualization
-      - Funding acquisition
-      - Supervision
+      - Investigation
+      - Resources
+      - Writing - review & editing
     corresponding: no
     email: gerit.pfuhl@uit.no
   Sylwia Adamus:
     name: Sylwia Adamus
-    affiliation: '49'
+    affiliation: '53'
     role:
-      - Conceptualization
-      - Funding acquisition
-      - Supervision
+      - Investigation
+      - Resources
+      - Writing - review & editing
     corresponding: no
     email: sylwiadamus@gmail.com
   Krystian Barzykowski:
     name: Krystian Barzykowski
-    affiliation: '49'
+    affiliation: '53'
     role:
-      - Conceptualization
-      - Funding acquisition
-      - Methodology
+      - Investigation
+      - Resources
       - Supervision
+      - Writing - review & editing
     corresponding: no
     email: krystian.barzykowski@uj.edu.pl
   Katarzyna Filip:
     name: Katarzyna Filip
-    affiliation: '49'
+    affiliation: '53'
     role:
-      - Conceptualization
-      - Funding acquisition
-      - Supervision
+      - Investigation
+      - Resources
+      - Writing - review & editing
     corresponding: no
     email: kfilip2240@gmail.com
   Patrícia Arriaga:
     name: Patrícia Arriaga
-    affiliation: '50'
+    affiliation: '54'
     role:
-      - Conceptualization
       - Funding acquisition
-      - Supervision
+      - Investigation
+      - Resources
+      - Writing - review & editing
     corresponding: no
     email: patricia.arriaga@iscte-iul.pt
   Vasilije Gvozdenović:
     name: Vasilije Gvozdenović
-    affiliation: '51'
+    affiliation: '55'
     role:
-      - Conceptualization
-      - Funding acquisition
-      - Supervision
+      - Investigation
+      - Resources
+      - Writing - review & editing
     corresponding: no
     email: vgvozdenovic@gmail.com
   Vanja Ković:
     name: Vanja Ković
-    affiliation: '51'
+    affiliation: '55'
     role:
-      - Conceptualization
-      - Funding acquisition
-      - Supervision
+      - Investigation
+      - Resources
+      - Writing - review & editing
     corresponding: no
     email: vanja.kovic@f.bg.ac.rs
-  Zhong Chen:
-    name: Zhong Chen
-    affiliation: '52'
-    role:
-      - Conceptualization
-      - Supervision
-    corresponding: no
-    email: zhongchen@um.edu.mo
   Fei Gao:
     name: Fei Gao
-    affiliation: '52'
+    affiliation: '56'
     role:
-      - Conceptualization
-      - Funding acquisition
-      - Supervision
+      - Investigation
+      - Resources
+      - Writing - review & editing
     corresponding: no
-    email: onegaofei@gmail.com
-  Lisa Li:
-    name: Lisa Li
-    affiliation: '52'
+    email: feigao@fudan.edu.cn
+  Jingxiang Li:
+    name: Jingxiang Li
+    affiliation: '56'
     role:
-      - Conceptualization
-      - Funding acquisition
-      - Supervision
+      - Investigation
+      - Resources
+      - Writing - review & editing
     corresponding: no
-    email: yb87720@um.edu.mo
+    email: xqli@um.edu.mo
   Jozef Bavoľár:
     name: Jozef Bavoľár
-    affiliation: '53'
+    affiliation: '57'
     role:
-      - Conceptualization
-      - Funding acquisition
-      - Supervision
+      - Investigation
+      - Resources
+      - Writing - review & editing
     corresponding: no
     email: jozef.bavolar@upjs.sk
   Monika Hricová:
     name: Monika Hricová
-    affiliation: '53'
+    affiliation: '57'
     role:
-      - Conceptualization
-      - Funding acquisition
-      - Supervision
+      - Investigation
+      - Resources
+      - Writing - review & editing
     corresponding: no
     email: monika.hricova@upjs.sk
   Pavol Kačmár:
     name: Pavol Kačmár
-    affiliation: '53'
+    affiliation: '57'
     role:
-      - Conceptualization
-      - Funding acquisition
-      - Supervision
+      - Investigation
+      - Resources
+      - Writing - review & editing
     corresponding: no
     email: pavol.kacmar@upjs.sk
   Matúš Adamkovič:
     name: Matúš Adamkovič
-    affiliation: '54,55'
+    affiliation: '58,59,60'
     role:
-      - Conceptualization
-      - Supervision
+      - Investigation
+      - Writing - review & editing
     corresponding: no
     email: matho.adamkovic@gmail.com
   Peter Babinčák:
     name: Peter Babinčák
-    affiliation: '56'
+    affiliation: '61'
     role:
-      - Conceptualization
-      - Supervision
+      - Investigation
+      - Writing - review & editing
     corresponding: no
     email: peter.babincak@unipo.sk
   Gabriel Baník:
     name: Gabriel Baník
-    affiliation: '56,57'
+    affiliation: '62'
     role:
-      - Conceptualization
-      - Supervision
+      - Investigation
+      - Writing - review & editing
     corresponding: no
     email: gabriel.banik@gmail.com
   Ivan Ropovik:
     name: Ivan Ropovik
-    affiliation: '57,58'
+    affiliation: '63,64'
     role:
-      - Conceptualization
-      - Supervision
+      - Investigation
+      - Writing - review & editing
     corresponding: no
     email: ivan.ropovik@gmail.com
   Danilo Zambrano Ricaurte:
     name: Danilo Zambrano Ricaurte
-    affiliation: '59'
+    affiliation: '65'
     role:
-      - Conceptualization
-      - Funding acquisition
-      - Supervision
+      - Investigation
+      - Resources
+      - Writing - review & editing
     corresponding: no
-    email: danilozambrano@psicologos.com
+    email: danilo.zambranor@outlook.com
   Sara Álvarez-Solas:
     name: Sara Álvarez-Solas
-    affiliation: '60'
+    affiliation: '66'
     role:
-      - Conceptualization
-      - Funding acquisition
-      - Supervision
+      - Investigation
+      - Resources
+      - Writing - review & editing
     corresponding: no
     email: sara.alvarez.solas@gmail.com
   Harry Manley:
     name: Harry Manley
-    affiliation: '61,62'
+    affiliation: '67,68'
     role:
-      - Conceptualization
-      - Funding acquisition
-      - Supervision
+      - Investigation
+      - Resources
+      - Writing - review & editing
     corresponding: no
     email: harrisonmanley@gmail.com
   Panita Suavansri:
     name: Panita Suavansri
-    affiliation: '61'
+    affiliation: '67'
     role:
-      - Conceptualization
-      - Funding acquisition
-      - Supervision
+      - Investigation
+      - Resources
+      - Writing - review & editing
     corresponding: no
     email: p.suavansri@gmail.com
   Chun-Chia Kung:
     name: Chun-Chia Kung
-    affiliation: '63'
+    affiliation: '69'
     role:
-      - Conceptualization
-      - Funding acquisition
-      - Supervision
+      - Investigation
+      - Resources
+      - Writing - review & editing
     corresponding: no
     email: cckung@kunglab-nckupsy.org
   Belemir Çoktok:
     name: Belemir Çoktok
-    affiliation: '64'
+    affiliation: '70'
     role:
-      - Conceptualization
-      - Funding acquisition
-      - Supervision
+      - Investigation
+      - Resources
+      - Writing - review & editing
     corresponding: no
     email: b.coktok@gmail.com
   Asil Ali Özdoğru:
     name: Asil Ali Özdoğru
-    affiliation: '64,65'
+    affiliation: '70,71'
     role:
-      - Conceptualization
-      - Funding acquisition
-      - Supervision
+      - Investigation
+      - Resources
+      - Writing - review & editing
     corresponding: no
     email: asil.ozdogru@uskudar.edu.tr
   Çağlar Solak:
     name: Çağlar Solak
-    affiliation: '66'
+    affiliation: '72'
     role:
-      - Conceptualization
-      - Supervision
+      - Investigation
+      - Writing - review & editing
     corresponding: no
     email: solakcaglar@gmail.com
   Sinem Söylemez:
     name: Sinem Söylemez
-    affiliation: '66'
+    affiliation: '72'
     role:
-      - Conceptualization
-      - Supervision
+      - Investigation
+      - Writing - review & editing
     corresponding: no
     email: sinem.nokta@gmail.com
   Sami Çoksan:
     name: Sami Çoksan
-    affiliation: '67,68'
+    affiliation: '73,74'
     role:
-      - Conceptualization
-      - Funding acquisition
-      - Supervision
+      - Investigation
+      - Resources
+      - Writing - review & editing
     corresponding: no
     email: sami.coksan@erzurum.edu.tr
   İlker Dalgar:
     name: İlker Dalgar
-    affiliation: '69'
+    affiliation: '75'
     role:
-      - Funding acquisition
-      - Supervision
+      - Resources
+      - Writing - review & editing
     corresponding: no
     email: ilkerdalgar@gmail.com
   Mahmoud Elsherif:
     name: Mahmoud Elsherif
-    affiliation: '70'
-    role: Supervision
+    affiliation: '76'
+    role: Writing - review & editing
     corresponding: no
     email: mahmoud.medhat.elsherif@gmail.com
   Martin Vasilev:
     name: Martin Vasilev
-    affiliation: '71'
-    role: Supervision
+    affiliation: '77'
+    role: Writing - review & editing
     corresponding: no
     email: m.vasilev@ucl.ac.uk
   Vinka Mlakic:
     name: Vinka Mlakic
-    affiliation: '72'
+    affiliation: '78'
     role:
-      - Funding acquisition
-      - Supervision
+      - Resources
+      - Writing - review & editing
     corresponding: no
     email: vinka.mlakic@gmail.com
   Elisabeth Oberzaucher:
     name: Elisabeth Oberzaucher
-    affiliation: '73'
+    affiliation: '79'
     role:
-      - Funding acquisition
-      - Supervision
+      - Resources
+      - Writing - review & editing
     corresponding: no
     email: elisabeth@oberzaucher.eu
   Stefan Stieger:
     name: Stefan Stieger
-    affiliation: '72'
+    affiliation: '78'
     role:
-      - Funding acquisition
-      - Supervision
+      - Resources
+      - Writing - review & editing
     corresponding: no
     email: stefan.stieger@kl.ac.at
   Selina Volsa:
     name: Selina Volsa
-    affiliation: '72'
+    affiliation: '78'
     role:
-      - Funding acquisition
-      - Supervision
+      - Resources
+      - Writing - review & editing
     corresponding: no
     email: selina.volsa@kl.ac.at
+  Erica D. Musser:
+    name: Erica D. Musser
+    affiliation: '80'
+    role: []
+    corresponding: no
+    email: emusser@barnard.edu
   Janis Zickfeld:
     name: Janis Zickfeld
-    affiliation: '74'
+    affiliation: '81'
     role:
-      - Funding acquisition
-      - Supervision
+      - Resources
+      - Writing - review & editing
     corresponding: no
     email: jhzickfeld@gmail.com
   Christopher R. Chartier:
     name: Christopher R. Chartier
-    affiliation: '30'
+    affiliation: '32'
     role:
-      - Conceptualization
-      - Formal analysis
-      - Supervision
+      - Investigation
+      - Project administration
+      - Writing - review & editing
     corresponding: no
     email: cchartie@ashland.edu
 
@@ -996,8 +1000,8 @@ affiliation:
     institution: Department of Psychology, Willamette University, Salem, United States
       of America
   - id: 6
-    institution: Institute of Cognition and Culture, Queen’s University Belfast, Belfast, United
-      Kingdom
+    institution: Institute of Cognition and Culture, Queen’s University Belfast, Belfest,
+      United Kingdom
   - id: 7
     institution: Department of Psychology, Lancaster University, Lancaster, United
       Kingdom
@@ -1012,7 +1016,8 @@ affiliation:
     institution: Department of Clinical Psychology, United Arab Emirates University,
       Al Ain, United Arab Emirates
   - id: 12
-    institution: Independent Researcher
+    institution: Jubail English Language and Preparatory Year Institute, Royal Commission
+      for Jubail and Yanbu, Saudi Arabia
   - id: 13
     institution: Psychology Department, College of Education, Sultan Qaboos University,
       Muscat, Oman
@@ -1023,162 +1028,183 @@ affiliation:
     institution: Department of Experimental Psychology, Institute of Psychology, University
       of Sao Paulo, Sao Paulo, Brazil
   - id: 16
-    institution: School of Psychology, University of Queensland, Brisbane, Australia
+    institution: Faculty of Philosophy, Universitary Center Foundation Santo André,
+      Santo André, Brazil
   - id: 17
-    institution: Department of Psychology, Macquarie University, Sydney, Australia
+    institution: School of Psychology, University of Queensland, Brisbane, Australia
   - id: 18
-    institution: Department of Philosophy, Macquarie University, Sydney, Australia
+    institution: Department of Psychology, Macquarie University, Sydney, Australia
   - id: 19
+    institution: Department of Philosophy, Macquarie University, Sydney, Australia
+  - id: 20
     institution: Department of Psychology, Bournemouth University, Bournemouth, United
       Kingdom
-  - id: 20
-    institution: Department of Psychology, Carleton University, Ottawa, Canada
   - id: 21
+    institution: Department of Psychology, Carleton University, Ottawa, Canada
+  - id: 22
+    institution: Department of Psychology, University of Oregon, Eugene, United States
+      of America
+  - id: 23
     institution: Department of Psychology, University of Essex, Colchester, United
       Kingdom
-  - id: 22
-    institution: School of Social, Psychological and Behavioural Sciences, Coventry
-      University, Coventry, United Kingdom
-  - id: 23
-    institution: Department of Psychology, Maynooth University, Maynooth, Ireland
   - id: 24
+    institution: School of Human Sciences and Institute for Lifecourse Development,
+      University of Greenwich, London, United Kingdom
+  - id: 25
+    institution: Department of Psychology, Maynooth University, Maynooth, Ireland
+  - id: 26
     institution: Division of Psychology, School of Social and Health Sciences, Abertay
       University, Dundee, United Kingdom
-  - id: 25
+  - id: 27
     institution: School of Psychology, Faculty of Health Sciences and Wellbeing, University
       of Sunderland, Sunderland, United Kingdom
-  - id: 26
+  - id: 28
     institution: School of Psychology and Vision Sciences, University of Leicester,
       Leicester, United Kingdom
-  - id: 27
+  - id: 29
     institution: School of Psychology, University of Nottingham Malaysia, Selangor,
       Malaysia
-  - id: 28
+  - id: 30
     institution: Department of Psychology, Alex Ekwueme Federal University, Ndufu-Alike,
       Nigeria
-  - id: 29
+  - id: 31
     institution: School of Psychology, University of Auckland, Auckland, New Zealand
-  - id: 30
+  - id: 32
     institution: Department of Psychology, Ashland University, Ashland, United States
       of America
-  - id: 31
+  - id: 33
     institution: Department of Psychology, University of Alabama, Tuscaloosa, United
       States of America
-  - id: 32
+  - id: 34
     institution: Hubbard Decision Research, Glen Ellyn, United States of America
-  - id: 33
+  - id: 35
     institution: Department of Psychology, Michigan State University, East Lansing,
       United States of America
-  - id: 34
+  - id: 36
     institution: Department of Psychology, Ithaca College, Ithaca, United States of
       America
-  - id: 35
+  - id: 37
     institution: Department of Psychology, University of Louisiana at Lafayette, Lafayette,
       United States of America
-  - id: 36
+  - id: 38
     institution: Department of Cognitive Science, Occidental College, Los Angeles,
       United States of America
-  - id: 37
+  - id: 39
     institution: Department of Psychology, University of Denver, Denver, United States
       of America
-  - id: 38
+  - id: 40
     institution: Department of Psychology, Franklin and Marshall College, Lancaster,
       United States of America
-  - id: 39
+  - id: 41
+    institution: Statistics Austria
+  - id: 42
     institution: Faculty of Psychology, University of Vienna, Wien, Austria
-  - id: 40
+  - id: 43
     institution: Department of Cognition, Emotion, and Methods in Psychology, Faculty
       of Psychology, University of Vienna, Vienna, Austria
-  - id: 41
-    institution: Department of Psychology and Psychotherapy, Witten/Herdecke University, Witten, 
+  - id: 44
+    institution: Department of Psychology and Psychotherapy, Witten/Herdecke University,
       Germany
-  - id: 42
+  - id: 45
     institution: School of Education, National and Kapodistrian University of Athens,
       Athens, Greece
-  - id: 43
+  - id: 46
     institution: Department of Psychology and School of Brain Sciences and Cognition,
       Ben Gurion University, Beer Sheba, Israel
-  - id: 44
+  - id: 47
     institution: School of Studies in Life Science, Pt. Ravishankar Shukla University,
       Raipur, India
-  - id: 45
+  - id: 48
     institution: Department of Health and Functioning, Western Norway University of
       Applied Sciences, Bergen, Norway
-  - id: 46
+  - id: 49
+    institution: Department of Communication and Culture, BI Norwegian Business School,
+      Oslo, Norway
+  - id: 50
     institution: Department of Psychology, University of Oslo, Oslo, Norway
-  - id: 47
+  - id: 51
     institution: Department of Psychology, UiT - The Arctic University of Norway,
       Tromsø, Norway
-  - id: 48
+  - id: 52
     institution: Department of Psychology, Norwegian University of Science and Technology,
       Trondheim, Norway
-  - id: 49
+  - id: 53
     institution: Institute of Psychology, Jagiellonian University, Krakow, Poland
-  - id: 50
+  - id: 54
     institution: Iscte-University Institute of Lisbon, CIS-IUL, Lisbon, Portugal
-  - id: 51
+  - id: 55
     institution: Laboratory for Neurocognition and Applied Cognition, Faculty of Philosophy,
       University of Belgrade, Belgrade, Serbia
-  - id: 52
+  - id: 56
     institution: Faculty of Arts and Humanities, University of Macau, Macau, China
-  - id: 53
+  - id: 57
     institution: Department of Psychology, Faculty of Arts, Pavol Jozef Šafarik University
       in Košice, Košice, Slovakia
-  - id: 54
-    institution: Institute of Social Sciences, CSPS, Slovak Academy of Sciences, Košice, Slovakia
-  - id: 55
-    institution: University of Jyväskylä, Finland
-  - id: 56
+  - id: 58
+    institution: Centre of Social and Psychological Sciences, Slovak Academy of Sciences,
+      Bratislava, Slovakia
+  - id: 59
+    institution: Faculty of Education, Charles University, Prague, Czechia
+  - id: 60
+    institution: Faculty of Humanities and Social Sciences, University of Jyväskylä,
+      Jyväskylä, Finland
+  - id: 61
     institution: Institute of Psychology, Faculty of Arts, University of Presov, Presov,
       Slovakia
-  - id: 57
+  - id: 62
+    institution: Department of Educational Psychology and Psychology of Health, Faculty
+      of Arts, Pavol Jozef Safarik University, Slovakia
+  - id: 63
     institution: Institute for Research and Development of Education, Faculty of Education,
       Charles University, Prague, Czechia
-  - id: 58
+  - id: 64
     institution: Institute of Psychology, Czech Academy of Sciences, Prague, Czechia
-  - id: 59
+  - id: 65
     institution: Faculty of Psychology, Fundación Universitaria Konrad Lorenz, Bogotá,
       Colombia
-  - id: 60
+  - id: 66
     institution: Faculty of Health, International University of La Rioja (UNIR), Logroño,
       Spain
-  - id: 61
+  - id: 67
     institution: Faculty of Psychology, Chulalongkorn University, Bangkok, Thailand
-  - id: 62
-    institution: Faculty of Behavioral Sciences, Education, & Languages, HELP University
+  - id: 68
+    institution: Faculty of Behavioral Sciences, Education, & Languages, HELP University,
       Subang 2, Malaysia
-  - id: 63
+  - id: 69
     institution: Department of Psychology, National Cheng Kung University, Tainan,
       Taiwan
-  - id: 64
+  - id: 70
     institution: Department of Psychology, Üsküdar University, İstanbul, Turkey
-  - id: 65
+  - id: 71
     institution: Department of Psychology, Marmara University, İstanbul, Turkey
-  - id: 66
+  - id: 72
     institution: Department of Psychology, Manisa Celal Bayar University, Manisa,
       Turkey
-  - id: 67
+  - id: 73
     institution: Department of Psychology, Erzurum Technical University, Erzurum,
       Turkey
-  - id: 68
+  - id: 74
     institution: Network for Economic and Social Trends, Western University, London,
       Canada
-  - id: 69
+  - id: 75
     institution: Department of Psychology, Ankara Medipol University, Ankara, Turkey
-  - id: 70
+  - id: 76
     institution: Department of Psychology and Vision Sciences, University of Leicester,
       Leicester, United Kingdom
-  - id: 71
+  - id: 77
     institution: Department of Experimental Psychology, University College London,
       London, United Kingdom
-  - id: 72
+  - id: 78
     institution: Department of Psychology and Psychodynamics, Karl Landsteiner University
       of Health Sciences, Krems an der Donau, Austria
-  - id: 73
+  - id: 79
     institution: Department of Evolutionary Anthropology, University of Vienna, Wien,
       Austria
-  - id: 74
-    institution: Department of Management Aarhus University, Aarhus, Denmark
+  - id: 80
+    institution: Department of Psychology, Barnard College, New York, United States
+      of America
+  - id: 81
+    institution: Department of Management, Aarhus University, Aarhus, Denmark
       
 authornote: |
   **Funding statement.** Matúš Adamkovič was supported by APVV-20-0319; Ivan Ropovik was supported by APVV-23-0421 and Mediated Society (MEDIS:ON) CZ.02.01.01/00/23_025/0008713, co-financed by the European Union; Peter Babinčák was supported by APVV-23-0647; Robert M. Ross was supported by Australian Research Council (grant number: DP180102384) and the John Templeton Foundation (grant ID: 62631); Zoltan Kekecs was supported by János Bolyai Research Scholarship of the Hungarian Academy of Science; Mahmoud Elsherif was supported by Leverhulme Trust; Glenn P. Williams was supported by Leverhulme Trust Research Project Grant (RPG-2016-093); Krystian Barzykowski was supported by National Science Centre, Poland (2019/35/B/HS6/00528); Gabriel Baník was supported by PRIMUS/20/HUM/009; Patrícia Arriaga was supported by Portuguese National Foundation for Science and Technology (FCT UID/PSI/03125/2019); Monika Hricová was supported by VEGA 1/0145/23.
