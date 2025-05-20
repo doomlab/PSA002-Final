@@ -963,7 +963,9 @@ author:
   Erica D. Musser:
     name: Erica D. Musser
     affiliation: '80'
-    role: []
+    role: 
+      - Investigation
+      - Writing - review & editing
     corresponding: no
     email: emusser@barnard.edu
   Janis Zickfeld:
