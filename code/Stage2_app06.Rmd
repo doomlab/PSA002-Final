@@ -24,6 +24,12 @@ Armstrong, R. A. (2014). When to use the {Bonferroni} correction.
 \emph{Ophthalmic and Physiological Optics}, \emph{34}(5), 502--508.
 \url{https://doi.org/10.1111/opo.12131}
 
+\bibitem[\citeproctext]{ref-athanasopoulos2023}
+Athanasopoulos, P. (2023).
+Linguistic relativity.
+In J. Culpeper (Ed.), \emph{The Routledge Handbook of Language and Mind} (pp. 469--477).
+Routledge.
+
 \bibitem[\citeproctext]{ref-bridgesTimingMegastudyComparing2020a}
 Bridges, D., Pitiot, A., MacAskill, M. R., \& Peirce, J. W. (2020). The
 timing mega-study: Comparing a range of experiment generators, both
@@ -140,10 +146,22 @@ Schönbrodt, F. D., Wagenmakers, E.-J., Zehetleitner, M., \& Perugini, M.
 {Efficiently} testing mean differences. \emph{Psychological Methods},
 \emph{22}(2), 322--339. \url{https://doi.org/10.1037/met0000061}
 
+\bibitem[\citeproctext]{ref-scorolli2014embodiment}
+Scorolli, C. (2014).
+Embodiment and language.
+In L. Shapiro (Ed.), \emph{The Routledge Handbook of Embodied Cognition} (pp. 145--156).
+Routledge.
+
 \bibitem[\citeproctext]{ref-vadilloUnderpoweredSamplesFalse2016}
 Vadillo, M. A., Konstantinidis, E., \& Shanks, D. R. (2016).
 Underpowered samples, false negatives, and unconscious learning.
 \emph{Psychonomic Bulletin \& Review}, \emph{23}(1), 87--102.
 \url{https://doi.org/10.3758/s13423-015-0892-6}
+
+\bibitem[\citeproctext]{ref-wilson2002}
+Wilson, M. (2002).
+Six views of embodied cognition.
+\emph{Psychonomic Bulletin \& Review}, \emph{9}(4), 625--636.
+\url{https://doi.org/10.3758/BF03196322}
 
 \end{CSLReferences}
