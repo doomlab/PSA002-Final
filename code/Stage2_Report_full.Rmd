@@ -1902,7 +1902,7 @@ SP_V_es <- escalc(measure = "MC",
 SP_V_meta_all <- rma.uni(yi, vi, data = SP_V_es, method = "REML", digits = 2)
 {
   ## save the plot
-  png(file = "includes/fig/meta-all.png", width=1400*3, height=1400*3, res = 225)
+  png(file = "includes/fig/meta-all.png", width=1400*3, height=1400*4, res = 300)
   
   forest(SP_V_meta_all,
    xlim = c(-300, 200), 
